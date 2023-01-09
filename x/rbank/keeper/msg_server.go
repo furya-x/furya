@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/rbank/types"
+	"github.com/warmage-sports/katana/x/rbank/types"
 )
 
 type msgServer struct {

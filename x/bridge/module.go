@@ -18,9 +18,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/stafihub/stafihub/x/bridge/client/cli"
-	"github.com/stafihub/stafihub/x/bridge/keeper"
-	"github.com/stafihub/stafihub/x/bridge/types"
+	"github.com/warmage-sports/katana/x/bridge/client/cli"
+	"github.com/warmage-sports/katana/x/bridge/keeper"
+	"github.com/warmage-sports/katana/x/bridge/types"
 )
 
 var (

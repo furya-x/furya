@@ -10,8 +10,8 @@ import (
 	tmtypes "github.com/tendermint/tendermint/types"
 	tmdb "github.com/tendermint/tm-db"
 
-	"github.com/stafihub/stafihub/app"
-	"github.com/stafihub/stafihub/cosmoscmd"
+	"github.com/warmage-sports/katana/app"
+	"github.com/warmage-sports/katana/cosmoscmd"
 )
 
 // New creates application instance with in-memory database and disabled logging.

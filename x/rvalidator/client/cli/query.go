@@ -10,7 +10,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/stafihub/stafihub/x/rvalidator/types"
+	"github.com/warmage-sports/katana/x/rvalidator/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

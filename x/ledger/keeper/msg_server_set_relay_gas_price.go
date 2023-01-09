@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/ledger/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/ledger/types"
+	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) SetRelayGasPrice(goCtx context.Context, msg *types.MsgSetRelayGasPrice) (*types.MsgSetRelayGasPriceResponse, error) {

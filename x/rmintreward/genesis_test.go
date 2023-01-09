@@ -3,10 +3,10 @@ package rmintreward_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/rmintreward"
-	"github.com/stafihub/stafihub/x/rmintreward/types"
+	keepertest "github.com/warmage-sports/katana/testutil/keeper"
+	"github.com/warmage-sports/katana/testutil/nullify"
+	"github.com/warmage-sports/katana/x/rmintreward"
+	"github.com/warmage-sports/katana/x/rmintreward/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,11 +1,11 @@
-# StaFiHub
+# Katana
 
-**StaFiHub** is a blockchain built using [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) and Tendermint and aims to provide liquid staking solutions for assets
+**Katana** is a blockchain built using [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) and Tendermint and aims to provide liquid staking solutions for assets
 through the Inter-Blockchain Communication (IBC) Protocol to rapidly grow the staking industry.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| [![Go Report Card](https://goreportcard.com/badge/github.com/stafihub/stafihub)](https://goreportcard.com/report/github.com/stafihub/stafihub) | [![license](https://img.shields.io/github/license/cosmos/gaia.svg)](https://github.com/stafihub/stafihub/blob/main/LICENSE) | [![LoC](https://tokei.rs/b1/github/stafihub/stafihub)](https://github.com/stafihub/stafihub) | [![GolangCI](https://golangci.com/badges/github.com/cosmos/cosmos.svg)](https://golangci.com/r/github.com/stafihub/stafihub) |
+| [![Go Report Card](https://goreportcard.com/badge/github.com/warmage-sports/katana)](https://goreportcard.com/report/github.com/warmage-sports/katana) | [![license](https://img.shields.io/github/license/cosmos/gaia.svg)](https://github.com/warmage-sports/katana/blob/main/LICENSE) | [![LoC](https://tokei.rs/b1/github/warmage-sports/katana)](https://github.com/warmage-sports/katana) | [![GolangCI](https://golangci.com/badges/github.com/cosmos/cosmos.svg)](https://golangci.com/r/github.com/warmage-sports/katana) |
 
 ## Run node
 
@@ -18,5 +18,5 @@ through the Inter-Blockchain Communication (IBC) Protocol to rapidly grow the st
 
 If you are looking for historical genesis files and other data
 
-- [`stafihub/mainnet`](https://github.com/stafihub/network/tree/main/mainnets)
-- [`stafihub/testnet`](https://github.com/stafihub/network/tree/main/testnets)
+- [`katana/mainnet`](https://github.com/katana/network/tree/main/mainnets)
+- [`katana/testnet`](https://github.com/katana/network/tree/main/testnets)

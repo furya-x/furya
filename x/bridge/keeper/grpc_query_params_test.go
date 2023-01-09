@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testkeeper "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/x/bridge/types"
+	testkeeper "github.com/warmage-sports/katana/testutil/keeper"
+	"github.com/warmage-sports/katana/x/bridge/types"
 	"github.com/stretchr/testify/require"
 )
 

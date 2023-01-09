@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/stafihub/stafihub/x/rvote/keeper"
-	"github.com/stafihub/stafihub/x/rvote/types"
+	"github.com/warmage-sports/katana/x/rvote/keeper"
+	"github.com/warmage-sports/katana/x/rvote/types"
 )
 
 // NewHandler ...

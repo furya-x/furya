@@ -3,10 +3,10 @@ package rdex_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/rdex"
-	"github.com/stafihub/stafihub/x/rdex/types"
+	keepertest "github.com/warmage-sports/katana/testutil/keeper"
+	"github.com/warmage-sports/katana/testutil/nullify"
+	"github.com/warmage-sports/katana/x/rdex"
+	"github.com/warmage-sports/katana/x/rdex/types"
 	"github.com/stretchr/testify/require"
 )
 

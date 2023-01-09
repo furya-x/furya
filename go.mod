@@ -1,4 +1,4 @@
-module github.com/stafihub/stafihub
+module github.com/warmage-sports/katana
 
 go 1.18
 

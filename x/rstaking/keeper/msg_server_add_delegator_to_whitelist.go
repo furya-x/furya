@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rstaking/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/rstaking/types"
+	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) AddDelegatorToWhitelist(goCtx context.Context, msg *types.MsgAddDelegatorToWhitelist) (*types.MsgAddDelegatorToWhitelistResponse, error) {

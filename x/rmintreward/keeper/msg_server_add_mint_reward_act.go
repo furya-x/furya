@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rmintreward/types"
-	sudoTypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/rmintreward/types"
+	sudoTypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) AddMintRewardAct(goCtx context.Context, msg *types.MsgAddMintRewardAct) (*types.MsgAddMintRewardActResponse, error) {

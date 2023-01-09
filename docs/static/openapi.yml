@@ -20906,10 +20906,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/bridge/banned_denom_list:
+  /warmage-sports/katana/bridge/banned_denom_list:
     get:
       summary: Queries a list of BannedDenomList items.
-      operationId: StafihubStafihubBridgeBannedDenomList
+      operationId: KatanaBridgeBannedDenomList
       responses:
         '200':
           description: A successful response.
@@ -20946,10 +20946,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/bridge/chaind_ids:
+  /warmage-sports/katana/bridge/chaind_ids:
     get:
       summary: Queries a list of ChaindIds items.
-      operationId: StafihubStafihubBridgeChaindIds
+      operationId: KatanaBridgeChaindIds
       responses:
         '200':
           description: A successful response.
@@ -20981,10 +20981,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/bridge/get_deposit_count/{chainId}':
+  '/warmage-sports/katana/bridge/get_deposit_count/{chainId}':
     get:
       summary: Queries a list of GetDepositCount items.
-      operationId: StafihubStafihubBridgeGetDepositCount
+      operationId: KatanaBridgeGetDepositCount
       responses:
         '200':
           description: A successful response.
@@ -21020,10 +21020,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/bridge/params:
+  /warmage-sports/katana/bridge/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubBridgeParams
+      operationId: KatanaBridgeParams
       responses:
         '200':
           description: A successful response.
@@ -21056,10 +21056,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/bridge/proposal_detail/{chainId}/{depositNonce}/{resourceId}/{amount}/{receiver}':
+  '/warmage-sports/katana/bridge/proposal_detail/{chainId}/{depositNonce}/{resourceId}/{amount}/{receiver}':
     get:
       summary: Queries a list of ProposalDetail items.
-      operationId: StafihubStafihubBridgeProposalDetail
+      operationId: KatanaBridgeProposalDetail
       responses:
         '200':
           description: A successful response.
@@ -21125,10 +21125,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/bridge/relay_fee/{chainId}':
+  '/warmage-sports/katana/bridge/relay_fee/{chainId}':
     get:
       summary: Queries a list of RelayFee items.
-      operationId: StafihubStafihubBridgeRelayFee
+      operationId: KatanaBridgeRelayFee
       responses:
         '200':
           description: A successful response.
@@ -21176,10 +21176,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/bridge/relay_fee_receiver:
+  /warmage-sports/katana/bridge/relay_fee_receiver:
     get:
       summary: Queries a list of RelayFeeReceiver items.
-      operationId: StafihubStafihubBridgeRelayFeeReceiver
+      operationId: KatanaBridgeRelayFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -21208,10 +21208,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/bridge/resourceid_to_denoms:
+  /warmage-sports/katana/bridge/resourceid_to_denoms:
     get:
       summary: Queries a list of ResourceidToDenoms items.
-      operationId: StafihubStafihubBridgeResourceidToDenoms
+      operationId: KatanaBridgeResourceidToDenoms
       responses:
         '200':
           description: A successful response.
@@ -21254,10 +21254,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/claim/claim_switch/{round}':
+  '/warmage-sports/katana/claim/claim_switch/{round}':
     get:
       summary: Queries a list of ClaimSwitch items.
-      operationId: StafihubStafihubClaimClaimSwitch
+      operationId: KatanaClaimClaimSwitch
       responses:
         '200':
           description: A successful response.
@@ -21292,10 +21292,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/stafihub/stafihub/claim/is_claimed/{round}/{index}':
+  '/warmage-sports/katana/claim/is_claimed/{round}/{index}':
     get:
       summary: Queries a list of IsClaimed items.
-      operationId: StafihubStafihubClaimIsClaimed
+      operationId: KatanaClaimIsClaimed
       responses:
         '200':
           description: A successful response.
@@ -21335,10 +21335,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/claim/params:
+  /warmage-sports/katana/claim/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubClaimParams
+      operationId: KatanaClaimParams
       responses:
         '200':
           description: A successful response.
@@ -21371,10 +21371,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/ledger/bonded_pools_by_denom/{denom}':
+  '/warmage-sports/katana/ledger/bonded_pools_by_denom/{denom}':
     get:
       summary: Queries a list of bondedPoolsByDenom items.
-      operationId: StafihubStafihubLedgerBondedPoolsByDenom
+      operationId: KatanaLedgerBondedPoolsByDenom
       responses:
         '200':
           description: A successful response.
@@ -21577,10 +21577,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/era_exchange_rate/{denom}/{era}':
+  '/warmage-sports/katana/ledger/era_exchange_rate/{denom}/{era}':
     get:
       summary: Queries a list of getEraExchangeRate items.
-      operationId: StafihubStafihubLedgerGetEraExchangeRate
+      operationId: KatanaLedgerGetEraExchangeRate
       responses:
         '200':
           description: A successful response.
@@ -21794,10 +21794,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/ledger/era_exchange_rates_by_denom/{denom}':
+  '/warmage-sports/katana/ledger/era_exchange_rates_by_denom/{denom}':
     get:
       summary: Queries a list of eraExchangeRatesByDenom items.
-      operationId: StafihubStafihubLedgerEraExchangeRatesByDenom
+      operationId: KatanaLedgerEraExchangeRatesByDenom
       responses:
         '200':
           description: A successful response.
@@ -22008,10 +22008,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/exchange_rate/{denom}':
+  '/warmage-sports/katana/ledger/exchange_rate/{denom}':
     get:
       summary: Queries a list of getExchangeRate items.
-      operationId: StafihubStafihubLedgerGetExchangeRate
+      operationId: KatanaLedgerGetExchangeRate
       responses:
         '200':
           description: A successful response.
@@ -22217,10 +22217,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/exchange_rate_all:
+  /warmage-sports/katana/ledger/exchange_rate_all:
     get:
       summary: Queries a list of exchangeRateAll items.
-      operationId: StafihubStafihubLedgerExchangeRateAll
+      operationId: KatanaLedgerExchangeRateAll
       responses:
         '200':
           description: A successful response.
@@ -22423,10 +22423,10 @@ paths:
                         }
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_bond_pipeline/{denom}/{pool}':
+  '/warmage-sports/katana/ledger/get_bond_pipeline/{denom}/{pool}':
     get:
       summary: Queries a list of getBondPipeline items.
-      operationId: StafihubStafihubLedgerGetBondPipeline
+      operationId: KatanaLedgerGetBondPipeline
       responses:
         '200':
           description: A successful response.
@@ -22645,10 +22645,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_bond_record/{denom}/{txhash}':
+  '/warmage-sports/katana/ledger/get_bond_record/{denom}/{txhash}':
     get:
       summary: Queries a list of getBondRecord items.
-      operationId: StafihubStafihubLedgerGetBondRecord
+      operationId: KatanaLedgerGetBondRecord
       responses:
         '200':
           description: A successful response.
@@ -22874,10 +22874,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_chain_era/{denom}':
+  '/warmage-sports/katana/ledger/get_chain_era/{denom}':
     get:
       summary: Queries a list of getChainEra items.
-      operationId: StafihubStafihubLedgerGetChainEra
+      operationId: KatanaLedgerGetChainEra
       responses:
         '200':
           description: A successful response.
@@ -23079,10 +23079,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_current_era_snapshot/{denom}':
+  '/warmage-sports/katana/ledger/get_current_era_snapshot/{denom}':
     get:
       summary: Queries a list of getCurrentEraSnapshot items.
-      operationId: StafihubStafihubLedgerGetCurrentEraSnapshot
+      operationId: KatanaLedgerGetCurrentEraSnapshot
       responses:
         '200':
           description: A successful response.
@@ -23285,10 +23285,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_era_snapshot/{denom}/{era}':
+  '/warmage-sports/katana/ledger/get_era_snapshot/{denom}/{era}':
     get:
       summary: Queries a list of getEraSnapshot items.
-      operationId: StafihubStafihubLedgerGetEraSnapshot
+      operationId: KatanaLedgerGetEraSnapshot
       responses:
         '200':
           description: A successful response.
@@ -23496,10 +23496,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_era_unbond_limit/{denom}':
+  '/warmage-sports/katana/ledger/get_era_unbond_limit/{denom}':
     get:
       summary: Queries a list of getEraUnbondLimit items.
-      operationId: StafihubStafihubLedgerGetEraUnbondLimit
+      operationId: KatanaLedgerGetEraUnbondLimit
       responses:
         '200':
           description: A successful response.
@@ -23701,10 +23701,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_pool_detail/{denom}/{pool}':
+  '/warmage-sports/katana/ledger/get_pool_detail/{denom}/{pool}':
     get:
       summary: Queries a list of getPoolDetail items.
-      operationId: StafihubStafihubLedgerGetPoolDetail
+      operationId: KatanaLedgerGetPoolDetail
       responses:
         '200':
           description: A successful response.
@@ -23928,10 +23928,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_r_params/{denom}':
+  '/warmage-sports/katana/ledger/get_r_params/{denom}':
     get:
       summary: Queries a list of GetRParams items.
-      operationId: StafihubStafihubLedgerGetRParams
+      operationId: KatanaLedgerGetRParams
       responses:
         '200':
           description: A successful response.
@@ -24148,10 +24148,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/get_signature:
+  /warmage-sports/katana/ledger/get_signature:
     get:
       summary: Queries a list of getSignature items.
-      operationId: StafihubStafihubLedgerGetSignature
+      operationId: KatanaLedgerGetSignature
       responses:
         '200':
           description: A successful response.
@@ -24400,10 +24400,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_snapshot/{shotId}':
+  '/warmage-sports/katana/ledger/get_snapshot/{shotId}':
     get:
       summary: Queries a list of getSnapshot items.
-      operationId: StafihubStafihubLedgerGetSnapshot
+      operationId: KatanaLedgerGetSnapshot
       responses:
         '200':
           description: A successful response.
@@ -24630,10 +24630,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/get_staking_reward_commission:
+  /warmage-sports/katana/ledger/get_staking_reward_commission:
     get:
       summary: Queries a list of getCommission items.
-      operationId: StafihubStafihubLedgerGetStakingRewardCommission
+      operationId: KatanaLedgerGetStakingRewardCommission
       responses:
         '200':
           description: A successful response.
@@ -24834,10 +24834,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_total_expected_active/{denom}/{era}':
+  '/warmage-sports/katana/ledger/get_total_expected_active/{denom}/{era}':
     get:
       summary: Queries a list of getTotalExpectedActive items.
-      operationId: StafihubStafihubLedgerGetTotalExpectedActive
+      operationId: KatanaLedgerGetTotalExpectedActive
       responses:
         '200':
           description: A successful response.
@@ -25043,10 +25043,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/ledger/get_unbond_commission:
+  /warmage-sports/katana/ledger/get_unbond_commission:
     get:
       summary: Queries a list of getUnbondCommission items.
-      operationId: StafihubStafihubLedgerGetUnbondCommission
+      operationId: KatanaLedgerGetUnbondCommission
       responses:
         '200':
           description: A successful response.
@@ -25247,10 +25247,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/get_unbond_relay_fee/{denom}':
+  '/warmage-sports/katana/ledger/get_unbond_relay_fee/{denom}':
     get:
       summary: Queries a list of getUnbondFee items.
-      operationId: StafihubStafihubLedgerGetUnbondRelayFee
+      operationId: KatanaLedgerGetUnbondRelayFee
       responses:
         '200':
           description: A successful response.
@@ -25469,10 +25469,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/ica_pool_list/{denom}':
+  '/warmage-sports/katana/ledger/ica_pool_list/{denom}':
     get:
       summary: Queries a list of IcaPoolList items.
-      operationId: StafihubStafihubLedgerIcaPoolList
+      operationId: KatanaLedgerIcaPoolList
       responses:
         '200':
           description: A successful response.
@@ -25728,10 +25728,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/interchain_tx_status/{propId}':
+  '/warmage-sports/katana/ledger/interchain_tx_status/{propId}':
     get:
       summary: Queries a list of InterchainTxStatus items.
-      operationId: StafihubStafihubLedgerInterchainTxStatus
+      operationId: KatanaLedgerInterchainTxStatus
       responses:
         '200':
           description: A successful response.
@@ -25938,10 +25938,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/ledger/pool_unbond_next_sequence/{denom}/{pool}/{unlockEra}':
+  '/warmage-sports/katana/ledger/pool_unbond_next_sequence/{denom}/{pool}/{unlockEra}':
     get:
       summary: Queries a list of PoolUnbondNextSequence items.
-      operationId: StafihubStafihubLedgerPoolUnbondNextSequence
+      operationId: KatanaLedgerPoolUnbondNextSequence
       responses:
         '200':
           description: A successful response.
@@ -26152,10 +26152,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/ledger/pool_unbondings/{denom}/{pool}/{unlockEra}':
+  '/warmage-sports/katana/ledger/pool_unbondings/{denom}/{pool}/{unlockEra}':
     get:
       summary: Queries a list of PoolUnbondings items.
-      operationId: StafihubStafihubLedgerPoolUnbondings
+      operationId: KatanaLedgerPoolUnbondings
       responses:
         '200':
           description: A successful response.
@@ -26374,10 +26374,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/ledger/protocol_fee_receiver:
+  /warmage-sports/katana/ledger/protocol_fee_receiver:
     get:
       summary: Queries a list of getReceiver items.
-      operationId: StafihubStafihubLedgerGetProtocolFeeReceiver
+      operationId: KatanaLedgerGetProtocolFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -26573,10 +26573,10 @@ paths:
                         }
       tags:
         - Query
-  '/stafihub/stafihub/ledger/relay_fee_receiver/{denom}':
+  '/warmage-sports/katana/ledger/relay_fee_receiver/{denom}':
     get:
       summary: Queries a list of RelayFeeReceiver items.
-      operationId: StafihubStafihubLedgerRelayFeeReceiver
+      operationId: KatanaLedgerRelayFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -26777,10 +26777,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/ledger/total_protocol_fee:
+  /warmage-sports/katana/ledger/total_protocol_fee:
     get:
       summary: Queries a list of TotalFeeList items.
-      operationId: StafihubStafihubLedgerTotalProtocolFee
+      operationId: KatanaLedgerTotalProtocolFee
       responses:
         '200':
           description: A successful response.
@@ -26983,10 +26983,10 @@ paths:
                         }
       tags:
         - Query
-  '/stafihub/stafihub/ledger/unbond_switch/{denom}':
+  '/warmage-sports/katana/ledger/unbond_switch/{denom}':
     get:
       summary: Queries a list of UnbondSwitch items.
-      operationId: StafihubStafihubLedgerUnbondSwitch
+      operationId: KatanaLedgerUnbondSwitch
       responses:
         '200':
           description: A successful response.
@@ -27187,10 +27187,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/mining/max_reward_pool_number:
+  /warmage-sports/katana/mining/max_reward_pool_number:
     get:
       summary: Queries a list of MaxRewardPoolNumber items.
-      operationId: StafihubStafihubMiningMaxRewardPoolNumber
+      operationId: KatanaMiningMaxRewardPoolNumber
       responses:
         '200':
           description: A successful response.
@@ -27220,10 +27220,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/max_stake_item_number:
+  /warmage-sports/katana/mining/max_stake_item_number:
     get:
       summary: Queries a list of MaxStakeItemNumber items.
-      operationId: StafihubStafihubMiningMaxStakeItemNumber
+      operationId: KatanaMiningMaxStakeItemNumber
       responses:
         '200':
           description: A successful response.
@@ -27253,10 +27253,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/mining_provider_list:
+  /warmage-sports/katana/mining/mining_provider_list:
     get:
       summary: Queries a list of MiningProviderList items.
-      operationId: StafihubStafihubMiningMiningProviderList
+      operationId: KatanaMiningMiningProviderList
       responses:
         '200':
           description: A successful response.
@@ -27287,10 +27287,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/params:
+  /warmage-sports/katana/mining/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubMiningParams
+      operationId: KatanaMiningParams
       responses:
         '200':
           description: A successful response.
@@ -27323,10 +27323,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/provider_switch:
+  /warmage-sports/katana/mining/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: StafihubStafihubMiningProviderSwitch
+      operationId: KatanaMiningProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -27355,10 +27355,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/reward_token_list:
+  /warmage-sports/katana/mining/reward_token_list:
     get:
       summary: Queries a list of RewardTokenList items.
-      operationId: StafihubStafihubMiningRewardTokenList
+      operationId: KatanaMiningRewardTokenList
       responses:
         '200':
           description: A successful response.
@@ -27396,10 +27396,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/mining/stake_item_list:
+  /warmage-sports/katana/mining/stake_item_list:
     get:
       summary: Queries a list of StakeItemList items.
-      operationId: StafihubStafihubMiningStakeItemList
+      operationId: KatanaMiningStakeItemList
       responses:
         '200':
           description: A successful response.
@@ -27451,10 +27451,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_pool_info/{stakePoolIndex}':
+  '/warmage-sports/katana/mining/stake_pool_info/{stakePoolIndex}':
     get:
       summary: Queries a list of StakePoolInfo items.
-      operationId: StafihubStafihubMiningStakePoolInfo
+      operationId: KatanaMiningStakePoolInfo
       responses:
         '200':
           description: A successful response.
@@ -27533,10 +27533,10 @@ paths:
           format: int64
       tags:
         - Query
-  /stafihub/stafihub/mining/stake_pool_list:
+  /warmage-sports/katana/mining/stake_pool_list:
     get:
       summary: Queries a list of StakePoolList items.
-      operationId: StafihubStafihubMiningStakePoolList
+      operationId: KatanaMiningStakePoolList
       responses:
         '200':
           description: A successful response.
@@ -27611,10 +27611,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_record/{userAddress}/{stakePoolIndex}/{stakeRecordIndex}':
+  '/warmage-sports/katana/mining/stake_record/{userAddress}/{stakePoolIndex}/{stakeRecordIndex}':
     get:
       summary: Queries a list of StakeRecord items.
-      operationId: StafihubStafihubMiningStakeRecord
+      operationId: KatanaMiningStakeRecord
       responses:
         '200':
           description: A successful response.
@@ -27696,10 +27696,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_record_count/{userAddress}/{stakePoolIndex}':
+  '/warmage-sports/katana/mining/stake_record_count/{userAddress}/{stakePoolIndex}':
     get:
       summary: Queries a list of StakeRecordCount items.
-      operationId: StafihubStafihubMiningStakeRecordCount
+      operationId: KatanaMiningStakeRecordCount
       responses:
         '200':
           description: A successful response.
@@ -27739,10 +27739,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_record_list/{userAddress}/{stakePoolIndex}':
+  '/warmage-sports/katana/mining/stake_record_list/{userAddress}/{stakePoolIndex}':
     get:
       summary: Queries a list of StakeRecordList items.
-      operationId: StafihubStafihubMiningStakeRecordList
+      operationId: KatanaMiningStakeRecordList
       responses:
         '200':
           description: A successful response.
@@ -27821,10 +27821,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/mining/stake_reward/{stakeUserAddress}/{stakePoolIndex}/{stakeRecordIndex}':
+  '/warmage-sports/katana/mining/stake_reward/{stakeUserAddress}/{stakePoolIndex}/{stakeRecordIndex}':
     get:
       summary: Queries a list of StakeReward items.
-      operationId: StafihubStafihubMiningStakeReward
+      operationId: KatanaMiningStakeReward
       responses:
         '200':
           description: A successful response.
@@ -27883,10 +27883,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/stafihub/stafihub/rbank/address_prefix/{denom}':
+  '/warmage-sports/katana/rbank/address_prefix/{denom}':
     get:
       summary: Queries a list of AddressPrefix items.
-      operationId: StafihubStafihubRbankAddressPrefix
+      operationId: KatanaRbankAddressPrefix
       responses:
         '200':
           description: A successful response.
@@ -27922,10 +27922,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rbank/params:
+  /warmage-sports/katana/rbank/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRbankParams
+      operationId: KatanaRbankParams
       responses:
         '200':
           description: A successful response.
@@ -27958,10 +27958,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/params:
+  /warmage-sports/katana/rdex/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRdexParams
+      operationId: KatanaRdexParams
       responses:
         '200':
           description: A successful response.
@@ -27994,10 +27994,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/pool_creator_list:
+  /warmage-sports/katana/rdex/pool_creator_list:
     get:
       summary: Queries a list of PoolCreatorList items.
-      operationId: StafihubStafihubRdexPoolCreatorList
+      operationId: KatanaRdexPoolCreatorList
       responses:
         '200':
           description: A successful response.
@@ -28028,10 +28028,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/provider_list:
+  /warmage-sports/katana/rdex/provider_list:
     get:
       summary: Queries a list of ProviderList items.
-      operationId: StafihubStafihubRdexProviderList
+      operationId: KatanaRdexProviderList
       responses:
         '200':
           description: A successful response.
@@ -28062,10 +28062,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rdex/provider_switch:
+  /warmage-sports/katana/rdex/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: StafihubStafihubRdexProviderSwitch
+      operationId: KatanaRdexProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -28094,10 +28094,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rdex/swap_pool_info/{lpDenom}':
+  '/warmage-sports/katana/rdex/swap_pool_info/{lpDenom}':
     get:
       summary: Queries a list of SwapPoolInfo items.
-      operationId: StafihubStafihubRdexSwapPoolInfo
+      operationId: KatanaRdexSwapPoolInfo
       responses:
         '200':
           description: A successful response.
@@ -28180,10 +28180,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rdex/swap_pool_list:
+  /warmage-sports/katana/rdex/swap_pool_list:
     get:
       summary: Queries a list of SwapPoolList items.
-      operationId: StafihubStafihubRdexSwapPoolList
+      operationId: KatanaRdexSwapPoolList
       responses:
         '200':
           description: A successful response.
@@ -28263,10 +28263,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/relayers/threshold/{arena}/{denom}':
+  '/warmage-sports/katana/relayers/threshold/{arena}/{denom}':
     get:
       summary: Queries a threshold by denom.
-      operationId: StafihubStafihubRelayersThreshold
+      operationId: KatanaRelayersThreshold
       responses:
         '200':
           description: A successful response.
@@ -28305,10 +28305,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/relayers/{arena}/{denom}':
+  '/warmage-sports/katana/relayers/{arena}/{denom}':
     get:
       summary: Queries a list of relayersByDenom items.
-      operationId: StafihubStafihubRelayersRelayers
+      operationId: KatanaRelayersRelayers
       responses:
         '200':
           description: A successful response.
@@ -28348,10 +28348,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/act_current_cycle/{denom}':
+  '/warmage-sports/katana/rmintreward/act_current_cycle/{denom}':
     get:
       summary: Queries a list of ActCurrentCycle items.
-      operationId: StafihubStafihubRmintrewardActCurrentCycle
+      operationId: KatanaRmintrewardActCurrentCycle
       responses:
         '200':
           description: A successful response.
@@ -28386,10 +28386,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/act_detail/{denom}/{cycle}':
+  '/warmage-sports/katana/rmintreward/act_detail/{denom}/{cycle}':
     get:
       summary: Queries a list of ActDetail items.
-      operationId: StafihubStafihubRmintrewardActDetail
+      operationId: KatanaRmintrewardActDetail
       responses:
         '200':
           description: A successful response.
@@ -28457,10 +28457,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/act_latest_cycle/{denom}':
+  '/warmage-sports/katana/rmintreward/act_latest_cycle/{denom}':
     get:
       summary: Queries a list of ActLatestCycle items.
-      operationId: StafihubStafihubRmintrewardActLatestCycle
+      operationId: KatanaRmintrewardActLatestCycle
       responses:
         '200':
           description: A successful response.
@@ -28495,10 +28495,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
+  '/warmage-sports/katana/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
     get:
       summary: Queries a list of ClaimInfoDetail items.
-      operationId: StafihubStafihubRmintrewardClaimInfoDetail
+      operationId: KatanaRmintrewardClaimInfoDetail
       responses:
         '200':
           description: A successful response.
@@ -28568,10 +28568,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/rmintreward/params:
+  /warmage-sports/katana/rmintreward/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRmintrewardParams
+      operationId: KatanaRmintrewardParams
       responses:
         '200':
           description: A successful response.
@@ -28604,10 +28604,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/user_acts/{address}/{denom}':
+  '/warmage-sports/katana/rmintreward/user_acts/{address}/{denom}':
     get:
       summary: Queries a list of UserActs items.
-      operationId: StafihubStafihubRmintrewardUserActs
+      operationId: KatanaRmintrewardUserActs
       responses:
         '200':
           description: A successful response.
@@ -28651,10 +28651,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
+  '/warmage-sports/katana/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
     get:
       summary: Queries a list of UserMintCount items.
-      operationId: StafihubStafihubRmintrewardUserMintCount
+      operationId: KatanaRmintrewardUserMintCount
       responses:
         '200':
           description: A successful response.
@@ -28698,10 +28698,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /stafihub/stafihub/rstaking/delegator_whitelist:
+  /warmage-sports/katana/rstaking/delegator_whitelist:
     get:
       summary: Queries a list of DelegatorWhitelist items.
-      operationId: StafihubStafihubRstakingDelegatorWhitelist
+      operationId: KatanaRstakingDelegatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28732,10 +28732,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/delegator_whitelist_switch:
+  /warmage-sports/katana/rstaking/delegator_whitelist_switch:
     get:
       summary: Queries a list of DelegatorWhitelistSwitch items.
-      operationId: StafihubStafihubRstakingDelegatorWhitelistSwitch
+      operationId: KatanaRstakingDelegatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28764,10 +28764,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/inflation_base:
+  /warmage-sports/katana/rstaking/inflation_base:
     get:
       summary: Queries a list of InflationBase items.
-      operationId: StafihubStafihubRstakingInflationBase
+      operationId: KatanaRstakingInflationBase
       responses:
         '200':
           description: A successful response.
@@ -28796,10 +28796,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/params:
+  /warmage-sports/katana/rstaking/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRstakingParams
+      operationId: KatanaRstakingParams
       responses:
         '200':
           description: A successful response.
@@ -28832,10 +28832,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/validator_whitelist:
+  /warmage-sports/katana/rstaking/validator_whitelist:
     get:
       summary: Queries a list of ValidatorWhitelist items.
-      operationId: StafihubStafihubRstakingValidatorWhitelist
+      operationId: KatanaRstakingValidatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28866,10 +28866,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /stafihub/stafihub/rstaking/validator_whitelist_switch:
+  /warmage-sports/katana/rstaking/validator_whitelist_switch:
     get:
       summary: Queries a list of WhitelistSwitch items.
-      operationId: StafihubStafihubRstakingValidatorWhitelistSwitch
+      operationId: KatanaRstakingValidatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28898,10 +28898,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/cycle_seconds/{denom}':
+  '/warmage-sports/katana/rvalidator/cycle_seconds/{denom}':
     get:
       summary: Queries a list of CycleSeconds items.
-      operationId: StafihubStafihubRvalidatorCycleSeconds
+      operationId: KatanaRvalidatorCycleSeconds
       responses:
         '200':
           description: A successful response.
@@ -28944,10 +28944,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
+  '/warmage-sports/katana/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestDealedCycle items.
-      operationId: StafihubStafihubRvalidatorLatestDealedCycle
+      operationId: KatanaRvalidatorLatestDealedCycle
       responses:
         '200':
           description: A successful response.
@@ -28996,10 +28996,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
+  '/warmage-sports/katana/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestVotedCycle items.
-      operationId: StafihubStafihubRvalidatorLatestVotedCycle
+      operationId: KatanaRvalidatorLatestVotedCycle
       responses:
         '200':
           description: A successful response.
@@ -29048,10 +29048,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rvalidator/params:
+  /warmage-sports/katana/rvalidator/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: StafihubStafihubRvalidatorParams
+      operationId: KatanaRvalidatorParams
       responses:
         '200':
           description: A successful response.
@@ -29084,10 +29084,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/r_validator_list/{denom}/{poolAddress}':
+  '/warmage-sports/katana/rvalidator/r_validator_list/{denom}/{poolAddress}':
     get:
       summary: Queries a list of RValidatorList items.
-      operationId: StafihubStafihubRvalidatorRValidatorList
+      operationId: KatanaRvalidatorRValidatorList
       responses:
         '200':
           description: A successful response.
@@ -29127,10 +29127,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvalidator/shuffle_seconds/{denom}':
+  '/warmage-sports/katana/rvalidator/shuffle_seconds/{denom}':
     get:
       summary: Queries a list of ShuffleSeconds items.
-      operationId: StafihubStafihubRvalidatorShuffleSeconds
+      operationId: KatanaRvalidatorShuffleSeconds
       responses:
         '200':
           description: A successful response.
@@ -29173,10 +29173,10 @@ paths:
           type: string
       tags:
         - Query
-  '/stafihub/stafihub/rvote/get_proposal/{propId}':
+  '/warmage-sports/katana/rvote/get_proposal/{propId}':
     get:
       summary: Queries a list of getProposal items.
-      operationId: StafihubStafihubRvoteGetProposal
+      operationId: KatanaRvoteGetProposal
       responses:
         '200':
           description: A successful response.
@@ -29377,10 +29377,10 @@ paths:
           type: string
       tags:
         - Query
-  /stafihub/stafihub/rvote/get_proposal_life:
+  /warmage-sports/katana/rvote/get_proposal_life:
     get:
       summary: Queries a list of getProposalLife items.
-      operationId: StafihubStafihubRvoteGetProposalLife
+      operationId: KatanaRvoteGetProposalLife
       responses:
         '200':
           description: A successful response.
@@ -29577,10 +29577,10 @@ paths:
                         }
       tags:
         - Query
-  /stafihub/stafihub/sudo/admin:
+  /warmage-sports/katana/sudo/admin:
     get:
       summary: Queries a list of admin items.
-      operationId: StafihubStafihubSudoAdmin
+      operationId: KatanaSudoAdmin
       responses:
         '200':
           description: A successful response.
@@ -45368,7 +45368,7 @@ definitions:
     description: |-
       Version defines the versioning scheme used to negotiate the IBC verison in
       the connection handshake.
-  stafihub.stafihub.bridge.BannedDenom:
+  katana.katana.bridge.BannedDenom:
     type: object
     properties:
       chainId:
@@ -45376,35 +45376,35 @@ definitions:
         format: int64
       denom:
         type: string
-  stafihub.stafihub.bridge.DenomType:
+  katana.katana.bridge.DenomType:
     type: string
     enum:
       - UNSPECIFIED
       - NATIVE
       - EXTERNAL
     default: UNSPECIFIED
-  stafihub.stafihub.bridge.MsgAddBannedDenomResponse:
+  katana.katana.bridge.MsgAddBannedDenomResponse:
     type: object
-  stafihub.stafihub.bridge.MsgAddChainIdResponse:
+  katana.katana.bridge.MsgAddChainIdResponse:
     type: object
-  stafihub.stafihub.bridge.MsgDepositResponse:
+  katana.katana.bridge.MsgDepositResponse:
     type: object
-  stafihub.stafihub.bridge.MsgRmBannedDenomResponse:
+  katana.katana.bridge.MsgRmBannedDenomResponse:
     type: object
-  stafihub.stafihub.bridge.MsgRmChainIdResponse:
+  katana.katana.bridge.MsgRmChainIdResponse:
     type: object
-  stafihub.stafihub.bridge.MsgSetRelayFeeReceiverResponse:
+  katana.katana.bridge.MsgSetRelayFeeReceiverResponse:
     type: object
-  stafihub.stafihub.bridge.MsgSetRelayFeeResponse:
+  katana.katana.bridge.MsgSetRelayFeeResponse:
     type: object
-  stafihub.stafihub.bridge.MsgSetResourceidToDenomResponse:
+  katana.katana.bridge.MsgSetResourceidToDenomResponse:
     type: object
-  stafihub.stafihub.bridge.MsgVoteProposalResponse:
+  katana.katana.bridge.MsgVoteProposalResponse:
     type: object
-  stafihub.stafihub.bridge.Params:
+  katana.katana.bridge.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.bridge.Proposal:
+  katana.katana.bridge.Proposal:
     type: object
     properties:
       content:
@@ -45420,14 +45420,14 @@ definitions:
         type: array
         items:
           type: string
-  stafihub.stafihub.bridge.ProposalContent:
+  katana.katana.bridge.ProposalContent:
     type: object
     properties:
       amount:
         type: string
       receiver:
         type: string
-  stafihub.stafihub.bridge.QueryBannedDenomListResponse:
+  katana.katana.bridge.QueryBannedDenomListResponse:
     type: object
     properties:
       list:
@@ -45440,7 +45440,7 @@ definitions:
               format: int64
             denom:
               type: string
-  stafihub.stafihub.bridge.QueryChaindIdsResponse:
+  katana.katana.bridge.QueryChaindIdsResponse:
     type: object
     properties:
       chainId:
@@ -45448,20 +45448,20 @@ definitions:
         items:
           type: integer
           format: int64
-  stafihub.stafihub.bridge.QueryGetDepositCountResponse:
+  katana.katana.bridge.QueryGetDepositCountResponse:
     type: object
     properties:
       count:
         type: integer
         format: int64
-  stafihub.stafihub.bridge.QueryParamsResponse:
+  katana.katana.bridge.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.bridge.QueryProposalDetailResponse:
+  katana.katana.bridge.QueryProposalDetailResponse:
     type: object
     properties:
       proposal:
@@ -45480,12 +45480,12 @@ definitions:
             type: array
             items:
               type: string
-  stafihub.stafihub.bridge.QueryRelayFeeReceiverResponse:
+  katana.katana.bridge.QueryRelayFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  stafihub.stafihub.bridge.QueryRelayFeeResponse:
+  katana.katana.bridge.QueryRelayFeeResponse:
     type: object
     properties:
       value:
@@ -45500,7 +45500,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  stafihub.stafihub.bridge.QueryResourceidToDenomsResponse:
+  katana.katana.bridge.QueryResourceidToDenomsResponse:
     type: object
     properties:
       resourceidToDenoms:
@@ -45519,7 +45519,7 @@ definitions:
                 - NATIVE
                 - EXTERNAL
               default: UNSPECIFIED
-  stafihub.stafihub.bridge.ResourceIdToDenom:
+  katana.katana.bridge.ResourceIdToDenom:
     type: object
     properties:
       resourceId:
@@ -45533,37 +45533,37 @@ definitions:
           - NATIVE
           - EXTERNAL
         default: UNSPECIFIED
-  stafihub.stafihub.claim.MsgClaimResponse:
+  katana.katana.claim.MsgClaimResponse:
     type: object
-  stafihub.stafihub.claim.MsgProvideTokenResponse:
+  katana.katana.claim.MsgProvideTokenResponse:
     type: object
-  stafihub.stafihub.claim.MsgSetMerkleRootResponse:
+  katana.katana.claim.MsgSetMerkleRootResponse:
     type: object
-  stafihub.stafihub.claim.MsgToggleClaimSwitchResponse:
+  katana.katana.claim.MsgToggleClaimSwitchResponse:
     type: object
-  stafihub.stafihub.claim.MsgWithdrawTokenResponse:
+  katana.katana.claim.MsgWithdrawTokenResponse:
     type: object
-  stafihub.stafihub.claim.Params:
+  katana.katana.claim.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.claim.QueryClaimSwitchResponse:
+  katana.katana.claim.QueryClaimSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.claim.QueryIsClaimedResponse:
+  katana.katana.claim.QueryIsClaimedResponse:
     type: object
     properties:
       isClaimed:
         type: boolean
-  stafihub.stafihub.claim.QueryParamsResponse:
+  katana.katana.claim.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.ledger.BondPipeline:
+  katana.katana.ledger.BondPipeline:
     type: object
     properties:
       denom:
@@ -45579,7 +45579,7 @@ definitions:
             type: string
           active:
             type: string
-  stafihub.stafihub.ledger.BondRecord:
+  katana.katana.ledger.BondRecord:
     type: object
     properties:
       denom:
@@ -45602,7 +45602,7 @@ definitions:
           - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
           - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
         default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  stafihub.stafihub.ledger.BondSnapshot:
+  katana.katana.ledger.BondSnapshot:
     type: object
     properties:
       denom:
@@ -45630,7 +45630,7 @@ definitions:
           - TRANSFER_SKIPPED
           - TRANSFER_REPORTED
         default: ERA_UPDATED
-  stafihub.stafihub.ledger.EraExchangeRate:
+  katana.katana.ledger.EraExchangeRate:
     type: object
     properties:
       denom:
@@ -45640,14 +45640,14 @@ definitions:
         format: int64
       value:
         type: string
-  stafihub.stafihub.ledger.ExchangeRate:
+  katana.katana.ledger.ExchangeRate:
     type: object
     properties:
       denom:
         type: string
       value:
         type: string
-  stafihub.stafihub.ledger.IcaAccount:
+  katana.katana.ledger.IcaAccount:
     type: object
     properties:
       owner:
@@ -45666,7 +45666,7 @@ definitions:
         type: string
       hostChannelId:
         type: string
-  stafihub.stafihub.ledger.IcaPoolDetail:
+  katana.katana.ledger.IcaPoolDetail:
     type: object
     properties:
       denom:
@@ -45721,7 +45721,7 @@ definitions:
             type: string
           hostChannelId:
             type: string
-  stafihub.stafihub.ledger.IcaPoolStatus:
+  katana.katana.ledger.IcaPoolStatus:
     type: string
     enum:
       - ICA_POOL_STATUS_UNSPECIFIED
@@ -45730,7 +45730,7 @@ definitions:
       - ICA_POOL_STATUS_CREATE_TWO
       - ICA_POOL_STATUS_SET_WITHDRAWAL
     default: ICA_POOL_STATUS_UNSPECIFIED
-  stafihub.stafihub.ledger.InterchainTxStatus:
+  katana.katana.ledger.InterchainTxStatus:
     type: string
     enum:
       - INTERCHAIN_TX_STATUS_UNSPECIFIED
@@ -45738,7 +45738,7 @@ definitions:
       - INTERCHAIN_TX_STATUS_SUCCESS
       - INTERCHAIN_TX_STATUS_FAILED
     default: INTERCHAIN_TX_STATUS_UNSPECIFIED
-  stafihub.stafihub.ledger.LinkChunk:
+  katana.katana.ledger.LinkChunk:
     type: object
     properties:
       bond:
@@ -45747,7 +45747,7 @@ definitions:
         type: string
       active:
         type: string
-  stafihub.stafihub.ledger.LiquidityBondState:
+  katana.katana.ledger.LiquidityBondState:
     type: string
     enum:
       - LIQUIDITY_BOND_STATE_VERIFY_OK
@@ -45757,53 +45757,53 @@ definitions:
       - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
       - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
     default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  stafihub.stafihub.ledger.MsgClearCurrentEraSnapShotsResponse:
+  katana.katana.ledger.MsgClearCurrentEraSnapShotsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgInitPoolResponse:
+  katana.katana.ledger.MsgInitPoolResponse:
     type: object
-  stafihub.stafihub.ledger.MsgLiquidityUnbondResponse:
+  katana.katana.ledger.MsgLiquidityUnbondResponse:
     type: object
-  stafihub.stafihub.ledger.MsgMigrateInitResponse:
+  katana.katana.ledger.MsgMigrateInitResponse:
     type: object
-  stafihub.stafihub.ledger.MsgMigrateUnbondingsResponse:
+  katana.katana.ledger.MsgMigrateUnbondingsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgRegisterIcaPoolResponse:
+  katana.katana.ledger.MsgRegisterIcaPoolResponse:
     type: object
-  stafihub.stafihub.ledger.MsgRmBondedPoolResponse:
+  katana.katana.ledger.MsgRmBondedPoolResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetEraSecondsResponse:
+  katana.katana.ledger.MsgSetEraSecondsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetEraUnbondLimitResponse:
+  katana.katana.ledger.MsgSetEraUnbondLimitResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetLeastBondResponse:
+  katana.katana.ledger.MsgSetLeastBondResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetPoolDetailResponse:
+  katana.katana.ledger.MsgSetPoolDetailResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetPoolStatusResponse:
+  katana.katana.ledger.MsgSetPoolStatusResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetProtocolFeeReceiverResponse:
+  katana.katana.ledger.MsgSetProtocolFeeReceiverResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetRParamsResponse:
+  katana.katana.ledger.MsgSetRParamsResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetRelayFeeReceiverResponse:
+  katana.katana.ledger.MsgSetRelayFeeReceiverResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetRelayGasPriceResponse:
+  katana.katana.ledger.MsgSetRelayGasPriceResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetStakingRewardCommissionResponse:
+  katana.katana.ledger.MsgSetStakingRewardCommissionResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetUnbondCommissionResponse:
+  katana.katana.ledger.MsgSetUnbondCommissionResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetUnbondRelayFeeResponse:
+  katana.katana.ledger.MsgSetUnbondRelayFeeResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSetWithdrawalAddrResponse:
+  katana.katana.ledger.MsgSetWithdrawalAddrResponse:
     type: object
-  stafihub.stafihub.ledger.MsgSubmitSignatureResponse:
+  katana.katana.ledger.MsgSubmitSignatureResponse:
     type: object
-  stafihub.stafihub.ledger.MsgToggleUnbondSwitchResponse:
+  katana.katana.ledger.MsgToggleUnbondSwitchResponse:
     type: object
-  stafihub.stafihub.ledger.MsgUnsealMigrateInitResponse:
+  katana.katana.ledger.MsgUnsealMigrateInitResponse:
     type: object
-  stafihub.stafihub.ledger.OriginalTxType:
+  katana.katana.ledger.OriginalTxType:
     type: string
     enum:
       - ORIGINAL_TX_TYPE_DEAL_ERAUPDATED
@@ -45813,7 +45813,7 @@ definitions:
       - ORIGINAL_TX_TYPE_RESERVED
     default: ORIGINAL_TX_TYPE_DEAL_ERAUPDATED
     description: OriginalTxType enumerates the tx type of a signature.
-  stafihub.stafihub.ledger.PoolBondState:
+  katana.katana.ledger.PoolBondState:
     type: string
     enum:
       - ERA_UPDATED
@@ -45822,7 +45822,7 @@ definitions:
       - TRANSFER_SKIPPED
       - TRANSFER_REPORTED
     default: ERA_UPDATED
-  stafihub.stafihub.ledger.PoolDetail:
+  katana.katana.ledger.PoolDetail:
     type: object
     properties:
       denom:
@@ -45843,21 +45843,21 @@ definitions:
           - NOT_ACTIVE
           - RESERVED
         default: ACTIVE
-  stafihub.stafihub.ledger.PoolStatus:
+  katana.katana.ledger.PoolStatus:
     type: string
     enum:
       - ACTIVE
       - NOT_ACTIVE
       - RESERVED
     default: ACTIVE
-  stafihub.stafihub.ledger.QueryBondedPoolsByDenomResponse:
+  katana.katana.ledger.QueryBondedPoolsByDenomResponse:
     type: object
     properties:
       addrs:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.QueryEraExchangeRatesByDenomResponse:
+  katana.katana.ledger.QueryEraExchangeRatesByDenomResponse:
     type: object
     properties:
       eraExchangeRates:
@@ -45872,7 +45872,7 @@ definitions:
               format: int64
             value:
               type: string
-  stafihub.stafihub.ledger.QueryExchangeRateAllResponse:
+  katana.katana.ledger.QueryExchangeRateAllResponse:
     type: object
     properties:
       exchangeRates:
@@ -45884,7 +45884,7 @@ definitions:
               type: string
             value:
               type: string
-  stafihub.stafihub.ledger.QueryGetBondPipelineResponse:
+  katana.katana.ledger.QueryGetBondPipelineResponse:
     type: object
     properties:
       pipeline:
@@ -45903,7 +45903,7 @@ definitions:
                 type: string
               active:
                 type: string
-  stafihub.stafihub.ledger.QueryGetBondRecordResponse:
+  katana.katana.ledger.QueryGetBondRecordResponse:
     type: object
     properties:
       bondRecord:
@@ -45929,20 +45929,20 @@ definitions:
               - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
               - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
             default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  stafihub.stafihub.ledger.QueryGetChainEraResponse:
+  katana.katana.ledger.QueryGetChainEraResponse:
     type: object
     properties:
       era:
         type: integer
         format: int64
-  stafihub.stafihub.ledger.QueryGetCurrentEraSnapshotResponse:
+  katana.katana.ledger.QueryGetCurrentEraSnapshotResponse:
     type: object
     properties:
       shotIds:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.QueryGetEraExchangeRateResponse:
+  katana.katana.ledger.QueryGetEraExchangeRateResponse:
     type: object
     properties:
       eraExchangeRate:
@@ -45955,20 +45955,20 @@ definitions:
             format: int64
           value:
             type: string
-  stafihub.stafihub.ledger.QueryGetEraSnapshotResponse:
+  katana.katana.ledger.QueryGetEraSnapshotResponse:
     type: object
     properties:
       shotIds:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.QueryGetEraUnbondLimitResponse:
+  katana.katana.ledger.QueryGetEraUnbondLimitResponse:
     type: object
     properties:
       limit:
         type: integer
         format: int64
-  stafihub.stafihub.ledger.QueryGetExchangeRateResponse:
+  katana.katana.ledger.QueryGetExchangeRateResponse:
     type: object
     properties:
       exchangeRate:
@@ -45978,7 +45978,7 @@ definitions:
             type: string
           value:
             type: string
-  stafihub.stafihub.ledger.QueryGetPoolDetailResponse:
+  katana.katana.ledger.QueryGetPoolDetailResponse:
     type: object
     properties:
       detail:
@@ -46002,12 +46002,12 @@ definitions:
               - NOT_ACTIVE
               - RESERVED
             default: ACTIVE
-  stafihub.stafihub.ledger.QueryGetProtocolFeeReceiverResponse:
+  katana.katana.ledger.QueryGetProtocolFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  stafihub.stafihub.ledger.QueryGetRParamsResponse:
+  katana.katana.ledger.QueryGetRParamsResponse:
     type: object
     properties:
       rParams:
@@ -46028,7 +46028,7 @@ definitions:
             format: int64
           leastBond:
             type: string
-  stafihub.stafihub.ledger.QueryGetSignatureResponse:
+  katana.katana.ledger.QueryGetSignatureResponse:
     type: object
     properties:
       signature:
@@ -46057,7 +46057,7 @@ definitions:
             type: array
             items:
               type: string
-  stafihub.stafihub.ledger.QueryGetSnapshotResponse:
+  katana.katana.ledger.QueryGetSnapshotResponse:
     type: object
     properties:
       shot:
@@ -46088,22 +46088,22 @@ definitions:
               - TRANSFER_SKIPPED
               - TRANSFER_REPORTED
             default: ERA_UPDATED
-  stafihub.stafihub.ledger.QueryGetStakingRewardCommissionResponse:
+  katana.katana.ledger.QueryGetStakingRewardCommissionResponse:
     type: object
     properties:
       commission:
         type: string
-  stafihub.stafihub.ledger.QueryGetTotalExpectedActiveResponse:
+  katana.katana.ledger.QueryGetTotalExpectedActiveResponse:
     type: object
     properties:
       active:
         type: string
-  stafihub.stafihub.ledger.QueryGetUnbondCommissionResponse:
+  katana.katana.ledger.QueryGetUnbondCommissionResponse:
     type: object
     properties:
       commission:
         type: string
-  stafihub.stafihub.ledger.QueryGetUnbondRelayFeeResponse:
+  katana.katana.ledger.QueryGetUnbondRelayFeeResponse:
     type: object
     properties:
       fee:
@@ -46126,7 +46126,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  stafihub.stafihub.ledger.QueryIcaPoolListResponse:
+  katana.katana.ledger.QueryIcaPoolListResponse:
     type: object
     properties:
       icaPoolList:
@@ -46186,7 +46186,7 @@ definitions:
                   type: string
                 hostChannelId:
                   type: string
-  stafihub.stafihub.ledger.QueryInterchainTxStatusResponse:
+  katana.katana.ledger.QueryInterchainTxStatusResponse:
     type: object
     properties:
       interchainTxStatus:
@@ -46197,13 +46197,13 @@ definitions:
           - INTERCHAIN_TX_STATUS_SUCCESS
           - INTERCHAIN_TX_STATUS_FAILED
         default: INTERCHAIN_TX_STATUS_UNSPECIFIED
-  stafihub.stafihub.ledger.QueryPoolUnbondNextSequenceResponse:
+  katana.katana.ledger.QueryPoolUnbondNextSequenceResponse:
     type: object
     properties:
       nextSequence:
         type: integer
         format: int64
-  stafihub.stafihub.ledger.QueryPoolUnbondingsResponse:
+  katana.katana.ledger.QueryPoolUnbondingsResponse:
     type: object
     properties:
       unbondings:
@@ -46217,12 +46217,12 @@ definitions:
               type: string
             recipient:
               type: string
-  stafihub.stafihub.ledger.QueryRelayFeeReceiverResponse:
+  katana.katana.ledger.QueryRelayFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  stafihub.stafihub.ledger.QueryTotalProtocolFeeResponse:
+  katana.katana.ledger.QueryTotalProtocolFeeResponse:
     type: object
     properties:
       totalProtocolFeeList:
@@ -46234,12 +46234,12 @@ definitions:
               type: string
             value:
               type: string
-  stafihub.stafihub.ledger.QueryUnbondSwitchResponse:
+  katana.katana.ledger.QueryUnbondSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.ledger.RParams:
+  katana.katana.ledger.RParams:
     type: object
     properties:
       denom:
@@ -46257,7 +46257,7 @@ definitions:
         format: int64
       leastBond:
         type: string
-  stafihub.stafihub.ledger.Signature:
+  katana.katana.ledger.Signature:
     type: object
     properties:
       denom:
@@ -46283,14 +46283,14 @@ definitions:
         type: array
         items:
           type: string
-  stafihub.stafihub.ledger.TotalProtocolFee:
+  katana.katana.ledger.TotalProtocolFee:
     type: object
     properties:
       denom:
         type: string
       value:
         type: string
-  stafihub.stafihub.ledger.UnbondRelayFee:
+  katana.katana.ledger.UnbondRelayFee:
     type: object
     properties:
       denom:
@@ -46307,7 +46307,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  stafihub.stafihub.ledger.Unbonding:
+  katana.katana.ledger.Unbonding:
     type: object
     properties:
       unbonder:
@@ -46316,7 +46316,7 @@ definitions:
         type: string
       recipient:
         type: string
-  stafihub.stafihub.mining.CreateRewardPoolInfo:
+  katana.katana.mining.CreateRewardPoolInfo:
     type: object
     properties:
       rewardTokenDenom:
@@ -46328,7 +46328,7 @@ definitions:
       startTimestamp:
         type: string
         format: uint64
-  stafihub.stafihub.mining.CreateStakeItemInfo:
+  katana.katana.mining.CreateStakeItemInfo:
     type: object
     properties:
       lockSecond:
@@ -46337,85 +46337,85 @@ definitions:
       powerRewardRate:
         type: string
         title: user stakedPower = powerRewardRate * stakedAmount
-  stafihub.stafihub.mining.MsgAddMiningProviderResponse:
+  katana.katana.mining.MsgAddMiningProviderResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddRewardPoolResponse:
+  katana.katana.mining.MsgAddRewardPoolResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddRewardResponse:
+  katana.katana.mining.MsgAddRewardResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddRewardTokenResponse:
+  katana.katana.mining.MsgAddRewardTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddStakeItemResponse:
+  katana.katana.mining.MsgAddStakeItemResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddStakePoolResponse:
+  katana.katana.mining.MsgAddStakePoolResponse:
     type: object
-  stafihub.stafihub.mining.MsgAddStakeTokenResponse:
+  katana.katana.mining.MsgAddStakeTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgClaimRewardResponse:
+  katana.katana.mining.MsgClaimRewardResponse:
     type: object
-  stafihub.stafihub.mining.MsgEmergencyWithdrawResponse:
+  katana.katana.mining.MsgEmergencyWithdrawResponse:
     type: object
-  stafihub.stafihub.mining.MsgRmMiningProviderResponse:
+  katana.katana.mining.MsgRmMiningProviderResponse:
     type: object
-  stafihub.stafihub.mining.MsgRmRewardTokenResponse:
+  katana.katana.mining.MsgRmRewardTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgRmStakeTokenResponse:
+  katana.katana.mining.MsgRmStakeTokenResponse:
     type: object
-  stafihub.stafihub.mining.MsgSetMaxRewardPoolNumberResponse:
+  katana.katana.mining.MsgSetMaxRewardPoolNumberResponse:
     type: object
-  stafihub.stafihub.mining.MsgSetMaxStakeItemNumberResponse:
+  katana.katana.mining.MsgSetMaxStakeItemNumberResponse:
     type: object
-  stafihub.stafihub.mining.MsgSetStakeItemLimitResponse:
+  katana.katana.mining.MsgSetStakeItemLimitResponse:
     type: object
-  stafihub.stafihub.mining.MsgStakeResponse:
+  katana.katana.mining.MsgStakeResponse:
     type: object
-  stafihub.stafihub.mining.MsgToggleEmergencySwitchResponse:
+  katana.katana.mining.MsgToggleEmergencySwitchResponse:
     type: object
-  stafihub.stafihub.mining.MsgToggleProviderSwitchResponse:
+  katana.katana.mining.MsgToggleProviderSwitchResponse:
     type: object
-  stafihub.stafihub.mining.MsgUpdateRewardPoolResponse:
+  katana.katana.mining.MsgUpdateRewardPoolResponse:
     type: object
-  stafihub.stafihub.mining.MsgUpdateStakeItemResponse:
+  katana.katana.mining.MsgUpdateStakeItemResponse:
     type: object
-  stafihub.stafihub.mining.MsgWithdrawResponse:
+  katana.katana.mining.MsgWithdrawResponse:
     type: object
-  stafihub.stafihub.mining.MsgWithdrawRewardTokenResponse:
+  katana.katana.mining.MsgWithdrawRewardTokenResponse:
     type: object
-  stafihub.stafihub.mining.Params:
+  katana.katana.mining.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.mining.QueryMaxRewardPoolNumberResponse:
+  katana.katana.mining.QueryMaxRewardPoolNumberResponse:
     type: object
     properties:
       number:
         type: integer
         format: int64
-  stafihub.stafihub.mining.QueryMaxStakeItemNumberResponse:
+  katana.katana.mining.QueryMaxStakeItemNumberResponse:
     type: object
     properties:
       number:
         type: integer
         format: int64
-  stafihub.stafihub.mining.QueryMiningProviderListResponse:
+  katana.katana.mining.QueryMiningProviderListResponse:
     type: object
     properties:
       miningProviderList:
         type: array
         items:
           type: string
-  stafihub.stafihub.mining.QueryParamsResponse:
+  katana.katana.mining.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.mining.QueryProviderSwitchResponse:
+  katana.katana.mining.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  stafihub.stafihub.mining.QueryRewardTokenListResponse:
+  katana.katana.mining.QueryRewardTokenListResponse:
     type: object
     properties:
       rewardTokenList:
@@ -46429,7 +46429,7 @@ definitions:
               type: string
             minRewardPerSecond:
               type: string
-  stafihub.stafihub.mining.QueryStakeItemListResponse:
+  katana.katana.mining.QueryStakeItemListResponse:
     type: object
     properties:
       stakeItemList:
@@ -46451,7 +46451,7 @@ definitions:
               title: user stakedPower = powerRewardRate * stakedAmount
             enable:
               type: boolean
-  stafihub.stafihub.mining.QueryStakePoolInfoResponse:
+  katana.katana.mining.QueryStakePoolInfoResponse:
     type: object
     properties:
       stakePool:
@@ -46500,7 +46500,7 @@ definitions:
             type: boolean
           creator:
             type: string
-  stafihub.stafihub.mining.QueryStakePoolListResponse:
+  katana.katana.mining.QueryStakePoolListResponse:
     type: object
     properties:
       stakePoolList:
@@ -46551,13 +46551,13 @@ definitions:
               type: boolean
             creator:
               type: string
-  stafihub.stafihub.mining.QueryStakeRecordCountResponse:
+  katana.katana.mining.QueryStakeRecordCountResponse:
     type: object
     properties:
       count:
         type: integer
         format: int64
-  stafihub.stafihub.mining.QueryStakeRecordListResponse:
+  katana.katana.mining.QueryStakeRecordListResponse:
     type: object
     properties:
       stakeRecordList:
@@ -46602,7 +46602,7 @@ definitions:
             stakeItemIndex:
               type: integer
               format: int64
-  stafihub.stafihub.mining.QueryStakeRecordResponse:
+  katana.katana.mining.QueryStakeRecordResponse:
     type: object
     properties:
       stakeRecord:
@@ -46645,7 +46645,7 @@ definitions:
           stakeItemIndex:
             type: integer
             format: int64
-  stafihub.stafihub.mining.QueryStakeRewardResponse:
+  katana.katana.mining.QueryStakeRewardResponse:
     type: object
     properties:
       rewardTokens:
@@ -46662,7 +46662,7 @@ definitions:
 
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
-  stafihub.stafihub.mining.RewardPool:
+  katana.katana.mining.RewardPool:
     type: object
     properties:
       index:
@@ -46688,7 +46688,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  stafihub.stafihub.mining.RewardToken:
+  katana.katana.mining.RewardToken:
     type: object
     properties:
       rewardTokenDenom:
@@ -46697,7 +46697,7 @@ definitions:
         type: string
       minRewardPerSecond:
         type: string
-  stafihub.stafihub.mining.StakeItem:
+  katana.katana.mining.StakeItem:
     type: object
     properties:
       index:
@@ -46714,7 +46714,7 @@ definitions:
         title: user stakedPower = powerRewardRate * stakedAmount
       enable:
         type: boolean
-  stafihub.stafihub.mining.StakePool:
+  katana.katana.mining.StakePool:
     type: object
     properties:
       index:
@@ -46760,7 +46760,7 @@ definitions:
         type: boolean
       creator:
         type: string
-  stafihub.stafihub.mining.UserRewardInfo:
+  katana.katana.mining.UserRewardInfo:
     type: object
     properties:
       rewardPoolIndex:
@@ -46772,7 +46772,7 @@ definitions:
         type: string
       claimedAmount:
         type: string
-  stafihub.stafihub.mining.UserStakeRecord:
+  katana.katana.mining.UserStakeRecord:
     type: object
     properties:
       userAddress:
@@ -46906,73 +46906,73 @@ definitions:
     description: |-
       Metadata represents a struct that describes
       a basic token.
-  stafihub.stafihub.rbank.MsgAddDenomResponse:
+  katana.katana.rbank.MsgAddDenomResponse:
     type: object
-  stafihub.stafihub.rbank.Params:
+  katana.katana.rbank.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rbank.QueryAddressPrefixResponse:
+  katana.katana.rbank.QueryAddressPrefixResponse:
     type: object
     properties:
       accAddressPrefix:
         type: string
       valAddressPrefix:
         type: string
-  stafihub.stafihub.rbank.QueryParamsResponse:
+  katana.katana.rbank.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rdex.MsgAddLiquidityResponse:
+  katana.katana.rdex.MsgAddLiquidityResponse:
     type: object
-  stafihub.stafihub.rdex.MsgAddPoolCreatorResponse:
+  katana.katana.rdex.MsgAddPoolCreatorResponse:
     type: object
-  stafihub.stafihub.rdex.MsgAddProviderResponse:
+  katana.katana.rdex.MsgAddProviderResponse:
     type: object
-  stafihub.stafihub.rdex.MsgCreatePoolResponse:
+  katana.katana.rdex.MsgCreatePoolResponse:
     type: object
-  stafihub.stafihub.rdex.MsgRemoveLiquidityResponse:
+  katana.katana.rdex.MsgRemoveLiquidityResponse:
     type: object
-  stafihub.stafihub.rdex.MsgRmPoolCreatorResponse:
+  katana.katana.rdex.MsgRmPoolCreatorResponse:
     type: object
-  stafihub.stafihub.rdex.MsgRmProviderResponse:
+  katana.katana.rdex.MsgRmProviderResponse:
     type: object
-  stafihub.stafihub.rdex.MsgSwapResponse:
+  katana.katana.rdex.MsgSwapResponse:
     type: object
-  stafihub.stafihub.rdex.MsgToggleProviderSwitchResponse:
+  katana.katana.rdex.MsgToggleProviderSwitchResponse:
     type: object
-  stafihub.stafihub.rdex.Params:
+  katana.katana.rdex.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rdex.QueryParamsResponse:
+  katana.katana.rdex.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rdex.QueryPoolCreatorListResponse:
+  katana.katana.rdex.QueryPoolCreatorListResponse:
     type: object
     properties:
       poolCreatorList:
         type: array
         items:
           type: string
-  stafihub.stafihub.rdex.QueryProviderListResponse:
+  katana.katana.rdex.QueryProviderListResponse:
     type: object
     properties:
       providerList:
         type: array
         items:
           type: string
-  stafihub.stafihub.rdex.QueryProviderSwitchResponse:
+  katana.katana.rdex.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  stafihub.stafihub.rdex.QuerySwapPoolInfoResponse:
+  katana.katana.rdex.QuerySwapPoolInfoResponse:
     type: object
     properties:
       swapPool:
@@ -47026,7 +47026,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  stafihub.stafihub.rdex.QuerySwapPoolListResponse:
+  katana.katana.rdex.QuerySwapPoolListResponse:
     type: object
     properties:
       swapPoolList:
@@ -47082,7 +47082,7 @@ definitions:
                 method
 
                 signatures required by gogoproto.
-  stafihub.stafihub.rdex.SwapPool:
+  katana.katana.rdex.SwapPool:
     type: object
     properties:
       index:
@@ -47124,26 +47124,26 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  stafihub.stafihub.relayers.MsgAddRelayerResponse:
+  katana.katana.relayers.MsgAddRelayerResponse:
     type: object
-  stafihub.stafihub.relayers.MsgDeleteRelayerResponse:
+  katana.katana.relayers.MsgDeleteRelayerResponse:
     type: object
-  stafihub.stafihub.relayers.MsgSetThresholdResponse:
+  katana.katana.relayers.MsgSetThresholdResponse:
     type: object
-  stafihub.stafihub.relayers.QueryRelayersResponse:
+  katana.katana.relayers.QueryRelayersResponse:
     type: object
     properties:
       relayers:
         type: array
         items:
           type: string
-  stafihub.stafihub.relayers.QueryThresholdResponse:
+  katana.katana.relayers.QueryThresholdResponse:
     type: object
     properties:
       threshold:
         type: integer
         format: int64
-  stafihub.stafihub.rmintreward.Acts:
+  katana.katana.rmintreward.Acts:
     type: object
     properties:
       acts:
@@ -47151,7 +47151,7 @@ definitions:
         items:
           type: string
           format: uint64
-  stafihub.stafihub.rmintreward.MintRewardAct:
+  katana.katana.rmintreward.MintRewardAct:
     type: object
     properties:
       begin:
@@ -47182,7 +47182,7 @@ definitions:
               type: string
             userLimit:
               type: string
-  stafihub.stafihub.rmintreward.MintRewardActPost:
+  katana.katana.rmintreward.MintRewardActPost:
     type: object
     properties:
       begin:
@@ -47207,24 +47207,24 @@ definitions:
               type: string
             userLimit:
               type: string
-  stafihub.stafihub.rmintreward.MsgAddMintRewardActResponse:
+  katana.katana.rmintreward.MsgAddMintRewardActResponse:
     type: object
-  stafihub.stafihub.rmintreward.MsgClaimMintRewardResponse:
+  katana.katana.rmintreward.MsgClaimMintRewardResponse:
     type: object
-  stafihub.stafihub.rmintreward.MsgProvideRewardTokenResponse:
+  katana.katana.rmintreward.MsgProvideRewardTokenResponse:
     type: object
-  stafihub.stafihub.rmintreward.MsgUpdateMintRewardActResponse:
+  katana.katana.rmintreward.MsgUpdateMintRewardActResponse:
     type: object
-  stafihub.stafihub.rmintreward.Params:
+  katana.katana.rmintreward.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rmintreward.QueryActCurrentCycleResponse:
+  katana.katana.rmintreward.QueryActCurrentCycleResponse:
     type: object
     properties:
       currentCycle:
         type: string
         format: uint64
-  stafihub.stafihub.rmintreward.QueryActDetailResponse:
+  katana.katana.rmintreward.QueryActDetailResponse:
     type: object
     properties:
       act:
@@ -47258,13 +47258,13 @@ definitions:
                   type: string
                 userLimit:
                   type: string
-  stafihub.stafihub.rmintreward.QueryActLatestCycleResponse:
+  katana.katana.rmintreward.QueryActLatestCycleResponse:
     type: object
     properties:
       latestCycle:
         type: string
         format: uint64
-  stafihub.stafihub.rmintreward.QueryClaimInfoDetailResponse:
+  katana.katana.rmintreward.QueryClaimInfoDetailResponse:
     type: object
     properties:
       claimInfo:
@@ -47291,14 +47291,14 @@ definitions:
                   type: string
                 totalClaimedAmount:
                   type: string
-  stafihub.stafihub.rmintreward.QueryParamsResponse:
+  katana.katana.rmintreward.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rmintreward.QueryUserActsResponse:
+  katana.katana.rmintreward.QueryUserActsResponse:
     type: object
     properties:
       acts:
@@ -47309,13 +47309,13 @@ definitions:
             items:
               type: string
               format: uint64
-  stafihub.stafihub.rmintreward.QueryUserMintCountResponse:
+  katana.katana.rmintreward.QueryUserMintCountResponse:
     type: object
     properties:
       count:
         type: string
         format: uint64
-  stafihub.stafihub.rmintreward.TokenClaimInfo:
+  katana.katana.rmintreward.TokenClaimInfo:
     type: object
     properties:
       denom:
@@ -47324,7 +47324,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  stafihub.stafihub.rmintreward.TokenRewardInfo:
+  katana.katana.rmintreward.TokenRewardInfo:
     type: object
     properties:
       denom:
@@ -47337,7 +47337,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  stafihub.stafihub.rmintreward.TokenRewardInfoPost:
+  katana.katana.rmintreward.TokenRewardInfoPost:
     type: object
     properties:
       denom:
@@ -47348,7 +47348,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  stafihub.stafihub.rmintreward.UserClaimInfo:
+  katana.katana.rmintreward.UserClaimInfo:
     type: object
     properties:
       mintRTokenAmount:
@@ -47372,62 +47372,62 @@ definitions:
               type: string
             totalClaimedAmount:
               type: string
-  stafihub.stafihub.rstaking.MsgAddDelegatorToWhitelistResponse:
+  katana.katana.rstaking.MsgAddDelegatorToWhitelistResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgAddValToWhitelistResponse:
+  katana.katana.rstaking.MsgAddValToWhitelistResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgProvideTokenResponse:
+  katana.katana.rstaking.MsgProvideTokenResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgRmDelegatorFromWhitelistResponse:
+  katana.katana.rstaking.MsgRmDelegatorFromWhitelistResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgSetInflationBaseResponse:
+  katana.katana.rstaking.MsgSetInflationBaseResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
+  katana.katana.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
+  katana.katana.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
     type: object
-  stafihub.stafihub.rstaking.MsgWithdrawResponse:
+  katana.katana.rstaking.MsgWithdrawResponse:
     type: object
-  stafihub.stafihub.rstaking.Params:
+  katana.katana.rstaking.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rstaking.QueryDelegatorWhitelistResponse:
+  katana.katana.rstaking.QueryDelegatorWhitelistResponse:
     type: object
     properties:
       delegatorAddress:
         type: array
         items:
           type: string
-  stafihub.stafihub.rstaking.QueryDelegatorWhitelistSwitchResponse:
+  katana.katana.rstaking.QueryDelegatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.rstaking.QueryInflationBaseResponse:
+  katana.katana.rstaking.QueryInflationBaseResponse:
     type: object
     properties:
       inflationBase:
         type: string
-  stafihub.stafihub.rstaking.QueryParamsResponse:
+  katana.katana.rstaking.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rstaking.QueryValidatorWhitelistResponse:
+  katana.katana.rstaking.QueryValidatorWhitelistResponse:
     type: object
     properties:
       valAddress:
         type: array
         items:
           type: string
-  stafihub.stafihub.rstaking.QueryValidatorWhitelistSwitchResponse:
+  katana.katana.rstaking.QueryValidatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  stafihub.stafihub.rvalidator.Cycle:
+  katana.katana.rvalidator.Cycle:
     type: object
     properties:
       denom:
@@ -47440,7 +47440,7 @@ definitions:
       number:
         type: string
         format: uint64
-  stafihub.stafihub.rvalidator.CycleSeconds:
+  katana.katana.rvalidator.CycleSeconds:
     type: object
     properties:
       denom:
@@ -47451,20 +47451,20 @@ definitions:
       seconds:
         type: string
         format: uint64
-  stafihub.stafihub.rvalidator.MsgAddRValidatorResponse:
+  katana.katana.rvalidator.MsgAddRValidatorResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgInitRValidatorResponse:
+  katana.katana.rvalidator.MsgInitRValidatorResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgRmRValidatorResponse:
+  katana.katana.rvalidator.MsgRmRValidatorResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgSetCycleSecondsResponse:
+  katana.katana.rvalidator.MsgSetCycleSecondsResponse:
     type: object
-  stafihub.stafihub.rvalidator.MsgSetShuffleSecondsResponse:
+  katana.katana.rvalidator.MsgSetShuffleSecondsResponse:
     type: object
-  stafihub.stafihub.rvalidator.Params:
+  katana.katana.rvalidator.Params:
     type: object
     description: Params defines the parameters for the module.
-  stafihub.stafihub.rvalidator.QueryCycleSecondsResponse:
+  katana.katana.rvalidator.QueryCycleSecondsResponse:
     type: object
     properties:
       cycleSeconds:
@@ -47478,7 +47478,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.QueryLatestDealedCycleResponse:
+  katana.katana.rvalidator.QueryLatestDealedCycleResponse:
     type: object
     properties:
       latestDealedCycle:
@@ -47494,7 +47494,7 @@ definitions:
           number:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.QueryLatestVotedCycleResponse:
+  katana.katana.rvalidator.QueryLatestVotedCycleResponse:
     type: object
     properties:
       latestVotedCycle:
@@ -47510,21 +47510,21 @@ definitions:
           number:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.QueryParamsResponse:
+  katana.katana.rvalidator.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  stafihub.stafihub.rvalidator.QueryRValidatorListResponse:
+  katana.katana.rvalidator.QueryRValidatorListResponse:
     type: object
     properties:
       rValidatorList:
         type: array
         items:
           type: string
-  stafihub.stafihub.rvalidator.QueryShuffleSecondsResponse:
+  katana.katana.rvalidator.QueryShuffleSecondsResponse:
     type: object
     properties:
       shuffleSeconds:
@@ -47538,7 +47538,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  stafihub.stafihub.rvalidator.ShuffleSeconds:
+  katana.katana.rvalidator.ShuffleSeconds:
     type: object
     properties:
       denom:
@@ -47549,9 +47549,9 @@ definitions:
       seconds:
         type: string
         format: uint64
-  stafihub.stafihub.rvote.MsgSetProposalLifeResponse:
+  katana.katana.rvote.MsgSetProposalLifeResponse:
     type: object
-  stafihub.stafihub.rvote.MsgSubmitProposalResponse:
+  katana.katana.rvote.MsgSubmitProposalResponse:
     type: object
     properties:
       propId:
@@ -47564,7 +47564,7 @@ definitions:
           - PROPOSAL_STATUS_EXPIRED
         default: PROPOSAL_STATUS_INITIATED
         description: ProposalStatus enumerates the valid statuses of a proposal.
-  stafihub.stafihub.rvote.ProposalStatus:
+  katana.katana.rvote.ProposalStatus:
     type: string
     enum:
       - PROPOSAL_STATUS_INITIATED
@@ -47572,20 +47572,20 @@ definitions:
       - PROPOSAL_STATUS_EXPIRED
     default: PROPOSAL_STATUS_INITIATED
     description: ProposalStatus enumerates the valid statuses of a proposal.
-  stafihub.stafihub.rvote.QueryGetProposalLifeResponse:
+  katana.katana.rvote.QueryGetProposalLifeResponse:
     type: object
     properties:
       proposalLife:
         type: string
         format: int64
-  stafihub.stafihub.rvote.QueryGetProposalResponse:
+  katana.katana.rvote.QueryGetProposalResponse:
     type: object
     properties:
       proposal:
         type: string
-  stafihub.stafihub.sudo.MsgUpdateAdminResponse:
+  katana.katana.sudo.MsgUpdateAdminResponse:
     type: object
-  stafihub.stafihub.sudo.QueryAdminResponse:
+  katana.katana.sudo.QueryAdminResponse:
     type: object
     properties:
       address:

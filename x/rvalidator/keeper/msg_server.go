@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/rvalidator/types"
+	"github.com/warmage-sports/katana/x/rvalidator/types"
 )
 
 type msgServer struct {

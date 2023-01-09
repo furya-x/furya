@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/stafihub/stafihub/testutil/sample"
-	"github.com/stafihub/stafihub/utils"
-	"github.com/stafihub/stafihub/x/mining/types"
+	"github.com/warmage-sports/katana/testutil/sample"
+	"github.com/warmage-sports/katana/utils"
+	"github.com/warmage-sports/katana/x/mining/types"
 	"github.com/stretchr/testify/require"
 )
 

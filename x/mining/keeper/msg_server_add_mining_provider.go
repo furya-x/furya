@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/mining/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/mining/types"
+	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) AddMiningProvider(goCtx context.Context, msg *types.MsgAddMiningProvider) (*types.MsgAddMiningProviderResponse, error) {

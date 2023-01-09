@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/rvalidator/types"
-	sudoTypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/rvalidator/types"
+	sudoTypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) SetCycleSeconds(goCtx context.Context, msg *types.MsgSetCycleSeconds) (*types.MsgSetCycleSecondsResponse, error) {

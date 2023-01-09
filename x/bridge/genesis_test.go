@@ -3,10 +3,10 @@ package bridge_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/bridge"
-	"github.com/stafihub/stafihub/x/bridge/types"
+	keepertest "github.com/warmage-sports/katana/testutil/keeper"
+	"github.com/warmage-sports/katana/testutil/nullify"
+	"github.com/warmage-sports/katana/x/bridge"
+	"github.com/warmage-sports/katana/x/bridge/types"
 	"github.com/stretchr/testify/require"
 )
 

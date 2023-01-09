@@ -4,11 +4,11 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	ledgertypes "github.com/stafihub/stafihub/x/ledger/types"
-	relayerstypes "github.com/stafihub/stafihub/x/relayers/types"
-	rvalidatortypes "github.com/stafihub/stafihub/x/rvalidator/types"
-	"github.com/stafihub/stafihub/x/rvote/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	ledgertypes "github.com/warmage-sports/katana/x/ledger/types"
+	relayerstypes "github.com/warmage-sports/katana/x/relayers/types"
+	rvalidatortypes "github.com/warmage-sports/katana/x/rvalidator/types"
+	"github.com/warmage-sports/katana/x/rvote/types"
+	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 type msgServer struct {

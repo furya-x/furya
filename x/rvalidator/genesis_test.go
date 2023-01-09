@@ -3,10 +3,10 @@ package rvalidator_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/rvalidator"
-	"github.com/stafihub/stafihub/x/rvalidator/types"
+	keepertest "github.com/warmage-sports/katana/testutil/keeper"
+	"github.com/warmage-sports/katana/testutil/nullify"
+	"github.com/warmage-sports/katana/x/rvalidator"
+	"github.com/warmage-sports/katana/x/rvalidator/types"
 	"github.com/stretchr/testify/require"
 )
 

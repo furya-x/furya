@@ -3,9 +3,9 @@ package rvalidator
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/stafihub/stafihub/x/rvalidator/keeper"
-	"github.com/stafihub/stafihub/x/rvalidator/types"
-	rvotetypes "github.com/stafihub/stafihub/x/rvote/types"
+	"github.com/warmage-sports/katana/x/rvalidator/keeper"
+	"github.com/warmage-sports/katana/x/rvalidator/types"
+	rvotetypes "github.com/warmage-sports/katana/x/rvote/types"
 )
 
 func NewProposalHandler(k keeper.Keeper) rvotetypes.Handler {

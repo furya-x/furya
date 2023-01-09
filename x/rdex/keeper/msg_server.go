@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/rdex/types"
+	"github.com/warmage-sports/katana/x/rdex/types"
 )
 
 type msgServer struct {

@@ -2,8 +2,8 @@ package mining
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/mining/keeper"
-	"github.com/stafihub/stafihub/x/mining/types"
+	"github.com/warmage-sports/katana/x/mining/keeper"
+	"github.com/warmage-sports/katana/x/mining/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

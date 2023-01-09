@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/ledger/types"
-	sudotypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/ledger/types"
+	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) RmBondedPool(goCtx context.Context, msg *types.MsgRmBondedPool) (*types.MsgRmBondedPoolResponse, error) {

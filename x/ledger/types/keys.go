@@ -5,7 +5,7 @@ import (
 	fmt "fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/utils"
+	"github.com/warmage-sports/katana/utils"
 )
 
 const (
@@ -28,7 +28,7 @@ const (
 var (
 	DefaultStakingRewardCommission = utils.MustNewDecFromStr("0.1")
 	DefaultUnbondCommission        = utils.MustNewDecFromStr("0.002")
-	DefaultUnbondRelayFee          = sdk.NewCoin(utils.FisDenom, sdk.NewInt(1000000))
+	DefaultUnbondRelayFee          = sdk.NewCoin(utils.KataDenom, sdk.NewInt(1000000))
 	DefaultEraUnbondLimit          = uint32(200)
 )
 

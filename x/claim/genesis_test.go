@@ -3,10 +3,10 @@ package claim_test
 import (
 	"testing"
 
-	keepertest "github.com/stafihub/stafihub/testutil/keeper"
-	"github.com/stafihub/stafihub/testutil/nullify"
-	"github.com/stafihub/stafihub/x/claim"
-	"github.com/stafihub/stafihub/x/claim/types"
+	keepertest "github.com/warmage-sports/katana/testutil/keeper"
+	"github.com/warmage-sports/katana/testutil/nullify"
+	"github.com/warmage-sports/katana/x/claim"
+	"github.com/warmage-sports/katana/x/claim/types"
 	"github.com/stretchr/testify/require"
 )
 

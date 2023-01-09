@@ -1,5 +1,5 @@
 syntax = "proto3";
-package stafihub.stafihub.rvote;
+package katana.katana.rvote;
 
 import "rvote/proposal.proto";
 import "google/protobuf/any.proto";
@@ -8,7 +8,7 @@ import "cosmos_proto/cosmos.proto";
 
 // this line is used by starport scaffolding # proto/tx/import
 
-option go_package = "github.com/stafihub/stafihub/x/rvote/types";
+option go_package = "github.com/warmage-sports/katana/x/rvote/types";
 
 // Msg defines the Msg service.
 service Msg {

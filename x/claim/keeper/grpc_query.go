@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/claim/types"
+	"github.com/warmage-sports/katana/x/claim/types"
 )
 
 var _ types.QueryServer = Keeper{}

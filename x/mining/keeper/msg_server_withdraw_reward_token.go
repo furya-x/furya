@@ -4,7 +4,7 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/mining/types"
+	"github.com/warmage-sports/katana/x/mining/types"
 )
 
 func (k msgServer) WithdrawRewardToken(goCtx context.Context, msg *types.MsgWithdrawRewardToken) (*types.MsgWithdrawRewardTokenResponse, error) {

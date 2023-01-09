@@ -34,7 +34,7 @@ type MsgSetResourceidToDenom struct {
 	Creator    string    `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	ResourceId string    `protobuf:"bytes,2,opt,name=resourceId,proto3" json:"resourceId,omitempty"`
 	Denom      string    `protobuf:"bytes,3,opt,name=denom,proto3" json:"denom,omitempty"`
-	DenomType  DenomType `protobuf:"varint,4,opt,name=denomType,proto3,enum=stafihub.stafihub.bridge.DenomType" json:"denomType,omitempty"`
+	DenomType  DenomType `protobuf:"varint,4,opt,name=denomType,proto3,enum=katana.katana.bridge.DenomType" json:"denomType,omitempty"`
 }
 
 func (m *MsgSetResourceidToDenom) Reset()         { *m = MsgSetResourceidToDenom{} }
@@ -898,24 +898,24 @@ func (m *MsgRmBannedDenomResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgRmBannedDenomResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgSetResourceidToDenom)(nil), "stafihub.stafihub.bridge.MsgSetResourceidToDenom")
-	proto.RegisterType((*MsgSetResourceidToDenomResponse)(nil), "stafihub.stafihub.bridge.MsgSetResourceidToDenomResponse")
-	proto.RegisterType((*MsgDeposit)(nil), "stafihub.stafihub.bridge.MsgDeposit")
-	proto.RegisterType((*MsgDepositResponse)(nil), "stafihub.stafihub.bridge.MsgDepositResponse")
-	proto.RegisterType((*MsgAddChainId)(nil), "stafihub.stafihub.bridge.MsgAddChainId")
-	proto.RegisterType((*MsgAddChainIdResponse)(nil), "stafihub.stafihub.bridge.MsgAddChainIdResponse")
-	proto.RegisterType((*MsgVoteProposal)(nil), "stafihub.stafihub.bridge.MsgVoteProposal")
-	proto.RegisterType((*MsgVoteProposalResponse)(nil), "stafihub.stafihub.bridge.MsgVoteProposalResponse")
-	proto.RegisterType((*MsgRmChainId)(nil), "stafihub.stafihub.bridge.MsgRmChainId")
-	proto.RegisterType((*MsgRmChainIdResponse)(nil), "stafihub.stafihub.bridge.MsgRmChainIdResponse")
-	proto.RegisterType((*MsgSetRelayFeeReceiver)(nil), "stafihub.stafihub.bridge.MsgSetRelayFeeReceiver")
-	proto.RegisterType((*MsgSetRelayFeeReceiverResponse)(nil), "stafihub.stafihub.bridge.MsgSetRelayFeeReceiverResponse")
-	proto.RegisterType((*MsgSetRelayFee)(nil), "stafihub.stafihub.bridge.MsgSetRelayFee")
-	proto.RegisterType((*MsgSetRelayFeeResponse)(nil), "stafihub.stafihub.bridge.MsgSetRelayFeeResponse")
-	proto.RegisterType((*MsgAddBannedDenom)(nil), "stafihub.stafihub.bridge.MsgAddBannedDenom")
-	proto.RegisterType((*MsgAddBannedDenomResponse)(nil), "stafihub.stafihub.bridge.MsgAddBannedDenomResponse")
-	proto.RegisterType((*MsgRmBannedDenom)(nil), "stafihub.stafihub.bridge.MsgRmBannedDenom")
-	proto.RegisterType((*MsgRmBannedDenomResponse)(nil), "stafihub.stafihub.bridge.MsgRmBannedDenomResponse")
+	proto.RegisterType((*MsgSetResourceidToDenom)(nil), "katana.katana.bridge.MsgSetResourceidToDenom")
+	proto.RegisterType((*MsgSetResourceidToDenomResponse)(nil), "katana.katana.bridge.MsgSetResourceidToDenomResponse")
+	proto.RegisterType((*MsgDeposit)(nil), "katana.katana.bridge.MsgDeposit")
+	proto.RegisterType((*MsgDepositResponse)(nil), "katana.katana.bridge.MsgDepositResponse")
+	proto.RegisterType((*MsgAddChainId)(nil), "katana.katana.bridge.MsgAddChainId")
+	proto.RegisterType((*MsgAddChainIdResponse)(nil), "katana.katana.bridge.MsgAddChainIdResponse")
+	proto.RegisterType((*MsgVoteProposal)(nil), "katana.katana.bridge.MsgVoteProposal")
+	proto.RegisterType((*MsgVoteProposalResponse)(nil), "katana.katana.bridge.MsgVoteProposalResponse")
+	proto.RegisterType((*MsgRmChainId)(nil), "katana.katana.bridge.MsgRmChainId")
+	proto.RegisterType((*MsgRmChainIdResponse)(nil), "katana.katana.bridge.MsgRmChainIdResponse")
+	proto.RegisterType((*MsgSetRelayFeeReceiver)(nil), "katana.katana.bridge.MsgSetRelayFeeReceiver")
+	proto.RegisterType((*MsgSetRelayFeeReceiverResponse)(nil), "katana.katana.bridge.MsgSetRelayFeeReceiverResponse")
+	proto.RegisterType((*MsgSetRelayFee)(nil), "katana.katana.bridge.MsgSetRelayFee")
+	proto.RegisterType((*MsgSetRelayFeeResponse)(nil), "katana.katana.bridge.MsgSetRelayFeeResponse")
+	proto.RegisterType((*MsgAddBannedDenom)(nil), "katana.katana.bridge.MsgAddBannedDenom")
+	proto.RegisterType((*MsgAddBannedDenomResponse)(nil), "katana.katana.bridge.MsgAddBannedDenomResponse")
+	proto.RegisterType((*MsgRmBannedDenom)(nil), "katana.katana.bridge.MsgRmBannedDenom")
+	proto.RegisterType((*MsgRmBannedDenomResponse)(nil), "katana.katana.bridge.MsgRmBannedDenomResponse")
 }
 
 func init() { proto.RegisterFile("bridge/tx.proto", fileDescriptor_41dc2e30e6049cae) }
@@ -1007,7 +1007,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SetResourceidToDenom(ctx context.Context, in *MsgSetResourceidToDenom, opts ...grpc.CallOption) (*MsgSetResourceidToDenomResponse, error) {
 	out := new(MsgSetResourceidToDenomResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/SetResourceidToDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/SetResourceidToDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1016,7 +1016,7 @@ func (c *msgClient) SetResourceidToDenom(ctx context.Context, in *MsgSetResource
 
 func (c *msgClient) Deposit(ctx context.Context, in *MsgDeposit, opts ...grpc.CallOption) (*MsgDepositResponse, error) {
 	out := new(MsgDepositResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/Deposit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/Deposit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1025,7 +1025,7 @@ func (c *msgClient) Deposit(ctx context.Context, in *MsgDeposit, opts ...grpc.Ca
 
 func (c *msgClient) AddChainId(ctx context.Context, in *MsgAddChainId, opts ...grpc.CallOption) (*MsgAddChainIdResponse, error) {
 	out := new(MsgAddChainIdResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/AddChainId", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/AddChainId", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1034,7 +1034,7 @@ func (c *msgClient) AddChainId(ctx context.Context, in *MsgAddChainId, opts ...g
 
 func (c *msgClient) VoteProposal(ctx context.Context, in *MsgVoteProposal, opts ...grpc.CallOption) (*MsgVoteProposalResponse, error) {
 	out := new(MsgVoteProposalResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/VoteProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/VoteProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1043,7 +1043,7 @@ func (c *msgClient) VoteProposal(ctx context.Context, in *MsgVoteProposal, opts 
 
 func (c *msgClient) RmChainId(ctx context.Context, in *MsgRmChainId, opts ...grpc.CallOption) (*MsgRmChainIdResponse, error) {
 	out := new(MsgRmChainIdResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/RmChainId", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/RmChainId", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1052,7 +1052,7 @@ func (c *msgClient) RmChainId(ctx context.Context, in *MsgRmChainId, opts ...grp
 
 func (c *msgClient) SetRelayFeeReceiver(ctx context.Context, in *MsgSetRelayFeeReceiver, opts ...grpc.CallOption) (*MsgSetRelayFeeReceiverResponse, error) {
 	out := new(MsgSetRelayFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/SetRelayFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/SetRelayFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1061,7 +1061,7 @@ func (c *msgClient) SetRelayFeeReceiver(ctx context.Context, in *MsgSetRelayFeeR
 
 func (c *msgClient) SetRelayFee(ctx context.Context, in *MsgSetRelayFee, opts ...grpc.CallOption) (*MsgSetRelayFeeResponse, error) {
 	out := new(MsgSetRelayFeeResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/SetRelayFee", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/SetRelayFee", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1070,7 +1070,7 @@ func (c *msgClient) SetRelayFee(ctx context.Context, in *MsgSetRelayFee, opts ..
 
 func (c *msgClient) AddBannedDenom(ctx context.Context, in *MsgAddBannedDenom, opts ...grpc.CallOption) (*MsgAddBannedDenomResponse, error) {
 	out := new(MsgAddBannedDenomResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/AddBannedDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/AddBannedDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1079,7 +1079,7 @@ func (c *msgClient) AddBannedDenom(ctx context.Context, in *MsgAddBannedDenom, o
 
 func (c *msgClient) RmBannedDenom(ctx context.Context, in *MsgRmBannedDenom, opts ...grpc.CallOption) (*MsgRmBannedDenomResponse, error) {
 	out := new(MsgRmBannedDenomResponse)
-	err := c.cc.Invoke(ctx, "/stafihub.stafihub.bridge.Msg/RmBannedDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Msg/RmBannedDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1145,7 +1145,7 @@ func _Msg_SetResourceidToDenom_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/SetResourceidToDenom",
+		FullMethod: "/katana.katana.bridge.Msg/SetResourceidToDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetResourceidToDenom(ctx, req.(*MsgSetResourceidToDenom))
@@ -1163,7 +1163,7 @@ func _Msg_Deposit_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/Deposit",
+		FullMethod: "/katana.katana.bridge.Msg/Deposit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Deposit(ctx, req.(*MsgDeposit))
@@ -1181,7 +1181,7 @@ func _Msg_AddChainId_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/AddChainId",
+		FullMethod: "/katana.katana.bridge.Msg/AddChainId",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddChainId(ctx, req.(*MsgAddChainId))
@@ -1199,7 +1199,7 @@ func _Msg_VoteProposal_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/VoteProposal",
+		FullMethod: "/katana.katana.bridge.Msg/VoteProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).VoteProposal(ctx, req.(*MsgVoteProposal))
@@ -1217,7 +1217,7 @@ func _Msg_RmChainId_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/RmChainId",
+		FullMethod: "/katana.katana.bridge.Msg/RmChainId",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmChainId(ctx, req.(*MsgRmChainId))
@@ -1235,7 +1235,7 @@ func _Msg_SetRelayFeeReceiver_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/SetRelayFeeReceiver",
+		FullMethod: "/katana.katana.bridge.Msg/SetRelayFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRelayFeeReceiver(ctx, req.(*MsgSetRelayFeeReceiver))
@@ -1253,7 +1253,7 @@ func _Msg_SetRelayFee_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/SetRelayFee",
+		FullMethod: "/katana.katana.bridge.Msg/SetRelayFee",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRelayFee(ctx, req.(*MsgSetRelayFee))
@@ -1271,7 +1271,7 @@ func _Msg_AddBannedDenom_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/AddBannedDenom",
+		FullMethod: "/katana.katana.bridge.Msg/AddBannedDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddBannedDenom(ctx, req.(*MsgAddBannedDenom))
@@ -1289,7 +1289,7 @@ func _Msg_RmBannedDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/stafihub.stafihub.bridge.Msg/RmBannedDenom",
+		FullMethod: "/katana.katana.bridge.Msg/RmBannedDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmBannedDenom(ctx, req.(*MsgRmBannedDenom))
@@ -1298,7 +1298,7 @@ func _Msg_RmBannedDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "stafihub.stafihub.bridge.Msg",
+	ServiceName: "katana.katana.bridge.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

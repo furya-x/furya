@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/gov"
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
 	"github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/stafihub/stafihub/utils"
+	"github.com/warmage-sports/katana/utils"
 )
 
 var (
@@ -31,7 +31,7 @@ func NewAppModuleBasic(proposalHandlers ...govclient.ProposalHandler) AppModuleB
 // module.
 func (am AppModuleBasic) DefaultGenesis(cdc codec.JSONCodec) json.RawMessage {
 	defaultGenesisState := types.DefaultGenesisState()
-	defaultGenesisState.DepositParams.MinDeposit[0].Denom = utils.FisDenom
+	defaultGenesisState.DepositParams.MinDeposit[0].Denom = utils.KataDenom
 
 	return cdc.MustMarshalJSON(defaultGenesisState)
 }

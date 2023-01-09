@@ -12,7 +12,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/stafihub/stafihub/x/rvote/types"
+	"github.com/warmage-sports/katana/x/rvote/types"
 )
 
 var (

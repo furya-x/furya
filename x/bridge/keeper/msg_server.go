@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/stafihub/stafihub/x/bridge/types"
+	"github.com/warmage-sports/katana/x/bridge/types"
 )
 
 type msgServer struct {

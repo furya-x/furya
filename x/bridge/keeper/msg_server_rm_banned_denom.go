@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/stafihub/stafihub/x/bridge/types"
-	sudoTypes "github.com/stafihub/stafihub/x/sudo/types"
+	"github.com/warmage-sports/katana/x/bridge/types"
+	sudoTypes "github.com/warmage-sports/katana/x/sudo/types"
 )
 
 func (k msgServer) RmBannedDenom(goCtx context.Context, msg *types.MsgRmBannedDenom) (*types.MsgRmBannedDenomResponse, error) {

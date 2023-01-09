@@ -93,7 +93,7 @@ func (m *SwapPool) GetToken() types.Coin {
 }
 
 func init() {
-	proto.RegisterType((*SwapPool)(nil), "stafihub.stafihub.rdex.SwapPool")
+	proto.RegisterType((*SwapPool)(nil), "katana.katana.rdex.SwapPool")
 }
 
 func init() { proto.RegisterFile("rdex/models.proto", fileDescriptor_cc88587beb583d4f) }
