@@ -361,11 +361,11 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "claim", "params"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "claim", "params"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_IsClaimed_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "claim", "is_claimed", "round", "index"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_IsClaimed_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "claim", "is_claimed", "round", "index"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ClaimSwitch_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "claim", "claim_switch", "round"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ClaimSwitch_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "claim", "claim_switch", "round"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

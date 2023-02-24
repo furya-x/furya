@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/version"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/spf13/cobra"
-	"github.com/warmage-sports/katana/x/rbank/types"
+	"github.com/oldfurya/furya/x/rbank/types"
 )
 
 var _ = strconv.Itoa(0)
@@ -30,30 +30,30 @@ $ %s tx rbank add-denom cosmos cosmosvaloper path/to/metadata.json  --from mykey
 Where metadata.json could be like this:
 
 {
-	"description": "The native staking token of the Katana.",
+	"description": "The native staking token of the Furya.",
 	"denom_units": [
         {
-			"denom": "ukata",
+			"denom": "ufury",
           	"exponent": 0,
           	"aliases": [
-            	"microkata"
+            	"microfury"
           	]
         },
         {
-          "denom": "mkata",
+          "denom": "mfury",
           "exponent": 3,
           "aliases": [
-            "millikata"
+            "millifury"
           ]
         },
         {
-          "denom": "kata",
+          "denom": "fury",
           "exponent": 6,
           "aliases": []
         }
       ],
-      "base": "ukata",
-      "display": "kata",
+      "base": "ufury",
+      "display": "fury",
       "name": "",
       "symbol": ""
 }

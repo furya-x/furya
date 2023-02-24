@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/warmage-sports/katana/testutil/keeper"
+	testkeeper "github.com/oldfurya/furya/testutil/keeper"
 	"github.com/stretchr/testify/require"
 )
 

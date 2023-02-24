@@ -3,7 +3,7 @@ package types
 import (
 	// this line is used by starport scaffolding # genesis/types/import
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/utils"
+	"github.com/oldfurya/furya/utils"
 )
 
 // DefaultIndex is the default capability global index
@@ -14,7 +14,7 @@ func DefaultGenesis() *GenesisState {
 	return &GenesisState{
 		Params:                   DefaultParams(),
 		InflationBase:            sdk.NewIntFromUint64(1000000000000),
-		CoinToBeBurned:           sdk.Coin{Denom: utils.KataDenom, Amount: sdk.NewIntFromUint64(1000000000000)},
+		CoinToBeBurned:           sdk.Coin{Denom: utils.FuryDenom, Amount: sdk.NewIntFromUint64(1000000000000)},
 		ValidatorWhitelist:       []string{},
 		ValidatorWhitelistSwitch: false,
 		DelegatorWhitelist:       []string{},

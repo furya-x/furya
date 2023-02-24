@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/testutil/sample"
-	"github.com/warmage-sports/katana/x/relayers/keeper"
-	"github.com/warmage-sports/katana/x/relayers/types"
-	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
+	keepertest "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/testutil/sample"
+	"github.com/oldfurya/furya/x/relayers/keeper"
+	"github.com/oldfurya/furya/x/relayers/types"
+	sudotypes "github.com/oldfurya/furya/x/sudo/types"
 	"github.com/stretchr/testify/require"
 )
 

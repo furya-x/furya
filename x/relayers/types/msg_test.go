@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/warmage-sports/katana/testutil/sample"
-	"github.com/warmage-sports/katana/x/relayers/types"
+	"github.com/oldfurya/furya/testutil/sample"
+	"github.com/oldfurya/furya/x/relayers/types"
 	"github.com/stretchr/testify/require"
 )
 

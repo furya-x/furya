@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/rbank/types"
-	sudoTypes "github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/x/rbank/types"
+	sudoTypes "github.com/oldfurya/furya/x/sudo/types"
 )
 
 func (k msgServer) AddDenom(goCtx context.Context, msg *types.MsgAddDenom) (*types.MsgAddDenomResponse, error) {

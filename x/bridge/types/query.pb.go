@@ -725,22 +725,22 @@ func (m *QueryGetDepositCountResponse) GetCount() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "katana.katana.bridge.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "katana.katana.bridge.QueryParamsResponse")
-	proto.RegisterType((*QueryChaindIdsRequest)(nil), "katana.katana.bridge.QueryChaindIdsRequest")
-	proto.RegisterType((*QueryChaindIdsResponse)(nil), "katana.katana.bridge.QueryChaindIdsResponse")
-	proto.RegisterType((*QueryProposalDetailRequest)(nil), "katana.katana.bridge.QueryProposalDetailRequest")
-	proto.RegisterType((*QueryProposalDetailResponse)(nil), "katana.katana.bridge.QueryProposalDetailResponse")
-	proto.RegisterType((*QueryResourceidToDenomsRequest)(nil), "katana.katana.bridge.QueryResourceidToDenomsRequest")
-	proto.RegisterType((*QueryResourceidToDenomsResponse)(nil), "katana.katana.bridge.QueryResourceidToDenomsResponse")
-	proto.RegisterType((*QueryRelayFeeReceiverRequest)(nil), "katana.katana.bridge.QueryRelayFeeReceiverRequest")
-	proto.RegisterType((*QueryRelayFeeReceiverResponse)(nil), "katana.katana.bridge.QueryRelayFeeReceiverResponse")
-	proto.RegisterType((*QueryRelayFeeRequest)(nil), "katana.katana.bridge.QueryRelayFeeRequest")
-	proto.RegisterType((*QueryRelayFeeResponse)(nil), "katana.katana.bridge.QueryRelayFeeResponse")
-	proto.RegisterType((*QueryBannedDenomListRequest)(nil), "katana.katana.bridge.QueryBannedDenomListRequest")
-	proto.RegisterType((*QueryBannedDenomListResponse)(nil), "katana.katana.bridge.QueryBannedDenomListResponse")
-	proto.RegisterType((*QueryGetDepositCountRequest)(nil), "katana.katana.bridge.QueryGetDepositCountRequest")
-	proto.RegisterType((*QueryGetDepositCountResponse)(nil), "katana.katana.bridge.QueryGetDepositCountResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.bridge.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.bridge.QueryParamsResponse")
+	proto.RegisterType((*QueryChaindIdsRequest)(nil), "furya.furya.bridge.QueryChaindIdsRequest")
+	proto.RegisterType((*QueryChaindIdsResponse)(nil), "furya.furya.bridge.QueryChaindIdsResponse")
+	proto.RegisterType((*QueryProposalDetailRequest)(nil), "furya.furya.bridge.QueryProposalDetailRequest")
+	proto.RegisterType((*QueryProposalDetailResponse)(nil), "furya.furya.bridge.QueryProposalDetailResponse")
+	proto.RegisterType((*QueryResourceidToDenomsRequest)(nil), "furya.furya.bridge.QueryResourceidToDenomsRequest")
+	proto.RegisterType((*QueryResourceidToDenomsResponse)(nil), "furya.furya.bridge.QueryResourceidToDenomsResponse")
+	proto.RegisterType((*QueryRelayFeeReceiverRequest)(nil), "furya.furya.bridge.QueryRelayFeeReceiverRequest")
+	proto.RegisterType((*QueryRelayFeeReceiverResponse)(nil), "furya.furya.bridge.QueryRelayFeeReceiverResponse")
+	proto.RegisterType((*QueryRelayFeeRequest)(nil), "furya.furya.bridge.QueryRelayFeeRequest")
+	proto.RegisterType((*QueryRelayFeeResponse)(nil), "furya.furya.bridge.QueryRelayFeeResponse")
+	proto.RegisterType((*QueryBannedDenomListRequest)(nil), "furya.furya.bridge.QueryBannedDenomListRequest")
+	proto.RegisterType((*QueryBannedDenomListResponse)(nil), "furya.furya.bridge.QueryBannedDenomListResponse")
+	proto.RegisterType((*QueryGetDepositCountRequest)(nil), "furya.furya.bridge.QueryGetDepositCountRequest")
+	proto.RegisterType((*QueryGetDepositCountResponse)(nil), "furya.furya.bridge.QueryGetDepositCountResponse")
 }
 
 func init() { proto.RegisterFile("bridge/query.proto", fileDescriptor_09fd90c905cb448b) }
@@ -849,7 +849,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -858,7 +858,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) ChaindIds(ctx context.Context, in *QueryChaindIdsRequest, opts ...grpc.CallOption) (*QueryChaindIdsResponse, error) {
 	out := new(QueryChaindIdsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/ChaindIds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/ChaindIds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -867,7 +867,7 @@ func (c *queryClient) ChaindIds(ctx context.Context, in *QueryChaindIdsRequest, 
 
 func (c *queryClient) ProposalDetail(ctx context.Context, in *QueryProposalDetailRequest, opts ...grpc.CallOption) (*QueryProposalDetailResponse, error) {
 	out := new(QueryProposalDetailResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/ProposalDetail", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/ProposalDetail", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -876,7 +876,7 @@ func (c *queryClient) ProposalDetail(ctx context.Context, in *QueryProposalDetai
 
 func (c *queryClient) ResourceidToDenoms(ctx context.Context, in *QueryResourceidToDenomsRequest, opts ...grpc.CallOption) (*QueryResourceidToDenomsResponse, error) {
 	out := new(QueryResourceidToDenomsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/ResourceidToDenoms", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/ResourceidToDenoms", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -885,7 +885,7 @@ func (c *queryClient) ResourceidToDenoms(ctx context.Context, in *QueryResourcei
 
 func (c *queryClient) RelayFeeReceiver(ctx context.Context, in *QueryRelayFeeReceiverRequest, opts ...grpc.CallOption) (*QueryRelayFeeReceiverResponse, error) {
 	out := new(QueryRelayFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/RelayFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/RelayFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -894,7 +894,7 @@ func (c *queryClient) RelayFeeReceiver(ctx context.Context, in *QueryRelayFeeRec
 
 func (c *queryClient) RelayFee(ctx context.Context, in *QueryRelayFeeRequest, opts ...grpc.CallOption) (*QueryRelayFeeResponse, error) {
 	out := new(QueryRelayFeeResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/RelayFee", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/RelayFee", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -903,7 +903,7 @@ func (c *queryClient) RelayFee(ctx context.Context, in *QueryRelayFeeRequest, op
 
 func (c *queryClient) BannedDenomList(ctx context.Context, in *QueryBannedDenomListRequest, opts ...grpc.CallOption) (*QueryBannedDenomListResponse, error) {
 	out := new(QueryBannedDenomListResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/BannedDenomList", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/BannedDenomList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -912,7 +912,7 @@ func (c *queryClient) BannedDenomList(ctx context.Context, in *QueryBannedDenomL
 
 func (c *queryClient) GetDepositCount(ctx context.Context, in *QueryGetDepositCountRequest, opts ...grpc.CallOption) (*QueryGetDepositCountResponse, error) {
 	out := new(QueryGetDepositCountResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.bridge.Query/GetDepositCount", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Query/GetDepositCount", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -982,7 +982,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/Params",
+		FullMethod: "/furya.furya.bridge.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -1000,7 +1000,7 @@ func _Query_ChaindIds_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/ChaindIds",
+		FullMethod: "/furya.furya.bridge.Query/ChaindIds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ChaindIds(ctx, req.(*QueryChaindIdsRequest))
@@ -1018,7 +1018,7 @@ func _Query_ProposalDetail_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/ProposalDetail",
+		FullMethod: "/furya.furya.bridge.Query/ProposalDetail",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ProposalDetail(ctx, req.(*QueryProposalDetailRequest))
@@ -1036,7 +1036,7 @@ func _Query_ResourceidToDenoms_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/ResourceidToDenoms",
+		FullMethod: "/furya.furya.bridge.Query/ResourceidToDenoms",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ResourceidToDenoms(ctx, req.(*QueryResourceidToDenomsRequest))
@@ -1054,7 +1054,7 @@ func _Query_RelayFeeReceiver_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/RelayFeeReceiver",
+		FullMethod: "/furya.furya.bridge.Query/RelayFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RelayFeeReceiver(ctx, req.(*QueryRelayFeeReceiverRequest))
@@ -1072,7 +1072,7 @@ func _Query_RelayFee_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/RelayFee",
+		FullMethod: "/furya.furya.bridge.Query/RelayFee",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RelayFee(ctx, req.(*QueryRelayFeeRequest))
@@ -1090,7 +1090,7 @@ func _Query_BannedDenomList_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/BannedDenomList",
+		FullMethod: "/furya.furya.bridge.Query/BannedDenomList",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).BannedDenomList(ctx, req.(*QueryBannedDenomListRequest))
@@ -1108,7 +1108,7 @@ func _Query_GetDepositCount_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.bridge.Query/GetDepositCount",
+		FullMethod: "/furya.furya.bridge.Query/GetDepositCount",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetDepositCount(ctx, req.(*QueryGetDepositCountRequest))
@@ -1117,7 +1117,7 @@ func _Query_GetDepositCount_Handler(srv interface{}, ctx context.Context, dec fu
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.bridge.Query",
+	ServiceName: "furya.furya.bridge.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

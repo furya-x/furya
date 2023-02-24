@@ -20906,10 +20906,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /warmage-sports/katana/bridge/banned_denom_list:
+  /oldfurya/furya/bridge/banned_denom_list:
     get:
       summary: Queries a list of BannedDenomList items.
-      operationId: KatanaBridgeBannedDenomList
+      operationId: FuryaBridgeBannedDenomList
       responses:
         '200':
           description: A successful response.
@@ -20946,10 +20946,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/bridge/chaind_ids:
+  /oldfurya/furya/bridge/chaind_ids:
     get:
       summary: Queries a list of ChaindIds items.
-      operationId: KatanaBridgeChaindIds
+      operationId: FuryaBridgeChaindIds
       responses:
         '200':
           description: A successful response.
@@ -20981,10 +20981,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/bridge/get_deposit_count/{chainId}':
+  '/oldfurya/furya/bridge/get_deposit_count/{chainId}':
     get:
       summary: Queries a list of GetDepositCount items.
-      operationId: KatanaBridgeGetDepositCount
+      operationId: FuryaBridgeGetDepositCount
       responses:
         '200':
           description: A successful response.
@@ -21020,10 +21020,10 @@ paths:
           format: int64
       tags:
         - Query
-  /warmage-sports/katana/bridge/params:
+  /oldfurya/furya/bridge/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaBridgeParams
+      operationId: FuryaBridgeParams
       responses:
         '200':
           description: A successful response.
@@ -21056,10 +21056,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/bridge/proposal_detail/{chainId}/{depositNonce}/{resourceId}/{amount}/{receiver}':
+  '/oldfurya/furya/bridge/proposal_detail/{chainId}/{depositNonce}/{resourceId}/{amount}/{receiver}':
     get:
       summary: Queries a list of ProposalDetail items.
-      operationId: KatanaBridgeProposalDetail
+      operationId: FuryaBridgeProposalDetail
       responses:
         '200':
           description: A successful response.
@@ -21125,10 +21125,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/bridge/relay_fee/{chainId}':
+  '/oldfurya/furya/bridge/relay_fee/{chainId}':
     get:
       summary: Queries a list of RelayFee items.
-      operationId: KatanaBridgeRelayFee
+      operationId: FuryaBridgeRelayFee
       responses:
         '200':
           description: A successful response.
@@ -21176,10 +21176,10 @@ paths:
           format: int64
       tags:
         - Query
-  /warmage-sports/katana/bridge/relay_fee_receiver:
+  /oldfurya/furya/bridge/relay_fee_receiver:
     get:
       summary: Queries a list of RelayFeeReceiver items.
-      operationId: KatanaBridgeRelayFeeReceiver
+      operationId: FuryaBridgeRelayFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -21208,10 +21208,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/bridge/resourceid_to_denoms:
+  /oldfurya/furya/bridge/resourceid_to_denoms:
     get:
       summary: Queries a list of ResourceidToDenoms items.
-      operationId: KatanaBridgeResourceidToDenoms
+      operationId: FuryaBridgeResourceidToDenoms
       responses:
         '200':
           description: A successful response.
@@ -21254,10 +21254,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/claim/claim_switch/{round}':
+  '/oldfurya/furya/claim/claim_switch/{round}':
     get:
       summary: Queries a list of ClaimSwitch items.
-      operationId: KatanaClaimClaimSwitch
+      operationId: FuryaClaimClaimSwitch
       responses:
         '200':
           description: A successful response.
@@ -21292,10 +21292,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/warmage-sports/katana/claim/is_claimed/{round}/{index}':
+  '/oldfurya/furya/claim/is_claimed/{round}/{index}':
     get:
       summary: Queries a list of IsClaimed items.
-      operationId: KatanaClaimIsClaimed
+      operationId: FuryaClaimIsClaimed
       responses:
         '200':
           description: A successful response.
@@ -21335,10 +21335,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /warmage-sports/katana/claim/params:
+  /oldfurya/furya/claim/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaClaimParams
+      operationId: FuryaClaimParams
       responses:
         '200':
           description: A successful response.
@@ -21371,10 +21371,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/ledger/bonded_pools_by_denom/{denom}':
+  '/oldfurya/furya/ledger/bonded_pools_by_denom/{denom}':
     get:
       summary: Queries a list of bondedPoolsByDenom items.
-      operationId: KatanaLedgerBondedPoolsByDenom
+      operationId: FuryaLedgerBondedPoolsByDenom
       responses:
         '200':
           description: A successful response.
@@ -21577,10 +21577,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/era_exchange_rate/{denom}/{era}':
+  '/oldfurya/furya/ledger/era_exchange_rate/{denom}/{era}':
     get:
       summary: Queries a list of getEraExchangeRate items.
-      operationId: KatanaLedgerGetEraExchangeRate
+      operationId: FuryaLedgerGetEraExchangeRate
       responses:
         '200':
           description: A successful response.
@@ -21794,10 +21794,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/ledger/era_exchange_rates_by_denom/{denom}':
+  '/oldfurya/furya/ledger/era_exchange_rates_by_denom/{denom}':
     get:
       summary: Queries a list of eraExchangeRatesByDenom items.
-      operationId: KatanaLedgerEraExchangeRatesByDenom
+      operationId: FuryaLedgerEraExchangeRatesByDenom
       responses:
         '200':
           description: A successful response.
@@ -22008,10 +22008,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/exchange_rate/{denom}':
+  '/oldfurya/furya/ledger/exchange_rate/{denom}':
     get:
       summary: Queries a list of getExchangeRate items.
-      operationId: KatanaLedgerGetExchangeRate
+      operationId: FuryaLedgerGetExchangeRate
       responses:
         '200':
           description: A successful response.
@@ -22217,10 +22217,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/ledger/exchange_rate_all:
+  /oldfurya/furya/ledger/exchange_rate_all:
     get:
       summary: Queries a list of exchangeRateAll items.
-      operationId: KatanaLedgerExchangeRateAll
+      operationId: FuryaLedgerExchangeRateAll
       responses:
         '200':
           description: A successful response.
@@ -22423,10 +22423,10 @@ paths:
                         }
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_bond_pipeline/{denom}/{pool}':
+  '/oldfurya/furya/ledger/get_bond_pipeline/{denom}/{pool}':
     get:
       summary: Queries a list of getBondPipeline items.
-      operationId: KatanaLedgerGetBondPipeline
+      operationId: FuryaLedgerGetBondPipeline
       responses:
         '200':
           description: A successful response.
@@ -22645,10 +22645,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_bond_record/{denom}/{txhash}':
+  '/oldfurya/furya/ledger/get_bond_record/{denom}/{txhash}':
     get:
       summary: Queries a list of getBondRecord items.
-      operationId: KatanaLedgerGetBondRecord
+      operationId: FuryaLedgerGetBondRecord
       responses:
         '200':
           description: A successful response.
@@ -22874,10 +22874,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_chain_era/{denom}':
+  '/oldfurya/furya/ledger/get_chain_era/{denom}':
     get:
       summary: Queries a list of getChainEra items.
-      operationId: KatanaLedgerGetChainEra
+      operationId: FuryaLedgerGetChainEra
       responses:
         '200':
           description: A successful response.
@@ -23079,10 +23079,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_current_era_snapshot/{denom}':
+  '/oldfurya/furya/ledger/get_current_era_snapshot/{denom}':
     get:
       summary: Queries a list of getCurrentEraSnapshot items.
-      operationId: KatanaLedgerGetCurrentEraSnapshot
+      operationId: FuryaLedgerGetCurrentEraSnapshot
       responses:
         '200':
           description: A successful response.
@@ -23285,10 +23285,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_era_snapshot/{denom}/{era}':
+  '/oldfurya/furya/ledger/get_era_snapshot/{denom}/{era}':
     get:
       summary: Queries a list of getEraSnapshot items.
-      operationId: KatanaLedgerGetEraSnapshot
+      operationId: FuryaLedgerGetEraSnapshot
       responses:
         '200':
           description: A successful response.
@@ -23496,10 +23496,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_era_unbond_limit/{denom}':
+  '/oldfurya/furya/ledger/get_era_unbond_limit/{denom}':
     get:
       summary: Queries a list of getEraUnbondLimit items.
-      operationId: KatanaLedgerGetEraUnbondLimit
+      operationId: FuryaLedgerGetEraUnbondLimit
       responses:
         '200':
           description: A successful response.
@@ -23701,10 +23701,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_pool_detail/{denom}/{pool}':
+  '/oldfurya/furya/ledger/get_pool_detail/{denom}/{pool}':
     get:
       summary: Queries a list of getPoolDetail items.
-      operationId: KatanaLedgerGetPoolDetail
+      operationId: FuryaLedgerGetPoolDetail
       responses:
         '200':
           description: A successful response.
@@ -23928,10 +23928,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_r_params/{denom}':
+  '/oldfurya/furya/ledger/get_r_params/{denom}':
     get:
       summary: Queries a list of GetRParams items.
-      operationId: KatanaLedgerGetRParams
+      operationId: FuryaLedgerGetRParams
       responses:
         '200':
           description: A successful response.
@@ -24148,10 +24148,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/ledger/get_signature:
+  /oldfurya/furya/ledger/get_signature:
     get:
       summary: Queries a list of getSignature items.
-      operationId: KatanaLedgerGetSignature
+      operationId: FuryaLedgerGetSignature
       responses:
         '200':
           description: A successful response.
@@ -24400,10 +24400,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_snapshot/{shotId}':
+  '/oldfurya/furya/ledger/get_snapshot/{shotId}':
     get:
       summary: Queries a list of getSnapshot items.
-      operationId: KatanaLedgerGetSnapshot
+      operationId: FuryaLedgerGetSnapshot
       responses:
         '200':
           description: A successful response.
@@ -24630,10 +24630,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/ledger/get_staking_reward_commission:
+  /oldfurya/furya/ledger/get_staking_reward_commission:
     get:
       summary: Queries a list of getCommission items.
-      operationId: KatanaLedgerGetStakingRewardCommission
+      operationId: FuryaLedgerGetStakingRewardCommission
       responses:
         '200':
           description: A successful response.
@@ -24834,10 +24834,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_total_expected_active/{denom}/{era}':
+  '/oldfurya/furya/ledger/get_total_expected_active/{denom}/{era}':
     get:
       summary: Queries a list of getTotalExpectedActive items.
-      operationId: KatanaLedgerGetTotalExpectedActive
+      operationId: FuryaLedgerGetTotalExpectedActive
       responses:
         '200':
           description: A successful response.
@@ -25043,10 +25043,10 @@ paths:
           format: int64
       tags:
         - Query
-  /warmage-sports/katana/ledger/get_unbond_commission:
+  /oldfurya/furya/ledger/get_unbond_commission:
     get:
       summary: Queries a list of getUnbondCommission items.
-      operationId: KatanaLedgerGetUnbondCommission
+      operationId: FuryaLedgerGetUnbondCommission
       responses:
         '200':
           description: A successful response.
@@ -25247,10 +25247,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/get_unbond_relay_fee/{denom}':
+  '/oldfurya/furya/ledger/get_unbond_relay_fee/{denom}':
     get:
       summary: Queries a list of getUnbondFee items.
-      operationId: KatanaLedgerGetUnbondRelayFee
+      operationId: FuryaLedgerGetUnbondRelayFee
       responses:
         '200':
           description: A successful response.
@@ -25469,10 +25469,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/ica_pool_list/{denom}':
+  '/oldfurya/furya/ledger/ica_pool_list/{denom}':
     get:
       summary: Queries a list of IcaPoolList items.
-      operationId: KatanaLedgerIcaPoolList
+      operationId: FuryaLedgerIcaPoolList
       responses:
         '200':
           description: A successful response.
@@ -25728,10 +25728,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/interchain_tx_status/{propId}':
+  '/oldfurya/furya/ledger/interchain_tx_status/{propId}':
     get:
       summary: Queries a list of InterchainTxStatus items.
-      operationId: KatanaLedgerInterchainTxStatus
+      operationId: FuryaLedgerInterchainTxStatus
       responses:
         '200':
           description: A successful response.
@@ -25938,10 +25938,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/ledger/pool_unbond_next_sequence/{denom}/{pool}/{unlockEra}':
+  '/oldfurya/furya/ledger/pool_unbond_next_sequence/{denom}/{pool}/{unlockEra}':
     get:
       summary: Queries a list of PoolUnbondNextSequence items.
-      operationId: KatanaLedgerPoolUnbondNextSequence
+      operationId: FuryaLedgerPoolUnbondNextSequence
       responses:
         '200':
           description: A successful response.
@@ -26152,10 +26152,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/ledger/pool_unbondings/{denom}/{pool}/{unlockEra}':
+  '/oldfurya/furya/ledger/pool_unbondings/{denom}/{pool}/{unlockEra}':
     get:
       summary: Queries a list of PoolUnbondings items.
-      operationId: KatanaLedgerPoolUnbondings
+      operationId: FuryaLedgerPoolUnbondings
       responses:
         '200':
           description: A successful response.
@@ -26374,10 +26374,10 @@ paths:
           format: int64
       tags:
         - Query
-  /warmage-sports/katana/ledger/protocol_fee_receiver:
+  /oldfurya/furya/ledger/protocol_fee_receiver:
     get:
       summary: Queries a list of getReceiver items.
-      operationId: KatanaLedgerGetProtocolFeeReceiver
+      operationId: FuryaLedgerGetProtocolFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -26573,10 +26573,10 @@ paths:
                         }
       tags:
         - Query
-  '/warmage-sports/katana/ledger/relay_fee_receiver/{denom}':
+  '/oldfurya/furya/ledger/relay_fee_receiver/{denom}':
     get:
       summary: Queries a list of RelayFeeReceiver items.
-      operationId: KatanaLedgerRelayFeeReceiver
+      operationId: FuryaLedgerRelayFeeReceiver
       responses:
         '200':
           description: A successful response.
@@ -26777,10 +26777,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/ledger/total_protocol_fee:
+  /oldfurya/furya/ledger/total_protocol_fee:
     get:
       summary: Queries a list of TotalFeeList items.
-      operationId: KatanaLedgerTotalProtocolFee
+      operationId: FuryaLedgerTotalProtocolFee
       responses:
         '200':
           description: A successful response.
@@ -26983,10 +26983,10 @@ paths:
                         }
       tags:
         - Query
-  '/warmage-sports/katana/ledger/unbond_switch/{denom}':
+  '/oldfurya/furya/ledger/unbond_switch/{denom}':
     get:
       summary: Queries a list of UnbondSwitch items.
-      operationId: KatanaLedgerUnbondSwitch
+      operationId: FuryaLedgerUnbondSwitch
       responses:
         '200':
           description: A successful response.
@@ -27187,10 +27187,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/mining/max_reward_pool_number:
+  /oldfurya/furya/mining/max_reward_pool_number:
     get:
       summary: Queries a list of MaxRewardPoolNumber items.
-      operationId: KatanaMiningMaxRewardPoolNumber
+      operationId: FuryaMiningMaxRewardPoolNumber
       responses:
         '200':
           description: A successful response.
@@ -27220,10 +27220,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/mining/max_stake_item_number:
+  /oldfurya/furya/mining/max_stake_item_number:
     get:
       summary: Queries a list of MaxStakeItemNumber items.
-      operationId: KatanaMiningMaxStakeItemNumber
+      operationId: FuryaMiningMaxStakeItemNumber
       responses:
         '200':
           description: A successful response.
@@ -27253,10 +27253,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/mining/mining_provider_list:
+  /oldfurya/furya/mining/mining_provider_list:
     get:
       summary: Queries a list of MiningProviderList items.
-      operationId: KatanaMiningMiningProviderList
+      operationId: FuryaMiningMiningProviderList
       responses:
         '200':
           description: A successful response.
@@ -27287,10 +27287,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/mining/params:
+  /oldfurya/furya/mining/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaMiningParams
+      operationId: FuryaMiningParams
       responses:
         '200':
           description: A successful response.
@@ -27323,10 +27323,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/mining/provider_switch:
+  /oldfurya/furya/mining/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: KatanaMiningProviderSwitch
+      operationId: FuryaMiningProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -27355,10 +27355,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/mining/reward_token_list:
+  /oldfurya/furya/mining/reward_token_list:
     get:
       summary: Queries a list of RewardTokenList items.
-      operationId: KatanaMiningRewardTokenList
+      operationId: FuryaMiningRewardTokenList
       responses:
         '200':
           description: A successful response.
@@ -27396,10 +27396,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/mining/stake_item_list:
+  /oldfurya/furya/mining/stake_item_list:
     get:
       summary: Queries a list of StakeItemList items.
-      operationId: KatanaMiningStakeItemList
+      operationId: FuryaMiningStakeItemList
       responses:
         '200':
           description: A successful response.
@@ -27451,10 +27451,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/mining/stake_pool_info/{stakePoolIndex}':
+  '/oldfurya/furya/mining/stake_pool_info/{stakePoolIndex}':
     get:
       summary: Queries a list of StakePoolInfo items.
-      operationId: KatanaMiningStakePoolInfo
+      operationId: FuryaMiningStakePoolInfo
       responses:
         '200':
           description: A successful response.
@@ -27533,10 +27533,10 @@ paths:
           format: int64
       tags:
         - Query
-  /warmage-sports/katana/mining/stake_pool_list:
+  /oldfurya/furya/mining/stake_pool_list:
     get:
       summary: Queries a list of StakePoolList items.
-      operationId: KatanaMiningStakePoolList
+      operationId: FuryaMiningStakePoolList
       responses:
         '200':
           description: A successful response.
@@ -27611,10 +27611,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/mining/stake_record/{userAddress}/{stakePoolIndex}/{stakeRecordIndex}':
+  '/oldfurya/furya/mining/stake_record/{userAddress}/{stakePoolIndex}/{stakeRecordIndex}':
     get:
       summary: Queries a list of StakeRecord items.
-      operationId: KatanaMiningStakeRecord
+      operationId: FuryaMiningStakeRecord
       responses:
         '200':
           description: A successful response.
@@ -27696,10 +27696,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/mining/stake_record_count/{userAddress}/{stakePoolIndex}':
+  '/oldfurya/furya/mining/stake_record_count/{userAddress}/{stakePoolIndex}':
     get:
       summary: Queries a list of StakeRecordCount items.
-      operationId: KatanaMiningStakeRecordCount
+      operationId: FuryaMiningStakeRecordCount
       responses:
         '200':
           description: A successful response.
@@ -27739,10 +27739,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/mining/stake_record_list/{userAddress}/{stakePoolIndex}':
+  '/oldfurya/furya/mining/stake_record_list/{userAddress}/{stakePoolIndex}':
     get:
       summary: Queries a list of StakeRecordList items.
-      operationId: KatanaMiningStakeRecordList
+      operationId: FuryaMiningStakeRecordList
       responses:
         '200':
           description: A successful response.
@@ -27821,10 +27821,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/mining/stake_reward/{stakeUserAddress}/{stakePoolIndex}/{stakeRecordIndex}':
+  '/oldfurya/furya/mining/stake_reward/{stakeUserAddress}/{stakePoolIndex}/{stakeRecordIndex}':
     get:
       summary: Queries a list of StakeReward items.
-      operationId: KatanaMiningStakeReward
+      operationId: FuryaMiningStakeReward
       responses:
         '200':
           description: A successful response.
@@ -27883,10 +27883,10 @@ paths:
           format: int64
       tags:
         - Query
-  '/warmage-sports/katana/rbank/address_prefix/{denom}':
+  '/oldfurya/furya/rbank/address_prefix/{denom}':
     get:
       summary: Queries a list of AddressPrefix items.
-      operationId: KatanaRbankAddressPrefix
+      operationId: FuryaRbankAddressPrefix
       responses:
         '200':
           description: A successful response.
@@ -27922,10 +27922,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/rbank/params:
+  /oldfurya/furya/rbank/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaRbankParams
+      operationId: FuryaRbankParams
       responses:
         '200':
           description: A successful response.
@@ -27958,10 +27958,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rdex/params:
+  /oldfurya/furya/rdex/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaRdexParams
+      operationId: FuryaRdexParams
       responses:
         '200':
           description: A successful response.
@@ -27994,10 +27994,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rdex/pool_creator_list:
+  /oldfurya/furya/rdex/pool_creator_list:
     get:
       summary: Queries a list of PoolCreatorList items.
-      operationId: KatanaRdexPoolCreatorList
+      operationId: FuryaRdexPoolCreatorList
       responses:
         '200':
           description: A successful response.
@@ -28028,10 +28028,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rdex/provider_list:
+  /oldfurya/furya/rdex/provider_list:
     get:
       summary: Queries a list of ProviderList items.
-      operationId: KatanaRdexProviderList
+      operationId: FuryaRdexProviderList
       responses:
         '200':
           description: A successful response.
@@ -28062,10 +28062,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rdex/provider_switch:
+  /oldfurya/furya/rdex/provider_switch:
     get:
       summary: Queries a list of ProviderSwitch items.
-      operationId: KatanaRdexProviderSwitch
+      operationId: FuryaRdexProviderSwitch
       responses:
         '200':
           description: A successful response.
@@ -28094,10 +28094,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/rdex/swap_pool_info/{lpDenom}':
+  '/oldfurya/furya/rdex/swap_pool_info/{lpDenom}':
     get:
       summary: Queries a list of SwapPoolInfo items.
-      operationId: KatanaRdexSwapPoolInfo
+      operationId: FuryaRdexSwapPoolInfo
       responses:
         '200':
           description: A successful response.
@@ -28180,10 +28180,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/rdex/swap_pool_list:
+  /oldfurya/furya/rdex/swap_pool_list:
     get:
       summary: Queries a list of SwapPoolList items.
-      operationId: KatanaRdexSwapPoolList
+      operationId: FuryaRdexSwapPoolList
       responses:
         '200':
           description: A successful response.
@@ -28263,10 +28263,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/relayers/threshold/{arena}/{denom}':
+  '/oldfurya/furya/relayers/threshold/{arena}/{denom}':
     get:
       summary: Queries a threshold by denom.
-      operationId: KatanaRelayersThreshold
+      operationId: FuryaRelayersThreshold
       responses:
         '200':
           description: A successful response.
@@ -28305,10 +28305,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/relayers/{arena}/{denom}':
+  '/oldfurya/furya/relayers/{arena}/{denom}':
     get:
       summary: Queries a list of relayersByDenom items.
-      operationId: KatanaRelayersRelayers
+      operationId: FuryaRelayersRelayers
       responses:
         '200':
           description: A successful response.
@@ -28348,10 +28348,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rmintreward/act_current_cycle/{denom}':
+  '/oldfurya/furya/rmintreward/act_current_cycle/{denom}':
     get:
       summary: Queries a list of ActCurrentCycle items.
-      operationId: KatanaRmintrewardActCurrentCycle
+      operationId: FuryaRmintrewardActCurrentCycle
       responses:
         '200':
           description: A successful response.
@@ -28386,10 +28386,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rmintreward/act_detail/{denom}/{cycle}':
+  '/oldfurya/furya/rmintreward/act_detail/{denom}/{cycle}':
     get:
       summary: Queries a list of ActDetail items.
-      operationId: KatanaRmintrewardActDetail
+      operationId: FuryaRmintrewardActDetail
       responses:
         '200':
           description: A successful response.
@@ -28457,10 +28457,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/warmage-sports/katana/rmintreward/act_latest_cycle/{denom}':
+  '/oldfurya/furya/rmintreward/act_latest_cycle/{denom}':
     get:
       summary: Queries a list of ActLatestCycle items.
-      operationId: KatanaRmintrewardActLatestCycle
+      operationId: FuryaRmintrewardActLatestCycle
       responses:
         '200':
           description: A successful response.
@@ -28495,10 +28495,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
+  '/oldfurya/furya/rmintreward/claim_info_detail/{address}/{denom}/{cycle}/{mintIndex}':
     get:
       summary: Queries a list of ClaimInfoDetail items.
-      operationId: KatanaRmintrewardClaimInfoDetail
+      operationId: FuryaRmintrewardClaimInfoDetail
       responses:
         '200':
           description: A successful response.
@@ -28568,10 +28568,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /warmage-sports/katana/rmintreward/params:
+  /oldfurya/furya/rmintreward/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaRmintrewardParams
+      operationId: FuryaRmintrewardParams
       responses:
         '200':
           description: A successful response.
@@ -28604,10 +28604,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/rmintreward/user_acts/{address}/{denom}':
+  '/oldfurya/furya/rmintreward/user_acts/{address}/{denom}':
     get:
       summary: Queries a list of UserActs items.
-      operationId: KatanaRmintrewardUserActs
+      operationId: FuryaRmintrewardUserActs
       responses:
         '200':
           description: A successful response.
@@ -28651,10 +28651,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
+  '/oldfurya/furya/rmintreward/user_mint_count/{address}/{denom}/{cycle}':
     get:
       summary: Queries a list of UserMintCount items.
-      operationId: KatanaRmintrewardUserMintCount
+      operationId: FuryaRmintrewardUserMintCount
       responses:
         '200':
           description: A successful response.
@@ -28698,10 +28698,10 @@ paths:
           format: uint64
       tags:
         - Query
-  /warmage-sports/katana/rstaking/delegator_whitelist:
+  /oldfurya/furya/rstaking/delegator_whitelist:
     get:
       summary: Queries a list of DelegatorWhitelist items.
-      operationId: KatanaRstakingDelegatorWhitelist
+      operationId: FuryaRstakingDelegatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28732,10 +28732,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rstaking/delegator_whitelist_switch:
+  /oldfurya/furya/rstaking/delegator_whitelist_switch:
     get:
       summary: Queries a list of DelegatorWhitelistSwitch items.
-      operationId: KatanaRstakingDelegatorWhitelistSwitch
+      operationId: FuryaRstakingDelegatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28764,10 +28764,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rstaking/inflation_base:
+  /oldfurya/furya/rstaking/inflation_base:
     get:
       summary: Queries a list of InflationBase items.
-      operationId: KatanaRstakingInflationBase
+      operationId: FuryaRstakingInflationBase
       responses:
         '200':
           description: A successful response.
@@ -28796,10 +28796,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rstaking/params:
+  /oldfurya/furya/rstaking/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaRstakingParams
+      operationId: FuryaRstakingParams
       responses:
         '200':
           description: A successful response.
@@ -28832,10 +28832,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rstaking/validator_whitelist:
+  /oldfurya/furya/rstaking/validator_whitelist:
     get:
       summary: Queries a list of ValidatorWhitelist items.
-      operationId: KatanaRstakingValidatorWhitelist
+      operationId: FuryaRstakingValidatorWhitelist
       responses:
         '200':
           description: A successful response.
@@ -28866,10 +28866,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  /warmage-sports/katana/rstaking/validator_whitelist_switch:
+  /oldfurya/furya/rstaking/validator_whitelist_switch:
     get:
       summary: Queries a list of WhitelistSwitch items.
-      operationId: KatanaRstakingValidatorWhitelistSwitch
+      operationId: FuryaRstakingValidatorWhitelistSwitch
       responses:
         '200':
           description: A successful response.
@@ -28898,10 +28898,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/rvalidator/cycle_seconds/{denom}':
+  '/oldfurya/furya/rvalidator/cycle_seconds/{denom}':
     get:
       summary: Queries a list of CycleSeconds items.
-      operationId: KatanaRvalidatorCycleSeconds
+      operationId: FuryaRvalidatorCycleSeconds
       responses:
         '200':
           description: A successful response.
@@ -28944,10 +28944,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
+  '/oldfurya/furya/rvalidator/latest_dealed_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestDealedCycle items.
-      operationId: KatanaRvalidatorLatestDealedCycle
+      operationId: FuryaRvalidatorLatestDealedCycle
       responses:
         '200':
           description: A successful response.
@@ -28996,10 +28996,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
+  '/oldfurya/furya/rvalidator/latest_voted_cycle/{denom}/{poolAddress}':
     get:
       summary: Queries a list of LatestVotedCycle items.
-      operationId: KatanaRvalidatorLatestVotedCycle
+      operationId: FuryaRvalidatorLatestVotedCycle
       responses:
         '200':
           description: A successful response.
@@ -29048,10 +29048,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/rvalidator/params:
+  /oldfurya/furya/rvalidator/params:
     get:
       summary: Parameters queries the parameters of the module.
-      operationId: KatanaRvalidatorParams
+      operationId: FuryaRvalidatorParams
       responses:
         '200':
           description: A successful response.
@@ -29084,10 +29084,10 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
-  '/warmage-sports/katana/rvalidator/r_validator_list/{denom}/{poolAddress}':
+  '/oldfurya/furya/rvalidator/r_validator_list/{denom}/{poolAddress}':
     get:
       summary: Queries a list of RValidatorList items.
-      operationId: KatanaRvalidatorRValidatorList
+      operationId: FuryaRvalidatorRValidatorList
       responses:
         '200':
           description: A successful response.
@@ -29127,10 +29127,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rvalidator/shuffle_seconds/{denom}':
+  '/oldfurya/furya/rvalidator/shuffle_seconds/{denom}':
     get:
       summary: Queries a list of ShuffleSeconds items.
-      operationId: KatanaRvalidatorShuffleSeconds
+      operationId: FuryaRvalidatorShuffleSeconds
       responses:
         '200':
           description: A successful response.
@@ -29173,10 +29173,10 @@ paths:
           type: string
       tags:
         - Query
-  '/warmage-sports/katana/rvote/get_proposal/{propId}':
+  '/oldfurya/furya/rvote/get_proposal/{propId}':
     get:
       summary: Queries a list of getProposal items.
-      operationId: KatanaRvoteGetProposal
+      operationId: FuryaRvoteGetProposal
       responses:
         '200':
           description: A successful response.
@@ -29377,10 +29377,10 @@ paths:
           type: string
       tags:
         - Query
-  /warmage-sports/katana/rvote/get_proposal_life:
+  /oldfurya/furya/rvote/get_proposal_life:
     get:
       summary: Queries a list of getProposalLife items.
-      operationId: KatanaRvoteGetProposalLife
+      operationId: FuryaRvoteGetProposalLife
       responses:
         '200':
           description: A successful response.
@@ -29577,10 +29577,10 @@ paths:
                         }
       tags:
         - Query
-  /warmage-sports/katana/sudo/admin:
+  /oldfurya/furya/sudo/admin:
     get:
       summary: Queries a list of admin items.
-      operationId: KatanaSudoAdmin
+      operationId: FuryaSudoAdmin
       responses:
         '200':
           description: A successful response.
@@ -45368,7 +45368,7 @@ definitions:
     description: |-
       Version defines the versioning scheme used to negotiate the IBC verison in
       the connection handshake.
-  katana.katana.bridge.BannedDenom:
+  furya.furya.bridge.BannedDenom:
     type: object
     properties:
       chainId:
@@ -45376,35 +45376,35 @@ definitions:
         format: int64
       denom:
         type: string
-  katana.katana.bridge.DenomType:
+  furya.furya.bridge.DenomType:
     type: string
     enum:
       - UNSPECIFIED
       - NATIVE
       - EXTERNAL
     default: UNSPECIFIED
-  katana.katana.bridge.MsgAddBannedDenomResponse:
+  furya.furya.bridge.MsgAddBannedDenomResponse:
     type: object
-  katana.katana.bridge.MsgAddChainIdResponse:
+  furya.furya.bridge.MsgAddChainIdResponse:
     type: object
-  katana.katana.bridge.MsgDepositResponse:
+  furya.furya.bridge.MsgDepositResponse:
     type: object
-  katana.katana.bridge.MsgRmBannedDenomResponse:
+  furya.furya.bridge.MsgRmBannedDenomResponse:
     type: object
-  katana.katana.bridge.MsgRmChainIdResponse:
+  furya.furya.bridge.MsgRmChainIdResponse:
     type: object
-  katana.katana.bridge.MsgSetRelayFeeReceiverResponse:
+  furya.furya.bridge.MsgSetRelayFeeReceiverResponse:
     type: object
-  katana.katana.bridge.MsgSetRelayFeeResponse:
+  furya.furya.bridge.MsgSetRelayFeeResponse:
     type: object
-  katana.katana.bridge.MsgSetResourceidToDenomResponse:
+  furya.furya.bridge.MsgSetResourceidToDenomResponse:
     type: object
-  katana.katana.bridge.MsgVoteProposalResponse:
+  furya.furya.bridge.MsgVoteProposalResponse:
     type: object
-  katana.katana.bridge.Params:
+  furya.furya.bridge.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.bridge.Proposal:
+  furya.furya.bridge.Proposal:
     type: object
     properties:
       content:
@@ -45420,14 +45420,14 @@ definitions:
         type: array
         items:
           type: string
-  katana.katana.bridge.ProposalContent:
+  furya.furya.bridge.ProposalContent:
     type: object
     properties:
       amount:
         type: string
       receiver:
         type: string
-  katana.katana.bridge.QueryBannedDenomListResponse:
+  furya.furya.bridge.QueryBannedDenomListResponse:
     type: object
     properties:
       list:
@@ -45440,7 +45440,7 @@ definitions:
               format: int64
             denom:
               type: string
-  katana.katana.bridge.QueryChaindIdsResponse:
+  furya.furya.bridge.QueryChaindIdsResponse:
     type: object
     properties:
       chainId:
@@ -45448,20 +45448,20 @@ definitions:
         items:
           type: integer
           format: int64
-  katana.katana.bridge.QueryGetDepositCountResponse:
+  furya.furya.bridge.QueryGetDepositCountResponse:
     type: object
     properties:
       count:
         type: integer
         format: int64
-  katana.katana.bridge.QueryParamsResponse:
+  furya.furya.bridge.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.bridge.QueryProposalDetailResponse:
+  furya.furya.bridge.QueryProposalDetailResponse:
     type: object
     properties:
       proposal:
@@ -45480,12 +45480,12 @@ definitions:
             type: array
             items:
               type: string
-  katana.katana.bridge.QueryRelayFeeReceiverResponse:
+  furya.furya.bridge.QueryRelayFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  katana.katana.bridge.QueryRelayFeeResponse:
+  furya.furya.bridge.QueryRelayFeeResponse:
     type: object
     properties:
       value:
@@ -45500,7 +45500,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  katana.katana.bridge.QueryResourceidToDenomsResponse:
+  furya.furya.bridge.QueryResourceidToDenomsResponse:
     type: object
     properties:
       resourceidToDenoms:
@@ -45519,7 +45519,7 @@ definitions:
                 - NATIVE
                 - EXTERNAL
               default: UNSPECIFIED
-  katana.katana.bridge.ResourceIdToDenom:
+  furya.furya.bridge.ResourceIdToDenom:
     type: object
     properties:
       resourceId:
@@ -45533,37 +45533,37 @@ definitions:
           - NATIVE
           - EXTERNAL
         default: UNSPECIFIED
-  katana.katana.claim.MsgClaimResponse:
+  furya.furya.claim.MsgClaimResponse:
     type: object
-  katana.katana.claim.MsgProvideTokenResponse:
+  furya.furya.claim.MsgProvideTokenResponse:
     type: object
-  katana.katana.claim.MsgSetMerkleRootResponse:
+  furya.furya.claim.MsgSetMerkleRootResponse:
     type: object
-  katana.katana.claim.MsgToggleClaimSwitchResponse:
+  furya.furya.claim.MsgToggleClaimSwitchResponse:
     type: object
-  katana.katana.claim.MsgWithdrawTokenResponse:
+  furya.furya.claim.MsgWithdrawTokenResponse:
     type: object
-  katana.katana.claim.Params:
+  furya.furya.claim.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.claim.QueryClaimSwitchResponse:
+  furya.furya.claim.QueryClaimSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  katana.katana.claim.QueryIsClaimedResponse:
+  furya.furya.claim.QueryIsClaimedResponse:
     type: object
     properties:
       isClaimed:
         type: boolean
-  katana.katana.claim.QueryParamsResponse:
+  furya.furya.claim.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.ledger.BondPipeline:
+  furya.furya.ledger.BondPipeline:
     type: object
     properties:
       denom:
@@ -45579,7 +45579,7 @@ definitions:
             type: string
           active:
             type: string
-  katana.katana.ledger.BondRecord:
+  furya.furya.ledger.BondRecord:
     type: object
     properties:
       denom:
@@ -45602,7 +45602,7 @@ definitions:
           - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
           - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
         default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  katana.katana.ledger.BondSnapshot:
+  furya.furya.ledger.BondSnapshot:
     type: object
     properties:
       denom:
@@ -45630,7 +45630,7 @@ definitions:
           - TRANSFER_SKIPPED
           - TRANSFER_REPORTED
         default: ERA_UPDATED
-  katana.katana.ledger.EraExchangeRate:
+  furya.furya.ledger.EraExchangeRate:
     type: object
     properties:
       denom:
@@ -45640,14 +45640,14 @@ definitions:
         format: int64
       value:
         type: string
-  katana.katana.ledger.ExchangeRate:
+  furya.furya.ledger.ExchangeRate:
     type: object
     properties:
       denom:
         type: string
       value:
         type: string
-  katana.katana.ledger.IcaAccount:
+  furya.furya.ledger.IcaAccount:
     type: object
     properties:
       owner:
@@ -45666,7 +45666,7 @@ definitions:
         type: string
       hostChannelId:
         type: string
-  katana.katana.ledger.IcaPoolDetail:
+  furya.furya.ledger.IcaPoolDetail:
     type: object
     properties:
       denom:
@@ -45721,7 +45721,7 @@ definitions:
             type: string
           hostChannelId:
             type: string
-  katana.katana.ledger.IcaPoolStatus:
+  furya.furya.ledger.IcaPoolStatus:
     type: string
     enum:
       - ICA_POOL_STATUS_UNSPECIFIED
@@ -45730,7 +45730,7 @@ definitions:
       - ICA_POOL_STATUS_CREATE_TWO
       - ICA_POOL_STATUS_SET_WITHDRAWAL
     default: ICA_POOL_STATUS_UNSPECIFIED
-  katana.katana.ledger.InterchainTxStatus:
+  furya.furya.ledger.InterchainTxStatus:
     type: string
     enum:
       - INTERCHAIN_TX_STATUS_UNSPECIFIED
@@ -45738,7 +45738,7 @@ definitions:
       - INTERCHAIN_TX_STATUS_SUCCESS
       - INTERCHAIN_TX_STATUS_FAILED
     default: INTERCHAIN_TX_STATUS_UNSPECIFIED
-  katana.katana.ledger.LinkChunk:
+  furya.furya.ledger.LinkChunk:
     type: object
     properties:
       bond:
@@ -45747,7 +45747,7 @@ definitions:
         type: string
       active:
         type: string
-  katana.katana.ledger.LiquidityBondState:
+  furya.furya.ledger.LiquidityBondState:
     type: string
     enum:
       - LIQUIDITY_BOND_STATE_VERIFY_OK
@@ -45757,53 +45757,53 @@ definitions:
       - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
       - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
     default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  katana.katana.ledger.MsgClearCurrentEraSnapShotsResponse:
+  furya.furya.ledger.MsgClearCurrentEraSnapShotsResponse:
     type: object
-  katana.katana.ledger.MsgInitPoolResponse:
+  furya.furya.ledger.MsgInitPoolResponse:
     type: object
-  katana.katana.ledger.MsgLiquidityUnbondResponse:
+  furya.furya.ledger.MsgLiquidityUnbondResponse:
     type: object
-  katana.katana.ledger.MsgMigrateInitResponse:
+  furya.furya.ledger.MsgMigrateInitResponse:
     type: object
-  katana.katana.ledger.MsgMigrateUnbondingsResponse:
+  furya.furya.ledger.MsgMigrateUnbondingsResponse:
     type: object
-  katana.katana.ledger.MsgRegisterIcaPoolResponse:
+  furya.furya.ledger.MsgRegisterIcaPoolResponse:
     type: object
-  katana.katana.ledger.MsgRmBondedPoolResponse:
+  furya.furya.ledger.MsgRmBondedPoolResponse:
     type: object
-  katana.katana.ledger.MsgSetEraSecondsResponse:
+  furya.furya.ledger.MsgSetEraSecondsResponse:
     type: object
-  katana.katana.ledger.MsgSetEraUnbondLimitResponse:
+  furya.furya.ledger.MsgSetEraUnbondLimitResponse:
     type: object
-  katana.katana.ledger.MsgSetLeastBondResponse:
+  furya.furya.ledger.MsgSetLeastBondResponse:
     type: object
-  katana.katana.ledger.MsgSetPoolDetailResponse:
+  furya.furya.ledger.MsgSetPoolDetailResponse:
     type: object
-  katana.katana.ledger.MsgSetPoolStatusResponse:
+  furya.furya.ledger.MsgSetPoolStatusResponse:
     type: object
-  katana.katana.ledger.MsgSetProtocolFeeReceiverResponse:
+  furya.furya.ledger.MsgSetProtocolFeeReceiverResponse:
     type: object
-  katana.katana.ledger.MsgSetRParamsResponse:
+  furya.furya.ledger.MsgSetRParamsResponse:
     type: object
-  katana.katana.ledger.MsgSetRelayFeeReceiverResponse:
+  furya.furya.ledger.MsgSetRelayFeeReceiverResponse:
     type: object
-  katana.katana.ledger.MsgSetRelayGasPriceResponse:
+  furya.furya.ledger.MsgSetRelayGasPriceResponse:
     type: object
-  katana.katana.ledger.MsgSetStakingRewardCommissionResponse:
+  furya.furya.ledger.MsgSetStakingRewardCommissionResponse:
     type: object
-  katana.katana.ledger.MsgSetUnbondCommissionResponse:
+  furya.furya.ledger.MsgSetUnbondCommissionResponse:
     type: object
-  katana.katana.ledger.MsgSetUnbondRelayFeeResponse:
+  furya.furya.ledger.MsgSetUnbondRelayFeeResponse:
     type: object
-  katana.katana.ledger.MsgSetWithdrawalAddrResponse:
+  furya.furya.ledger.MsgSetWithdrawalAddrResponse:
     type: object
-  katana.katana.ledger.MsgSubmitSignatureResponse:
+  furya.furya.ledger.MsgSubmitSignatureResponse:
     type: object
-  katana.katana.ledger.MsgToggleUnbondSwitchResponse:
+  furya.furya.ledger.MsgToggleUnbondSwitchResponse:
     type: object
-  katana.katana.ledger.MsgUnsealMigrateInitResponse:
+  furya.furya.ledger.MsgUnsealMigrateInitResponse:
     type: object
-  katana.katana.ledger.OriginalTxType:
+  furya.furya.ledger.OriginalTxType:
     type: string
     enum:
       - ORIGINAL_TX_TYPE_DEAL_ERAUPDATED
@@ -45813,7 +45813,7 @@ definitions:
       - ORIGINAL_TX_TYPE_RESERVED
     default: ORIGINAL_TX_TYPE_DEAL_ERAUPDATED
     description: OriginalTxType enumerates the tx type of a signature.
-  katana.katana.ledger.PoolBondState:
+  furya.furya.ledger.PoolBondState:
     type: string
     enum:
       - ERA_UPDATED
@@ -45822,7 +45822,7 @@ definitions:
       - TRANSFER_SKIPPED
       - TRANSFER_REPORTED
     default: ERA_UPDATED
-  katana.katana.ledger.PoolDetail:
+  furya.furya.ledger.PoolDetail:
     type: object
     properties:
       denom:
@@ -45843,21 +45843,21 @@ definitions:
           - NOT_ACTIVE
           - RESERVED
         default: ACTIVE
-  katana.katana.ledger.PoolStatus:
+  furya.furya.ledger.PoolStatus:
     type: string
     enum:
       - ACTIVE
       - NOT_ACTIVE
       - RESERVED
     default: ACTIVE
-  katana.katana.ledger.QueryBondedPoolsByDenomResponse:
+  furya.furya.ledger.QueryBondedPoolsByDenomResponse:
     type: object
     properties:
       addrs:
         type: array
         items:
           type: string
-  katana.katana.ledger.QueryEraExchangeRatesByDenomResponse:
+  furya.furya.ledger.QueryEraExchangeRatesByDenomResponse:
     type: object
     properties:
       eraExchangeRates:
@@ -45872,7 +45872,7 @@ definitions:
               format: int64
             value:
               type: string
-  katana.katana.ledger.QueryExchangeRateAllResponse:
+  furya.furya.ledger.QueryExchangeRateAllResponse:
     type: object
     properties:
       exchangeRates:
@@ -45884,7 +45884,7 @@ definitions:
               type: string
             value:
               type: string
-  katana.katana.ledger.QueryGetBondPipelineResponse:
+  furya.furya.ledger.QueryGetBondPipelineResponse:
     type: object
     properties:
       pipeline:
@@ -45903,7 +45903,7 @@ definitions:
                 type: string
               active:
                 type: string
-  katana.katana.ledger.QueryGetBondRecordResponse:
+  furya.furya.ledger.QueryGetBondRecordResponse:
     type: object
     properties:
       bondRecord:
@@ -45929,20 +45929,20 @@ definitions:
               - LIQUIDITY_BOND_STATE_AMOUNT_UNMATCH
               - LIQUIDITY_BOND_STATE_MEMO_UNMATCH
             default: LIQUIDITY_BOND_STATE_VERIFY_OK
-  katana.katana.ledger.QueryGetChainEraResponse:
+  furya.furya.ledger.QueryGetChainEraResponse:
     type: object
     properties:
       era:
         type: integer
         format: int64
-  katana.katana.ledger.QueryGetCurrentEraSnapshotResponse:
+  furya.furya.ledger.QueryGetCurrentEraSnapshotResponse:
     type: object
     properties:
       shotIds:
         type: array
         items:
           type: string
-  katana.katana.ledger.QueryGetEraExchangeRateResponse:
+  furya.furya.ledger.QueryGetEraExchangeRateResponse:
     type: object
     properties:
       eraExchangeRate:
@@ -45955,20 +45955,20 @@ definitions:
             format: int64
           value:
             type: string
-  katana.katana.ledger.QueryGetEraSnapshotResponse:
+  furya.furya.ledger.QueryGetEraSnapshotResponse:
     type: object
     properties:
       shotIds:
         type: array
         items:
           type: string
-  katana.katana.ledger.QueryGetEraUnbondLimitResponse:
+  furya.furya.ledger.QueryGetEraUnbondLimitResponse:
     type: object
     properties:
       limit:
         type: integer
         format: int64
-  katana.katana.ledger.QueryGetExchangeRateResponse:
+  furya.furya.ledger.QueryGetExchangeRateResponse:
     type: object
     properties:
       exchangeRate:
@@ -45978,7 +45978,7 @@ definitions:
             type: string
           value:
             type: string
-  katana.katana.ledger.QueryGetPoolDetailResponse:
+  furya.furya.ledger.QueryGetPoolDetailResponse:
     type: object
     properties:
       detail:
@@ -46002,12 +46002,12 @@ definitions:
               - NOT_ACTIVE
               - RESERVED
             default: ACTIVE
-  katana.katana.ledger.QueryGetProtocolFeeReceiverResponse:
+  furya.furya.ledger.QueryGetProtocolFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  katana.katana.ledger.QueryGetRParamsResponse:
+  furya.furya.ledger.QueryGetRParamsResponse:
     type: object
     properties:
       rParams:
@@ -46028,7 +46028,7 @@ definitions:
             format: int64
           leastBond:
             type: string
-  katana.katana.ledger.QueryGetSignatureResponse:
+  furya.furya.ledger.QueryGetSignatureResponse:
     type: object
     properties:
       signature:
@@ -46057,7 +46057,7 @@ definitions:
             type: array
             items:
               type: string
-  katana.katana.ledger.QueryGetSnapshotResponse:
+  furya.furya.ledger.QueryGetSnapshotResponse:
     type: object
     properties:
       shot:
@@ -46088,22 +46088,22 @@ definitions:
               - TRANSFER_SKIPPED
               - TRANSFER_REPORTED
             default: ERA_UPDATED
-  katana.katana.ledger.QueryGetStakingRewardCommissionResponse:
+  furya.furya.ledger.QueryGetStakingRewardCommissionResponse:
     type: object
     properties:
       commission:
         type: string
-  katana.katana.ledger.QueryGetTotalExpectedActiveResponse:
+  furya.furya.ledger.QueryGetTotalExpectedActiveResponse:
     type: object
     properties:
       active:
         type: string
-  katana.katana.ledger.QueryGetUnbondCommissionResponse:
+  furya.furya.ledger.QueryGetUnbondCommissionResponse:
     type: object
     properties:
       commission:
         type: string
-  katana.katana.ledger.QueryGetUnbondRelayFeeResponse:
+  furya.furya.ledger.QueryGetUnbondRelayFeeResponse:
     type: object
     properties:
       fee:
@@ -46126,7 +46126,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  katana.katana.ledger.QueryIcaPoolListResponse:
+  furya.furya.ledger.QueryIcaPoolListResponse:
     type: object
     properties:
       icaPoolList:
@@ -46186,7 +46186,7 @@ definitions:
                   type: string
                 hostChannelId:
                   type: string
-  katana.katana.ledger.QueryInterchainTxStatusResponse:
+  furya.furya.ledger.QueryInterchainTxStatusResponse:
     type: object
     properties:
       interchainTxStatus:
@@ -46197,13 +46197,13 @@ definitions:
           - INTERCHAIN_TX_STATUS_SUCCESS
           - INTERCHAIN_TX_STATUS_FAILED
         default: INTERCHAIN_TX_STATUS_UNSPECIFIED
-  katana.katana.ledger.QueryPoolUnbondNextSequenceResponse:
+  furya.furya.ledger.QueryPoolUnbondNextSequenceResponse:
     type: object
     properties:
       nextSequence:
         type: integer
         format: int64
-  katana.katana.ledger.QueryPoolUnbondingsResponse:
+  furya.furya.ledger.QueryPoolUnbondingsResponse:
     type: object
     properties:
       unbondings:
@@ -46217,12 +46217,12 @@ definitions:
               type: string
             recipient:
               type: string
-  katana.katana.ledger.QueryRelayFeeReceiverResponse:
+  furya.furya.ledger.QueryRelayFeeReceiverResponse:
     type: object
     properties:
       receiver:
         type: string
-  katana.katana.ledger.QueryTotalProtocolFeeResponse:
+  furya.furya.ledger.QueryTotalProtocolFeeResponse:
     type: object
     properties:
       totalProtocolFeeList:
@@ -46234,12 +46234,12 @@ definitions:
               type: string
             value:
               type: string
-  katana.katana.ledger.QueryUnbondSwitchResponse:
+  furya.furya.ledger.QueryUnbondSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  katana.katana.ledger.RParams:
+  furya.furya.ledger.RParams:
     type: object
     properties:
       denom:
@@ -46257,7 +46257,7 @@ definitions:
         format: int64
       leastBond:
         type: string
-  katana.katana.ledger.Signature:
+  furya.furya.ledger.Signature:
     type: object
     properties:
       denom:
@@ -46283,14 +46283,14 @@ definitions:
         type: array
         items:
           type: string
-  katana.katana.ledger.TotalProtocolFee:
+  furya.furya.ledger.TotalProtocolFee:
     type: object
     properties:
       denom:
         type: string
       value:
         type: string
-  katana.katana.ledger.UnbondRelayFee:
+  furya.furya.ledger.UnbondRelayFee:
     type: object
     properties:
       denom:
@@ -46307,7 +46307,7 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  katana.katana.ledger.Unbonding:
+  furya.furya.ledger.Unbonding:
     type: object
     properties:
       unbonder:
@@ -46316,7 +46316,7 @@ definitions:
         type: string
       recipient:
         type: string
-  katana.katana.mining.CreateRewardPoolInfo:
+  furya.furya.mining.CreateRewardPoolInfo:
     type: object
     properties:
       rewardTokenDenom:
@@ -46328,7 +46328,7 @@ definitions:
       startTimestamp:
         type: string
         format: uint64
-  katana.katana.mining.CreateStakeItemInfo:
+  furya.furya.mining.CreateStakeItemInfo:
     type: object
     properties:
       lockSecond:
@@ -46337,85 +46337,85 @@ definitions:
       powerRewardRate:
         type: string
         title: user stakedPower = powerRewardRate * stakedAmount
-  katana.katana.mining.MsgAddMiningProviderResponse:
+  furya.furya.mining.MsgAddMiningProviderResponse:
     type: object
-  katana.katana.mining.MsgAddRewardPoolResponse:
+  furya.furya.mining.MsgAddRewardPoolResponse:
     type: object
-  katana.katana.mining.MsgAddRewardResponse:
+  furya.furya.mining.MsgAddRewardResponse:
     type: object
-  katana.katana.mining.MsgAddRewardTokenResponse:
+  furya.furya.mining.MsgAddRewardTokenResponse:
     type: object
-  katana.katana.mining.MsgAddStakeItemResponse:
+  furya.furya.mining.MsgAddStakeItemResponse:
     type: object
-  katana.katana.mining.MsgAddStakePoolResponse:
+  furya.furya.mining.MsgAddStakePoolResponse:
     type: object
-  katana.katana.mining.MsgAddStakeTokenResponse:
+  furya.furya.mining.MsgAddStakeTokenResponse:
     type: object
-  katana.katana.mining.MsgClaimRewardResponse:
+  furya.furya.mining.MsgClaimRewardResponse:
     type: object
-  katana.katana.mining.MsgEmergencyWithdrawResponse:
+  furya.furya.mining.MsgEmergencyWithdrawResponse:
     type: object
-  katana.katana.mining.MsgRmMiningProviderResponse:
+  furya.furya.mining.MsgRmMiningProviderResponse:
     type: object
-  katana.katana.mining.MsgRmRewardTokenResponse:
+  furya.furya.mining.MsgRmRewardTokenResponse:
     type: object
-  katana.katana.mining.MsgRmStakeTokenResponse:
+  furya.furya.mining.MsgRmStakeTokenResponse:
     type: object
-  katana.katana.mining.MsgSetMaxRewardPoolNumberResponse:
+  furya.furya.mining.MsgSetMaxRewardPoolNumberResponse:
     type: object
-  katana.katana.mining.MsgSetMaxStakeItemNumberResponse:
+  furya.furya.mining.MsgSetMaxStakeItemNumberResponse:
     type: object
-  katana.katana.mining.MsgSetStakeItemLimitResponse:
+  furya.furya.mining.MsgSetStakeItemLimitResponse:
     type: object
-  katana.katana.mining.MsgStakeResponse:
+  furya.furya.mining.MsgStakeResponse:
     type: object
-  katana.katana.mining.MsgToggleEmergencySwitchResponse:
+  furya.furya.mining.MsgToggleEmergencySwitchResponse:
     type: object
-  katana.katana.mining.MsgToggleProviderSwitchResponse:
+  furya.furya.mining.MsgToggleProviderSwitchResponse:
     type: object
-  katana.katana.mining.MsgUpdateRewardPoolResponse:
+  furya.furya.mining.MsgUpdateRewardPoolResponse:
     type: object
-  katana.katana.mining.MsgUpdateStakeItemResponse:
+  furya.furya.mining.MsgUpdateStakeItemResponse:
     type: object
-  katana.katana.mining.MsgWithdrawResponse:
+  furya.furya.mining.MsgWithdrawResponse:
     type: object
-  katana.katana.mining.MsgWithdrawRewardTokenResponse:
+  furya.furya.mining.MsgWithdrawRewardTokenResponse:
     type: object
-  katana.katana.mining.Params:
+  furya.furya.mining.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.mining.QueryMaxRewardPoolNumberResponse:
+  furya.furya.mining.QueryMaxRewardPoolNumberResponse:
     type: object
     properties:
       number:
         type: integer
         format: int64
-  katana.katana.mining.QueryMaxStakeItemNumberResponse:
+  furya.furya.mining.QueryMaxStakeItemNumberResponse:
     type: object
     properties:
       number:
         type: integer
         format: int64
-  katana.katana.mining.QueryMiningProviderListResponse:
+  furya.furya.mining.QueryMiningProviderListResponse:
     type: object
     properties:
       miningProviderList:
         type: array
         items:
           type: string
-  katana.katana.mining.QueryParamsResponse:
+  furya.furya.mining.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.mining.QueryProviderSwitchResponse:
+  furya.furya.mining.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  katana.katana.mining.QueryRewardTokenListResponse:
+  furya.furya.mining.QueryRewardTokenListResponse:
     type: object
     properties:
       rewardTokenList:
@@ -46429,7 +46429,7 @@ definitions:
               type: string
             minRewardPerSecond:
               type: string
-  katana.katana.mining.QueryStakeItemListResponse:
+  furya.furya.mining.QueryStakeItemListResponse:
     type: object
     properties:
       stakeItemList:
@@ -46451,7 +46451,7 @@ definitions:
               title: user stakedPower = powerRewardRate * stakedAmount
             enable:
               type: boolean
-  katana.katana.mining.QueryStakePoolInfoResponse:
+  furya.furya.mining.QueryStakePoolInfoResponse:
     type: object
     properties:
       stakePool:
@@ -46500,7 +46500,7 @@ definitions:
             type: boolean
           creator:
             type: string
-  katana.katana.mining.QueryStakePoolListResponse:
+  furya.furya.mining.QueryStakePoolListResponse:
     type: object
     properties:
       stakePoolList:
@@ -46551,13 +46551,13 @@ definitions:
               type: boolean
             creator:
               type: string
-  katana.katana.mining.QueryStakeRecordCountResponse:
+  furya.furya.mining.QueryStakeRecordCountResponse:
     type: object
     properties:
       count:
         type: integer
         format: int64
-  katana.katana.mining.QueryStakeRecordListResponse:
+  furya.furya.mining.QueryStakeRecordListResponse:
     type: object
     properties:
       stakeRecordList:
@@ -46602,7 +46602,7 @@ definitions:
             stakeItemIndex:
               type: integer
               format: int64
-  katana.katana.mining.QueryStakeRecordResponse:
+  furya.furya.mining.QueryStakeRecordResponse:
     type: object
     properties:
       stakeRecord:
@@ -46645,7 +46645,7 @@ definitions:
           stakeItemIndex:
             type: integer
             format: int64
-  katana.katana.mining.QueryStakeRewardResponse:
+  furya.furya.mining.QueryStakeRewardResponse:
     type: object
     properties:
       rewardTokens:
@@ -46662,7 +46662,7 @@ definitions:
 
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
-  katana.katana.mining.RewardPool:
+  furya.furya.mining.RewardPool:
     type: object
     properties:
       index:
@@ -46688,7 +46688,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  katana.katana.mining.RewardToken:
+  furya.furya.mining.RewardToken:
     type: object
     properties:
       rewardTokenDenom:
@@ -46697,7 +46697,7 @@ definitions:
         type: string
       minRewardPerSecond:
         type: string
-  katana.katana.mining.StakeItem:
+  furya.furya.mining.StakeItem:
     type: object
     properties:
       index:
@@ -46714,7 +46714,7 @@ definitions:
         title: user stakedPower = powerRewardRate * stakedAmount
       enable:
         type: boolean
-  katana.katana.mining.StakePool:
+  furya.furya.mining.StakePool:
     type: object
     properties:
       index:
@@ -46760,7 +46760,7 @@ definitions:
         type: boolean
       creator:
         type: string
-  katana.katana.mining.UserRewardInfo:
+  furya.furya.mining.UserRewardInfo:
     type: object
     properties:
       rewardPoolIndex:
@@ -46772,7 +46772,7 @@ definitions:
         type: string
       claimedAmount:
         type: string
-  katana.katana.mining.UserStakeRecord:
+  furya.furya.mining.UserStakeRecord:
     type: object
     properties:
       userAddress:
@@ -46906,73 +46906,73 @@ definitions:
     description: |-
       Metadata represents a struct that describes
       a basic token.
-  katana.katana.rbank.MsgAddDenomResponse:
+  furya.furya.rbank.MsgAddDenomResponse:
     type: object
-  katana.katana.rbank.Params:
+  furya.furya.rbank.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.rbank.QueryAddressPrefixResponse:
+  furya.furya.rbank.QueryAddressPrefixResponse:
     type: object
     properties:
       accAddressPrefix:
         type: string
       valAddressPrefix:
         type: string
-  katana.katana.rbank.QueryParamsResponse:
+  furya.furya.rbank.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.rdex.MsgAddLiquidityResponse:
+  furya.furya.rdex.MsgAddLiquidityResponse:
     type: object
-  katana.katana.rdex.MsgAddPoolCreatorResponse:
+  furya.furya.rdex.MsgAddPoolCreatorResponse:
     type: object
-  katana.katana.rdex.MsgAddProviderResponse:
+  furya.furya.rdex.MsgAddProviderResponse:
     type: object
-  katana.katana.rdex.MsgCreatePoolResponse:
+  furya.furya.rdex.MsgCreatePoolResponse:
     type: object
-  katana.katana.rdex.MsgRemoveLiquidityResponse:
+  furya.furya.rdex.MsgRemoveLiquidityResponse:
     type: object
-  katana.katana.rdex.MsgRmPoolCreatorResponse:
+  furya.furya.rdex.MsgRmPoolCreatorResponse:
     type: object
-  katana.katana.rdex.MsgRmProviderResponse:
+  furya.furya.rdex.MsgRmProviderResponse:
     type: object
-  katana.katana.rdex.MsgSwapResponse:
+  furya.furya.rdex.MsgSwapResponse:
     type: object
-  katana.katana.rdex.MsgToggleProviderSwitchResponse:
+  furya.furya.rdex.MsgToggleProviderSwitchResponse:
     type: object
-  katana.katana.rdex.Params:
+  furya.furya.rdex.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.rdex.QueryParamsResponse:
+  furya.furya.rdex.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.rdex.QueryPoolCreatorListResponse:
+  furya.furya.rdex.QueryPoolCreatorListResponse:
     type: object
     properties:
       poolCreatorList:
         type: array
         items:
           type: string
-  katana.katana.rdex.QueryProviderListResponse:
+  furya.furya.rdex.QueryProviderListResponse:
     type: object
     properties:
       providerList:
         type: array
         items:
           type: string
-  katana.katana.rdex.QueryProviderSwitchResponse:
+  furya.furya.rdex.QueryProviderSwitchResponse:
     type: object
     properties:
       providerSwitch:
         type: boolean
-  katana.katana.rdex.QuerySwapPoolInfoResponse:
+  furya.furya.rdex.QuerySwapPoolInfoResponse:
     type: object
     properties:
       swapPool:
@@ -47026,7 +47026,7 @@ definitions:
               method
 
               signatures required by gogoproto.
-  katana.katana.rdex.QuerySwapPoolListResponse:
+  furya.furya.rdex.QuerySwapPoolListResponse:
     type: object
     properties:
       swapPoolList:
@@ -47082,7 +47082,7 @@ definitions:
                 method
 
                 signatures required by gogoproto.
-  katana.katana.rdex.SwapPool:
+  furya.furya.rdex.SwapPool:
     type: object
     properties:
       index:
@@ -47124,26 +47124,26 @@ definitions:
 
           NOTE: The amount field is an Int which implements the custom method
           signatures required by gogoproto.
-  katana.katana.relayers.MsgAddRelayerResponse:
+  furya.furya.relayers.MsgAddRelayerResponse:
     type: object
-  katana.katana.relayers.MsgDeleteRelayerResponse:
+  furya.furya.relayers.MsgDeleteRelayerResponse:
     type: object
-  katana.katana.relayers.MsgSetThresholdResponse:
+  furya.furya.relayers.MsgSetThresholdResponse:
     type: object
-  katana.katana.relayers.QueryRelayersResponse:
+  furya.furya.relayers.QueryRelayersResponse:
     type: object
     properties:
       relayers:
         type: array
         items:
           type: string
-  katana.katana.relayers.QueryThresholdResponse:
+  furya.furya.relayers.QueryThresholdResponse:
     type: object
     properties:
       threshold:
         type: integer
         format: int64
-  katana.katana.rmintreward.Acts:
+  furya.furya.rmintreward.Acts:
     type: object
     properties:
       acts:
@@ -47151,7 +47151,7 @@ definitions:
         items:
           type: string
           format: uint64
-  katana.katana.rmintreward.MintRewardAct:
+  furya.furya.rmintreward.MintRewardAct:
     type: object
     properties:
       begin:
@@ -47182,7 +47182,7 @@ definitions:
               type: string
             userLimit:
               type: string
-  katana.katana.rmintreward.MintRewardActPost:
+  furya.furya.rmintreward.MintRewardActPost:
     type: object
     properties:
       begin:
@@ -47207,24 +47207,24 @@ definitions:
               type: string
             userLimit:
               type: string
-  katana.katana.rmintreward.MsgAddMintRewardActResponse:
+  furya.furya.rmintreward.MsgAddMintRewardActResponse:
     type: object
-  katana.katana.rmintreward.MsgClaimMintRewardResponse:
+  furya.furya.rmintreward.MsgClaimMintRewardResponse:
     type: object
-  katana.katana.rmintreward.MsgProvideRewardTokenResponse:
+  furya.furya.rmintreward.MsgProvideRewardTokenResponse:
     type: object
-  katana.katana.rmintreward.MsgUpdateMintRewardActResponse:
+  furya.furya.rmintreward.MsgUpdateMintRewardActResponse:
     type: object
-  katana.katana.rmintreward.Params:
+  furya.furya.rmintreward.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.rmintreward.QueryActCurrentCycleResponse:
+  furya.furya.rmintreward.QueryActCurrentCycleResponse:
     type: object
     properties:
       currentCycle:
         type: string
         format: uint64
-  katana.katana.rmintreward.QueryActDetailResponse:
+  furya.furya.rmintreward.QueryActDetailResponse:
     type: object
     properties:
       act:
@@ -47258,13 +47258,13 @@ definitions:
                   type: string
                 userLimit:
                   type: string
-  katana.katana.rmintreward.QueryActLatestCycleResponse:
+  furya.furya.rmintreward.QueryActLatestCycleResponse:
     type: object
     properties:
       latestCycle:
         type: string
         format: uint64
-  katana.katana.rmintreward.QueryClaimInfoDetailResponse:
+  furya.furya.rmintreward.QueryClaimInfoDetailResponse:
     type: object
     properties:
       claimInfo:
@@ -47291,14 +47291,14 @@ definitions:
                   type: string
                 totalClaimedAmount:
                   type: string
-  katana.katana.rmintreward.QueryParamsResponse:
+  furya.furya.rmintreward.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.rmintreward.QueryUserActsResponse:
+  furya.furya.rmintreward.QueryUserActsResponse:
     type: object
     properties:
       acts:
@@ -47309,13 +47309,13 @@ definitions:
             items:
               type: string
               format: uint64
-  katana.katana.rmintreward.QueryUserMintCountResponse:
+  furya.furya.rmintreward.QueryUserMintCountResponse:
     type: object
     properties:
       count:
         type: string
         format: uint64
-  katana.katana.rmintreward.TokenClaimInfo:
+  furya.furya.rmintreward.TokenClaimInfo:
     type: object
     properties:
       denom:
@@ -47324,7 +47324,7 @@ definitions:
         type: string
       totalClaimedAmount:
         type: string
-  katana.katana.rmintreward.TokenRewardInfo:
+  furya.furya.rmintreward.TokenRewardInfo:
     type: object
     properties:
       denom:
@@ -47337,7 +47337,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  katana.katana.rmintreward.TokenRewardInfoPost:
+  furya.furya.rmintreward.TokenRewardInfoPost:
     type: object
     properties:
       denom:
@@ -47348,7 +47348,7 @@ definitions:
         type: string
       userLimit:
         type: string
-  katana.katana.rmintreward.UserClaimInfo:
+  furya.furya.rmintreward.UserClaimInfo:
     type: object
     properties:
       mintRTokenAmount:
@@ -47372,62 +47372,62 @@ definitions:
               type: string
             totalClaimedAmount:
               type: string
-  katana.katana.rstaking.MsgAddDelegatorToWhitelistResponse:
+  furya.furya.rstaking.MsgAddDelegatorToWhitelistResponse:
     type: object
-  katana.katana.rstaking.MsgAddValToWhitelistResponse:
+  furya.furya.rstaking.MsgAddValToWhitelistResponse:
     type: object
-  katana.katana.rstaking.MsgProvideTokenResponse:
+  furya.furya.rstaking.MsgProvideTokenResponse:
     type: object
-  katana.katana.rstaking.MsgRmDelegatorFromWhitelistResponse:
+  furya.furya.rstaking.MsgRmDelegatorFromWhitelistResponse:
     type: object
-  katana.katana.rstaking.MsgSetInflationBaseResponse:
+  furya.furya.rstaking.MsgSetInflationBaseResponse:
     type: object
-  katana.katana.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
+  furya.furya.rstaking.MsgToggleDelegatorWhitelistSwitchResponse:
     type: object
-  katana.katana.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
+  furya.furya.rstaking.MsgToggleValidatorWhitelistSwitchResponse:
     type: object
-  katana.katana.rstaking.MsgWithdrawResponse:
+  furya.furya.rstaking.MsgWithdrawResponse:
     type: object
-  katana.katana.rstaking.Params:
+  furya.furya.rstaking.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.rstaking.QueryDelegatorWhitelistResponse:
+  furya.furya.rstaking.QueryDelegatorWhitelistResponse:
     type: object
     properties:
       delegatorAddress:
         type: array
         items:
           type: string
-  katana.katana.rstaking.QueryDelegatorWhitelistSwitchResponse:
+  furya.furya.rstaking.QueryDelegatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  katana.katana.rstaking.QueryInflationBaseResponse:
+  furya.furya.rstaking.QueryInflationBaseResponse:
     type: object
     properties:
       inflationBase:
         type: string
-  katana.katana.rstaking.QueryParamsResponse:
+  furya.furya.rstaking.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.rstaking.QueryValidatorWhitelistResponse:
+  furya.furya.rstaking.QueryValidatorWhitelistResponse:
     type: object
     properties:
       valAddress:
         type: array
         items:
           type: string
-  katana.katana.rstaking.QueryValidatorWhitelistSwitchResponse:
+  furya.furya.rstaking.QueryValidatorWhitelistSwitchResponse:
     type: object
     properties:
       isOpen:
         type: boolean
-  katana.katana.rvalidator.Cycle:
+  furya.furya.rvalidator.Cycle:
     type: object
     properties:
       denom:
@@ -47440,7 +47440,7 @@ definitions:
       number:
         type: string
         format: uint64
-  katana.katana.rvalidator.CycleSeconds:
+  furya.furya.rvalidator.CycleSeconds:
     type: object
     properties:
       denom:
@@ -47451,20 +47451,20 @@ definitions:
       seconds:
         type: string
         format: uint64
-  katana.katana.rvalidator.MsgAddRValidatorResponse:
+  furya.furya.rvalidator.MsgAddRValidatorResponse:
     type: object
-  katana.katana.rvalidator.MsgInitRValidatorResponse:
+  furya.furya.rvalidator.MsgInitRValidatorResponse:
     type: object
-  katana.katana.rvalidator.MsgRmRValidatorResponse:
+  furya.furya.rvalidator.MsgRmRValidatorResponse:
     type: object
-  katana.katana.rvalidator.MsgSetCycleSecondsResponse:
+  furya.furya.rvalidator.MsgSetCycleSecondsResponse:
     type: object
-  katana.katana.rvalidator.MsgSetShuffleSecondsResponse:
+  furya.furya.rvalidator.MsgSetShuffleSecondsResponse:
     type: object
-  katana.katana.rvalidator.Params:
+  furya.furya.rvalidator.Params:
     type: object
     description: Params defines the parameters for the module.
-  katana.katana.rvalidator.QueryCycleSecondsResponse:
+  furya.furya.rvalidator.QueryCycleSecondsResponse:
     type: object
     properties:
       cycleSeconds:
@@ -47478,7 +47478,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  katana.katana.rvalidator.QueryLatestDealedCycleResponse:
+  furya.furya.rvalidator.QueryLatestDealedCycleResponse:
     type: object
     properties:
       latestDealedCycle:
@@ -47494,7 +47494,7 @@ definitions:
           number:
             type: string
             format: uint64
-  katana.katana.rvalidator.QueryLatestVotedCycleResponse:
+  furya.furya.rvalidator.QueryLatestVotedCycleResponse:
     type: object
     properties:
       latestVotedCycle:
@@ -47510,21 +47510,21 @@ definitions:
           number:
             type: string
             format: uint64
-  katana.katana.rvalidator.QueryParamsResponse:
+  furya.furya.rvalidator.QueryParamsResponse:
     type: object
     properties:
       params:
         description: params holds all the parameters of this module.
         type: object
     description: QueryParamsResponse is response type for the Query/Params RPC method.
-  katana.katana.rvalidator.QueryRValidatorListResponse:
+  furya.furya.rvalidator.QueryRValidatorListResponse:
     type: object
     properties:
       rValidatorList:
         type: array
         items:
           type: string
-  katana.katana.rvalidator.QueryShuffleSecondsResponse:
+  furya.furya.rvalidator.QueryShuffleSecondsResponse:
     type: object
     properties:
       shuffleSeconds:
@@ -47538,7 +47538,7 @@ definitions:
           seconds:
             type: string
             format: uint64
-  katana.katana.rvalidator.ShuffleSeconds:
+  furya.furya.rvalidator.ShuffleSeconds:
     type: object
     properties:
       denom:
@@ -47549,9 +47549,9 @@ definitions:
       seconds:
         type: string
         format: uint64
-  katana.katana.rvote.MsgSetProposalLifeResponse:
+  furya.furya.rvote.MsgSetProposalLifeResponse:
     type: object
-  katana.katana.rvote.MsgSubmitProposalResponse:
+  furya.furya.rvote.MsgSubmitProposalResponse:
     type: object
     properties:
       propId:
@@ -47564,7 +47564,7 @@ definitions:
           - PROPOSAL_STATUS_EXPIRED
         default: PROPOSAL_STATUS_INITIATED
         description: ProposalStatus enumerates the valid statuses of a proposal.
-  katana.katana.rvote.ProposalStatus:
+  furya.furya.rvote.ProposalStatus:
     type: string
     enum:
       - PROPOSAL_STATUS_INITIATED
@@ -47572,20 +47572,20 @@ definitions:
       - PROPOSAL_STATUS_EXPIRED
     default: PROPOSAL_STATUS_INITIATED
     description: ProposalStatus enumerates the valid statuses of a proposal.
-  katana.katana.rvote.QueryGetProposalLifeResponse:
+  furya.furya.rvote.QueryGetProposalLifeResponse:
     type: object
     properties:
       proposalLife:
         type: string
         format: int64
-  katana.katana.rvote.QueryGetProposalResponse:
+  furya.furya.rvote.QueryGetProposalResponse:
     type: object
     properties:
       proposal:
         type: string
-  katana.katana.sudo.MsgUpdateAdminResponse:
+  furya.furya.sudo.MsgUpdateAdminResponse:
     type: object
-  katana.katana.sudo.QueryAdminResponse:
+  furya.furya.sudo.QueryAdminResponse:
     type: object
     properties:
       address:

@@ -143,8 +143,8 @@ func (m *Threshold) GetValue() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*Relayer)(nil), "katana.katana.relayers.Relayer")
-	proto.RegisterType((*Threshold)(nil), "katana.katana.relayers.Threshold")
+	proto.RegisterType((*Relayer)(nil), "furya.furya.relayers.Relayer")
+	proto.RegisterType((*Threshold)(nil), "furya.furya.relayers.Threshold")
 }
 
 func init() { proto.RegisterFile("relayers/relayer.proto", fileDescriptor_40adf04c18425525) }

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package katana.katana.rbank;
+package furya.furya.rbank;
 
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
@@ -7,17 +7,17 @@ import "cosmos/base/query/v1beta1/pagination.proto";
 import "rbank/params.proto";
 // this line is used by starport scaffolding # 1
 
-option go_package = "github.com/warmage-sports/katana/x/rbank/types";
+option go_package = "github.com/oldfurya/furya/x/rbank/types";
 
 // Query defines the gRPC querier service.
 service Query {
   // Parameters queries the parameters of the module.
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/warmage-sports/katana/rbank/params";
+    option (google.api.http).get = "/oldfurya/furya/rbank/params";
   }
   // Queries a list of AddressPrefix items.
 	rpc AddressPrefix(QueryAddressPrefixRequest) returns (QueryAddressPrefixResponse) {
-		option (google.api.http).get = "/warmage-sports/katana/rbank/address_prefix/{denom}";
+		option (google.api.http).get = "/oldfurya/furya/rbank/address_prefix/{denom}";
 	}
 
 // this line is used by starport scaffolding # 2

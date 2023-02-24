@@ -825,24 +825,24 @@ func (m *MsgRmPoolCreatorResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgRmPoolCreatorResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgCreatePool)(nil), "katana.katana.rdex.MsgCreatePool")
-	proto.RegisterType((*MsgCreatePoolResponse)(nil), "katana.katana.rdex.MsgCreatePoolResponse")
-	proto.RegisterType((*MsgAddLiquidity)(nil), "katana.katana.rdex.MsgAddLiquidity")
-	proto.RegisterType((*MsgAddLiquidityResponse)(nil), "katana.katana.rdex.MsgAddLiquidityResponse")
-	proto.RegisterType((*MsgSwap)(nil), "katana.katana.rdex.MsgSwap")
-	proto.RegisterType((*MsgSwapResponse)(nil), "katana.katana.rdex.MsgSwapResponse")
-	proto.RegisterType((*MsgRemoveLiquidity)(nil), "katana.katana.rdex.MsgRemoveLiquidity")
-	proto.RegisterType((*MsgRemoveLiquidityResponse)(nil), "katana.katana.rdex.MsgRemoveLiquidityResponse")
-	proto.RegisterType((*MsgToggleProviderSwitch)(nil), "katana.katana.rdex.MsgToggleProviderSwitch")
-	proto.RegisterType((*MsgToggleProviderSwitchResponse)(nil), "katana.katana.rdex.MsgToggleProviderSwitchResponse")
-	proto.RegisterType((*MsgAddProvider)(nil), "katana.katana.rdex.MsgAddProvider")
-	proto.RegisterType((*MsgAddProviderResponse)(nil), "katana.katana.rdex.MsgAddProviderResponse")
-	proto.RegisterType((*MsgRmProvider)(nil), "katana.katana.rdex.MsgRmProvider")
-	proto.RegisterType((*MsgRmProviderResponse)(nil), "katana.katana.rdex.MsgRmProviderResponse")
-	proto.RegisterType((*MsgAddPoolCreator)(nil), "katana.katana.rdex.MsgAddPoolCreator")
-	proto.RegisterType((*MsgAddPoolCreatorResponse)(nil), "katana.katana.rdex.MsgAddPoolCreatorResponse")
-	proto.RegisterType((*MsgRmPoolCreator)(nil), "katana.katana.rdex.MsgRmPoolCreator")
-	proto.RegisterType((*MsgRmPoolCreatorResponse)(nil), "katana.katana.rdex.MsgRmPoolCreatorResponse")
+	proto.RegisterType((*MsgCreatePool)(nil), "furya.furya.rdex.MsgCreatePool")
+	proto.RegisterType((*MsgCreatePoolResponse)(nil), "furya.furya.rdex.MsgCreatePoolResponse")
+	proto.RegisterType((*MsgAddLiquidity)(nil), "furya.furya.rdex.MsgAddLiquidity")
+	proto.RegisterType((*MsgAddLiquidityResponse)(nil), "furya.furya.rdex.MsgAddLiquidityResponse")
+	proto.RegisterType((*MsgSwap)(nil), "furya.furya.rdex.MsgSwap")
+	proto.RegisterType((*MsgSwapResponse)(nil), "furya.furya.rdex.MsgSwapResponse")
+	proto.RegisterType((*MsgRemoveLiquidity)(nil), "furya.furya.rdex.MsgRemoveLiquidity")
+	proto.RegisterType((*MsgRemoveLiquidityResponse)(nil), "furya.furya.rdex.MsgRemoveLiquidityResponse")
+	proto.RegisterType((*MsgToggleProviderSwitch)(nil), "furya.furya.rdex.MsgToggleProviderSwitch")
+	proto.RegisterType((*MsgToggleProviderSwitchResponse)(nil), "furya.furya.rdex.MsgToggleProviderSwitchResponse")
+	proto.RegisterType((*MsgAddProvider)(nil), "furya.furya.rdex.MsgAddProvider")
+	proto.RegisterType((*MsgAddProviderResponse)(nil), "furya.furya.rdex.MsgAddProviderResponse")
+	proto.RegisterType((*MsgRmProvider)(nil), "furya.furya.rdex.MsgRmProvider")
+	proto.RegisterType((*MsgRmProviderResponse)(nil), "furya.furya.rdex.MsgRmProviderResponse")
+	proto.RegisterType((*MsgAddPoolCreator)(nil), "furya.furya.rdex.MsgAddPoolCreator")
+	proto.RegisterType((*MsgAddPoolCreatorResponse)(nil), "furya.furya.rdex.MsgAddPoolCreatorResponse")
+	proto.RegisterType((*MsgRmPoolCreator)(nil), "furya.furya.rdex.MsgRmPoolCreator")
+	proto.RegisterType((*MsgRmPoolCreatorResponse)(nil), "furya.furya.rdex.MsgRmPoolCreatorResponse")
 }
 
 func init() { proto.RegisterFile("rdex/tx.proto", fileDescriptor_518c52ad1bbe1f44) }
@@ -932,7 +932,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) CreatePool(ctx context.Context, in *MsgCreatePool, opts ...grpc.CallOption) (*MsgCreatePoolResponse, error) {
 	out := new(MsgCreatePoolResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/CreatePool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/CreatePool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -941,7 +941,7 @@ func (c *msgClient) CreatePool(ctx context.Context, in *MsgCreatePool, opts ...g
 
 func (c *msgClient) AddLiquidity(ctx context.Context, in *MsgAddLiquidity, opts ...grpc.CallOption) (*MsgAddLiquidityResponse, error) {
 	out := new(MsgAddLiquidityResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/AddLiquidity", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/AddLiquidity", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -950,7 +950,7 @@ func (c *msgClient) AddLiquidity(ctx context.Context, in *MsgAddLiquidity, opts 
 
 func (c *msgClient) Swap(ctx context.Context, in *MsgSwap, opts ...grpc.CallOption) (*MsgSwapResponse, error) {
 	out := new(MsgSwapResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/Swap", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/Swap", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -959,7 +959,7 @@ func (c *msgClient) Swap(ctx context.Context, in *MsgSwap, opts ...grpc.CallOpti
 
 func (c *msgClient) RemoveLiquidity(ctx context.Context, in *MsgRemoveLiquidity, opts ...grpc.CallOption) (*MsgRemoveLiquidityResponse, error) {
 	out := new(MsgRemoveLiquidityResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/RemoveLiquidity", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/RemoveLiquidity", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -968,7 +968,7 @@ func (c *msgClient) RemoveLiquidity(ctx context.Context, in *MsgRemoveLiquidity,
 
 func (c *msgClient) ToggleProviderSwitch(ctx context.Context, in *MsgToggleProviderSwitch, opts ...grpc.CallOption) (*MsgToggleProviderSwitchResponse, error) {
 	out := new(MsgToggleProviderSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/ToggleProviderSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/ToggleProviderSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -977,7 +977,7 @@ func (c *msgClient) ToggleProviderSwitch(ctx context.Context, in *MsgToggleProvi
 
 func (c *msgClient) AddProvider(ctx context.Context, in *MsgAddProvider, opts ...grpc.CallOption) (*MsgAddProviderResponse, error) {
 	out := new(MsgAddProviderResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/AddProvider", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/AddProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -986,7 +986,7 @@ func (c *msgClient) AddProvider(ctx context.Context, in *MsgAddProvider, opts ..
 
 func (c *msgClient) RmProvider(ctx context.Context, in *MsgRmProvider, opts ...grpc.CallOption) (*MsgRmProviderResponse, error) {
 	out := new(MsgRmProviderResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/RmProvider", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/RmProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -995,7 +995,7 @@ func (c *msgClient) RmProvider(ctx context.Context, in *MsgRmProvider, opts ...g
 
 func (c *msgClient) AddPoolCreator(ctx context.Context, in *MsgAddPoolCreator, opts ...grpc.CallOption) (*MsgAddPoolCreatorResponse, error) {
 	out := new(MsgAddPoolCreatorResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/AddPoolCreator", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/AddPoolCreator", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1004,7 +1004,7 @@ func (c *msgClient) AddPoolCreator(ctx context.Context, in *MsgAddPoolCreator, o
 
 func (c *msgClient) RmPoolCreator(ctx context.Context, in *MsgRmPoolCreator, opts ...grpc.CallOption) (*MsgRmPoolCreatorResponse, error) {
 	out := new(MsgRmPoolCreatorResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rdex.Msg/RmPoolCreator", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Msg/RmPoolCreator", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1070,7 +1070,7 @@ func _Msg_CreatePool_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/CreatePool",
+		FullMethod: "/furya.furya.rdex.Msg/CreatePool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).CreatePool(ctx, req.(*MsgCreatePool))
@@ -1088,7 +1088,7 @@ func _Msg_AddLiquidity_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/AddLiquidity",
+		FullMethod: "/furya.furya.rdex.Msg/AddLiquidity",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddLiquidity(ctx, req.(*MsgAddLiquidity))
@@ -1106,7 +1106,7 @@ func _Msg_Swap_Handler(srv interface{}, ctx context.Context, dec func(interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/Swap",
+		FullMethod: "/furya.furya.rdex.Msg/Swap",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Swap(ctx, req.(*MsgSwap))
@@ -1124,7 +1124,7 @@ func _Msg_RemoveLiquidity_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/RemoveLiquidity",
+		FullMethod: "/furya.furya.rdex.Msg/RemoveLiquidity",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RemoveLiquidity(ctx, req.(*MsgRemoveLiquidity))
@@ -1142,7 +1142,7 @@ func _Msg_ToggleProviderSwitch_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/ToggleProviderSwitch",
+		FullMethod: "/furya.furya.rdex.Msg/ToggleProviderSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleProviderSwitch(ctx, req.(*MsgToggleProviderSwitch))
@@ -1160,7 +1160,7 @@ func _Msg_AddProvider_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/AddProvider",
+		FullMethod: "/furya.furya.rdex.Msg/AddProvider",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddProvider(ctx, req.(*MsgAddProvider))
@@ -1178,7 +1178,7 @@ func _Msg_RmProvider_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/RmProvider",
+		FullMethod: "/furya.furya.rdex.Msg/RmProvider",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmProvider(ctx, req.(*MsgRmProvider))
@@ -1196,7 +1196,7 @@ func _Msg_AddPoolCreator_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/AddPoolCreator",
+		FullMethod: "/furya.furya.rdex.Msg/AddPoolCreator",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddPoolCreator(ctx, req.(*MsgAddPoolCreator))
@@ -1214,7 +1214,7 @@ func _Msg_RmPoolCreator_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rdex.Msg/RmPoolCreator",
+		FullMethod: "/furya.furya.rdex.Msg/RmPoolCreator",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmPoolCreator(ctx, req.(*MsgRmPoolCreator))
@@ -1223,7 +1223,7 @@ func _Msg_RmPoolCreator_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.rdex.Msg",
+	ServiceName: "furya.furya.rdex.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

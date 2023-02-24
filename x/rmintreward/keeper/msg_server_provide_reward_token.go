@@ -4,7 +4,7 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/rmintreward/types"
+	"github.com/oldfurya/furya/x/rmintreward/types"
 )
 
 func (k msgServer) ProvideRewardToken(goCtx context.Context, msg *types.MsgProvideRewardToken) (*types.MsgProvideRewardTokenResponse, error) {

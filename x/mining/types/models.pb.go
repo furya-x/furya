@@ -8,7 +8,7 @@ import (
 	github_com_cosmos_cosmos_sdk_types "github.com/cosmos/cosmos-sdk/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
-	github_com_katana_katana_utils "github.com/warmage-sports/katana/utils"
+	github_com_furya_furya_utils "github.com/oldfurya/furya/utils"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -387,7 +387,7 @@ type StakeItem struct {
 	StakePoolIndex uint32 `protobuf:"varint,2,opt,name=stakePoolIndex,proto3" json:"stakePoolIndex,omitempty"`
 	LockSecond     uint64 `protobuf:"varint,3,opt,name=lockSecond,proto3" json:"lockSecond,omitempty"`
 	// user stakedPower = powerRewardRate * stakedAmount
-	PowerRewardRate github_com_katana_katana_utils.Dec `protobuf:"bytes,4,opt,name=powerRewardRate,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"powerRewardRate"`
+	PowerRewardRate github_com_furya_furya_utils.Dec `protobuf:"bytes,4,opt,name=powerRewardRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"powerRewardRate"`
 	Enable          bool                                   `protobuf:"varint,5,opt,name=enable,proto3" json:"enable,omitempty"`
 }
 
@@ -453,7 +453,7 @@ func (m *StakeItem) GetEnable() bool {
 }
 
 type StakeItemLimit struct {
-	MaxPowerRewardRate github_com_katana_katana_utils.Dec `protobuf:"bytes,1,opt,name=maxPowerRewardRate,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"maxPowerRewardRate"`
+	MaxPowerRewardRate github_com_furya_furya_utils.Dec `protobuf:"bytes,1,opt,name=maxPowerRewardRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"maxPowerRewardRate"`
 	MaxLockSecond      uint64                                 `protobuf:"varint,2,opt,name=maxLockSecond,proto3" json:"maxLockSecond,omitempty"`
 }
 
@@ -498,13 +498,13 @@ func (m *StakeItemLimit) GetMaxLockSecond() uint64 {
 }
 
 func init() {
-	proto.RegisterType((*StakePool)(nil), "katana.katana.mining.StakePool")
-	proto.RegisterType((*RewardPool)(nil), "katana.katana.mining.RewardPool")
-	proto.RegisterType((*UserStakeRecord)(nil), "katana.katana.mining.UserStakeRecord")
-	proto.RegisterType((*UserRewardInfo)(nil), "katana.katana.mining.UserRewardInfo")
-	proto.RegisterType((*RewardToken)(nil), "katana.katana.mining.RewardToken")
-	proto.RegisterType((*StakeItem)(nil), "katana.katana.mining.StakeItem")
-	proto.RegisterType((*StakeItemLimit)(nil), "katana.katana.mining.StakeItemLimit")
+	proto.RegisterType((*StakePool)(nil), "furya.furya.mining.StakePool")
+	proto.RegisterType((*RewardPool)(nil), "furya.furya.mining.RewardPool")
+	proto.RegisterType((*UserStakeRecord)(nil), "furya.furya.mining.UserStakeRecord")
+	proto.RegisterType((*UserRewardInfo)(nil), "furya.furya.mining.UserRewardInfo")
+	proto.RegisterType((*RewardToken)(nil), "furya.furya.mining.RewardToken")
+	proto.RegisterType((*StakeItem)(nil), "furya.furya.mining.StakeItem")
+	proto.RegisterType((*StakeItemLimit)(nil), "furya.furya.mining.StakeItemLimit")
 }
 
 func init() { proto.RegisterFile("mining/models.proto", fileDescriptor_155eb5abfcd1d3be) }

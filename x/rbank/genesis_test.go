@@ -3,10 +3,10 @@ package rbank_test
 import (
 	"testing"
 
-	keepertest "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/testutil/nullify"
-	"github.com/warmage-sports/katana/x/rbank"
-	"github.com/warmage-sports/katana/x/rbank/types"
+	keepertest "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/testutil/nullify"
+	"github.com/oldfurya/furya/x/rbank"
+	"github.com/oldfurya/furya/x/rbank/types"
 	"github.com/stretchr/testify/require"
 )
 

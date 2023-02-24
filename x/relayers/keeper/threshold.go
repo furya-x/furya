@@ -3,7 +3,7 @@ package keeper
 import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/relayers/types"
+	"github.com/oldfurya/furya/x/relayers/types"
 )
 
 // SetThreshold set a specific threshold in the store from its denom

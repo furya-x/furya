@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/warmage-sports/katana/x/mining/types"
+	"github.com/oldfurya/furya/x/mining/types"
 )
 
 type msgServer struct {

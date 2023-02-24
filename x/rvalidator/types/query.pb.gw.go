@@ -696,17 +696,17 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "rvalidator", "params"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rvalidator", "params"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_RValidatorList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "rvalidator", "r_validator_list", "denom", "poolAddress"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_RValidatorList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "rvalidator", "r_validator_list", "denom", "poolAddress"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_CycleSeconds_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "rvalidator", "cycle_seconds", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_CycleSeconds_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "rvalidator", "cycle_seconds", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ShuffleSeconds_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "rvalidator", "shuffle_seconds", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ShuffleSeconds_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "rvalidator", "shuffle_seconds", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_LatestVotedCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "rvalidator", "latest_voted_cycle", "denom", "poolAddress"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_LatestVotedCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "rvalidator", "latest_voted_cycle", "denom", "poolAddress"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_LatestDealedCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "rvalidator", "latest_dealed_cycle", "denom", "poolAddress"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_LatestDealedCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "rvalidator", "latest_dealed_cycle", "denom", "poolAddress"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

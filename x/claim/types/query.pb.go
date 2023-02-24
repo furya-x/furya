@@ -298,12 +298,12 @@ func (m *QueryClaimSwitchResponse) GetIsOpen() bool {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "katana.katana.claim.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "katana.katana.claim.QueryParamsResponse")
-	proto.RegisterType((*QueryIsClaimedRequest)(nil), "katana.katana.claim.QueryIsClaimedRequest")
-	proto.RegisterType((*QueryIsClaimedResponse)(nil), "katana.katana.claim.QueryIsClaimedResponse")
-	proto.RegisterType((*QueryClaimSwitchRequest)(nil), "katana.katana.claim.QueryClaimSwitchRequest")
-	proto.RegisterType((*QueryClaimSwitchResponse)(nil), "katana.katana.claim.QueryClaimSwitchResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.claim.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.claim.QueryParamsResponse")
+	proto.RegisterType((*QueryIsClaimedRequest)(nil), "furya.furya.claim.QueryIsClaimedRequest")
+	proto.RegisterType((*QueryIsClaimedResponse)(nil), "furya.furya.claim.QueryIsClaimedResponse")
+	proto.RegisterType((*QueryClaimSwitchRequest)(nil), "furya.furya.claim.QueryClaimSwitchRequest")
+	proto.RegisterType((*QueryClaimSwitchResponse)(nil), "furya.furya.claim.QueryClaimSwitchResponse")
 }
 
 func init() { proto.RegisterFile("claim/query.proto", fileDescriptor_f8c6eefbad679c0d) }
@@ -372,7 +372,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.claim.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.claim.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -381,7 +381,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) IsClaimed(ctx context.Context, in *QueryIsClaimedRequest, opts ...grpc.CallOption) (*QueryIsClaimedResponse, error) {
 	out := new(QueryIsClaimedResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.claim.Query/IsClaimed", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.claim.Query/IsClaimed", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -390,7 +390,7 @@ func (c *queryClient) IsClaimed(ctx context.Context, in *QueryIsClaimedRequest, 
 
 func (c *queryClient) ClaimSwitch(ctx context.Context, in *QueryClaimSwitchRequest, opts ...grpc.CallOption) (*QueryClaimSwitchResponse, error) {
 	out := new(QueryClaimSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.claim.Query/ClaimSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.claim.Query/ClaimSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -435,7 +435,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.claim.Query/Params",
+		FullMethod: "/furya.furya.claim.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -453,7 +453,7 @@ func _Query_IsClaimed_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.claim.Query/IsClaimed",
+		FullMethod: "/furya.furya.claim.Query/IsClaimed",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).IsClaimed(ctx, req.(*QueryIsClaimedRequest))
@@ -471,7 +471,7 @@ func _Query_ClaimSwitch_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.claim.Query/ClaimSwitch",
+		FullMethod: "/furya.furya.claim.Query/ClaimSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ClaimSwitch(ctx, req.(*QueryClaimSwitchRequest))
@@ -480,7 +480,7 @@ func _Query_ClaimSwitch_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.claim.Query",
+	ServiceName: "furya.furya.claim.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -714,22 +714,22 @@ func (m *MsgRmDelegatorFromWhitelistResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgRmDelegatorFromWhitelistResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgSetInflationBase)(nil), "katana.katana.rstaking.MsgSetInflationBase")
-	proto.RegisterType((*MsgSetInflationBaseResponse)(nil), "katana.katana.rstaking.MsgSetInflationBaseResponse")
-	proto.RegisterType((*MsgAddValToWhitelist)(nil), "katana.katana.rstaking.MsgAddValToWhitelist")
-	proto.RegisterType((*MsgAddValToWhitelistResponse)(nil), "katana.katana.rstaking.MsgAddValToWhitelistResponse")
-	proto.RegisterType((*MsgToggleValidatorWhitelistSwitch)(nil), "katana.katana.rstaking.MsgToggleValidatorWhitelistSwitch")
-	proto.RegisterType((*MsgToggleValidatorWhitelistSwitchResponse)(nil), "katana.katana.rstaking.MsgToggleValidatorWhitelistSwitchResponse")
-	proto.RegisterType((*MsgWithdraw)(nil), "katana.katana.rstaking.MsgWithdraw")
-	proto.RegisterType((*MsgWithdrawResponse)(nil), "katana.katana.rstaking.MsgWithdrawResponse")
-	proto.RegisterType((*MsgAddDelegatorToWhitelist)(nil), "katana.katana.rstaking.MsgAddDelegatorToWhitelist")
-	proto.RegisterType((*MsgAddDelegatorToWhitelistResponse)(nil), "katana.katana.rstaking.MsgAddDelegatorToWhitelistResponse")
-	proto.RegisterType((*MsgToggleDelegatorWhitelistSwitch)(nil), "katana.katana.rstaking.MsgToggleDelegatorWhitelistSwitch")
-	proto.RegisterType((*MsgToggleDelegatorWhitelistSwitchResponse)(nil), "katana.katana.rstaking.MsgToggleDelegatorWhitelistSwitchResponse")
-	proto.RegisterType((*MsgProvideToken)(nil), "katana.katana.rstaking.MsgProvideToken")
-	proto.RegisterType((*MsgProvideTokenResponse)(nil), "katana.katana.rstaking.MsgProvideTokenResponse")
-	proto.RegisterType((*MsgRmDelegatorFromWhitelist)(nil), "katana.katana.rstaking.MsgRmDelegatorFromWhitelist")
-	proto.RegisterType((*MsgRmDelegatorFromWhitelistResponse)(nil), "katana.katana.rstaking.MsgRmDelegatorFromWhitelistResponse")
+	proto.RegisterType((*MsgSetInflationBase)(nil), "furya.furya.rstaking.MsgSetInflationBase")
+	proto.RegisterType((*MsgSetInflationBaseResponse)(nil), "furya.furya.rstaking.MsgSetInflationBaseResponse")
+	proto.RegisterType((*MsgAddValToWhitelist)(nil), "furya.furya.rstaking.MsgAddValToWhitelist")
+	proto.RegisterType((*MsgAddValToWhitelistResponse)(nil), "furya.furya.rstaking.MsgAddValToWhitelistResponse")
+	proto.RegisterType((*MsgToggleValidatorWhitelistSwitch)(nil), "furya.furya.rstaking.MsgToggleValidatorWhitelistSwitch")
+	proto.RegisterType((*MsgToggleValidatorWhitelistSwitchResponse)(nil), "furya.furya.rstaking.MsgToggleValidatorWhitelistSwitchResponse")
+	proto.RegisterType((*MsgWithdraw)(nil), "furya.furya.rstaking.MsgWithdraw")
+	proto.RegisterType((*MsgWithdrawResponse)(nil), "furya.furya.rstaking.MsgWithdrawResponse")
+	proto.RegisterType((*MsgAddDelegatorToWhitelist)(nil), "furya.furya.rstaking.MsgAddDelegatorToWhitelist")
+	proto.RegisterType((*MsgAddDelegatorToWhitelistResponse)(nil), "furya.furya.rstaking.MsgAddDelegatorToWhitelistResponse")
+	proto.RegisterType((*MsgToggleDelegatorWhitelistSwitch)(nil), "furya.furya.rstaking.MsgToggleDelegatorWhitelistSwitch")
+	proto.RegisterType((*MsgToggleDelegatorWhitelistSwitchResponse)(nil), "furya.furya.rstaking.MsgToggleDelegatorWhitelistSwitchResponse")
+	proto.RegisterType((*MsgProvideToken)(nil), "furya.furya.rstaking.MsgProvideToken")
+	proto.RegisterType((*MsgProvideTokenResponse)(nil), "furya.furya.rstaking.MsgProvideTokenResponse")
+	proto.RegisterType((*MsgRmDelegatorFromWhitelist)(nil), "furya.furya.rstaking.MsgRmDelegatorFromWhitelist")
+	proto.RegisterType((*MsgRmDelegatorFromWhitelistResponse)(nil), "furya.furya.rstaking.MsgRmDelegatorFromWhitelistResponse")
 }
 
 func init() { proto.RegisterFile("rstaking/tx.proto", fileDescriptor_dc4bfb0e643e29ba) }
@@ -812,7 +812,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SetInflationBase(ctx context.Context, in *MsgSetInflationBase, opts ...grpc.CallOption) (*MsgSetInflationBaseResponse, error) {
 	out := new(MsgSetInflationBaseResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/SetInflationBase", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/SetInflationBase", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -821,7 +821,7 @@ func (c *msgClient) SetInflationBase(ctx context.Context, in *MsgSetInflationBas
 
 func (c *msgClient) AddValToWhitelist(ctx context.Context, in *MsgAddValToWhitelist, opts ...grpc.CallOption) (*MsgAddValToWhitelistResponse, error) {
 	out := new(MsgAddValToWhitelistResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/AddValToWhitelist", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/AddValToWhitelist", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -830,7 +830,7 @@ func (c *msgClient) AddValToWhitelist(ctx context.Context, in *MsgAddValToWhitel
 
 func (c *msgClient) ToggleValidatorWhitelistSwitch(ctx context.Context, in *MsgToggleValidatorWhitelistSwitch, opts ...grpc.CallOption) (*MsgToggleValidatorWhitelistSwitchResponse, error) {
 	out := new(MsgToggleValidatorWhitelistSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/ToggleValidatorWhitelistSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/ToggleValidatorWhitelistSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -839,7 +839,7 @@ func (c *msgClient) ToggleValidatorWhitelistSwitch(ctx context.Context, in *MsgT
 
 func (c *msgClient) Withdraw(ctx context.Context, in *MsgWithdraw, opts ...grpc.CallOption) (*MsgWithdrawResponse, error) {
 	out := new(MsgWithdrawResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/Withdraw", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/Withdraw", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -848,7 +848,7 @@ func (c *msgClient) Withdraw(ctx context.Context, in *MsgWithdraw, opts ...grpc.
 
 func (c *msgClient) AddDelegatorToWhitelist(ctx context.Context, in *MsgAddDelegatorToWhitelist, opts ...grpc.CallOption) (*MsgAddDelegatorToWhitelistResponse, error) {
 	out := new(MsgAddDelegatorToWhitelistResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/AddDelegatorToWhitelist", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/AddDelegatorToWhitelist", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -857,7 +857,7 @@ func (c *msgClient) AddDelegatorToWhitelist(ctx context.Context, in *MsgAddDeleg
 
 func (c *msgClient) ToggleDelegatorWhitelistSwitch(ctx context.Context, in *MsgToggleDelegatorWhitelistSwitch, opts ...grpc.CallOption) (*MsgToggleDelegatorWhitelistSwitchResponse, error) {
 	out := new(MsgToggleDelegatorWhitelistSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/ToggleDelegatorWhitelistSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/ToggleDelegatorWhitelistSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -866,7 +866,7 @@ func (c *msgClient) ToggleDelegatorWhitelistSwitch(ctx context.Context, in *MsgT
 
 func (c *msgClient) ProvideToken(ctx context.Context, in *MsgProvideToken, opts ...grpc.CallOption) (*MsgProvideTokenResponse, error) {
 	out := new(MsgProvideTokenResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/ProvideToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/ProvideToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -875,7 +875,7 @@ func (c *msgClient) ProvideToken(ctx context.Context, in *MsgProvideToken, opts 
 
 func (c *msgClient) RmDelegatorFromWhitelist(ctx context.Context, in *MsgRmDelegatorFromWhitelist, opts ...grpc.CallOption) (*MsgRmDelegatorFromWhitelistResponse, error) {
 	out := new(MsgRmDelegatorFromWhitelistResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Msg/RmDelegatorFromWhitelist", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Msg/RmDelegatorFromWhitelist", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -937,7 +937,7 @@ func _Msg_SetInflationBase_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/SetInflationBase",
+		FullMethod: "/furya.furya.rstaking.Msg/SetInflationBase",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetInflationBase(ctx, req.(*MsgSetInflationBase))
@@ -955,7 +955,7 @@ func _Msg_AddValToWhitelist_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/AddValToWhitelist",
+		FullMethod: "/furya.furya.rstaking.Msg/AddValToWhitelist",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddValToWhitelist(ctx, req.(*MsgAddValToWhitelist))
@@ -973,7 +973,7 @@ func _Msg_ToggleValidatorWhitelistSwitch_Handler(srv interface{}, ctx context.Co
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/ToggleValidatorWhitelistSwitch",
+		FullMethod: "/furya.furya.rstaking.Msg/ToggleValidatorWhitelistSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleValidatorWhitelistSwitch(ctx, req.(*MsgToggleValidatorWhitelistSwitch))
@@ -991,7 +991,7 @@ func _Msg_Withdraw_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/Withdraw",
+		FullMethod: "/furya.furya.rstaking.Msg/Withdraw",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Withdraw(ctx, req.(*MsgWithdraw))
@@ -1009,7 +1009,7 @@ func _Msg_AddDelegatorToWhitelist_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/AddDelegatorToWhitelist",
+		FullMethod: "/furya.furya.rstaking.Msg/AddDelegatorToWhitelist",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddDelegatorToWhitelist(ctx, req.(*MsgAddDelegatorToWhitelist))
@@ -1027,7 +1027,7 @@ func _Msg_ToggleDelegatorWhitelistSwitch_Handler(srv interface{}, ctx context.Co
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/ToggleDelegatorWhitelistSwitch",
+		FullMethod: "/furya.furya.rstaking.Msg/ToggleDelegatorWhitelistSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleDelegatorWhitelistSwitch(ctx, req.(*MsgToggleDelegatorWhitelistSwitch))
@@ -1045,7 +1045,7 @@ func _Msg_ProvideToken_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/ProvideToken",
+		FullMethod: "/furya.furya.rstaking.Msg/ProvideToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ProvideToken(ctx, req.(*MsgProvideToken))
@@ -1063,7 +1063,7 @@ func _Msg_RmDelegatorFromWhitelist_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Msg/RmDelegatorFromWhitelist",
+		FullMethod: "/furya.furya.rstaking.Msg/RmDelegatorFromWhitelist",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmDelegatorFromWhitelist(ctx, req.(*MsgRmDelegatorFromWhitelist))
@@ -1072,7 +1072,7 @@ func _Msg_RmDelegatorFromWhitelist_Handler(srv interface{}, ctx context.Context,
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.rstaking.Msg",
+	ServiceName: "furya.furya.rstaking.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

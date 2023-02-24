@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/warmage-sports/katana/x/rbank/types"
+	"github.com/oldfurya/furya/x/rbank/types"
 )
 
 var (

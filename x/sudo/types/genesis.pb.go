@@ -69,7 +69,7 @@ func (m *GenesisState) GetAdmin() string {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "katana.katana.sudo.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furya.furya.sudo.GenesisState")
 }
 
 func init() { proto.RegisterFile("sudo/genesis.proto", fileDescriptor_42ea41d5cf585a67) }

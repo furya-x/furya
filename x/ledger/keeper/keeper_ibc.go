@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	capabilitytypes "github.com/cosmos/cosmos-sdk/x/capability/types"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/x/ledger/types"
 )
 
 // ClaimCapability claims the channel capability passed via the OnOpenChanInit callback

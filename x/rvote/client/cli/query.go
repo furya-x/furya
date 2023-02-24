@@ -13,7 +13,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/warmage-sports/katana/x/rvote/types"
+	"github.com/oldfurya/furya/x/rvote/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

@@ -18,9 +18,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/warmage-sports/katana/x/rbank/client/cli"
-	"github.com/warmage-sports/katana/x/rbank/keeper"
-	"github.com/warmage-sports/katana/x/rbank/types"
+	"github.com/oldfurya/furya/x/rbank/client/cli"
+	"github.com/oldfurya/furya/x/rbank/keeper"
+	"github.com/oldfurya/furya/x/rbank/types"
 )
 
 var (

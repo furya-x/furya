@@ -3,9 +3,9 @@ package ledger_test
 import (
 	"testing"
 
-	keepertest "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/x/ledger"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	keepertest "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/x/ledger"
+	"github.com/oldfurya/furya/x/ledger/types"
 	"github.com/stretchr/testify/require"
 )
 

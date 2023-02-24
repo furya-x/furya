@@ -2,8 +2,8 @@ package sudo
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/sudo/keeper"
-	"github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/x/sudo/keeper"
+	"github.com/oldfurya/furya/x/sudo/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

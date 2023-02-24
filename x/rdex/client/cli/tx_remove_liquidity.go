@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/spf13/cobra"
-	"github.com/warmage-sports/katana/x/rdex/types"
+	"github.com/oldfurya/furya/x/rdex/types"
 )
 
 var _ = strconv.Itoa(0)

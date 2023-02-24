@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/x/claim/types"
+	testkeeper "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/x/claim/types"
 	"github.com/stretchr/testify/require"
 )
 

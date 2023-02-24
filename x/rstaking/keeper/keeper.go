@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/warmage-sports/katana/x/rstaking/types"
+	"github.com/oldfurya/furya/x/rstaking/types"
 )
 
 type (

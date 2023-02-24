@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testkeeper "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/x/rstaking/types"
+	testkeeper "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/x/rstaking/types"
 	"github.com/stretchr/testify/require"
 )
 

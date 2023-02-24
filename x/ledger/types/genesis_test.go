@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/x/ledger/types"
 	"github.com/stretchr/testify/require"
 )
 

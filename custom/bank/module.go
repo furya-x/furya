@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/bank"
 	"github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/warmage-sports/katana/utils"
+	"github.com/oldfurya/furya/utils"
 )
 
 var (
@@ -24,55 +24,55 @@ type AppModuleBasic struct {
 func (am AppModuleBasic) DefaultGenesis(cdc codec.JSONCodec) json.RawMessage {
 	defaultGenesisState := types.DefaultGenesisState()
 	// {
-	//     "description": "The native staking token of the Katana Hub",
+	//     "description": "The native staking token of the Furya Hub",
 	//     "denom_units": [
 	//         {
-	//             "denom": "ukata",
+	//             "denom": "ufury",
 	//             "exponent": 0,
 	//             "aliases": [
-	//                 "microkata"
+	//                 "microfury"
 	//             ]
 	//         },
 	//         {
-	//             "denom": "mkata",
+	//             "denom": "mfury",
 	//             "exponent": 3,
 	//             "aliases": [
-	//               "millikata"
+	//               "millifury"
 	//             ]
 	//         },
 	//         {
-	//             "denom": "kata",
+	//             "denom": "fury",
 	//             "exponent": 6
 	//         }
 	//     ],
-	//     "base": "ukata",
-	//     "display": "kata",
-	//     "name": "KATA",
-	//     "symbol": "KATA"
+	//     "base": "ufury",
+	//     "display": "fury",
+	//     "name": "FURY",
+	//     "symbol": "FURY"
 	// }
 	defaultGenesisState.DenomMetadata = append(defaultGenesisState.DenomMetadata,
 		types.Metadata{
-			Description: "The native staking token of the Katana Hub",
+			Description: "The native staking token of the Furya Hub",
 			DenomUnits: []*types.DenomUnit{
 				{
-					Denom:    utils.KataDenom,
+					Denom:    utils.FuryDenom,
 					Exponent: 0,
-					Aliases:  []string{"microkata"},
+					Aliases:  []string{"microfury"},
 				},
 				{
-					Denom:    "mkata",
+					Denom:    "mfury",
 					Exponent: 3,
-					Aliases:  []string{"millikata"},
+					Aliases:  []string{"millifury"},
 				},
 				{
-					Denom:    "kata",
+					Denom:    "fury",
 					Exponent: 6,
 				},
 			},
-			Base:    utils.KataDenom,
-			Display: "kata",
-			Name:    "KATA",
-			Symbol:  "KATA",
+			Base:    utils.FuryDenom,
+			Display: "fury",
+			Name:    "FURY",
+			Symbol:  "FURY",
 		},
 	)
 	return cdc.MustMarshalJSON(defaultGenesisState)

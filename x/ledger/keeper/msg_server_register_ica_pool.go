@@ -4,8 +4,8 @@ import (
 	"context"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/warmage-sports/katana/x/ledger/types"
-	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/x/ledger/types"
+	sudotypes "github.com/oldfurya/furya/x/sudo/types"
 )
 
 func (k msgServer) RegisterIcaPool(goCtx context.Context, msg *types.MsgRegisterIcaPool) (*types.MsgRegisterIcaPoolResponse, error) {

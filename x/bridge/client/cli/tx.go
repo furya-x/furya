@@ -8,7 +8,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/warmage-sports/katana/x/bridge/types"
+	"github.com/oldfurya/furya/x/bridge/types"
 )
 
 var (

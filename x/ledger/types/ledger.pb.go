@@ -9,7 +9,7 @@ import (
 	github_com_cosmos_cosmos_sdk_types "github.com/cosmos/cosmos-sdk/types"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
-	github_com_katana_katana_utils "github.com/warmage-sports/katana/utils"
+	github_com_furya_furya_utils "github.com/oldfurya/furya/utils"
 	io "io"
 	math "math"
 	math_bits "math/bits"
@@ -532,7 +532,7 @@ type PoolDetail struct {
 	Pool        string     `protobuf:"bytes,2,opt,name=pool,proto3" json:"pool,omitempty"`
 	SubAccounts []string   `protobuf:"bytes,3,rep,name=subAccounts,proto3" json:"subAccounts,omitempty"`
 	Threshold   uint32     `protobuf:"varint,4,opt,name=threshold,proto3" json:"threshold,omitempty"`
-	Status      PoolStatus `protobuf:"varint,5,opt,name=status,proto3,enum=katana.katana.ledger.PoolStatus" json:"status,omitempty"`
+	Status      PoolStatus `protobuf:"varint,5,opt,name=status,proto3,enum=furya.furya.ledger.PoolStatus" json:"status,omitempty"`
 }
 
 func (m *PoolDetail) Reset()         { *m = PoolDetail{} }
@@ -647,7 +647,7 @@ type BondSnapshot struct {
 	Pool      string        `protobuf:"bytes,2,opt,name=pool,proto3" json:"pool,omitempty"`
 	Era       uint32        `protobuf:"varint,3,opt,name=era,proto3" json:"era,omitempty"`
 	Chunk     LinkChunk     `protobuf:"bytes,4,opt,name=chunk,proto3" json:"chunk"`
-	BondState PoolBondState `protobuf:"varint,6,opt,name=bond_state,json=bondState,proto3,enum=katana.katana.ledger.PoolBondState" json:"bond_state,omitempty"`
+	BondState PoolBondState `protobuf:"varint,6,opt,name=bond_state,json=bondState,proto3,enum=furya.furya.ledger.PoolBondState" json:"bond_state,omitempty"`
 }
 
 func (m *BondSnapshot) Reset()         { *m = BondSnapshot{} }
@@ -720,7 +720,7 @@ func (m *BondSnapshot) GetBondState() PoolBondState {
 
 type ExchangeRate struct {
 	Denom string                                 `protobuf:"bytes,1,opt,name=denom,proto3" json:"denom,omitempty"`
-	Value github_com_katana_katana_utils.Dec `protobuf:"bytes,2,opt,name=value,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"value"`
+	Value github_com_furya_furya_utils.Dec `protobuf:"bytes,2,opt,name=value,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"value"`
 }
 
 func (m *ExchangeRate) Reset()         { *m = ExchangeRate{} }
@@ -811,7 +811,7 @@ func (m *TotalProtocolFee) GetDenom() string {
 type EraExchangeRate struct {
 	Denom string                                 `protobuf:"bytes,1,opt,name=denom,proto3" json:"denom,omitempty"`
 	Era   uint32                                 `protobuf:"varint,2,opt,name=era,proto3" json:"era,omitempty"`
-	Value github_com_katana_katana_utils.Dec `protobuf:"bytes,3,opt,name=value,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"value"`
+	Value github_com_furya_furya_utils.Dec `protobuf:"bytes,3,opt,name=value,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"value"`
 }
 
 func (m *EraExchangeRate) Reset()         { *m = EraExchangeRate{} }
@@ -965,7 +965,7 @@ type BondRecord struct {
 	Pool   string                                 `protobuf:"bytes,3,opt,name=pool,proto3" json:"pool,omitempty"`
 	Txhash string                                 `protobuf:"bytes,4,opt,name=txhash,proto3" json:"txhash,omitempty"`
 	Amount github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,5,opt,name=amount,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"amount"`
-	State  LiquidityBondState                     `protobuf:"varint,6,opt,name=state,proto3,enum=katana.katana.ledger.LiquidityBondState" json:"state,omitempty"`
+	State  LiquidityBondState                     `protobuf:"varint,6,opt,name=state,proto3,enum=furya.furya.ledger.LiquidityBondState" json:"state,omitempty"`
 }
 
 func (m *BondRecord) Reset()         { *m = BondRecord{} }
@@ -1040,7 +1040,7 @@ type Signature struct {
 	Denom  string         `protobuf:"bytes,1,opt,name=denom,proto3" json:"denom,omitempty"`
 	Era    uint32         `protobuf:"varint,2,opt,name=era,proto3" json:"era,omitempty"`
 	Pool   string         `protobuf:"bytes,3,opt,name=pool,proto3" json:"pool,omitempty"`
-	TxType OriginalTxType `protobuf:"varint,4,opt,name=txType,proto3,enum=katana.katana.ledger.OriginalTxType" json:"txType,omitempty"`
+	TxType OriginalTxType `protobuf:"varint,4,opt,name=txType,proto3,enum=furya.furya.ledger.OriginalTxType" json:"txType,omitempty"`
 	PropId string         `protobuf:"bytes,5,opt,name=propId,proto3" json:"propId,omitempty"`
 	Sigs   []string       `protobuf:"bytes,6,rep,name=sigs,proto3" json:"sigs,omitempty"`
 }
@@ -1307,7 +1307,7 @@ func (m *IcaAccount) GetHostChannelId() string {
 type IcaPoolDetail struct {
 	Denom             string        `protobuf:"bytes,1,opt,name=denom,proto3" json:"denom,omitempty"`
 	Index             uint32        `protobuf:"varint,2,opt,name=index,proto3" json:"index,omitempty"`
-	Status            IcaPoolStatus `protobuf:"varint,3,opt,name=status,proto3,enum=katana.katana.ledger.IcaPoolStatus" json:"status,omitempty"`
+	Status            IcaPoolStatus `protobuf:"varint,3,opt,name=status,proto3,enum=furya.furya.ledger.IcaPoolStatus" json:"status,omitempty"`
 	DelegationAccount *IcaAccount   `protobuf:"bytes,4,opt,name=DelegationAccount,proto3" json:"DelegationAccount,omitempty"`
 	WithdrawalAccount *IcaAccount   `protobuf:"bytes,5,opt,name=WithdrawalAccount,proto3" json:"WithdrawalAccount,omitempty"`
 }
@@ -1381,31 +1381,31 @@ func (m *IcaPoolDetail) GetWithdrawalAccount() *IcaAccount {
 }
 
 func init() {
-	proto.RegisterEnum("katana.katana.ledger.PoolStatus", PoolStatus_name, PoolStatus_value)
-	proto.RegisterEnum("katana.katana.ledger.PoolBondState", PoolBondState_name, PoolBondState_value)
-	proto.RegisterEnum("katana.katana.ledger.BondAction", BondAction_name, BondAction_value)
-	proto.RegisterEnum("katana.katana.ledger.LiquidityBondState", LiquidityBondState_name, LiquidityBondState_value)
-	proto.RegisterEnum("katana.katana.ledger.OriginalTxType", OriginalTxType_name, OriginalTxType_value)
-	proto.RegisterEnum("katana.katana.ledger.IcaPoolStatus", IcaPoolStatus_name, IcaPoolStatus_value)
-	proto.RegisterEnum("katana.katana.ledger.InterchainTxStatus", InterchainTxStatus_name, InterchainTxStatus_value)
-	proto.RegisterType((*ChainEra)(nil), "katana.katana.ledger.ChainEra")
-	proto.RegisterType((*Pool)(nil), "katana.katana.ledger.Pool")
-	proto.RegisterType((*BondPipeline)(nil), "katana.katana.ledger.BondPipeline")
-	proto.RegisterType((*EraSnapshot)(nil), "katana.katana.ledger.EraSnapshot")
-	proto.RegisterType((*EraUnbondLimit)(nil), "katana.katana.ledger.EraUnbondLimit")
-	proto.RegisterType((*PoolDetail)(nil), "katana.katana.ledger.PoolDetail")
-	proto.RegisterType((*LinkChunk)(nil), "katana.katana.ledger.LinkChunk")
-	proto.RegisterType((*BondSnapshot)(nil), "katana.katana.ledger.BondSnapshot")
-	proto.RegisterType((*ExchangeRate)(nil), "katana.katana.ledger.ExchangeRate")
-	proto.RegisterType((*TotalProtocolFee)(nil), "katana.katana.ledger.TotalProtocolFee")
-	proto.RegisterType((*EraExchangeRate)(nil), "katana.katana.ledger.EraExchangeRate")
-	proto.RegisterType((*UnbondRelayFee)(nil), "katana.katana.ledger.UnbondRelayFee")
-	proto.RegisterType((*Unbonding)(nil), "katana.katana.ledger.Unbonding")
-	proto.RegisterType((*BondRecord)(nil), "katana.katana.ledger.BondRecord")
-	proto.RegisterType((*Signature)(nil), "katana.katana.ledger.Signature")
-	proto.RegisterType((*RParams)(nil), "katana.katana.ledger.RParams")
-	proto.RegisterType((*IcaAccount)(nil), "katana.katana.ledger.IcaAccount")
-	proto.RegisterType((*IcaPoolDetail)(nil), "katana.katana.ledger.IcaPoolDetail")
+	proto.RegisterEnum("furya.furya.ledger.PoolStatus", PoolStatus_name, PoolStatus_value)
+	proto.RegisterEnum("furya.furya.ledger.PoolBondState", PoolBondState_name, PoolBondState_value)
+	proto.RegisterEnum("furya.furya.ledger.BondAction", BondAction_name, BondAction_value)
+	proto.RegisterEnum("furya.furya.ledger.LiquidityBondState", LiquidityBondState_name, LiquidityBondState_value)
+	proto.RegisterEnum("furya.furya.ledger.OriginalTxType", OriginalTxType_name, OriginalTxType_value)
+	proto.RegisterEnum("furya.furya.ledger.IcaPoolStatus", IcaPoolStatus_name, IcaPoolStatus_value)
+	proto.RegisterEnum("furya.furya.ledger.InterchainTxStatus", InterchainTxStatus_name, InterchainTxStatus_value)
+	proto.RegisterType((*ChainEra)(nil), "furya.furya.ledger.ChainEra")
+	proto.RegisterType((*Pool)(nil), "furya.furya.ledger.Pool")
+	proto.RegisterType((*BondPipeline)(nil), "furya.furya.ledger.BondPipeline")
+	proto.RegisterType((*EraSnapshot)(nil), "furya.furya.ledger.EraSnapshot")
+	proto.RegisterType((*EraUnbondLimit)(nil), "furya.furya.ledger.EraUnbondLimit")
+	proto.RegisterType((*PoolDetail)(nil), "furya.furya.ledger.PoolDetail")
+	proto.RegisterType((*LinkChunk)(nil), "furya.furya.ledger.LinkChunk")
+	proto.RegisterType((*BondSnapshot)(nil), "furya.furya.ledger.BondSnapshot")
+	proto.RegisterType((*ExchangeRate)(nil), "furya.furya.ledger.ExchangeRate")
+	proto.RegisterType((*TotalProtocolFee)(nil), "furya.furya.ledger.TotalProtocolFee")
+	proto.RegisterType((*EraExchangeRate)(nil), "furya.furya.ledger.EraExchangeRate")
+	proto.RegisterType((*UnbondRelayFee)(nil), "furya.furya.ledger.UnbondRelayFee")
+	proto.RegisterType((*Unbonding)(nil), "furya.furya.ledger.Unbonding")
+	proto.RegisterType((*BondRecord)(nil), "furya.furya.ledger.BondRecord")
+	proto.RegisterType((*Signature)(nil), "furya.furya.ledger.Signature")
+	proto.RegisterType((*RParams)(nil), "furya.furya.ledger.RParams")
+	proto.RegisterType((*IcaAccount)(nil), "furya.furya.ledger.IcaAccount")
+	proto.RegisterType((*IcaPoolDetail)(nil), "furya.furya.ledger.IcaPoolDetail")
 }
 
 func init() { proto.RegisterFile("ledger/ledger.proto", fileDescriptor_e71eacad52bcf67e) }

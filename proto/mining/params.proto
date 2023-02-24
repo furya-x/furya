@@ -1,9 +1,9 @@
 syntax = "proto3";
-package katana.katana.mining;
+package furya.furya.mining;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/warmage-sports/katana/x/mining/types";
+option go_package = "github.com/oldfurya/furya/x/mining/types";
 
 // Params defines the parameters for the module.
 message Params {

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/rdex/types"
+	"github.com/oldfurya/furya/x/rdex/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -15,17 +15,17 @@ func TestGetLpTokenDenom(t *testing.T) {
 }
 
 func TestParseCoins(t *testing.T) {
-	coind, err := sdk.ParseCoinsNormalized("30ukata,0uratom")
+	coind, err := sdk.ParseCoinsNormalized("30ufury,0uxatom")
 	require.NoError(t, err)
-	require.Equal(t, coind.String(), "30ukata")
+	require.Equal(t, coind.String(), "30ufury")
 
-	coins := sdk.Coins{sdk.NewCoin("ukata", sdk.NewInt(30)), sdk.NewCoin("uratom", sdk.NewInt(0))}
+	coins := sdk.Coins{sdk.NewCoin("ufury", sdk.NewInt(30)), sdk.NewCoin("uxatom", sdk.NewInt(0))}
 	require.False(t, coins.IsValid())
 }
 
 func TestAddCoins(t *testing.T) {
-	coinA := sdk.NewCoin("ukata", sdk.NewInt(30))
-	coinB := sdk.NewCoin("uratom", sdk.NewInt(1))
+	coinA := sdk.NewCoin("ufury", sdk.NewInt(30))
+	coinB := sdk.NewCoin("uxatom", sdk.NewInt(1))
 
 	coins := sdk.NewCoins()
 	coins = coins.Add(coinA)

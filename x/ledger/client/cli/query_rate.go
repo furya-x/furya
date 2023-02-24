@@ -14,7 +14,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/x/ledger/types"
 )
 
 func CmdListExchangeRate() *cobra.Command {

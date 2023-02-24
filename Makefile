@@ -48,8 +48,8 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=katanad \
-		  -X github.com/cosmos/cosmos-sdk/version.AppName=katanad \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=furyad \
+		  -X github.com/cosmos/cosmos-sdk/version.AppName=furyad \
 		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 		  -X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
@@ -70,21 +70,21 @@ all: tools install lint
 .PHONY:build
 build: go.sum
 ifeq ($(OS),Windows_NT)
-	go build $(BUILD_FLAGS) -o build/katanad.exe ./cmd/katanad
+	go build $(BUILD_FLAGS) -o build/furyad.exe ./cmd/furyad
 else
-	go build $(BUILD_FLAGS) -o build/katanad ./cmd/katanad
+	go build $(BUILD_FLAGS) -o build/furyad ./cmd/furyad
 endif
 
 build-linux: go.sum
 	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
 
 build-all-binary: go.sum
-	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-linux-amd64 ./cmd/katanad
-	LEDGER_ENABLED=false GOOS=linux GOARCH=arm64 go build $(BUILD_FLAGS) -o build/iris-linux-arm64 ./cmd/katanad
-	LEDGER_ENABLED=false GOOS=windows GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-windows-amd64.exe ./cmd/katanad
+	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-linux-amd64 ./cmd/furyad
+	LEDGER_ENABLED=false GOOS=linux GOARCH=arm64 go build $(BUILD_FLAGS) -o build/iris-linux-arm64 ./cmd/furyad
+	LEDGER_ENABLED=false GOOS=windows GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-windows-amd64.exe ./cmd/furyad
 
 install: go.sum
-	go install $(BUILD_FLAGS) ./cmd/katanad
+	go install $(BUILD_FLAGS) ./cmd/furyad
 
 update-swagger-docs: statik proto-swagger-gen
 	$(BINDIR)/statik -src=lite/swagger-ui -dest=lite -f -m
@@ -135,7 +135,7 @@ test-cover:
 format:
 	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./lite/statik/statik.go" -not -path "*.pb.go" | xargs gofmt -w -s
 	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./lite/statik/statik.go" -not -path "*.pb.go" | xargs misspell -w
-	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./lite/statik/statik.go" -not -path "*.pb.go" | xargs goimports -w -local github.com/warmage-sports/katana
+	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./lite/statik/statik.go" -not -path "*.pb.go" | xargs goimports -w -local github.com/oldfurya/furya
 
 benchmark:
 	@go test -mod=readonly -bench=. ./...

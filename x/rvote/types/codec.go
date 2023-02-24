@@ -21,7 +21,7 @@ func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {
 	)
 
 	registry.RegisterInterface(
-		"katana.rvote.Content",
+		"furya.rvote.Content",
 		(*Content)(nil),
 	)
 	// this line is used by starport scaffolding # 3

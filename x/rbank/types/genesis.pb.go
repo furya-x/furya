@@ -137,8 +137,8 @@ func (m *AddressPrefix) GetValAddressPrefix() string {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "katana.katana.rbank.GenesisState")
-	proto.RegisterType((*AddressPrefix)(nil), "katana.katana.rbank.AddressPrefix")
+	proto.RegisterType((*GenesisState)(nil), "furya.furya.rbank.GenesisState")
+	proto.RegisterType((*AddressPrefix)(nil), "furya.furya.rbank.AddressPrefix")
 }
 
 func init() { proto.RegisterFile("rbank/genesis.proto", fileDescriptor_fd1f8a6f057161fb) }

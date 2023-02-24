@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	rdexKeeper "github.com/warmage-sports/katana/x/rdex/keeper"
+	rdexKeeper "github.com/oldfurya/furya/x/rdex/keeper"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package katana.katana.rdex;
+package furya.furya.rdex;
 
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
@@ -8,37 +8,37 @@ import "rdex/params.proto";
 import "rdex/models.proto";
 // this line is used by starport scaffolding # 1
 
-option go_package = "github.com/warmage-sports/katana/x/rdex/types";
+option go_package = "github.com/oldfurya/furya/x/rdex/types";
 
 // Query defines the gRPC querier service.
 service Query {
   // Parameters queries the parameters of the module.
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
-    option (google.api.http).get = "/warmage-sports/katana/rdex/params";
+    option (google.api.http).get = "/oldfurya/furya/rdex/params";
   }
   // Queries a list of SwapPoolInfo items.
 	rpc SwapPoolInfo(QuerySwapPoolInfoRequest) returns (QuerySwapPoolInfoResponse) {
-		option (google.api.http).get = "/warmage-sports/katana/rdex/swap_pool_info/{lpDenom}";
+		option (google.api.http).get = "/oldfurya/furya/rdex/swap_pool_info/{lpDenom}";
 	}
 
 // Queries a list of SwapPoolList items.
 	rpc SwapPoolList(QuerySwapPoolListRequest) returns (QuerySwapPoolListResponse) {
-		option (google.api.http).get = "/warmage-sports/katana/rdex/swap_pool_list";
+		option (google.api.http).get = "/oldfurya/furya/rdex/swap_pool_list";
 	}
 
 // Queries a list of ProviderList items.
 	rpc ProviderList(QueryProviderListRequest) returns (QueryProviderListResponse) {
-		option (google.api.http).get = "/warmage-sports/katana/rdex/provider_list";
+		option (google.api.http).get = "/oldfurya/furya/rdex/provider_list";
 	}
 
 // Queries a list of PoolCreatorList items.
 	rpc PoolCreatorList(QueryPoolCreatorListRequest) returns (QueryPoolCreatorListResponse) {
-		option (google.api.http).get = "/warmage-sports/katana/rdex/pool_creator_list";
+		option (google.api.http).get = "/oldfurya/furya/rdex/pool_creator_list";
 	}
 
 // Queries a list of ProviderSwitch items.
 	rpc ProviderSwitch(QueryProviderSwitchRequest) returns (QueryProviderSwitchResponse) {
-		option (google.api.http).get = "/warmage-sports/katana/rdex/provider_switch";
+		option (google.api.http).get = "/oldfurya/furya/rdex/provider_switch";
 	}
 
 // this line is used by starport scaffolding # 2

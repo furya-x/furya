@@ -130,8 +130,8 @@ func (m *ProposalContent) GetReceiver() string {
 }
 
 func init() {
-	proto.RegisterType((*Proposal)(nil), "katana.katana.bridge.Proposal")
-	proto.RegisterType((*ProposalContent)(nil), "katana.katana.bridge.ProposalContent")
+	proto.RegisterType((*Proposal)(nil), "furya.furya.bridge.Proposal")
+	proto.RegisterType((*ProposalContent)(nil), "furya.furya.bridge.ProposalContent")
 }
 
 func init() { proto.RegisterFile("bridge/proposal.proto", fileDescriptor_ede56148d86d38d9) }

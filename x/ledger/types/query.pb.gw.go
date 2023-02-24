@@ -2761,59 +2761,59 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_GetExchangeRate_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "exchange_rate", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetExchangeRate_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "exchange_rate", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ExchangeRateAll_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "ledger", "exchange_rate_all"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ExchangeRateAll_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "ledger", "exchange_rate_all"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetEraExchangeRate_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "ledger", "era_exchange_rate", "denom", "era"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetEraExchangeRate_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "ledger", "era_exchange_rate", "denom", "era"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_EraExchangeRatesByDenom_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "era_exchange_rates_by_denom", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_EraExchangeRatesByDenom_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "era_exchange_rates_by_denom", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_BondedPoolsByDenom_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "bonded_pools_by_denom", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_BondedPoolsByDenom_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "bonded_pools_by_denom", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetPoolDetail_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "ledger", "get_pool_detail", "denom", "pool"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetPoolDetail_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "ledger", "get_pool_detail", "denom", "pool"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetChainEra_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "get_chain_era", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetChainEra_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "get_chain_era", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetCurrentEraSnapshot_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "get_current_era_snapshot", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetCurrentEraSnapshot_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "get_current_era_snapshot", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetProtocolFeeReceiver_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "ledger", "protocol_fee_receiver"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetProtocolFeeReceiver_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "ledger", "protocol_fee_receiver"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetStakingRewardCommission_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "ledger", "get_staking_reward_commission"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetStakingRewardCommission_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "ledger", "get_staking_reward_commission"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetUnbondRelayFee_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "get_unbond_relay_fee", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetUnbondRelayFee_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "get_unbond_relay_fee", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetUnbondCommission_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "ledger", "get_unbond_commission"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetUnbondCommission_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "ledger", "get_unbond_commission"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetEraUnbondLimit_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "get_era_unbond_limit", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetEraUnbondLimit_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "get_era_unbond_limit", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetBondPipeline_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "ledger", "get_bond_pipeline", "denom", "pool"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetBondPipeline_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "ledger", "get_bond_pipeline", "denom", "pool"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetEraSnapshot_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "ledger", "get_era_snapshot", "denom", "era"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetEraSnapshot_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "ledger", "get_era_snapshot", "denom", "era"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetSnapshot_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "get_snapshot", "shotId"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetSnapshot_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "get_snapshot", "shotId"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetTotalExpectedActive_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "ledger", "get_total_expected_active", "denom", "era"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetTotalExpectedActive_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "ledger", "get_total_expected_active", "denom", "era"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetBondRecord_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"katana", "ledger", "get_bond_record", "denom", "txhash"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetBondRecord_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "ledger", "get_bond_record", "denom", "txhash"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetSignature_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "ledger", "get_signature"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetSignature_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "ledger", "get_signature"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_GetRParams_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "get_r_params", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_GetRParams_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "get_r_params", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_TotalProtocolFee_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"katana", "ledger", "total_protocol_fee"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_TotalProtocolFee_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "ledger", "total_protocol_fee"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_RelayFeeReceiver_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "relay_fee_receiver", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_RelayFeeReceiver_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "relay_fee_receiver", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_UnbondSwitch_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "unbond_switch", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_UnbondSwitch_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "unbond_switch", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_PoolUnbondNextSequence_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"katana", "ledger", "pool_unbond_next_sequence", "denom", "pool", "unlockEra"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_PoolUnbondNextSequence_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"furya", "ledger", "pool_unbond_next_sequence", "denom", "pool", "unlockEra"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_PoolUnbondings_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"katana", "ledger", "pool_unbondings", "denom", "pool", "unlockEra"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_PoolUnbondings_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"furya", "ledger", "pool_unbondings", "denom", "pool", "unlockEra"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_IcaPoolList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "ica_pool_list", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_IcaPoolList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "ica_pool_list", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_InterchainTxStatus_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"katana", "ledger", "interchain_tx_status", "propId"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_InterchainTxStatus_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "ledger", "interchain_tx_status", "propId"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

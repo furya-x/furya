@@ -12,7 +12,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/x/ledger/types"
 )
 
 var (

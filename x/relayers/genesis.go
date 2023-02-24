@@ -2,8 +2,8 @@ package relayers
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/relayers/keeper"
-	"github.com/warmage-sports/katana/x/relayers/types"
+	"github.com/oldfurya/furya/x/relayers/keeper"
+	"github.com/oldfurya/furya/x/relayers/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

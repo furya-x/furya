@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/claim/types"
-	sudoTypes "github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/x/claim/types"
+	sudoTypes "github.com/oldfurya/furya/x/sudo/types"
 )
 
 func (k msgServer) SetMerkleRoot(goCtx context.Context, msg *types.MsgSetMerkleRoot) (*types.MsgSetMerkleRootResponse, error) {

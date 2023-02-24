@@ -1,6 +1,6 @@
 # Install
 
-This guide will explain how to install the `katanad` entrypoint
+This guide will explain how to install the `furyad` entrypoint
 onto your system. With these installed on a server, you can participate in the
 mainnet as either a [Full Node](./join-mainnet.md) or a
 [Validator](./validator-setup.md).
@@ -39,10 +39,10 @@ go version
 
 ## Install the binaries
 
-Next, let's install the latest version of katanad. Make sure you `git checkout` the
-correct [released version](https://github.com/warmage-sports/katana/releases).
+Next, let's install the latest version of furyad. Make sure you `git checkout` the
+correct [released version](https://github.com/oldfurya/furya/releases).
 
 ```bash
-git clone -b <latest-release-tag> https://github.com/warmage-sports/katana
-cd katana && make install
+git clone -b <latest-release-tag> https://github.com/oldfurya/furya
+cd furya && make install
 ```

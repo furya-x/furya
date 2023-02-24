@@ -1,5 +1,5 @@
 syntax = "proto3";
-package katana.katana.bridge;
+package furya.furya.bridge;
 
 import "gogoproto/gogo.proto";
 import "cosmos/base/v1beta1/coin.proto";
@@ -7,7 +7,7 @@ import "bridge/genesis.proto";
 
 // this line is used by starport scaffolding # proto/tx/import
 
-option go_package = "github.com/warmage-sports/katana/x/bridge/types";
+option go_package = "github.com/oldfurya/furya/x/bridge/types";
 
 // Msg defines the Msg service.
 service Msg {

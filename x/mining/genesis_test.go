@@ -3,10 +3,10 @@ package mining_test
 import (
 	"testing"
 
-	keepertest "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/testutil/nullify"
-	"github.com/warmage-sports/katana/x/mining"
-	"github.com/warmage-sports/katana/x/mining/types"
+	keepertest "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/testutil/nullify"
+	"github.com/oldfurya/furya/x/mining"
+	"github.com/oldfurya/furya/x/mining/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -4,9 +4,9 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/utils"
-	"github.com/warmage-sports/katana/x/rstaking/types"
-	sudotypes "github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/utils"
+	"github.com/oldfurya/furya/x/rstaking/types"
+	sudotypes "github.com/oldfurya/furya/x/sudo/types"
 )
 
 func (k msgServer) ProvideToken(goCtx context.Context, msg *types.MsgProvideToken) (*types.MsgProvideTokenResponse, error) {
@@ -16,7 +16,7 @@ func (k msgServer) ProvideToken(goCtx context.Context, msg *types.MsgProvideToke
 	if !isAdmin {
 		return nil, sudotypes.ErrCreatorNotAdmin
 	}
-	if msg.Token.Denom != utils.KataDenom {
+	if msg.Token.Denom != utils.FuryDenom {
 		return nil, types.ErrDenomUnmatch
 	}
 	if err := k.Keeper.bankKeeper.MintCoins(ctx, types.ModuleName, sdk.NewCoins(msg.Token)); err != nil {

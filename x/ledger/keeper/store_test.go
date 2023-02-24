@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testkeeper "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/testutil/sample"
-	"github.com/warmage-sports/katana/utils"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	testkeeper "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/testutil/sample"
+	"github.com/oldfurya/furya/utils"
+	"github.com/oldfurya/furya/x/ledger/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -153,15 +153,15 @@ func TestKeeper_SetChainEra(t *testing.T) {
 func TestKeeper_Commission(t *testing.T) {
 	k, ctx := testkeeper.LedgerKeeper(t)
 
-	cms := k.GetStakingRewardCommission(ctx, "uratom")
+	cms := k.GetStakingRewardCommission(ctx, "uxatom")
 	require.Equal(t, types.DefaultStakingRewardCommission, cms)
 
 	dec, err := utils.NewDecFromStr("0.5")
 	require.Nil(t, err)
 	t.Log(dec)
-	k.SetStakingRewardCommission(ctx, "uratom", dec)
+	k.SetStakingRewardCommission(ctx, "uxatom", dec)
 
-	cms = k.GetStakingRewardCommission(ctx, "uratom")
+	cms = k.GetStakingRewardCommission(ctx, "uxatom")
 	require.Equal(t, dec, cms)
 }
 

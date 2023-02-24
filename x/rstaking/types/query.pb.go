@@ -507,18 +507,18 @@ func (m *QueryDelegatorWhitelistSwitchResponse) GetIsOpen() bool {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "katana.katana.rstaking.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "katana.katana.rstaking.QueryParamsResponse")
-	proto.RegisterType((*QueryInflationBaseRequest)(nil), "katana.katana.rstaking.QueryInflationBaseRequest")
-	proto.RegisterType((*QueryInflationBaseResponse)(nil), "katana.katana.rstaking.QueryInflationBaseResponse")
-	proto.RegisterType((*QueryValidatorWhitelistRequest)(nil), "katana.katana.rstaking.QueryValidatorWhitelistRequest")
-	proto.RegisterType((*QueryValidatorWhitelistResponse)(nil), "katana.katana.rstaking.QueryValidatorWhitelistResponse")
-	proto.RegisterType((*QueryValidatorWhitelistSwitchRequest)(nil), "katana.katana.rstaking.QueryValidatorWhitelistSwitchRequest")
-	proto.RegisterType((*QueryValidatorWhitelistSwitchResponse)(nil), "katana.katana.rstaking.QueryValidatorWhitelistSwitchResponse")
-	proto.RegisterType((*QueryDelegatorWhitelistRequest)(nil), "katana.katana.rstaking.QueryDelegatorWhitelistRequest")
-	proto.RegisterType((*QueryDelegatorWhitelistResponse)(nil), "katana.katana.rstaking.QueryDelegatorWhitelistResponse")
-	proto.RegisterType((*QueryDelegatorWhitelistSwitchRequest)(nil), "katana.katana.rstaking.QueryDelegatorWhitelistSwitchRequest")
-	proto.RegisterType((*QueryDelegatorWhitelistSwitchResponse)(nil), "katana.katana.rstaking.QueryDelegatorWhitelistSwitchResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.rstaking.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.rstaking.QueryParamsResponse")
+	proto.RegisterType((*QueryInflationBaseRequest)(nil), "furya.furya.rstaking.QueryInflationBaseRequest")
+	proto.RegisterType((*QueryInflationBaseResponse)(nil), "furya.furya.rstaking.QueryInflationBaseResponse")
+	proto.RegisterType((*QueryValidatorWhitelistRequest)(nil), "furya.furya.rstaking.QueryValidatorWhitelistRequest")
+	proto.RegisterType((*QueryValidatorWhitelistResponse)(nil), "furya.furya.rstaking.QueryValidatorWhitelistResponse")
+	proto.RegisterType((*QueryValidatorWhitelistSwitchRequest)(nil), "furya.furya.rstaking.QueryValidatorWhitelistSwitchRequest")
+	proto.RegisterType((*QueryValidatorWhitelistSwitchResponse)(nil), "furya.furya.rstaking.QueryValidatorWhitelistSwitchResponse")
+	proto.RegisterType((*QueryDelegatorWhitelistRequest)(nil), "furya.furya.rstaking.QueryDelegatorWhitelistRequest")
+	proto.RegisterType((*QueryDelegatorWhitelistResponse)(nil), "furya.furya.rstaking.QueryDelegatorWhitelistResponse")
+	proto.RegisterType((*QueryDelegatorWhitelistSwitchRequest)(nil), "furya.furya.rstaking.QueryDelegatorWhitelistSwitchRequest")
+	proto.RegisterType((*QueryDelegatorWhitelistSwitchResponse)(nil), "furya.furya.rstaking.QueryDelegatorWhitelistSwitchResponse")
 }
 
 func init() { proto.RegisterFile("rstaking/query.proto", fileDescriptor_e22409a29fe39f84) }
@@ -602,7 +602,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -611,7 +611,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) InflationBase(ctx context.Context, in *QueryInflationBaseRequest, opts ...grpc.CallOption) (*QueryInflationBaseResponse, error) {
 	out := new(QueryInflationBaseResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Query/InflationBase", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Query/InflationBase", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -620,7 +620,7 @@ func (c *queryClient) InflationBase(ctx context.Context, in *QueryInflationBaseR
 
 func (c *queryClient) ValidatorWhitelist(ctx context.Context, in *QueryValidatorWhitelistRequest, opts ...grpc.CallOption) (*QueryValidatorWhitelistResponse, error) {
 	out := new(QueryValidatorWhitelistResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Query/ValidatorWhitelist", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Query/ValidatorWhitelist", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -629,7 +629,7 @@ func (c *queryClient) ValidatorWhitelist(ctx context.Context, in *QueryValidator
 
 func (c *queryClient) ValidatorWhitelistSwitch(ctx context.Context, in *QueryValidatorWhitelistSwitchRequest, opts ...grpc.CallOption) (*QueryValidatorWhitelistSwitchResponse, error) {
 	out := new(QueryValidatorWhitelistSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Query/ValidatorWhitelistSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Query/ValidatorWhitelistSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -638,7 +638,7 @@ func (c *queryClient) ValidatorWhitelistSwitch(ctx context.Context, in *QueryVal
 
 func (c *queryClient) DelegatorWhitelist(ctx context.Context, in *QueryDelegatorWhitelistRequest, opts ...grpc.CallOption) (*QueryDelegatorWhitelistResponse, error) {
 	out := new(QueryDelegatorWhitelistResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Query/DelegatorWhitelist", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Query/DelegatorWhitelist", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -647,7 +647,7 @@ func (c *queryClient) DelegatorWhitelist(ctx context.Context, in *QueryDelegator
 
 func (c *queryClient) DelegatorWhitelistSwitch(ctx context.Context, in *QueryDelegatorWhitelistSwitchRequest, opts ...grpc.CallOption) (*QueryDelegatorWhitelistSwitchResponse, error) {
 	out := new(QueryDelegatorWhitelistSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rstaking.Query/DelegatorWhitelistSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rstaking.Query/DelegatorWhitelistSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -707,7 +707,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Query/Params",
+		FullMethod: "/furya.furya.rstaking.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -725,7 +725,7 @@ func _Query_InflationBase_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Query/InflationBase",
+		FullMethod: "/furya.furya.rstaking.Query/InflationBase",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).InflationBase(ctx, req.(*QueryInflationBaseRequest))
@@ -743,7 +743,7 @@ func _Query_ValidatorWhitelist_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Query/ValidatorWhitelist",
+		FullMethod: "/furya.furya.rstaking.Query/ValidatorWhitelist",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ValidatorWhitelist(ctx, req.(*QueryValidatorWhitelistRequest))
@@ -761,7 +761,7 @@ func _Query_ValidatorWhitelistSwitch_Handler(srv interface{}, ctx context.Contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Query/ValidatorWhitelistSwitch",
+		FullMethod: "/furya.furya.rstaking.Query/ValidatorWhitelistSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ValidatorWhitelistSwitch(ctx, req.(*QueryValidatorWhitelistSwitchRequest))
@@ -779,7 +779,7 @@ func _Query_DelegatorWhitelist_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Query/DelegatorWhitelist",
+		FullMethod: "/furya.furya.rstaking.Query/DelegatorWhitelist",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).DelegatorWhitelist(ctx, req.(*QueryDelegatorWhitelistRequest))
@@ -797,7 +797,7 @@ func _Query_DelegatorWhitelistSwitch_Handler(srv interface{}, ctx context.Contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rstaking.Query/DelegatorWhitelistSwitch",
+		FullMethod: "/furya.furya.rstaking.Query/DelegatorWhitelistSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).DelegatorWhitelistSwitch(ctx, req.(*QueryDelegatorWhitelistSwitchRequest))
@@ -806,7 +806,7 @@ func _Query_DelegatorWhitelistSwitch_Handler(srv interface{}, ctx context.Contex
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.rstaking.Query",
+	ServiceName: "furya.furya.rstaking.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

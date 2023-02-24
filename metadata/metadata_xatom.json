@@ -2,19 +2,19 @@
     "description": "A liquid staking representation of staked ATOMs",
     "denom_units": [
         {
-            "denom": "uratom",
+            "denom": "uxatom",
             "exponent": 0,
             "aliases": [
-                "microratom"
+                "microxatom"
             ]
         },
         {
-            "denom": "ratom",
+            "denom": "xatom",
             "exponent": 6
         }
     ],
-    "base": "uratom",
-    "display": "ratom",
-    "name": "rATOM",
-    "symbol": "rATOM"
+    "base": "uxatom",
+    "display": "xatom",
+    "name": "xATOM",
+    "symbol": "xATOM"
 }

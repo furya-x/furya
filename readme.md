@@ -1,11 +1,11 @@
-# Katana
+# Furya
 
-**Katana** is a blockchain built using [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) and Tendermint and aims to provide liquid staking solutions for assets
+**Furya** is a blockchain built using [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) and Tendermint and aims to provide liquid staking solutions for assets
 through the Inter-Blockchain Communication (IBC) Protocol to rapidly grow the staking industry.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| [![Go Report Card](https://goreportcard.com/badge/github.com/warmage-sports/katana)](https://goreportcard.com/report/github.com/warmage-sports/katana) | [![license](https://img.shields.io/github/license/cosmos/gaia.svg)](https://github.com/warmage-sports/katana/blob/main/LICENSE) | [![LoC](https://tokei.rs/b1/github/warmage-sports/katana)](https://github.com/warmage-sports/katana) | [![GolangCI](https://golangci.com/badges/github.com/cosmos/cosmos.svg)](https://golangci.com/r/github.com/warmage-sports/katana) |
+| [![Go Report Card](https://goreportcard.com/badge/github.com/oldfurya/furya)](https://goreportcard.com/report/github.com/oldfurya/furya) | [![license](https://img.shields.io/github/license/cosmos/gaia.svg)](https://github.com/oldfurya/furya/blob/main/LICENSE) | [![LoC](https://tokei.rs/b1/github/oldfurya/furya)](https://github.com/oldfurya/furya) | [![GolangCI](https://golangci.com/badges/github.com/cosmos/cosmos.svg)](https://golangci.com/r/github.com/oldfurya/furya) |
 
 ## Run node
 
@@ -18,5 +18,5 @@ through the Inter-Blockchain Communication (IBC) Protocol to rapidly grow the st
 
 If you are looking for historical genesis files and other data
 
-- [`katana/mainnet`](https://github.com/katana/network/tree/main/mainnets)
-- [`katana/testnet`](https://github.com/katana/network/tree/main/testnets)
+- [`furya/mainnet`](https://github.com/furya/network/tree/main/mainnets)
+- [`furya/testnet`](https://github.com/furya/network/tree/main/testnets)

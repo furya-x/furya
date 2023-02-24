@@ -698,20 +698,20 @@ func (m *QueryClaimInfoDetailResponse) GetClaimInfo() *UserClaimInfo {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "katana.katana.rmintreward.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "katana.katana.rmintreward.QueryParamsResponse")
-	proto.RegisterType((*QueryActLatestCycleRequest)(nil), "katana.katana.rmintreward.QueryActLatestCycleRequest")
-	proto.RegisterType((*QueryActLatestCycleResponse)(nil), "katana.katana.rmintreward.QueryActLatestCycleResponse")
-	proto.RegisterType((*QueryActDetailRequest)(nil), "katana.katana.rmintreward.QueryActDetailRequest")
-	proto.RegisterType((*QueryActDetailResponse)(nil), "katana.katana.rmintreward.QueryActDetailResponse")
-	proto.RegisterType((*QueryUserMintCountRequest)(nil), "katana.katana.rmintreward.QueryUserMintCountRequest")
-	proto.RegisterType((*QueryUserMintCountResponse)(nil), "katana.katana.rmintreward.QueryUserMintCountResponse")
-	proto.RegisterType((*QueryUserActsRequest)(nil), "katana.katana.rmintreward.QueryUserActsRequest")
-	proto.RegisterType((*QueryUserActsResponse)(nil), "katana.katana.rmintreward.QueryUserActsResponse")
-	proto.RegisterType((*QueryActCurrentCycleRequest)(nil), "katana.katana.rmintreward.QueryActCurrentCycleRequest")
-	proto.RegisterType((*QueryActCurrentCycleResponse)(nil), "katana.katana.rmintreward.QueryActCurrentCycleResponse")
-	proto.RegisterType((*QueryClaimInfoDetailRequest)(nil), "katana.katana.rmintreward.QueryClaimInfoDetailRequest")
-	proto.RegisterType((*QueryClaimInfoDetailResponse)(nil), "katana.katana.rmintreward.QueryClaimInfoDetailResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.rmintreward.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.rmintreward.QueryParamsResponse")
+	proto.RegisterType((*QueryActLatestCycleRequest)(nil), "furya.furya.rmintreward.QueryActLatestCycleRequest")
+	proto.RegisterType((*QueryActLatestCycleResponse)(nil), "furya.furya.rmintreward.QueryActLatestCycleResponse")
+	proto.RegisterType((*QueryActDetailRequest)(nil), "furya.furya.rmintreward.QueryActDetailRequest")
+	proto.RegisterType((*QueryActDetailResponse)(nil), "furya.furya.rmintreward.QueryActDetailResponse")
+	proto.RegisterType((*QueryUserMintCountRequest)(nil), "furya.furya.rmintreward.QueryUserMintCountRequest")
+	proto.RegisterType((*QueryUserMintCountResponse)(nil), "furya.furya.rmintreward.QueryUserMintCountResponse")
+	proto.RegisterType((*QueryUserActsRequest)(nil), "furya.furya.rmintreward.QueryUserActsRequest")
+	proto.RegisterType((*QueryUserActsResponse)(nil), "furya.furya.rmintreward.QueryUserActsResponse")
+	proto.RegisterType((*QueryActCurrentCycleRequest)(nil), "furya.furya.rmintreward.QueryActCurrentCycleRequest")
+	proto.RegisterType((*QueryActCurrentCycleResponse)(nil), "furya.furya.rmintreward.QueryActCurrentCycleResponse")
+	proto.RegisterType((*QueryClaimInfoDetailRequest)(nil), "furya.furya.rmintreward.QueryClaimInfoDetailRequest")
+	proto.RegisterType((*QueryClaimInfoDetailResponse)(nil), "furya.furya.rmintreward.QueryClaimInfoDetailResponse")
 }
 
 func init() { proto.RegisterFile("rmintreward/query.proto", fileDescriptor_a060f1414d4add49) }
@@ -810,7 +810,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -819,7 +819,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) ActLatestCycle(ctx context.Context, in *QueryActLatestCycleRequest, opts ...grpc.CallOption) (*QueryActLatestCycleResponse, error) {
 	out := new(QueryActLatestCycleResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/ActLatestCycle", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/ActLatestCycle", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -828,7 +828,7 @@ func (c *queryClient) ActLatestCycle(ctx context.Context, in *QueryActLatestCycl
 
 func (c *queryClient) ActDetail(ctx context.Context, in *QueryActDetailRequest, opts ...grpc.CallOption) (*QueryActDetailResponse, error) {
 	out := new(QueryActDetailResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/ActDetail", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/ActDetail", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -837,7 +837,7 @@ func (c *queryClient) ActDetail(ctx context.Context, in *QueryActDetailRequest, 
 
 func (c *queryClient) UserMintCount(ctx context.Context, in *QueryUserMintCountRequest, opts ...grpc.CallOption) (*QueryUserMintCountResponse, error) {
 	out := new(QueryUserMintCountResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/UserMintCount", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/UserMintCount", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -846,7 +846,7 @@ func (c *queryClient) UserMintCount(ctx context.Context, in *QueryUserMintCountR
 
 func (c *queryClient) UserActs(ctx context.Context, in *QueryUserActsRequest, opts ...grpc.CallOption) (*QueryUserActsResponse, error) {
 	out := new(QueryUserActsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/UserActs", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/UserActs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -855,7 +855,7 @@ func (c *queryClient) UserActs(ctx context.Context, in *QueryUserActsRequest, op
 
 func (c *queryClient) ActCurrentCycle(ctx context.Context, in *QueryActCurrentCycleRequest, opts ...grpc.CallOption) (*QueryActCurrentCycleResponse, error) {
 	out := new(QueryActCurrentCycleResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/ActCurrentCycle", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/ActCurrentCycle", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -864,7 +864,7 @@ func (c *queryClient) ActCurrentCycle(ctx context.Context, in *QueryActCurrentCy
 
 func (c *queryClient) ClaimInfoDetail(ctx context.Context, in *QueryClaimInfoDetailRequest, opts ...grpc.CallOption) (*QueryClaimInfoDetailResponse, error) {
 	out := new(QueryClaimInfoDetailResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.rmintreward.Query/ClaimInfoDetail", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Query/ClaimInfoDetail", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -929,7 +929,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/Params",
+		FullMethod: "/furya.furya.rmintreward.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -947,7 +947,7 @@ func _Query_ActLatestCycle_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/ActLatestCycle",
+		FullMethod: "/furya.furya.rmintreward.Query/ActLatestCycle",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ActLatestCycle(ctx, req.(*QueryActLatestCycleRequest))
@@ -965,7 +965,7 @@ func _Query_ActDetail_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/ActDetail",
+		FullMethod: "/furya.furya.rmintreward.Query/ActDetail",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ActDetail(ctx, req.(*QueryActDetailRequest))
@@ -983,7 +983,7 @@ func _Query_UserMintCount_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/UserMintCount",
+		FullMethod: "/furya.furya.rmintreward.Query/UserMintCount",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).UserMintCount(ctx, req.(*QueryUserMintCountRequest))
@@ -1001,7 +1001,7 @@ func _Query_UserActs_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/UserActs",
+		FullMethod: "/furya.furya.rmintreward.Query/UserActs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).UserActs(ctx, req.(*QueryUserActsRequest))
@@ -1019,7 +1019,7 @@ func _Query_ActCurrentCycle_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/ActCurrentCycle",
+		FullMethod: "/furya.furya.rmintreward.Query/ActCurrentCycle",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ActCurrentCycle(ctx, req.(*QueryActCurrentCycleRequest))
@@ -1037,7 +1037,7 @@ func _Query_ClaimInfoDetail_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.rmintreward.Query/ClaimInfoDetail",
+		FullMethod: "/furya.furya.rmintreward.Query/ClaimInfoDetail",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ClaimInfoDetail(ctx, req.(*QueryClaimInfoDetailRequest))
@@ -1046,7 +1046,7 @@ func _Query_ClaimInfoDetail_Handler(srv interface{}, ctx context.Context, dec fu
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.rmintreward.Query",
+	ServiceName: "furya.furya.rmintreward.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

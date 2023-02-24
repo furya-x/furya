@@ -1,11 +1,11 @@
 syntax = "proto3";
-package katana.katana.relayers;
+package furya.furya.relayers;
 
 import "gogoproto/gogo.proto";
 import "relayers/relayer.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/warmage-sports/katana/x/relayers/types";
+option go_package = "github.com/oldfurya/furya/x/relayers/types";
 
 // GenesisState defines the relayers module's genesis state.
 message GenesisState {

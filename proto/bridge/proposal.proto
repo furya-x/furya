@@ -1,9 +1,9 @@
 syntax = "proto3";
-package katana.katana.bridge;
+package furya.furya.bridge;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/warmage-sports/katana/x/bridge/types";
+option go_package = "github.com/oldfurya/furya/x/bridge/types";
 
 message Proposal {
   ProposalContent content = 1 ;

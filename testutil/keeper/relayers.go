@@ -6,8 +6,8 @@ import (
 
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/relayers/keeper"
-	"github.com/warmage-sports/katana/x/relayers/types"
+	"github.com/oldfurya/furya/x/relayers/keeper"
+	"github.com/oldfurya/furya/x/relayers/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

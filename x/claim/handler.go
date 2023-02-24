@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/warmage-sports/katana/x/claim/keeper"
-	"github.com/warmage-sports/katana/x/claim/types"
+	"github.com/oldfurya/furya/x/claim/keeper"
+	"github.com/oldfurya/furya/x/claim/types"
 )
 
 // NewHandler ...

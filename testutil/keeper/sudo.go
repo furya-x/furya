@@ -10,10 +10,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/store"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/app"
-	"github.com/warmage-sports/katana/testutil/sample"
-	"github.com/warmage-sports/katana/x/sudo/keeper"
-	"github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/app"
+	"github.com/oldfurya/furya/testutil/sample"
+	"github.com/oldfurya/furya/x/sudo/keeper"
+	"github.com/oldfurya/furya/x/sudo/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
@@ -26,8 +26,8 @@ import (
 	paramskeeper "github.com/cosmos/cosmos-sdk/x/params/keeper"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	miningtypes "github.com/warmage-sports/katana/x/mining/types"
-	rdextypes "github.com/warmage-sports/katana/x/rdex/types"
+	miningtypes "github.com/oldfurya/furya/x/mining/types"
+	rdextypes "github.com/oldfurya/furya/x/rdex/types"
 )
 
 var (

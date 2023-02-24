@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
-	"github.com/warmage-sports/katana/x/rstaking/types"
+	"github.com/oldfurya/furya/x/rstaking/types"
 )
 
 func CmdQueryParams() *cobra.Command {

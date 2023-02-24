@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
-	"github.com/warmage-sports/katana/x/mining/types"
+	"github.com/oldfurya/furya/x/mining/types"
 )
 
 func CmdQueryParams() *cobra.Command {

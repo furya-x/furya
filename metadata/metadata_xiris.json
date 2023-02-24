@@ -2,19 +2,19 @@
     "description": "A liquid staking representation of staked IRISs",
     "denom_units": [
         {
-            "denom": "uriris",
+            "denom": "uxiris",
             "exponent": 0,
             "aliases": [
-                "microriris"
+                "microxiris"
             ]
         },
         {
-            "denom": "riris",
+            "denom": "xiris",
             "exponent": 6
         }
     ],
-    "base": "uriris",
-    "display": "riris",
-    "name": "rIRIS",
-    "symbol": "rIRIS"
+    "base": "uxiris",
+    "display": "xiris",
+    "name": "xIRIS",
+    "symbol": "xIRIS"
 }

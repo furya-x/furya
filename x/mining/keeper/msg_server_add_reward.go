@@ -4,7 +4,7 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/mining/types"
+	"github.com/oldfurya/furya/x/mining/types"
 )
 
 func (k msgServer) AddReward(goCtx context.Context, msg *types.MsgAddReward) (*types.MsgAddRewardResponse, error) {

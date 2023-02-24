@@ -1,10 +1,10 @@
 syntax = "proto3";
-package katana.katana.sudo;
+package furya.furya.sudo;
 
 import "gogoproto/gogo.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/warmage-sports/katana/x/sudo/types";
+option go_package = "github.com/oldfurya/furya/x/sudo/types";
 
 // GenesisState defines the sudo module's genesis state.
 message GenesisState {

@@ -374,7 +374,7 @@ func (m *BannedDenom) GetDenom() string {
 type ResourceIdToDenom struct {
 	ResourceId string    `protobuf:"bytes,1,opt,name=resourceId,proto3" json:"resourceId,omitempty"`
 	Denom      string    `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
-	DenomType  DenomType `protobuf:"varint,3,opt,name=denomType,proto3,enum=katana.katana.bridge.DenomType" json:"denomType,omitempty"`
+	DenomType  DenomType `protobuf:"varint,3,opt,name=denomType,proto3,enum=furya.furya.bridge.DenomType" json:"denomType,omitempty"`
 }
 
 func (m *ResourceIdToDenom) Reset()         { *m = ResourceIdToDenom{} }
@@ -432,13 +432,13 @@ func (m *ResourceIdToDenom) GetDenomType() DenomType {
 }
 
 func init() {
-	proto.RegisterEnum("katana.katana.bridge.DenomType", DenomType_name, DenomType_value)
-	proto.RegisterType((*GenesisState)(nil), "katana.katana.bridge.GenesisState")
-	proto.RegisterType((*DepositCount)(nil), "katana.katana.bridge.DepositCount")
-	proto.RegisterType((*GenesisProposal)(nil), "katana.katana.bridge.GenesisProposal")
-	proto.RegisterType((*RelayFee)(nil), "katana.katana.bridge.RelayFee")
-	proto.RegisterType((*BannedDenom)(nil), "katana.katana.bridge.BannedDenom")
-	proto.RegisterType((*ResourceIdToDenom)(nil), "katana.katana.bridge.ResourceIdToDenom")
+	proto.RegisterEnum("furya.furya.bridge.DenomType", DenomType_name, DenomType_value)
+	proto.RegisterType((*GenesisState)(nil), "furya.furya.bridge.GenesisState")
+	proto.RegisterType((*DepositCount)(nil), "furya.furya.bridge.DepositCount")
+	proto.RegisterType((*GenesisProposal)(nil), "furya.furya.bridge.GenesisProposal")
+	proto.RegisterType((*RelayFee)(nil), "furya.furya.bridge.RelayFee")
+	proto.RegisterType((*BannedDenom)(nil), "furya.furya.bridge.BannedDenom")
+	proto.RegisterType((*ResourceIdToDenom)(nil), "furya.furya.bridge.ResourceIdToDenom")
 }
 
 func init() { proto.RegisterFile("bridge/genesis.proto", fileDescriptor_9fdd574b337deec5) }

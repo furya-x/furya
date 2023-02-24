@@ -8,8 +8,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/spf13/cobra"
-	"github.com/warmage-sports/katana/x/rvalidator/types"
-	rvotetypes "github.com/warmage-sports/katana/x/rvote/types"
+	"github.com/oldfurya/furya/x/rvalidator/types"
+	rvotetypes "github.com/oldfurya/furya/x/rvote/types"
 )
 
 var _ = strconv.Itoa(0)

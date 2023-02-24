@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/warmage-sports/katana/testutil/sample"
-	"github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/testutil/sample"
+	"github.com/oldfurya/furya/x/sudo/types"
 	"github.com/stretchr/testify/require"
 )
 

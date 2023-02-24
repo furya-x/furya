@@ -1,7 +1,7 @@
 syntax = "proto3";
-package katana.katana.relayers;
+package furya.furya.relayers;
 
-option go_package = "github.com/warmage-sports/katana/x/relayers/types";
+option go_package = "github.com/oldfurya/furya/x/relayers/types";
 
 message Relayer {
     string arena = 1;

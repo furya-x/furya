@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/utils"
+	"github.com/oldfurya/furya/utils"
 )
 
 const (

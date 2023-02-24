@@ -3,9 +3,9 @@ package relayers_test
 import (
 	"testing"
 
-	keepertest "github.com/warmage-sports/katana/testutil/keeper"
-	"github.com/warmage-sports/katana/x/relayers"
-	"github.com/warmage-sports/katana/x/relayers/types"
+	keepertest "github.com/oldfurya/furya/testutil/keeper"
+	"github.com/oldfurya/furya/x/relayers"
+	"github.com/oldfurya/furya/x/relayers/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,4 +1,4 @@
-module github.com/warmage-sports/katana
+module github.com/oldfurya/furya
 
 go 1.18
 

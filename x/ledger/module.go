@@ -18,9 +18,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/warmage-sports/katana/x/ledger/client/cli"
-	"github.com/warmage-sports/katana/x/ledger/keeper"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/x/ledger/client/cli"
+	"github.com/oldfurya/furya/x/ledger/keeper"
+	"github.com/oldfurya/furya/x/ledger/types"
 )
 
 var (

@@ -1,11 +1,11 @@
 syntax = "proto3";
-package katana.katana.ledger;
+package furya.furya.ledger;
 
 import "gogoproto/gogo.proto";
 import "ledger/ledger.proto";
 import "google/protobuf/any.proto";
 
-option go_package = "github.com/warmage-sports/katana/x/ledger/types";
+option go_package = "github.com/oldfurya/furya/x/ledger/types";
 
 message SetChainEraProposal {
     string proposer = 1;

@@ -1647,7 +1647,7 @@ type QueryGetSignatureRequest struct {
 	Denom  string         `protobuf:"bytes,1,opt,name=denom,proto3" json:"denom,omitempty"`
 	Era    uint32         `protobuf:"varint,2,opt,name=era,proto3" json:"era,omitempty"`
 	Pool   string         `protobuf:"bytes,3,opt,name=pool,proto3" json:"pool,omitempty"`
-	TxType OriginalTxType `protobuf:"varint,4,opt,name=txType,proto3,enum=katana.katana.ledger.OriginalTxType" json:"txType,omitempty"`
+	TxType OriginalTxType `protobuf:"varint,4,opt,name=txType,proto3,enum=furya.furya.ledger.OriginalTxType" json:"txType,omitempty"`
 	PropId string         `protobuf:"bytes,5,opt,name=propId,proto3" json:"propId,omitempty"`
 }
 
@@ -2448,7 +2448,7 @@ func (m *QueryInterchainTxStatusRequest) GetPropId() string {
 }
 
 type QueryInterchainTxStatusResponse struct {
-	InterchainTxStatus InterchainTxStatus `protobuf:"varint,1,opt,name=interchainTxStatus,proto3,enum=katana.katana.ledger.InterchainTxStatus" json:"interchainTxStatus,omitempty"`
+	InterchainTxStatus InterchainTxStatus `protobuf:"varint,1,opt,name=interchainTxStatus,proto3,enum=furya.furya.ledger.InterchainTxStatus" json:"interchainTxStatus,omitempty"`
 }
 
 func (m *QueryInterchainTxStatusResponse) Reset()         { *m = QueryInterchainTxStatusResponse{} }
@@ -2492,60 +2492,60 @@ func (m *QueryInterchainTxStatusResponse) GetInterchainTxStatus() InterchainTxSt
 }
 
 func init() {
-	proto.RegisterType((*QueryGetExchangeRateRequest)(nil), "katana.katana.ledger.QueryGetExchangeRateRequest")
-	proto.RegisterType((*QueryGetExchangeRateResponse)(nil), "katana.katana.ledger.QueryGetExchangeRateResponse")
-	proto.RegisterType((*QueryExchangeRateAllRequest)(nil), "katana.katana.ledger.QueryExchangeRateAllRequest")
-	proto.RegisterType((*QueryExchangeRateAllResponse)(nil), "katana.katana.ledger.QueryExchangeRateAllResponse")
-	proto.RegisterType((*QueryGetEraExchangeRateRequest)(nil), "katana.katana.ledger.QueryGetEraExchangeRateRequest")
-	proto.RegisterType((*QueryGetEraExchangeRateResponse)(nil), "katana.katana.ledger.QueryGetEraExchangeRateResponse")
-	proto.RegisterType((*QueryEraExchangeRatesByDenomRequest)(nil), "katana.katana.ledger.QueryEraExchangeRatesByDenomRequest")
-	proto.RegisterType((*QueryEraExchangeRatesByDenomResponse)(nil), "katana.katana.ledger.QueryEraExchangeRatesByDenomResponse")
-	proto.RegisterType((*QueryBondedPoolsByDenomRequest)(nil), "katana.katana.ledger.QueryBondedPoolsByDenomRequest")
-	proto.RegisterType((*QueryBondedPoolsByDenomResponse)(nil), "katana.katana.ledger.QueryBondedPoolsByDenomResponse")
-	proto.RegisterType((*QueryGetPoolDetailRequest)(nil), "katana.katana.ledger.QueryGetPoolDetailRequest")
-	proto.RegisterType((*QueryGetPoolDetailResponse)(nil), "katana.katana.ledger.QueryGetPoolDetailResponse")
-	proto.RegisterType((*QueryGetChainEraRequest)(nil), "katana.katana.ledger.QueryGetChainEraRequest")
-	proto.RegisterType((*QueryGetChainEraResponse)(nil), "katana.katana.ledger.QueryGetChainEraResponse")
-	proto.RegisterType((*QueryGetCurrentEraSnapshotRequest)(nil), "katana.katana.ledger.QueryGetCurrentEraSnapshotRequest")
-	proto.RegisterType((*QueryGetCurrentEraSnapshotResponse)(nil), "katana.katana.ledger.QueryGetCurrentEraSnapshotResponse")
-	proto.RegisterType((*QueryGetProtocolFeeReceiverRequest)(nil), "katana.katana.ledger.QueryGetProtocolFeeReceiverRequest")
-	proto.RegisterType((*QueryGetProtocolFeeReceiverResponse)(nil), "katana.katana.ledger.QueryGetProtocolFeeReceiverResponse")
-	proto.RegisterType((*QueryGetStakingRewardCommissionRequest)(nil), "katana.katana.ledger.QueryGetStakingRewardCommissionRequest")
-	proto.RegisterType((*QueryGetStakingRewardCommissionResponse)(nil), "katana.katana.ledger.QueryGetStakingRewardCommissionResponse")
-	proto.RegisterType((*QueryGetUnbondRelayFeeRequest)(nil), "katana.katana.ledger.QueryGetUnbondRelayFeeRequest")
-	proto.RegisterType((*QueryGetUnbondRelayFeeResponse)(nil), "katana.katana.ledger.QueryGetUnbondRelayFeeResponse")
-	proto.RegisterType((*QueryGetUnbondCommissionRequest)(nil), "katana.katana.ledger.QueryGetUnbondCommissionRequest")
-	proto.RegisterType((*QueryGetUnbondCommissionResponse)(nil), "katana.katana.ledger.QueryGetUnbondCommissionResponse")
-	proto.RegisterType((*QueryGetEraUnbondLimitRequest)(nil), "katana.katana.ledger.QueryGetEraUnbondLimitRequest")
-	proto.RegisterType((*QueryGetEraUnbondLimitResponse)(nil), "katana.katana.ledger.QueryGetEraUnbondLimitResponse")
-	proto.RegisterType((*QueryGetBondPipelineRequest)(nil), "katana.katana.ledger.QueryGetBondPipelineRequest")
-	proto.RegisterType((*QueryGetBondPipelineResponse)(nil), "katana.katana.ledger.QueryGetBondPipelineResponse")
-	proto.RegisterType((*QueryGetEraSnapshotRequest)(nil), "katana.katana.ledger.QueryGetEraSnapshotRequest")
-	proto.RegisterType((*QueryGetEraSnapshotResponse)(nil), "katana.katana.ledger.QueryGetEraSnapshotResponse")
-	proto.RegisterType((*QueryGetSnapshotRequest)(nil), "katana.katana.ledger.QueryGetSnapshotRequest")
-	proto.RegisterType((*QueryGetSnapshotResponse)(nil), "katana.katana.ledger.QueryGetSnapshotResponse")
-	proto.RegisterType((*QueryGetTotalExpectedActiveRequest)(nil), "katana.katana.ledger.QueryGetTotalExpectedActiveRequest")
-	proto.RegisterType((*QueryGetTotalExpectedActiveResponse)(nil), "katana.katana.ledger.QueryGetTotalExpectedActiveResponse")
-	proto.RegisterType((*QueryGetBondRecordRequest)(nil), "katana.katana.ledger.QueryGetBondRecordRequest")
-	proto.RegisterType((*QueryGetBondRecordResponse)(nil), "katana.katana.ledger.QueryGetBondRecordResponse")
-	proto.RegisterType((*QueryGetSignatureRequest)(nil), "katana.katana.ledger.QueryGetSignatureRequest")
-	proto.RegisterType((*QueryGetSignatureResponse)(nil), "katana.katana.ledger.QueryGetSignatureResponse")
-	proto.RegisterType((*QueryGetRParamsRequest)(nil), "katana.katana.ledger.QueryGetRParamsRequest")
-	proto.RegisterType((*QueryGetRParamsResponse)(nil), "katana.katana.ledger.QueryGetRParamsResponse")
-	proto.RegisterType((*QueryTotalProtocolFeeRequest)(nil), "katana.katana.ledger.QueryTotalProtocolFeeRequest")
-	proto.RegisterType((*QueryTotalProtocolFeeResponse)(nil), "katana.katana.ledger.QueryTotalProtocolFeeResponse")
-	proto.RegisterType((*QueryRelayFeeReceiverRequest)(nil), "katana.katana.ledger.QueryRelayFeeReceiverRequest")
-	proto.RegisterType((*QueryRelayFeeReceiverResponse)(nil), "katana.katana.ledger.QueryRelayFeeReceiverResponse")
-	proto.RegisterType((*QueryUnbondSwitchRequest)(nil), "katana.katana.ledger.QueryUnbondSwitchRequest")
-	proto.RegisterType((*QueryUnbondSwitchResponse)(nil), "katana.katana.ledger.QueryUnbondSwitchResponse")
-	proto.RegisterType((*QueryPoolUnbondNextSequenceRequest)(nil), "katana.katana.ledger.QueryPoolUnbondNextSequenceRequest")
-	proto.RegisterType((*QueryPoolUnbondNextSequenceResponse)(nil), "katana.katana.ledger.QueryPoolUnbondNextSequenceResponse")
-	proto.RegisterType((*QueryPoolUnbondingsRequest)(nil), "katana.katana.ledger.QueryPoolUnbondingsRequest")
-	proto.RegisterType((*QueryPoolUnbondingsResponse)(nil), "katana.katana.ledger.QueryPoolUnbondingsResponse")
-	proto.RegisterType((*QueryIcaPoolListRequest)(nil), "katana.katana.ledger.QueryIcaPoolListRequest")
-	proto.RegisterType((*QueryIcaPoolListResponse)(nil), "katana.katana.ledger.QueryIcaPoolListResponse")
-	proto.RegisterType((*QueryInterchainTxStatusRequest)(nil), "katana.katana.ledger.QueryInterchainTxStatusRequest")
-	proto.RegisterType((*QueryInterchainTxStatusResponse)(nil), "katana.katana.ledger.QueryInterchainTxStatusResponse")
+	proto.RegisterType((*QueryGetExchangeRateRequest)(nil), "furya.furya.ledger.QueryGetExchangeRateRequest")
+	proto.RegisterType((*QueryGetExchangeRateResponse)(nil), "furya.furya.ledger.QueryGetExchangeRateResponse")
+	proto.RegisterType((*QueryExchangeRateAllRequest)(nil), "furya.furya.ledger.QueryExchangeRateAllRequest")
+	proto.RegisterType((*QueryExchangeRateAllResponse)(nil), "furya.furya.ledger.QueryExchangeRateAllResponse")
+	proto.RegisterType((*QueryGetEraExchangeRateRequest)(nil), "furya.furya.ledger.QueryGetEraExchangeRateRequest")
+	proto.RegisterType((*QueryGetEraExchangeRateResponse)(nil), "furya.furya.ledger.QueryGetEraExchangeRateResponse")
+	proto.RegisterType((*QueryEraExchangeRatesByDenomRequest)(nil), "furya.furya.ledger.QueryEraExchangeRatesByDenomRequest")
+	proto.RegisterType((*QueryEraExchangeRatesByDenomResponse)(nil), "furya.furya.ledger.QueryEraExchangeRatesByDenomResponse")
+	proto.RegisterType((*QueryBondedPoolsByDenomRequest)(nil), "furya.furya.ledger.QueryBondedPoolsByDenomRequest")
+	proto.RegisterType((*QueryBondedPoolsByDenomResponse)(nil), "furya.furya.ledger.QueryBondedPoolsByDenomResponse")
+	proto.RegisterType((*QueryGetPoolDetailRequest)(nil), "furya.furya.ledger.QueryGetPoolDetailRequest")
+	proto.RegisterType((*QueryGetPoolDetailResponse)(nil), "furya.furya.ledger.QueryGetPoolDetailResponse")
+	proto.RegisterType((*QueryGetChainEraRequest)(nil), "furya.furya.ledger.QueryGetChainEraRequest")
+	proto.RegisterType((*QueryGetChainEraResponse)(nil), "furya.furya.ledger.QueryGetChainEraResponse")
+	proto.RegisterType((*QueryGetCurrentEraSnapshotRequest)(nil), "furya.furya.ledger.QueryGetCurrentEraSnapshotRequest")
+	proto.RegisterType((*QueryGetCurrentEraSnapshotResponse)(nil), "furya.furya.ledger.QueryGetCurrentEraSnapshotResponse")
+	proto.RegisterType((*QueryGetProtocolFeeReceiverRequest)(nil), "furya.furya.ledger.QueryGetProtocolFeeReceiverRequest")
+	proto.RegisterType((*QueryGetProtocolFeeReceiverResponse)(nil), "furya.furya.ledger.QueryGetProtocolFeeReceiverResponse")
+	proto.RegisterType((*QueryGetStakingRewardCommissionRequest)(nil), "furya.furya.ledger.QueryGetStakingRewardCommissionRequest")
+	proto.RegisterType((*QueryGetStakingRewardCommissionResponse)(nil), "furya.furya.ledger.QueryGetStakingRewardCommissionResponse")
+	proto.RegisterType((*QueryGetUnbondRelayFeeRequest)(nil), "furya.furya.ledger.QueryGetUnbondRelayFeeRequest")
+	proto.RegisterType((*QueryGetUnbondRelayFeeResponse)(nil), "furya.furya.ledger.QueryGetUnbondRelayFeeResponse")
+	proto.RegisterType((*QueryGetUnbondCommissionRequest)(nil), "furya.furya.ledger.QueryGetUnbondCommissionRequest")
+	proto.RegisterType((*QueryGetUnbondCommissionResponse)(nil), "furya.furya.ledger.QueryGetUnbondCommissionResponse")
+	proto.RegisterType((*QueryGetEraUnbondLimitRequest)(nil), "furya.furya.ledger.QueryGetEraUnbondLimitRequest")
+	proto.RegisterType((*QueryGetEraUnbondLimitResponse)(nil), "furya.furya.ledger.QueryGetEraUnbondLimitResponse")
+	proto.RegisterType((*QueryGetBondPipelineRequest)(nil), "furya.furya.ledger.QueryGetBondPipelineRequest")
+	proto.RegisterType((*QueryGetBondPipelineResponse)(nil), "furya.furya.ledger.QueryGetBondPipelineResponse")
+	proto.RegisterType((*QueryGetEraSnapshotRequest)(nil), "furya.furya.ledger.QueryGetEraSnapshotRequest")
+	proto.RegisterType((*QueryGetEraSnapshotResponse)(nil), "furya.furya.ledger.QueryGetEraSnapshotResponse")
+	proto.RegisterType((*QueryGetSnapshotRequest)(nil), "furya.furya.ledger.QueryGetSnapshotRequest")
+	proto.RegisterType((*QueryGetSnapshotResponse)(nil), "furya.furya.ledger.QueryGetSnapshotResponse")
+	proto.RegisterType((*QueryGetTotalExpectedActiveRequest)(nil), "furya.furya.ledger.QueryGetTotalExpectedActiveRequest")
+	proto.RegisterType((*QueryGetTotalExpectedActiveResponse)(nil), "furya.furya.ledger.QueryGetTotalExpectedActiveResponse")
+	proto.RegisterType((*QueryGetBondRecordRequest)(nil), "furya.furya.ledger.QueryGetBondRecordRequest")
+	proto.RegisterType((*QueryGetBondRecordResponse)(nil), "furya.furya.ledger.QueryGetBondRecordResponse")
+	proto.RegisterType((*QueryGetSignatureRequest)(nil), "furya.furya.ledger.QueryGetSignatureRequest")
+	proto.RegisterType((*QueryGetSignatureResponse)(nil), "furya.furya.ledger.QueryGetSignatureResponse")
+	proto.RegisterType((*QueryGetRParamsRequest)(nil), "furya.furya.ledger.QueryGetRParamsRequest")
+	proto.RegisterType((*QueryGetRParamsResponse)(nil), "furya.furya.ledger.QueryGetRParamsResponse")
+	proto.RegisterType((*QueryTotalProtocolFeeRequest)(nil), "furya.furya.ledger.QueryTotalProtocolFeeRequest")
+	proto.RegisterType((*QueryTotalProtocolFeeResponse)(nil), "furya.furya.ledger.QueryTotalProtocolFeeResponse")
+	proto.RegisterType((*QueryRelayFeeReceiverRequest)(nil), "furya.furya.ledger.QueryRelayFeeReceiverRequest")
+	proto.RegisterType((*QueryRelayFeeReceiverResponse)(nil), "furya.furya.ledger.QueryRelayFeeReceiverResponse")
+	proto.RegisterType((*QueryUnbondSwitchRequest)(nil), "furya.furya.ledger.QueryUnbondSwitchRequest")
+	proto.RegisterType((*QueryUnbondSwitchResponse)(nil), "furya.furya.ledger.QueryUnbondSwitchResponse")
+	proto.RegisterType((*QueryPoolUnbondNextSequenceRequest)(nil), "furya.furya.ledger.QueryPoolUnbondNextSequenceRequest")
+	proto.RegisterType((*QueryPoolUnbondNextSequenceResponse)(nil), "furya.furya.ledger.QueryPoolUnbondNextSequenceResponse")
+	proto.RegisterType((*QueryPoolUnbondingsRequest)(nil), "furya.furya.ledger.QueryPoolUnbondingsRequest")
+	proto.RegisterType((*QueryPoolUnbondingsResponse)(nil), "furya.furya.ledger.QueryPoolUnbondingsResponse")
+	proto.RegisterType((*QueryIcaPoolListRequest)(nil), "furya.furya.ledger.QueryIcaPoolListRequest")
+	proto.RegisterType((*QueryIcaPoolListResponse)(nil), "furya.furya.ledger.QueryIcaPoolListResponse")
+	proto.RegisterType((*QueryInterchainTxStatusRequest)(nil), "furya.furya.ledger.QueryInterchainTxStatusRequest")
+	proto.RegisterType((*QueryInterchainTxStatusResponse)(nil), "furya.furya.ledger.QueryInterchainTxStatusResponse")
 }
 
 func init() { proto.RegisterFile("ledger/query.proto", fileDescriptor_ca959e2684fc7842) }
@@ -2767,7 +2767,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) GetExchangeRate(ctx context.Context, in *QueryGetExchangeRateRequest, opts ...grpc.CallOption) (*QueryGetExchangeRateResponse, error) {
 	out := new(QueryGetExchangeRateResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetExchangeRate", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetExchangeRate", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2776,7 +2776,7 @@ func (c *queryClient) GetExchangeRate(ctx context.Context, in *QueryGetExchangeR
 
 func (c *queryClient) ExchangeRateAll(ctx context.Context, in *QueryExchangeRateAllRequest, opts ...grpc.CallOption) (*QueryExchangeRateAllResponse, error) {
 	out := new(QueryExchangeRateAllResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/ExchangeRateAll", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/ExchangeRateAll", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2785,7 +2785,7 @@ func (c *queryClient) ExchangeRateAll(ctx context.Context, in *QueryExchangeRate
 
 func (c *queryClient) GetEraExchangeRate(ctx context.Context, in *QueryGetEraExchangeRateRequest, opts ...grpc.CallOption) (*QueryGetEraExchangeRateResponse, error) {
 	out := new(QueryGetEraExchangeRateResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetEraExchangeRate", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetEraExchangeRate", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2794,7 +2794,7 @@ func (c *queryClient) GetEraExchangeRate(ctx context.Context, in *QueryGetEraExc
 
 func (c *queryClient) EraExchangeRatesByDenom(ctx context.Context, in *QueryEraExchangeRatesByDenomRequest, opts ...grpc.CallOption) (*QueryEraExchangeRatesByDenomResponse, error) {
 	out := new(QueryEraExchangeRatesByDenomResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/EraExchangeRatesByDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/EraExchangeRatesByDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2803,7 +2803,7 @@ func (c *queryClient) EraExchangeRatesByDenom(ctx context.Context, in *QueryEraE
 
 func (c *queryClient) BondedPoolsByDenom(ctx context.Context, in *QueryBondedPoolsByDenomRequest, opts ...grpc.CallOption) (*QueryBondedPoolsByDenomResponse, error) {
 	out := new(QueryBondedPoolsByDenomResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/BondedPoolsByDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/BondedPoolsByDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2812,7 +2812,7 @@ func (c *queryClient) BondedPoolsByDenom(ctx context.Context, in *QueryBondedPoo
 
 func (c *queryClient) GetPoolDetail(ctx context.Context, in *QueryGetPoolDetailRequest, opts ...grpc.CallOption) (*QueryGetPoolDetailResponse, error) {
 	out := new(QueryGetPoolDetailResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetPoolDetail", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetPoolDetail", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2821,7 +2821,7 @@ func (c *queryClient) GetPoolDetail(ctx context.Context, in *QueryGetPoolDetailR
 
 func (c *queryClient) GetChainEra(ctx context.Context, in *QueryGetChainEraRequest, opts ...grpc.CallOption) (*QueryGetChainEraResponse, error) {
 	out := new(QueryGetChainEraResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetChainEra", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetChainEra", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2830,7 +2830,7 @@ func (c *queryClient) GetChainEra(ctx context.Context, in *QueryGetChainEraReque
 
 func (c *queryClient) GetCurrentEraSnapshot(ctx context.Context, in *QueryGetCurrentEraSnapshotRequest, opts ...grpc.CallOption) (*QueryGetCurrentEraSnapshotResponse, error) {
 	out := new(QueryGetCurrentEraSnapshotResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetCurrentEraSnapshot", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetCurrentEraSnapshot", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2839,7 +2839,7 @@ func (c *queryClient) GetCurrentEraSnapshot(ctx context.Context, in *QueryGetCur
 
 func (c *queryClient) GetProtocolFeeReceiver(ctx context.Context, in *QueryGetProtocolFeeReceiverRequest, opts ...grpc.CallOption) (*QueryGetProtocolFeeReceiverResponse, error) {
 	out := new(QueryGetProtocolFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetProtocolFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetProtocolFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2848,7 +2848,7 @@ func (c *queryClient) GetProtocolFeeReceiver(ctx context.Context, in *QueryGetPr
 
 func (c *queryClient) GetStakingRewardCommission(ctx context.Context, in *QueryGetStakingRewardCommissionRequest, opts ...grpc.CallOption) (*QueryGetStakingRewardCommissionResponse, error) {
 	out := new(QueryGetStakingRewardCommissionResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetStakingRewardCommission", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetStakingRewardCommission", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2857,7 +2857,7 @@ func (c *queryClient) GetStakingRewardCommission(ctx context.Context, in *QueryG
 
 func (c *queryClient) GetUnbondRelayFee(ctx context.Context, in *QueryGetUnbondRelayFeeRequest, opts ...grpc.CallOption) (*QueryGetUnbondRelayFeeResponse, error) {
 	out := new(QueryGetUnbondRelayFeeResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetUnbondRelayFee", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetUnbondRelayFee", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2866,7 +2866,7 @@ func (c *queryClient) GetUnbondRelayFee(ctx context.Context, in *QueryGetUnbondR
 
 func (c *queryClient) GetUnbondCommission(ctx context.Context, in *QueryGetUnbondCommissionRequest, opts ...grpc.CallOption) (*QueryGetUnbondCommissionResponse, error) {
 	out := new(QueryGetUnbondCommissionResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetUnbondCommission", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetUnbondCommission", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2875,7 +2875,7 @@ func (c *queryClient) GetUnbondCommission(ctx context.Context, in *QueryGetUnbon
 
 func (c *queryClient) GetEraUnbondLimit(ctx context.Context, in *QueryGetEraUnbondLimitRequest, opts ...grpc.CallOption) (*QueryGetEraUnbondLimitResponse, error) {
 	out := new(QueryGetEraUnbondLimitResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetEraUnbondLimit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetEraUnbondLimit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2884,7 +2884,7 @@ func (c *queryClient) GetEraUnbondLimit(ctx context.Context, in *QueryGetEraUnbo
 
 func (c *queryClient) GetBondPipeline(ctx context.Context, in *QueryGetBondPipelineRequest, opts ...grpc.CallOption) (*QueryGetBondPipelineResponse, error) {
 	out := new(QueryGetBondPipelineResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetBondPipeline", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetBondPipeline", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2893,7 +2893,7 @@ func (c *queryClient) GetBondPipeline(ctx context.Context, in *QueryGetBondPipel
 
 func (c *queryClient) GetEraSnapshot(ctx context.Context, in *QueryGetEraSnapshotRequest, opts ...grpc.CallOption) (*QueryGetEraSnapshotResponse, error) {
 	out := new(QueryGetEraSnapshotResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetEraSnapshot", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetEraSnapshot", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2902,7 +2902,7 @@ func (c *queryClient) GetEraSnapshot(ctx context.Context, in *QueryGetEraSnapsho
 
 func (c *queryClient) GetSnapshot(ctx context.Context, in *QueryGetSnapshotRequest, opts ...grpc.CallOption) (*QueryGetSnapshotResponse, error) {
 	out := new(QueryGetSnapshotResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetSnapshot", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetSnapshot", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2911,7 +2911,7 @@ func (c *queryClient) GetSnapshot(ctx context.Context, in *QueryGetSnapshotReque
 
 func (c *queryClient) GetTotalExpectedActive(ctx context.Context, in *QueryGetTotalExpectedActiveRequest, opts ...grpc.CallOption) (*QueryGetTotalExpectedActiveResponse, error) {
 	out := new(QueryGetTotalExpectedActiveResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetTotalExpectedActive", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetTotalExpectedActive", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2920,7 +2920,7 @@ func (c *queryClient) GetTotalExpectedActive(ctx context.Context, in *QueryGetTo
 
 func (c *queryClient) GetBondRecord(ctx context.Context, in *QueryGetBondRecordRequest, opts ...grpc.CallOption) (*QueryGetBondRecordResponse, error) {
 	out := new(QueryGetBondRecordResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetBondRecord", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetBondRecord", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2929,7 +2929,7 @@ func (c *queryClient) GetBondRecord(ctx context.Context, in *QueryGetBondRecordR
 
 func (c *queryClient) GetSignature(ctx context.Context, in *QueryGetSignatureRequest, opts ...grpc.CallOption) (*QueryGetSignatureResponse, error) {
 	out := new(QueryGetSignatureResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetSignature", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetSignature", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2938,7 +2938,7 @@ func (c *queryClient) GetSignature(ctx context.Context, in *QueryGetSignatureReq
 
 func (c *queryClient) GetRParams(ctx context.Context, in *QueryGetRParamsRequest, opts ...grpc.CallOption) (*QueryGetRParamsResponse, error) {
 	out := new(QueryGetRParamsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/GetRParams", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/GetRParams", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2947,7 +2947,7 @@ func (c *queryClient) GetRParams(ctx context.Context, in *QueryGetRParamsRequest
 
 func (c *queryClient) TotalProtocolFee(ctx context.Context, in *QueryTotalProtocolFeeRequest, opts ...grpc.CallOption) (*QueryTotalProtocolFeeResponse, error) {
 	out := new(QueryTotalProtocolFeeResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/TotalProtocolFee", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/TotalProtocolFee", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2956,7 +2956,7 @@ func (c *queryClient) TotalProtocolFee(ctx context.Context, in *QueryTotalProtoc
 
 func (c *queryClient) RelayFeeReceiver(ctx context.Context, in *QueryRelayFeeReceiverRequest, opts ...grpc.CallOption) (*QueryRelayFeeReceiverResponse, error) {
 	out := new(QueryRelayFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/RelayFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/RelayFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2965,7 +2965,7 @@ func (c *queryClient) RelayFeeReceiver(ctx context.Context, in *QueryRelayFeeRec
 
 func (c *queryClient) UnbondSwitch(ctx context.Context, in *QueryUnbondSwitchRequest, opts ...grpc.CallOption) (*QueryUnbondSwitchResponse, error) {
 	out := new(QueryUnbondSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/UnbondSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/UnbondSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2974,7 +2974,7 @@ func (c *queryClient) UnbondSwitch(ctx context.Context, in *QueryUnbondSwitchReq
 
 func (c *queryClient) PoolUnbondNextSequence(ctx context.Context, in *QueryPoolUnbondNextSequenceRequest, opts ...grpc.CallOption) (*QueryPoolUnbondNextSequenceResponse, error) {
 	out := new(QueryPoolUnbondNextSequenceResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/PoolUnbondNextSequence", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/PoolUnbondNextSequence", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2983,7 +2983,7 @@ func (c *queryClient) PoolUnbondNextSequence(ctx context.Context, in *QueryPoolU
 
 func (c *queryClient) PoolUnbondings(ctx context.Context, in *QueryPoolUnbondingsRequest, opts ...grpc.CallOption) (*QueryPoolUnbondingsResponse, error) {
 	out := new(QueryPoolUnbondingsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/PoolUnbondings", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/PoolUnbondings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2992,7 +2992,7 @@ func (c *queryClient) PoolUnbondings(ctx context.Context, in *QueryPoolUnbonding
 
 func (c *queryClient) IcaPoolList(ctx context.Context, in *QueryIcaPoolListRequest, opts ...grpc.CallOption) (*QueryIcaPoolListResponse, error) {
 	out := new(QueryIcaPoolListResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/IcaPoolList", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/IcaPoolList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -3001,7 +3001,7 @@ func (c *queryClient) IcaPoolList(ctx context.Context, in *QueryIcaPoolListReque
 
 func (c *queryClient) InterchainTxStatus(ctx context.Context, in *QueryInterchainTxStatusRequest, opts ...grpc.CallOption) (*QueryInterchainTxStatusResponse, error) {
 	out := new(QueryInterchainTxStatusResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Query/InterchainTxStatus", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Query/InterchainTxStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -3166,7 +3166,7 @@ func _Query_GetExchangeRate_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetExchangeRate",
+		FullMethod: "/furya.furya.ledger.Query/GetExchangeRate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetExchangeRate(ctx, req.(*QueryGetExchangeRateRequest))
@@ -3184,7 +3184,7 @@ func _Query_ExchangeRateAll_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/ExchangeRateAll",
+		FullMethod: "/furya.furya.ledger.Query/ExchangeRateAll",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ExchangeRateAll(ctx, req.(*QueryExchangeRateAllRequest))
@@ -3202,7 +3202,7 @@ func _Query_GetEraExchangeRate_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetEraExchangeRate",
+		FullMethod: "/furya.furya.ledger.Query/GetEraExchangeRate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetEraExchangeRate(ctx, req.(*QueryGetEraExchangeRateRequest))
@@ -3220,7 +3220,7 @@ func _Query_EraExchangeRatesByDenom_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/EraExchangeRatesByDenom",
+		FullMethod: "/furya.furya.ledger.Query/EraExchangeRatesByDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).EraExchangeRatesByDenom(ctx, req.(*QueryEraExchangeRatesByDenomRequest))
@@ -3238,7 +3238,7 @@ func _Query_BondedPoolsByDenom_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/BondedPoolsByDenom",
+		FullMethod: "/furya.furya.ledger.Query/BondedPoolsByDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).BondedPoolsByDenom(ctx, req.(*QueryBondedPoolsByDenomRequest))
@@ -3256,7 +3256,7 @@ func _Query_GetPoolDetail_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetPoolDetail",
+		FullMethod: "/furya.furya.ledger.Query/GetPoolDetail",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetPoolDetail(ctx, req.(*QueryGetPoolDetailRequest))
@@ -3274,7 +3274,7 @@ func _Query_GetChainEra_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetChainEra",
+		FullMethod: "/furya.furya.ledger.Query/GetChainEra",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetChainEra(ctx, req.(*QueryGetChainEraRequest))
@@ -3292,7 +3292,7 @@ func _Query_GetCurrentEraSnapshot_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetCurrentEraSnapshot",
+		FullMethod: "/furya.furya.ledger.Query/GetCurrentEraSnapshot",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetCurrentEraSnapshot(ctx, req.(*QueryGetCurrentEraSnapshotRequest))
@@ -3310,7 +3310,7 @@ func _Query_GetProtocolFeeReceiver_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetProtocolFeeReceiver",
+		FullMethod: "/furya.furya.ledger.Query/GetProtocolFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetProtocolFeeReceiver(ctx, req.(*QueryGetProtocolFeeReceiverRequest))
@@ -3328,7 +3328,7 @@ func _Query_GetStakingRewardCommission_Handler(srv interface{}, ctx context.Cont
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetStakingRewardCommission",
+		FullMethod: "/furya.furya.ledger.Query/GetStakingRewardCommission",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetStakingRewardCommission(ctx, req.(*QueryGetStakingRewardCommissionRequest))
@@ -3346,7 +3346,7 @@ func _Query_GetUnbondRelayFee_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetUnbondRelayFee",
+		FullMethod: "/furya.furya.ledger.Query/GetUnbondRelayFee",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetUnbondRelayFee(ctx, req.(*QueryGetUnbondRelayFeeRequest))
@@ -3364,7 +3364,7 @@ func _Query_GetUnbondCommission_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetUnbondCommission",
+		FullMethod: "/furya.furya.ledger.Query/GetUnbondCommission",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetUnbondCommission(ctx, req.(*QueryGetUnbondCommissionRequest))
@@ -3382,7 +3382,7 @@ func _Query_GetEraUnbondLimit_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetEraUnbondLimit",
+		FullMethod: "/furya.furya.ledger.Query/GetEraUnbondLimit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetEraUnbondLimit(ctx, req.(*QueryGetEraUnbondLimitRequest))
@@ -3400,7 +3400,7 @@ func _Query_GetBondPipeline_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetBondPipeline",
+		FullMethod: "/furya.furya.ledger.Query/GetBondPipeline",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetBondPipeline(ctx, req.(*QueryGetBondPipelineRequest))
@@ -3418,7 +3418,7 @@ func _Query_GetEraSnapshot_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetEraSnapshot",
+		FullMethod: "/furya.furya.ledger.Query/GetEraSnapshot",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetEraSnapshot(ctx, req.(*QueryGetEraSnapshotRequest))
@@ -3436,7 +3436,7 @@ func _Query_GetSnapshot_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetSnapshot",
+		FullMethod: "/furya.furya.ledger.Query/GetSnapshot",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetSnapshot(ctx, req.(*QueryGetSnapshotRequest))
@@ -3454,7 +3454,7 @@ func _Query_GetTotalExpectedActive_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetTotalExpectedActive",
+		FullMethod: "/furya.furya.ledger.Query/GetTotalExpectedActive",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetTotalExpectedActive(ctx, req.(*QueryGetTotalExpectedActiveRequest))
@@ -3472,7 +3472,7 @@ func _Query_GetBondRecord_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetBondRecord",
+		FullMethod: "/furya.furya.ledger.Query/GetBondRecord",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetBondRecord(ctx, req.(*QueryGetBondRecordRequest))
@@ -3490,7 +3490,7 @@ func _Query_GetSignature_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetSignature",
+		FullMethod: "/furya.furya.ledger.Query/GetSignature",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetSignature(ctx, req.(*QueryGetSignatureRequest))
@@ -3508,7 +3508,7 @@ func _Query_GetRParams_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/GetRParams",
+		FullMethod: "/furya.furya.ledger.Query/GetRParams",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).GetRParams(ctx, req.(*QueryGetRParamsRequest))
@@ -3526,7 +3526,7 @@ func _Query_TotalProtocolFee_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/TotalProtocolFee",
+		FullMethod: "/furya.furya.ledger.Query/TotalProtocolFee",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).TotalProtocolFee(ctx, req.(*QueryTotalProtocolFeeRequest))
@@ -3544,7 +3544,7 @@ func _Query_RelayFeeReceiver_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/RelayFeeReceiver",
+		FullMethod: "/furya.furya.ledger.Query/RelayFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RelayFeeReceiver(ctx, req.(*QueryRelayFeeReceiverRequest))
@@ -3562,7 +3562,7 @@ func _Query_UnbondSwitch_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/UnbondSwitch",
+		FullMethod: "/furya.furya.ledger.Query/UnbondSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).UnbondSwitch(ctx, req.(*QueryUnbondSwitchRequest))
@@ -3580,7 +3580,7 @@ func _Query_PoolUnbondNextSequence_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/PoolUnbondNextSequence",
+		FullMethod: "/furya.furya.ledger.Query/PoolUnbondNextSequence",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).PoolUnbondNextSequence(ctx, req.(*QueryPoolUnbondNextSequenceRequest))
@@ -3598,7 +3598,7 @@ func _Query_PoolUnbondings_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/PoolUnbondings",
+		FullMethod: "/furya.furya.ledger.Query/PoolUnbondings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).PoolUnbondings(ctx, req.(*QueryPoolUnbondingsRequest))
@@ -3616,7 +3616,7 @@ func _Query_IcaPoolList_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/IcaPoolList",
+		FullMethod: "/furya.furya.ledger.Query/IcaPoolList",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).IcaPoolList(ctx, req.(*QueryIcaPoolListRequest))
@@ -3634,7 +3634,7 @@ func _Query_InterchainTxStatus_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Query/InterchainTxStatus",
+		FullMethod: "/furya.furya.ledger.Query/InterchainTxStatus",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).InterchainTxStatus(ctx, req.(*QueryInterchainTxStatusRequest))
@@ -3643,7 +3643,7 @@ func _Query_InterchainTxStatus_Handler(srv interface{}, ctx context.Context, dec
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.ledger.Query",
+	ServiceName: "furya.furya.ledger.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -12,7 +12,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	grpc1 "github.com/gogo/protobuf/grpc"
 	proto "github.com/gogo/protobuf/proto"
-	github_com_katana_katana_utils "github.com/warmage-sports/katana/utils"
+	github_com_furya_furya_utils "github.com/oldfurya/furya/utils"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -427,7 +427,7 @@ var xxx_messageInfo_MsgClearCurrentEraSnapShotsResponse proto.InternalMessageInf
 type MsgSetStakingRewardCommission struct {
 	Creator    string                                 `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	Denom      string                                 `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
-	Commission github_com_katana_katana_utils.Dec `protobuf:"bytes,3,opt,name=commission,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"commission"`
+	Commission github_com_furya_furya_utils.Dec `protobuf:"bytes,3,opt,name=commission,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"commission"`
 }
 
 func (m *MsgSetStakingRewardCommission) Reset()         { *m = MsgSetStakingRewardCommission{} }
@@ -790,7 +790,7 @@ var xxx_messageInfo_MsgLiquidityUnbondResponse proto.InternalMessageInfo
 type MsgSetUnbondCommission struct {
 	Creator    string                                 `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	Denom      string                                 `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
-	Commission github_com_katana_katana_utils.Dec `protobuf:"bytes,3,opt,name=commission,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"commission"`
+	Commission github_com_furya_furya_utils.Dec `protobuf:"bytes,3,opt,name=commission,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"commission"`
 }
 
 func (m *MsgSetUnbondCommission) Reset()         { *m = MsgSetUnbondCommission{} }
@@ -881,7 +881,7 @@ type MsgSubmitSignature struct {
 	Denom     string         `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
 	Era       uint32         `protobuf:"varint,3,opt,name=era,proto3" json:"era"`
 	Pool      string         `protobuf:"bytes,4,opt,name=pool,proto3" json:"pool,omitempty"`
-	TxType    OriginalTxType `protobuf:"varint,5,opt,name=txType,proto3,enum=katana.katana.ledger.OriginalTxType" json:"txType,omitempty"`
+	TxType    OriginalTxType `protobuf:"varint,5,opt,name=txType,proto3,enum=furya.furya.ledger.OriginalTxType" json:"txType,omitempty"`
 	PropId    string         `protobuf:"bytes,6,opt,name=propId,proto3" json:"propId,omitempty"`
 	Signature string         `protobuf:"bytes,7,opt,name=signature,proto3" json:"signature,omitempty"`
 }
@@ -1540,7 +1540,7 @@ type MsgMigrateInit struct {
 	Active           github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,5,opt,name=active,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"active"`
 	Bond             github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,6,opt,name=bond,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"bond"`
 	Unbond           github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,7,opt,name=unbond,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"unbond"`
-	ExchangeRate     github_com_katana_katana_utils.Dec `protobuf:"bytes,8,opt,name=exchangeRate,proto3,customtype=github.com/warmage-sports/katana/utils.Dec" json:"exchangeRate"`
+	ExchangeRate     github_com_furya_furya_utils.Dec `protobuf:"bytes,8,opt,name=exchangeRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"exchangeRate"`
 	TotalProtocolFee github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,9,opt,name=totalProtocolFee,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"totalProtocolFee"`
 }
 
@@ -2198,7 +2198,7 @@ type MsgSetPoolStatus struct {
 	Creator string     `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	Denom   string     `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
 	Pool    string     `protobuf:"bytes,3,opt,name=pool,proto3" json:"pool,omitempty"`
-	Status  PoolStatus `protobuf:"varint,4,opt,name=status,proto3,enum=katana.katana.ledger.PoolStatus" json:"status,omitempty"`
+	Status  PoolStatus `protobuf:"varint,4,opt,name=status,proto3,enum=furya.furya.ledger.PoolStatus" json:"status,omitempty"`
 }
 
 func (m *MsgSetPoolStatus) Reset()         { *m = MsgSetPoolStatus{} }
@@ -2299,52 +2299,52 @@ func (m *MsgSetPoolStatusResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgSetPoolStatusResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgSetEraUnbondLimit)(nil), "katana.katana.ledger.MsgSetEraUnbondLimit")
-	proto.RegisterType((*MsgSetEraUnbondLimitResponse)(nil), "katana.katana.ledger.MsgSetEraUnbondLimitResponse")
-	proto.RegisterType((*MsgSetPoolDetail)(nil), "katana.katana.ledger.MsgSetPoolDetail")
-	proto.RegisterType((*MsgSetPoolDetailResponse)(nil), "katana.katana.ledger.MsgSetPoolDetailResponse")
-	proto.RegisterType((*MsgSetLeastBond)(nil), "katana.katana.ledger.MsgSetLeastBond")
-	proto.RegisterType((*MsgSetLeastBondResponse)(nil), "katana.katana.ledger.MsgSetLeastBondResponse")
-	proto.RegisterType((*MsgClearCurrentEraSnapShots)(nil), "katana.katana.ledger.MsgClearCurrentEraSnapShots")
-	proto.RegisterType((*MsgClearCurrentEraSnapShotsResponse)(nil), "katana.katana.ledger.MsgClearCurrentEraSnapShotsResponse")
-	proto.RegisterType((*MsgSetStakingRewardCommission)(nil), "katana.katana.ledger.MsgSetStakingRewardCommission")
-	proto.RegisterType((*MsgSetStakingRewardCommissionResponse)(nil), "katana.katana.ledger.MsgSetStakingRewardCommissionResponse")
-	proto.RegisterType((*MsgSetProtocolFeeReceiver)(nil), "katana.katana.ledger.MsgSetProtocolFeeReceiver")
-	proto.RegisterType((*MsgSetProtocolFeeReceiverResponse)(nil), "katana.katana.ledger.MsgSetProtocolFeeReceiverResponse")
-	proto.RegisterType((*MsgSetUnbondRelayFee)(nil), "katana.katana.ledger.MsgSetUnbondRelayFee")
-	proto.RegisterType((*MsgSetUnbondRelayFeeResponse)(nil), "katana.katana.ledger.MsgSetUnbondRelayFeeResponse")
-	proto.RegisterType((*MsgLiquidityUnbond)(nil), "katana.katana.ledger.MsgLiquidityUnbond")
-	proto.RegisterType((*MsgLiquidityUnbondResponse)(nil), "katana.katana.ledger.MsgLiquidityUnbondResponse")
-	proto.RegisterType((*MsgSetUnbondCommission)(nil), "katana.katana.ledger.MsgSetUnbondCommission")
-	proto.RegisterType((*MsgSetUnbondCommissionResponse)(nil), "katana.katana.ledger.MsgSetUnbondCommissionResponse")
-	proto.RegisterType((*MsgSubmitSignature)(nil), "katana.katana.ledger.MsgSubmitSignature")
-	proto.RegisterType((*MsgSubmitSignatureResponse)(nil), "katana.katana.ledger.MsgSubmitSignatureResponse")
-	proto.RegisterType((*MsgSetRParams)(nil), "katana.katana.ledger.MsgSetRParams")
-	proto.RegisterType((*MsgSetRParamsResponse)(nil), "katana.katana.ledger.MsgSetRParamsResponse")
-	proto.RegisterType((*MsgSetRelayFeeReceiver)(nil), "katana.katana.ledger.MsgSetRelayFeeReceiver")
-	proto.RegisterType((*MsgSetRelayFeeReceiverResponse)(nil), "katana.katana.ledger.MsgSetRelayFeeReceiverResponse")
-	proto.RegisterType((*MsgSetRelayGasPrice)(nil), "katana.katana.ledger.MsgSetRelayGasPrice")
-	proto.RegisterType((*MsgSetRelayGasPriceResponse)(nil), "katana.katana.ledger.MsgSetRelayGasPriceResponse")
-	proto.RegisterType((*MsgSetEraSeconds)(nil), "katana.katana.ledger.MsgSetEraSeconds")
-	proto.RegisterType((*MsgSetEraSecondsResponse)(nil), "katana.katana.ledger.MsgSetEraSecondsResponse")
-	proto.RegisterType((*MsgRmBondedPool)(nil), "katana.katana.ledger.MsgRmBondedPool")
-	proto.RegisterType((*MsgRmBondedPoolResponse)(nil), "katana.katana.ledger.MsgRmBondedPoolResponse")
-	proto.RegisterType((*MsgMigrateInit)(nil), "katana.katana.ledger.MsgMigrateInit")
-	proto.RegisterType((*MsgMigrateInitResponse)(nil), "katana.katana.ledger.MsgMigrateInitResponse")
-	proto.RegisterType((*MsgMigrateUnbondings)(nil), "katana.katana.ledger.MsgMigrateUnbondings")
-	proto.RegisterType((*MsgMigrateUnbondingsResponse)(nil), "katana.katana.ledger.MsgMigrateUnbondingsResponse")
-	proto.RegisterType((*MsgToggleUnbondSwitch)(nil), "katana.katana.ledger.MsgToggleUnbondSwitch")
-	proto.RegisterType((*MsgToggleUnbondSwitchResponse)(nil), "katana.katana.ledger.MsgToggleUnbondSwitchResponse")
-	proto.RegisterType((*MsgUnsealMigrateInit)(nil), "katana.katana.ledger.MsgUnsealMigrateInit")
-	proto.RegisterType((*MsgUnsealMigrateInitResponse)(nil), "katana.katana.ledger.MsgUnsealMigrateInitResponse")
-	proto.RegisterType((*MsgRegisterIcaPool)(nil), "katana.katana.ledger.MsgRegisterIcaPool")
-	proto.RegisterType((*MsgRegisterIcaPoolResponse)(nil), "katana.katana.ledger.MsgRegisterIcaPoolResponse")
-	proto.RegisterType((*MsgSetWithdrawalAddr)(nil), "katana.katana.ledger.MsgSetWithdrawalAddr")
-	proto.RegisterType((*MsgSetWithdrawalAddrResponse)(nil), "katana.katana.ledger.MsgSetWithdrawalAddrResponse")
-	proto.RegisterType((*MsgInitPool)(nil), "katana.katana.ledger.MsgInitPool")
-	proto.RegisterType((*MsgInitPoolResponse)(nil), "katana.katana.ledger.MsgInitPoolResponse")
-	proto.RegisterType((*MsgSetPoolStatus)(nil), "katana.katana.ledger.MsgSetPoolStatus")
-	proto.RegisterType((*MsgSetPoolStatusResponse)(nil), "katana.katana.ledger.MsgSetPoolStatusResponse")
+	proto.RegisterType((*MsgSetEraUnbondLimit)(nil), "furya.furya.ledger.MsgSetEraUnbondLimit")
+	proto.RegisterType((*MsgSetEraUnbondLimitResponse)(nil), "furya.furya.ledger.MsgSetEraUnbondLimitResponse")
+	proto.RegisterType((*MsgSetPoolDetail)(nil), "furya.furya.ledger.MsgSetPoolDetail")
+	proto.RegisterType((*MsgSetPoolDetailResponse)(nil), "furya.furya.ledger.MsgSetPoolDetailResponse")
+	proto.RegisterType((*MsgSetLeastBond)(nil), "furya.furya.ledger.MsgSetLeastBond")
+	proto.RegisterType((*MsgSetLeastBondResponse)(nil), "furya.furya.ledger.MsgSetLeastBondResponse")
+	proto.RegisterType((*MsgClearCurrentEraSnapShots)(nil), "furya.furya.ledger.MsgClearCurrentEraSnapShots")
+	proto.RegisterType((*MsgClearCurrentEraSnapShotsResponse)(nil), "furya.furya.ledger.MsgClearCurrentEraSnapShotsResponse")
+	proto.RegisterType((*MsgSetStakingRewardCommission)(nil), "furya.furya.ledger.MsgSetStakingRewardCommission")
+	proto.RegisterType((*MsgSetStakingRewardCommissionResponse)(nil), "furya.furya.ledger.MsgSetStakingRewardCommissionResponse")
+	proto.RegisterType((*MsgSetProtocolFeeReceiver)(nil), "furya.furya.ledger.MsgSetProtocolFeeReceiver")
+	proto.RegisterType((*MsgSetProtocolFeeReceiverResponse)(nil), "furya.furya.ledger.MsgSetProtocolFeeReceiverResponse")
+	proto.RegisterType((*MsgSetUnbondRelayFee)(nil), "furya.furya.ledger.MsgSetUnbondRelayFee")
+	proto.RegisterType((*MsgSetUnbondRelayFeeResponse)(nil), "furya.furya.ledger.MsgSetUnbondRelayFeeResponse")
+	proto.RegisterType((*MsgLiquidityUnbond)(nil), "furya.furya.ledger.MsgLiquidityUnbond")
+	proto.RegisterType((*MsgLiquidityUnbondResponse)(nil), "furya.furya.ledger.MsgLiquidityUnbondResponse")
+	proto.RegisterType((*MsgSetUnbondCommission)(nil), "furya.furya.ledger.MsgSetUnbondCommission")
+	proto.RegisterType((*MsgSetUnbondCommissionResponse)(nil), "furya.furya.ledger.MsgSetUnbondCommissionResponse")
+	proto.RegisterType((*MsgSubmitSignature)(nil), "furya.furya.ledger.MsgSubmitSignature")
+	proto.RegisterType((*MsgSubmitSignatureResponse)(nil), "furya.furya.ledger.MsgSubmitSignatureResponse")
+	proto.RegisterType((*MsgSetRParams)(nil), "furya.furya.ledger.MsgSetRParams")
+	proto.RegisterType((*MsgSetRParamsResponse)(nil), "furya.furya.ledger.MsgSetRParamsResponse")
+	proto.RegisterType((*MsgSetRelayFeeReceiver)(nil), "furya.furya.ledger.MsgSetRelayFeeReceiver")
+	proto.RegisterType((*MsgSetRelayFeeReceiverResponse)(nil), "furya.furya.ledger.MsgSetRelayFeeReceiverResponse")
+	proto.RegisterType((*MsgSetRelayGasPrice)(nil), "furya.furya.ledger.MsgSetRelayGasPrice")
+	proto.RegisterType((*MsgSetRelayGasPriceResponse)(nil), "furya.furya.ledger.MsgSetRelayGasPriceResponse")
+	proto.RegisterType((*MsgSetEraSeconds)(nil), "furya.furya.ledger.MsgSetEraSeconds")
+	proto.RegisterType((*MsgSetEraSecondsResponse)(nil), "furya.furya.ledger.MsgSetEraSecondsResponse")
+	proto.RegisterType((*MsgRmBondedPool)(nil), "furya.furya.ledger.MsgRmBondedPool")
+	proto.RegisterType((*MsgRmBondedPoolResponse)(nil), "furya.furya.ledger.MsgRmBondedPoolResponse")
+	proto.RegisterType((*MsgMigrateInit)(nil), "furya.furya.ledger.MsgMigrateInit")
+	proto.RegisterType((*MsgMigrateInitResponse)(nil), "furya.furya.ledger.MsgMigrateInitResponse")
+	proto.RegisterType((*MsgMigrateUnbondings)(nil), "furya.furya.ledger.MsgMigrateUnbondings")
+	proto.RegisterType((*MsgMigrateUnbondingsResponse)(nil), "furya.furya.ledger.MsgMigrateUnbondingsResponse")
+	proto.RegisterType((*MsgToggleUnbondSwitch)(nil), "furya.furya.ledger.MsgToggleUnbondSwitch")
+	proto.RegisterType((*MsgToggleUnbondSwitchResponse)(nil), "furya.furya.ledger.MsgToggleUnbondSwitchResponse")
+	proto.RegisterType((*MsgUnsealMigrateInit)(nil), "furya.furya.ledger.MsgUnsealMigrateInit")
+	proto.RegisterType((*MsgUnsealMigrateInitResponse)(nil), "furya.furya.ledger.MsgUnsealMigrateInitResponse")
+	proto.RegisterType((*MsgRegisterIcaPool)(nil), "furya.furya.ledger.MsgRegisterIcaPool")
+	proto.RegisterType((*MsgRegisterIcaPoolResponse)(nil), "furya.furya.ledger.MsgRegisterIcaPoolResponse")
+	proto.RegisterType((*MsgSetWithdrawalAddr)(nil), "furya.furya.ledger.MsgSetWithdrawalAddr")
+	proto.RegisterType((*MsgSetWithdrawalAddrResponse)(nil), "furya.furya.ledger.MsgSetWithdrawalAddrResponse")
+	proto.RegisterType((*MsgInitPool)(nil), "furya.furya.ledger.MsgInitPool")
+	proto.RegisterType((*MsgInitPoolResponse)(nil), "furya.furya.ledger.MsgInitPoolResponse")
+	proto.RegisterType((*MsgSetPoolStatus)(nil), "furya.furya.ledger.MsgSetPoolStatus")
+	proto.RegisterType((*MsgSetPoolStatusResponse)(nil), "furya.furya.ledger.MsgSetPoolStatusResponse")
 }
 
 func init() { proto.RegisterFile("ledger/tx.proto", fileDescriptor_8b521ea88205ae40) }
@@ -2508,7 +2508,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SetEraUnbondLimit(ctx context.Context, in *MsgSetEraUnbondLimit, opts ...grpc.CallOption) (*MsgSetEraUnbondLimitResponse, error) {
 	out := new(MsgSetEraUnbondLimitResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetEraUnbondLimit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetEraUnbondLimit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2517,7 +2517,7 @@ func (c *msgClient) SetEraUnbondLimit(ctx context.Context, in *MsgSetEraUnbondLi
 
 func (c *msgClient) SetPoolDetail(ctx context.Context, in *MsgSetPoolDetail, opts ...grpc.CallOption) (*MsgSetPoolDetailResponse, error) {
 	out := new(MsgSetPoolDetailResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetPoolDetail", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetPoolDetail", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2526,7 +2526,7 @@ func (c *msgClient) SetPoolDetail(ctx context.Context, in *MsgSetPoolDetail, opt
 
 func (c *msgClient) SetLeastBond(ctx context.Context, in *MsgSetLeastBond, opts ...grpc.CallOption) (*MsgSetLeastBondResponse, error) {
 	out := new(MsgSetLeastBondResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetLeastBond", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetLeastBond", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2535,7 +2535,7 @@ func (c *msgClient) SetLeastBond(ctx context.Context, in *MsgSetLeastBond, opts 
 
 func (c *msgClient) ClearCurrentEraSnapShots(ctx context.Context, in *MsgClearCurrentEraSnapShots, opts ...grpc.CallOption) (*MsgClearCurrentEraSnapShotsResponse, error) {
 	out := new(MsgClearCurrentEraSnapShotsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/ClearCurrentEraSnapShots", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/ClearCurrentEraSnapShots", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2544,7 +2544,7 @@ func (c *msgClient) ClearCurrentEraSnapShots(ctx context.Context, in *MsgClearCu
 
 func (c *msgClient) SetStakingRewardCommission(ctx context.Context, in *MsgSetStakingRewardCommission, opts ...grpc.CallOption) (*MsgSetStakingRewardCommissionResponse, error) {
 	out := new(MsgSetStakingRewardCommissionResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetStakingRewardCommission", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetStakingRewardCommission", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2553,7 +2553,7 @@ func (c *msgClient) SetStakingRewardCommission(ctx context.Context, in *MsgSetSt
 
 func (c *msgClient) SetProtocolFeeReceiver(ctx context.Context, in *MsgSetProtocolFeeReceiver, opts ...grpc.CallOption) (*MsgSetProtocolFeeReceiverResponse, error) {
 	out := new(MsgSetProtocolFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetProtocolFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetProtocolFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2562,7 +2562,7 @@ func (c *msgClient) SetProtocolFeeReceiver(ctx context.Context, in *MsgSetProtoc
 
 func (c *msgClient) SetUnbondRelayFee(ctx context.Context, in *MsgSetUnbondRelayFee, opts ...grpc.CallOption) (*MsgSetUnbondRelayFeeResponse, error) {
 	out := new(MsgSetUnbondRelayFeeResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetUnbondRelayFee", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetUnbondRelayFee", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2571,7 +2571,7 @@ func (c *msgClient) SetUnbondRelayFee(ctx context.Context, in *MsgSetUnbondRelay
 
 func (c *msgClient) LiquidityUnbond(ctx context.Context, in *MsgLiquidityUnbond, opts ...grpc.CallOption) (*MsgLiquidityUnbondResponse, error) {
 	out := new(MsgLiquidityUnbondResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/LiquidityUnbond", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/LiquidityUnbond", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2580,7 +2580,7 @@ func (c *msgClient) LiquidityUnbond(ctx context.Context, in *MsgLiquidityUnbond,
 
 func (c *msgClient) SetUnbondCommission(ctx context.Context, in *MsgSetUnbondCommission, opts ...grpc.CallOption) (*MsgSetUnbondCommissionResponse, error) {
 	out := new(MsgSetUnbondCommissionResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetUnbondCommission", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetUnbondCommission", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2589,7 +2589,7 @@ func (c *msgClient) SetUnbondCommission(ctx context.Context, in *MsgSetUnbondCom
 
 func (c *msgClient) SubmitSignature(ctx context.Context, in *MsgSubmitSignature, opts ...grpc.CallOption) (*MsgSubmitSignatureResponse, error) {
 	out := new(MsgSubmitSignatureResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SubmitSignature", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SubmitSignature", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2598,7 +2598,7 @@ func (c *msgClient) SubmitSignature(ctx context.Context, in *MsgSubmitSignature,
 
 func (c *msgClient) SetRParams(ctx context.Context, in *MsgSetRParams, opts ...grpc.CallOption) (*MsgSetRParamsResponse, error) {
 	out := new(MsgSetRParamsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetRParams", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetRParams", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2607,7 +2607,7 @@ func (c *msgClient) SetRParams(ctx context.Context, in *MsgSetRParams, opts ...g
 
 func (c *msgClient) SetRelayFeeReceiver(ctx context.Context, in *MsgSetRelayFeeReceiver, opts ...grpc.CallOption) (*MsgSetRelayFeeReceiverResponse, error) {
 	out := new(MsgSetRelayFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetRelayFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetRelayFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2616,7 +2616,7 @@ func (c *msgClient) SetRelayFeeReceiver(ctx context.Context, in *MsgSetRelayFeeR
 
 func (c *msgClient) SetRelayGasPrice(ctx context.Context, in *MsgSetRelayGasPrice, opts ...grpc.CallOption) (*MsgSetRelayGasPriceResponse, error) {
 	out := new(MsgSetRelayGasPriceResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetRelayGasPrice", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetRelayGasPrice", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2625,7 +2625,7 @@ func (c *msgClient) SetRelayGasPrice(ctx context.Context, in *MsgSetRelayGasPric
 
 func (c *msgClient) SetEraSeconds(ctx context.Context, in *MsgSetEraSeconds, opts ...grpc.CallOption) (*MsgSetEraSecondsResponse, error) {
 	out := new(MsgSetEraSecondsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetEraSeconds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetEraSeconds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2634,7 +2634,7 @@ func (c *msgClient) SetEraSeconds(ctx context.Context, in *MsgSetEraSeconds, opt
 
 func (c *msgClient) RmBondedPool(ctx context.Context, in *MsgRmBondedPool, opts ...grpc.CallOption) (*MsgRmBondedPoolResponse, error) {
 	out := new(MsgRmBondedPoolResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/RmBondedPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/RmBondedPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2643,7 +2643,7 @@ func (c *msgClient) RmBondedPool(ctx context.Context, in *MsgRmBondedPool, opts 
 
 func (c *msgClient) MigrateInit(ctx context.Context, in *MsgMigrateInit, opts ...grpc.CallOption) (*MsgMigrateInitResponse, error) {
 	out := new(MsgMigrateInitResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/MigrateInit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/MigrateInit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2652,7 +2652,7 @@ func (c *msgClient) MigrateInit(ctx context.Context, in *MsgMigrateInit, opts ..
 
 func (c *msgClient) MigrateUnbondings(ctx context.Context, in *MsgMigrateUnbondings, opts ...grpc.CallOption) (*MsgMigrateUnbondingsResponse, error) {
 	out := new(MsgMigrateUnbondingsResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/MigrateUnbondings", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/MigrateUnbondings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2661,7 +2661,7 @@ func (c *msgClient) MigrateUnbondings(ctx context.Context, in *MsgMigrateUnbondi
 
 func (c *msgClient) ToggleUnbondSwitch(ctx context.Context, in *MsgToggleUnbondSwitch, opts ...grpc.CallOption) (*MsgToggleUnbondSwitchResponse, error) {
 	out := new(MsgToggleUnbondSwitchResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/ToggleUnbondSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/ToggleUnbondSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2670,7 +2670,7 @@ func (c *msgClient) ToggleUnbondSwitch(ctx context.Context, in *MsgToggleUnbondS
 
 func (c *msgClient) UnsealMigrateInit(ctx context.Context, in *MsgUnsealMigrateInit, opts ...grpc.CallOption) (*MsgUnsealMigrateInitResponse, error) {
 	out := new(MsgUnsealMigrateInitResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/UnsealMigrateInit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/UnsealMigrateInit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2679,7 +2679,7 @@ func (c *msgClient) UnsealMigrateInit(ctx context.Context, in *MsgUnsealMigrateI
 
 func (c *msgClient) RegisterIcaPool(ctx context.Context, in *MsgRegisterIcaPool, opts ...grpc.CallOption) (*MsgRegisterIcaPoolResponse, error) {
 	out := new(MsgRegisterIcaPoolResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/RegisterIcaPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/RegisterIcaPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2688,7 +2688,7 @@ func (c *msgClient) RegisterIcaPool(ctx context.Context, in *MsgRegisterIcaPool,
 
 func (c *msgClient) SetWithdrawalAddr(ctx context.Context, in *MsgSetWithdrawalAddr, opts ...grpc.CallOption) (*MsgSetWithdrawalAddrResponse, error) {
 	out := new(MsgSetWithdrawalAddrResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetWithdrawalAddr", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetWithdrawalAddr", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2697,7 +2697,7 @@ func (c *msgClient) SetWithdrawalAddr(ctx context.Context, in *MsgSetWithdrawalA
 
 func (c *msgClient) InitPool(ctx context.Context, in *MsgInitPool, opts ...grpc.CallOption) (*MsgInitPoolResponse, error) {
 	out := new(MsgInitPoolResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/InitPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/InitPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2706,7 +2706,7 @@ func (c *msgClient) InitPool(ctx context.Context, in *MsgInitPool, opts ...grpc.
 
 func (c *msgClient) SetPoolStatus(ctx context.Context, in *MsgSetPoolStatus, opts ...grpc.CallOption) (*MsgSetPoolStatusResponse, error) {
 	out := new(MsgSetPoolStatusResponse)
-	err := c.cc.Invoke(ctx, "/katana.katana.ledger.Msg/SetPoolStatus", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furya.furya.ledger.Msg/SetPoolStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2828,7 +2828,7 @@ func _Msg_SetEraUnbondLimit_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetEraUnbondLimit",
+		FullMethod: "/furya.furya.ledger.Msg/SetEraUnbondLimit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetEraUnbondLimit(ctx, req.(*MsgSetEraUnbondLimit))
@@ -2846,7 +2846,7 @@ func _Msg_SetPoolDetail_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetPoolDetail",
+		FullMethod: "/furya.furya.ledger.Msg/SetPoolDetail",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetPoolDetail(ctx, req.(*MsgSetPoolDetail))
@@ -2864,7 +2864,7 @@ func _Msg_SetLeastBond_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetLeastBond",
+		FullMethod: "/furya.furya.ledger.Msg/SetLeastBond",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetLeastBond(ctx, req.(*MsgSetLeastBond))
@@ -2882,7 +2882,7 @@ func _Msg_ClearCurrentEraSnapShots_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/ClearCurrentEraSnapShots",
+		FullMethod: "/furya.furya.ledger.Msg/ClearCurrentEraSnapShots",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ClearCurrentEraSnapShots(ctx, req.(*MsgClearCurrentEraSnapShots))
@@ -2900,7 +2900,7 @@ func _Msg_SetStakingRewardCommission_Handler(srv interface{}, ctx context.Contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetStakingRewardCommission",
+		FullMethod: "/furya.furya.ledger.Msg/SetStakingRewardCommission",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetStakingRewardCommission(ctx, req.(*MsgSetStakingRewardCommission))
@@ -2918,7 +2918,7 @@ func _Msg_SetProtocolFeeReceiver_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetProtocolFeeReceiver",
+		FullMethod: "/furya.furya.ledger.Msg/SetProtocolFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetProtocolFeeReceiver(ctx, req.(*MsgSetProtocolFeeReceiver))
@@ -2936,7 +2936,7 @@ func _Msg_SetUnbondRelayFee_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetUnbondRelayFee",
+		FullMethod: "/furya.furya.ledger.Msg/SetUnbondRelayFee",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetUnbondRelayFee(ctx, req.(*MsgSetUnbondRelayFee))
@@ -2954,7 +2954,7 @@ func _Msg_LiquidityUnbond_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/LiquidityUnbond",
+		FullMethod: "/furya.furya.ledger.Msg/LiquidityUnbond",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).LiquidityUnbond(ctx, req.(*MsgLiquidityUnbond))
@@ -2972,7 +2972,7 @@ func _Msg_SetUnbondCommission_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetUnbondCommission",
+		FullMethod: "/furya.furya.ledger.Msg/SetUnbondCommission",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetUnbondCommission(ctx, req.(*MsgSetUnbondCommission))
@@ -2990,7 +2990,7 @@ func _Msg_SubmitSignature_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SubmitSignature",
+		FullMethod: "/furya.furya.ledger.Msg/SubmitSignature",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SubmitSignature(ctx, req.(*MsgSubmitSignature))
@@ -3008,7 +3008,7 @@ func _Msg_SetRParams_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetRParams",
+		FullMethod: "/furya.furya.ledger.Msg/SetRParams",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRParams(ctx, req.(*MsgSetRParams))
@@ -3026,7 +3026,7 @@ func _Msg_SetRelayFeeReceiver_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetRelayFeeReceiver",
+		FullMethod: "/furya.furya.ledger.Msg/SetRelayFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRelayFeeReceiver(ctx, req.(*MsgSetRelayFeeReceiver))
@@ -3044,7 +3044,7 @@ func _Msg_SetRelayGasPrice_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetRelayGasPrice",
+		FullMethod: "/furya.furya.ledger.Msg/SetRelayGasPrice",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRelayGasPrice(ctx, req.(*MsgSetRelayGasPrice))
@@ -3062,7 +3062,7 @@ func _Msg_SetEraSeconds_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetEraSeconds",
+		FullMethod: "/furya.furya.ledger.Msg/SetEraSeconds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetEraSeconds(ctx, req.(*MsgSetEraSeconds))
@@ -3080,7 +3080,7 @@ func _Msg_RmBondedPool_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/RmBondedPool",
+		FullMethod: "/furya.furya.ledger.Msg/RmBondedPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmBondedPool(ctx, req.(*MsgRmBondedPool))
@@ -3098,7 +3098,7 @@ func _Msg_MigrateInit_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/MigrateInit",
+		FullMethod: "/furya.furya.ledger.Msg/MigrateInit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).MigrateInit(ctx, req.(*MsgMigrateInit))
@@ -3116,7 +3116,7 @@ func _Msg_MigrateUnbondings_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/MigrateUnbondings",
+		FullMethod: "/furya.furya.ledger.Msg/MigrateUnbondings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).MigrateUnbondings(ctx, req.(*MsgMigrateUnbondings))
@@ -3134,7 +3134,7 @@ func _Msg_ToggleUnbondSwitch_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/ToggleUnbondSwitch",
+		FullMethod: "/furya.furya.ledger.Msg/ToggleUnbondSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleUnbondSwitch(ctx, req.(*MsgToggleUnbondSwitch))
@@ -3152,7 +3152,7 @@ func _Msg_UnsealMigrateInit_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/UnsealMigrateInit",
+		FullMethod: "/furya.furya.ledger.Msg/UnsealMigrateInit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UnsealMigrateInit(ctx, req.(*MsgUnsealMigrateInit))
@@ -3170,7 +3170,7 @@ func _Msg_RegisterIcaPool_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/RegisterIcaPool",
+		FullMethod: "/furya.furya.ledger.Msg/RegisterIcaPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RegisterIcaPool(ctx, req.(*MsgRegisterIcaPool))
@@ -3188,7 +3188,7 @@ func _Msg_SetWithdrawalAddr_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetWithdrawalAddr",
+		FullMethod: "/furya.furya.ledger.Msg/SetWithdrawalAddr",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetWithdrawalAddr(ctx, req.(*MsgSetWithdrawalAddr))
@@ -3206,7 +3206,7 @@ func _Msg_InitPool_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/InitPool",
+		FullMethod: "/furya.furya.ledger.Msg/InitPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).InitPool(ctx, req.(*MsgInitPool))
@@ -3224,7 +3224,7 @@ func _Msg_SetPoolStatus_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/katana.katana.ledger.Msg/SetPoolStatus",
+		FullMethod: "/furya.furya.ledger.Msg/SetPoolStatus",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetPoolStatus(ctx, req.(*MsgSetPoolStatus))
@@ -3233,7 +3233,7 @@ func _Msg_SetPoolStatus_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "katana.katana.ledger.Msg",
+	ServiceName: "furya.furya.ledger.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

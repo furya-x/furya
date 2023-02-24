@@ -1,12 +1,12 @@
 syntax = "proto3";
-package katana.katana.ledger;
+package furya.furya.ledger;
 
 import "gogoproto/gogo.proto";
 import "ledger/ledger.proto";
 
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/warmage-sports/katana/x/ledger/types";
+option go_package = "github.com/oldfurya/furya/x/ledger/types";
 
 // GenesisState defines the ledger module's genesis state.
 message GenesisState {
@@ -55,12 +55,12 @@ message GenesisEraSnapshot {
 
 message StakingRewardCommission {
     string denom = 1;
-    string value = 2 [(gogoproto.customtype) = "github.com/warmage-sports/katana/utils.Dec", (gogoproto.nullable) = false];
+    string value = 2 [(gogoproto.customtype) = "github.com/oldfurya/furya/utils.Dec", (gogoproto.nullable) = false];
 }
 
 message UnbondCommission {
     string denom = 1;
-    string value = 2 [(gogoproto.customtype) = "github.com/warmage-sports/katana/utils.Dec", (gogoproto.nullable) = false];
+    string value = 2 [(gogoproto.customtype) = "github.com/oldfurya/furya/utils.Dec", (gogoproto.nullable) = false];
 }
 
 message RelayFeeReceiver {

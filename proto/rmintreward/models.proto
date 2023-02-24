@@ -1,9 +1,9 @@
 syntax = "proto3";
-package katana.katana.rmintreward;
+package furya.furya.rmintreward;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/warmage-sports/katana/x/rmintreward/types";
+option go_package = "github.com/oldfurya/furya/x/rmintreward/types";
 
 message MintRewardAct {
     int64 begin = 1;

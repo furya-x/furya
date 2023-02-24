@@ -13,8 +13,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	capabilitykeeper "github.com/cosmos/cosmos-sdk/x/capability/keeper"
 	icacontrollerkeeper "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/controller/keeper"
-	"github.com/warmage-sports/katana/utils"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/utils"
+	"github.com/oldfurya/furya/x/ledger/types"
 )
 
 type (

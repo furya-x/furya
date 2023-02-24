@@ -10,8 +10,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/spf13/cobra"
-	"github.com/warmage-sports/katana/utils"
-	"github.com/warmage-sports/katana/x/ledger/types"
+	"github.com/oldfurya/furya/utils"
+	"github.com/oldfurya/furya/x/ledger/types"
 )
 
 var _ = strconv.Itoa(0)

@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/warmage-sports/katana/x/rvalidator/types"
-	sudoTypes "github.com/warmage-sports/katana/x/sudo/types"
+	"github.com/oldfurya/furya/x/rvalidator/types"
+	sudoTypes "github.com/oldfurya/furya/x/sudo/types"
 )
 
 func (k msgServer) AddRValidator(goCtx context.Context, msg *types.MsgAddRValidator) (*types.MsgAddRValidatorResponse, error) {
