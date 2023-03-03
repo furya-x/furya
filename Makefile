@@ -70,21 +70,21 @@ all: tools install lint
 .PHONY:build
 build: go.sum
 ifeq ($(OS),Windows_NT)
-	go build $(BUILD_FLAGS) -o build/furyad.exe ./cmd/furyad
+	go build $(BUILD_FLAGS) -o build/furyad.exe ./cmd/fury
 else
-	go build $(BUILD_FLAGS) -o build/furyad ./cmd/furyad
+	go build $(BUILD_FLAGS) -o build/furyad ./cmd/fury
 endif
 
 build-linux: go.sum
 	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
 
 build-all-binary: go.sum
-	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-linux-amd64 ./cmd/furyad
-	LEDGER_ENABLED=false GOOS=linux GOARCH=arm64 go build $(BUILD_FLAGS) -o build/iris-linux-arm64 ./cmd/furyad
-	LEDGER_ENABLED=false GOOS=windows GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-windows-amd64.exe ./cmd/furyad
+	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-linux-amd64 ./cmd/fury
+	LEDGER_ENABLED=false GOOS=linux GOARCH=arm64 go build $(BUILD_FLAGS) -o build/iris-linux-arm64 ./cmd/fury
+	LEDGER_ENABLED=false GOOS=windows GOARCH=amd64 go build $(BUILD_FLAGS) -o build/iris-windows-amd64.exe ./cmd/fury
 
 install: go.sum
-	go install $(BUILD_FLAGS) ./cmd/furyad
+	go install $(BUILD_FLAGS) ./cmd/fury
 
 update-swagger-docs: statik proto-swagger-gen
 	$(BINDIR)/statik -src=lite/swagger-ui -dest=lite -f -m
@@ -110,7 +110,7 @@ go.sum:
 draw-deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i ./cmd/iris -d 2 | dot -Tpng -o dependency-graph.png
+	@goviz -i ./cmd/fury -d 2 | dot -Tpng -o dependency-graph.png
 
 clean:
 	rm -rf build/ tmp-swagger-gen/
