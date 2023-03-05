@@ -148,7 +148,7 @@ import (
 )
 
 const (
-	AccountAddressPrefix = "furya"
+	AccountAddressPrefix = "did:fury:"
 	Name                 = "furya"
 )
 
