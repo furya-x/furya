@@ -5,7 +5,7 @@
 ### set protocol fee receiver
 
 ```bash
-furyad tx ledger set-protocol-fee-receiver furya1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc --from admin --chain-id local-furya --keyring-backend file
+furyad tx ledger set-protocol-fee-receiver did:fury:1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc --from admin --chain-id local-furya --keyring-backend file
 
 furyad query ledger protocol-fee-receiver 
 ```
@@ -21,7 +21,7 @@ furyad query bank denom-metadata
 furyad query rbank address-prefix uxatom
 
 # set relay fee receiver
-furyad tx ledger set-relay-fee-receiver uxatom furya1mgjkpyfm00mxk0nmhvfvwhlr65067d538l6cxa --from admin --chain-id local-furya --keyring-backend file
+furyad tx ledger set-relay-fee-receiver uxatom did:fury:1mgjkpyfm00mxk0nmhvfvwhlr65067d538l6cxa --from admin --chain-id local-furya --keyring-backend file
 
 furyad query ledger relay-fee-receiver uxatom
 
@@ -37,7 +37,7 @@ furyad query ledger bond-pipeline uxatom cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26
 
 
 # add relayers
-furyad tx relayers add-relayers ledger uxatom furya1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx:furya1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc --keyring-backend file --from admin --chain-id local-furya
+furyad tx relayers add-relayers ledger uxatom did:fury:1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx:did:fury:1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc --keyring-backend file --from admin --chain-id local-furya
 
 furyad query relayers relayers ledger uxatom
 
@@ -91,7 +91,7 @@ furyad tx ledger set-withdrawal-addr cosmos1gsth46z50w256p4kq36xquh4q90mfjq0t4lm
 
 ```bash
 # add relayers
-furyad tx relayers add-relayers rvalidator uxatom furya14z467aut40mcrt2ddyxf7e74fq99udul7kaf9g:furya15lne70yk254s0pm2da6g59r82cjymzjqvvqxz7 --keyring-backend file --from admin --chain-id local-furya
+furyad tx relayers add-relayers rvalidator uxatom did:fury:14z467aut40mcrt2ddyxf7e74fq99udul7kaf9g:did:fury:15lne70yk254s0pm2da6g59r82cjymzjqvvqxz7 --keyring-backend file --from admin --chain-id local-furya
 
 furyad q relayers relayers rvalidator uxatom
 
@@ -125,7 +125,7 @@ furyad query bridge chain-ids
 
 
 
-furyad tx relayers add-relayers bridge 1 furya1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx --from admin --keyring-backend file --chain-id local-furya
+furyad tx relayers add-relayers bridge 1 did:fury:1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx --from admin --keyring-backend file --chain-id local-furya
 
 furyad query relayers relayers bridge 1
 
@@ -143,7 +143,7 @@ furyad query bridge resourceid-to-denoms
 
 
 
-furyad tx bridge set-relay-fee-receiver furya1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx --from admin --keyring-backend file --chain-id local-furya
+furyad tx bridge set-relay-fee-receiver did:fury:1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx --from admin --keyring-backend file --chain-id local-furya
 
 furyad query bridge relay-fee-receiver
 
@@ -188,7 +188,7 @@ furyad query bridge denom-types
 ```bash
 furyad tx rdex create-pool 10ufury 20uxatom --from admin --chain-id local-furya --keyring-backend file
 
-furyad tx rdex add-provider furya1qzt0qajzr9df3en5sk06xlk26n30003c8uhdkg --from admin --chain-id local-furya --keyring-backend file
+furyad tx rdex add-provider did:fury:1qzt0qajzr9df3en5sk06xlk26n30003c8uhdkg --from admin --chain-id local-furya --keyring-backend file
 
 furyad tx rdex add-liquidity  100ufury 200uxatom --from admin --chain-id local-furya --keyring-backend file
 
@@ -200,7 +200,7 @@ furyad tx rdex swap 2ufury 1uxatom  --from admin --chain-id local-furya --keyrin
 ### mining
 
 ```bash
-furyad tx mining add-mining-provider furya1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx  --from admin --chain-id local-furya --keyring-backend file
+furyad tx mining add-mining-provider did:fury:1ychj8z22pw0ruc65mx8nvdn7ca9qylpkauetvx  --from admin --chain-id local-furya --keyring-backend file
 
 furyad tx mining add-reward-token ufury 200 --from admin --chain-id local-furya --keyring-backend file
 
@@ -223,13 +223,13 @@ furyad tx mining withdraw 1 10ufury 0 --from test --chain-id local-furya --keyri
 ### liquidity bond (gaiad example)
 
 ```bash
-gaiad tx bank send userAccount cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 1000000stake --note 1:furya1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc --keyring-backend file --chain-id local-cosmos
+gaiad tx bank send userAccount cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 1000000stake --note 1:did:fury:1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc --keyring-backend file --chain-id local-cosmos
 ```
 
 ### recover (gaiad example)
 
 ```bash
-gaiad tx bank send userAccount cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 1stake --note 2:furya1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc:9A80F3E6A007E1144BE34F4A0AC35B9288C19641BCAD3464277168000AF5FC66 --keyring-backend file --chain-id local-cosmos
+gaiad tx bank send userAccount cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75 1stake --note 2:did:fury:1ukq4mtq604prn5yxul7syh5ysvj0w5jrclvrvc:9A80F3E6A007E1144BE34F4A0AC35B9288C19641BCAD3464277168000AF5FC66 --keyring-backend file --chain-id local-cosmos
 ```
 
 ### liquidity unbond

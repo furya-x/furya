@@ -17,7 +17,7 @@ accounts:
 - name: kael
   coins:
   - 100000token
-  address: fury15cg8s33kywgm7qulxs0kxyu26m2gr06mz2frjj
+  address: did:fury:15cg8s33kywgm7qulxs0kxyu26m2gr06mz2frjj
 faucet:
   name: bob
   coins:
