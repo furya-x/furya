@@ -1,9 +1,9 @@
 syntax = "proto3";
-package furya.furya.rbank;
+package furyahub.furyahub.rbank;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/oldfurya/furya/x/rbank/types";
+option go_package = "github.com/furyahub/furyahub/x/rbank/types";
 
 // Params defines the parameters for the module.
 message Params {

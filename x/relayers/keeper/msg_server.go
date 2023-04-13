@@ -6,9 +6,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	ledgertypes "github.com/oldfurya/furya/x/ledger/types"
-	"github.com/oldfurya/furya/x/relayers/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	ledgertypes "github.com/furyahub/furyahub/x/ledger/types"
+	"github.com/furyahub/furyahub/x/relayers/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 type msgServer struct {

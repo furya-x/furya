@@ -1,9 +1,9 @@
 syntax = "proto3";
-package furya.furya.rstaking;
+package furyahub.furyahub.rstaking;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/oldfurya/furya/x/rstaking/types";
+option go_package = "github.com/furyahub/furyahub/x/rstaking/types";
 
 // Params defines the parameters for the module.
 message Params {

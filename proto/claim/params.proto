@@ -1,9 +1,9 @@
 syntax = "proto3";
-package furya.furya.claim;
+package furyahub.furyahub.claim;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/oldfurya/furya/x/claim/types";
+option go_package = "github.com/furyahub/furyahub/x/claim/types";
 
 // Params defines the parameters for the module.
 message Params {

@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/oldfurya/furya/testutil/sample"
-	"github.com/oldfurya/furya/x/rdex/types"
+	"github.com/furyahub/furyahub/testutil/sample"
+	"github.com/furyahub/furyahub/x/rdex/types"
 	"github.com/stretchr/testify/require"
 )
 

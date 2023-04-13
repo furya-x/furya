@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/oldfurya/furya/x/rstaking/types"
+	"github.com/furyahub/furyahub/x/rstaking/types"
 	"github.com/stretchr/testify/require"
 )
 

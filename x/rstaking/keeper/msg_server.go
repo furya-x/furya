@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/oldfurya/furya/x/rstaking/types"
+	"github.com/furyahub/furyahub/x/rstaking/types"
 )
 
 type msgServer struct {

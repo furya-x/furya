@@ -4,11 +4,11 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	ledgertypes "github.com/oldfurya/furya/x/ledger/types"
-	relayerstypes "github.com/oldfurya/furya/x/relayers/types"
-	rvalidatortypes "github.com/oldfurya/furya/x/rvalidator/types"
-	"github.com/oldfurya/furya/x/rvote/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	ledgertypes "github.com/furyahub/furyahub/x/ledger/types"
+	relayerstypes "github.com/furyahub/furyahub/x/relayers/types"
+	rvalidatortypes "github.com/furyahub/furyahub/x/rvalidator/types"
+	"github.com/furyahub/furyahub/x/rvote/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 type msgServer struct {

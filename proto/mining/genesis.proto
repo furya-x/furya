@@ -1,12 +1,12 @@
 syntax = "proto3";
-package furya.furya.mining;
+package furyahub.furyahub.mining;
 
 import "gogoproto/gogo.proto";
 import "mining/params.proto";
 import "mining/models.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/oldfurya/furya/x/mining/types";
+option go_package = "github.com/furyahub/furyahub/x/mining/types";
 
 // GenesisState defines the mining module's genesis state.
 message GenesisState {

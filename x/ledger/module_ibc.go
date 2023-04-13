@@ -12,8 +12,8 @@ import (
 	ibcporttypes "github.com/cosmos/ibc-go/v3/modules/core/05-port/types"
 	ibchost "github.com/cosmos/ibc-go/v3/modules/core/24-host"
 	ibcexported "github.com/cosmos/ibc-go/v3/modules/core/exported"
-	"github.com/oldfurya/furya/x/ledger/keeper"
-	"github.com/oldfurya/furya/x/ledger/types"
+	"github.com/furyahub/furyahub/x/ledger/keeper"
+	"github.com/furyahub/furyahub/x/ledger/types"
 )
 
 var _ ibcporttypes.IBCModule = (*IBCModule)(nil)

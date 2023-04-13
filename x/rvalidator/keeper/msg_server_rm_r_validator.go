@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rvalidator/types"
-	sudoTypes "github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/x/rvalidator/types"
+	sudoTypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 func (k msgServer) RmRValidator(goCtx context.Context, msg *types.MsgRmRValidator) (*types.MsgRmRValidatorResponse, error) {

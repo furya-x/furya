@@ -4,9 +4,9 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/utils"
-	"github.com/oldfurya/furya/x/rstaking/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/utils"
+	"github.com/furyahub/furyahub/x/rstaking/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 func (k msgServer) ProvideToken(goCtx context.Context, msg *types.MsgProvideToken) (*types.MsgProvideTokenResponse, error) {

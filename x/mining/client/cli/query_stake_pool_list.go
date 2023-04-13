@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/mining/types"
+	"github.com/furyahub/furyahub/x/mining/types"
 )
 
 var _ = strconv.Itoa(0)

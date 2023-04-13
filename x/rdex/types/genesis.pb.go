@@ -101,7 +101,7 @@ func (m *GenesisState) GetPoolCreatorList() []string {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furya.furya.rdex.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furyahub.furyahub.rdex.GenesisState")
 }
 
 func init() { proto.RegisterFile("rdex/genesis.proto", fileDescriptor_c37cf5f25c73edc4) }

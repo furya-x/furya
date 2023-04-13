@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/oldfurya/furya/x/bridge/types"
+	"github.com/furyahub/furyahub/x/bridge/types"
 	"github.com/stretchr/testify/require"
 )
 

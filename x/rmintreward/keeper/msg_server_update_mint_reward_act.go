@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rmintreward/types"
-	sudoTypes "github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/x/rmintreward/types"
+	sudoTypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 func (k msgServer) UpdateMintRewardAct(goCtx context.Context, msg *types.MsgUpdateMintRewardAct) (*types.MsgUpdateMintRewardActResponse, error) {

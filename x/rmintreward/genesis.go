@@ -2,8 +2,8 @@ package rmintreward
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rmintreward/keeper"
-	"github.com/oldfurya/furya/x/rmintreward/types"
+	"github.com/furyahub/furyahub/x/rmintreward/keeper"
+	"github.com/furyahub/furyahub/x/rmintreward/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

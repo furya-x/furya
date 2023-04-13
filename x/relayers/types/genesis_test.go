@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/oldfurya/furya/x/relayers/types"
+	"github.com/furyahub/furyahub/x/relayers/types"
 	"github.com/stretchr/testify/require"
 )
 

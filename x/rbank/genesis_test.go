@@ -3,10 +3,10 @@ package rbank_test
 import (
 	"testing"
 
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/testutil/nullify"
-	"github.com/oldfurya/furya/x/rbank"
-	"github.com/oldfurya/furya/x/rbank/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/testutil/nullify"
+	"github.com/furyahub/furyahub/x/rbank"
+	"github.com/furyahub/furyahub/x/rbank/types"
 	"github.com/stretchr/testify/require"
 )
 

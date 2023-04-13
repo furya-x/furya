@@ -1,23 +1,23 @@
-# Deploy Your Own Furya Testnet
+# Deploy Your Own FurYaHub Testnet
 
-This document describes 3 ways to setup a network of `furyad` nodes, each serving a different usecase:
+This document describes 3 ways to setup a network of `furyahubd` nodes, each serving a different usecase:
 
 1. Single-node, local, manual testnet
 2. Multi-node, local, automated testnet
 3. Multi-node, remote, automated testnet
 
-Supporting code can be found in the [networks directory](https://github.com/furya/network) and additionally the `local` or `remote` sub-directories.
+Supporting code can be found in the [networks directory](https://github.com/furyahub/network) and additionally the `local` or `remote` sub-directories.
 
 > NOTE: The `remote` network bootstrapping may be out of sync with the latest releases and is not to be relied upon.
 
 ## Available Docker images
 
-In case you need to use or deploy furya as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
+In case you need to use or deploy furyahub as a container you could skip the `build` steps and use the official images, \$TAG stands for the version you are interested in:
 
-- `docker run -it -v ~/.furya:/root/.furya tendermint:$TAG furyad init`
-- `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.furya:/root/.furya tendermint:$TAG furyad start`
+- `docker run -it -v ~/.furyahub:/root/.furyahub tendermint:$TAG furyahubd init`
+- `docker run -it -p 26657:26657 -p 26656:26656 -v ~/.furyahub:/root/.furyahub tendermint:$TAG furyahubd start`
 - ...
-- `docker run -it -v ~/.furya:/root/.furya tendermint:$TAG furyad version`
+- `docker run -it -v ~/.furyahub:/root/.furyahub tendermint:$TAG furyahubd version`
 
 The same images can be used to build your own docker-compose stack.
 
@@ -27,7 +27,7 @@ This guide helps you create a single validator node that runs a network locally 
 
 ### Requirements
 
-- [Install furya](./install.md)
+- [Install furyahub](./install.md)
 - [Install `jq`](https://stedolan.github.io/jq/download/) (optional)
 
 ### Create Genesis File and Start the Network
@@ -37,54 +37,54 @@ This guide helps you create a single validator node that runs a network locally 
 cd $HOME
 
 # Initialize the genesis.json file that will help you to bootstrap the network
-furyad init my-node --chain-id my-chain
+furyahubd init my-node --chain-id my-chain
 
 # Create a key to hold your validator account
-furyad keys add my-account
+furyahubd keys add my-account
 
 # Add that key into the genesis.app_state.accounts array in the genesis file
 # NOTE: this command lets you set the number of coins. Make sure this account has some coins
 # with the genesis.app_state.staking.params.bond_denom denom, the default is staking
-furyad add-genesis-account $(furyad keys show my-account -a) 1000000000ufury,1000000000validatortoken
+furyahubd add-genesis-account $(furyahubd keys show my-account -a) 1000000000ufis,1000000000validatortoken
 
 # Generate the transaction that creates your validator
-furyad gentx my-account 1000000000ufury --chain-id my-chain
+furyahubd gentx my-account 1000000000ufis --chain-id my-chain
 
 # Add the generated bonding transaction to the genesis file
-furyad collect-gentxs
+furyahubd collect-gentxs
 
-# Now its safe to start `furyad`
-furyad start
+# Now its safe to start `furyahubd`
+furyahubd start
 ```
 
-This setup puts all the data for `furyad` in `~/.furya`. You can examine the genesis file you created at `~/.furya/config/genesis.json`. With this configuration `furyad` is also ready to use and has an account with tokens (both staking and custom).
+This setup puts all the data for `furyahubd` in `~/.furyahub`. You can examine the genesis file you created at `~/.furyahub/config/genesis.json`. With this configuration `furyahubd` is also ready to use and has an account with tokens (both staking and custom).
 
 ## Multi-node, Local, Automated Testnet
 
-From the [networks/local directory](https://github.com/furya/network):
+From the [networks/local directory](https://github.com/furyahub/network):
 
 ### Requirements
 
-- [Install furya](./install.md)
+- [Install furyahub](./install.md)
 - [Install docker](https://docs.docker.com/engine/installation/)
 - [Install docker-compose](https://docs.docker.com/compose/install/)
 
 ### Build
 
-Build the `furyad` binary (linux) and the `tendermint/furyadnode` docker image required for running the `localnet` commands. This binary will be mounted into the container and can be updated without rebuilding the image, so you only need to build the image once.
+Build the `furyahubd` binary (linux) and the `tendermint/furyahubdnode` docker image required for running the `localnet` commands. This binary will be mounted into the container and can be updated without rebuilding the image, so you only need to build the image once.
 
 ```bash
-# Clone the furya repo
-git clone https://github.com/oldfurya/furya.git
+# Clone the furyahub repo
+git clone https://github.com/furyahub/furyahub.git
 
 # Work from the SDK repo
-cd furya
+cd furyahub
 
 # Build the linux binary in ./build
 make build-linux
 
-# Build tendermint/furyadnode image
-make build-docker-furyadnode
+# Build tendermint/furyahubdnode image
+make build-docker-furyahubdnode
 ```
 
 ### Run Your Testnet
@@ -95,15 +95,15 @@ To start a 4 node testnet run:
 make localnet-start
 ```
 
-This command creates a 4-node network using the furyadnode image.
+This command creates a 4-node network using the furyahubdnode image.
 The ports for each node are found in this table:
 
 | Node ID     | P2P Port | RPC Port |
 | ----------- | -------- | -------- |
-| `furyanode0` | `26656`  | `26657`  |
-| `furyanode1` | `26659`  | `26660`  |
-| `furyanode2` | `26661`  | `26662`  |
-| `furyanode3` | `26663`  | `26664`  |
+| `furyahubnode0` | `26656`  | `26657`  |
+| `furyahubnode1` | `26659`  | `26660`  |
+| `furyahubnode2` | `26661`  | `26662`  |
+| `furyahubnode3` | `26663`  | `26664`  |
 
 To update the binary, just rebuild it and restart the nodes:
 
@@ -114,67 +114,67 @@ make build-linux localnet-start
 ### Configuration
 
 The `make localnet-start` creates files for a 4-node testnet in `./build` by
-calling the `furyad testnet` command. This outputs a handful of files in the
+calling the `furyahubd testnet` command. This outputs a handful of files in the
 `./build` directory:
 
 ```bash
 $ tree -L 2 build/
 build/
-├── furyad
+├── furyahubd
 ├── gentxs
 │   ├── node0.json
 │   ├── node1.json
 │   ├── node2.json
 │   └── node3.json
 ├── node0
-│   └── furyad
+│   └── furyahubd
 │       ├── key_seed.json
 │       ├── keys
-│       ├── ${LOG:-furyad.log}
+│       ├── ${LOG:-furyahubd.log}
 │       ├── config
 │       └── data
 ├── node1
 │       ├── key_seed.json
-│       ├── ${LOG:-furyad.log}
+│       ├── ${LOG:-furyahubd.log}
 │       ├── config
 │       └── data
 ├── node2
 │       ├── key_seed.json
-│       ├── ${LOG:-furyad.log}
+│       ├── ${LOG:-furyahubd.log}
 │       ├── config
 │       └── data
 └── node3
          ├── key_seed.json
-         ├── ${LOG:-furyad.log}
+         ├── ${LOG:-furyahubd.log}
          ├── config
          └── data
 ```
 
-Each `./build/nodeN` directory is mounted to the `/furyad` directory in each container.
+Each `./build/nodeN` directory is mounted to the `/furyahubd` directory in each container.
 
 ### Logging
 
-Logs are saved under each `./build/nodeN/furyad/furya.log`. You can also watch logs
+Logs are saved under each `./build/nodeN/furyahubd/furyahub.log`. You can also watch logs
 directly via Docker, for example:
 
 ```bash
-docker logs -f furyadnode0
+docker logs -f furyahubdnode0
 ```
 
 ### Keys & Accounts
 
-To interact with `furyad` and start querying state or creating txs, you use the
-`furyad` directory of any given node as your `home`, for example:
+To interact with `furyahubd` and start querying state or creating txs, you use the
+`furyahubd` directory of any given node as your `home`, for example:
 
 ```bash
-furyad keys list --home ./build/node0/furyad
+furyahubd keys list --home ./build/node0/furyahubd
 ```
 
 Now that accounts exists, you may create new accounts and send those accounts
 funds!
 
 ::: tip
-**Note**: Each node's seed is located at `./build/nodeN/furyad/key_seed.json` and can be restored to the CLI using the `furyad keys add --restore` command
+**Note**: Each node's seed is located at `./build/nodeN/furyahubd/key_seed.json` and can be restored to the CLI using the `furyahubd keys add --restore` command
 :::
 
 ### Special Binaries
@@ -183,12 +183,12 @@ If you have multiple binaries with different names, you can specify which one to
 
 ```bash
 # Run with custom binary
-BINARY=furyafoo make localnet-start
+BINARY=furyahubfoo make localnet-start
 ```
 
 ## Multi-Node, Remote, Automated Testnet
 
-The following should be run from the [networks directory](https://github.com/furya/network).
+The following should be run from the [networks directory](https://github.com/furyahub/network).
 
 ### Terraform & Ansible
 

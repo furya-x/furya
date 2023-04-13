@@ -2,8 +2,8 @@ package rdex
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rdex/keeper"
-	"github.com/oldfurya/furya/x/rdex/types"
+	"github.com/furyahub/furyahub/x/rdex/keeper"
+	"github.com/furyahub/furyahub/x/rdex/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

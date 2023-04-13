@@ -11,15 +11,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/relayers/types"
+	"github.com/furyahub/furyahub/x/relayers/types"
 )
 
 var (
 	DefaultRelativePacketTimeoutTimestamp = uint64((time.Duration(10) * time.Minute).Nanoseconds())
-)
-
-const (
-	flagPacketTimeoutTimestamp = "packet-timeout-timestamp"
 )
 
 // GetTxCmd returns the transaction commands for this module

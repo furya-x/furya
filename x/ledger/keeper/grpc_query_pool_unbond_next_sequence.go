@@ -4,7 +4,7 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/ledger/types"
+	"github.com/furyahub/furyahub/x/ledger/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

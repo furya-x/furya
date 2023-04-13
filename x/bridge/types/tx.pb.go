@@ -34,7 +34,7 @@ type MsgSetResourceidToDenom struct {
 	Creator    string    `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	ResourceId string    `protobuf:"bytes,2,opt,name=resourceId,proto3" json:"resourceId,omitempty"`
 	Denom      string    `protobuf:"bytes,3,opt,name=denom,proto3" json:"denom,omitempty"`
-	DenomType  DenomType `protobuf:"varint,4,opt,name=denomType,proto3,enum=furya.furya.bridge.DenomType" json:"denomType,omitempty"`
+	DenomType  DenomType `protobuf:"varint,4,opt,name=denomType,proto3,enum=furyahub.furyahub.bridge.DenomType" json:"denomType,omitempty"`
 }
 
 func (m *MsgSetResourceidToDenom) Reset()         { *m = MsgSetResourceidToDenom{} }
@@ -898,24 +898,24 @@ func (m *MsgRmBannedDenomResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgRmBannedDenomResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgSetResourceidToDenom)(nil), "furya.furya.bridge.MsgSetResourceidToDenom")
-	proto.RegisterType((*MsgSetResourceidToDenomResponse)(nil), "furya.furya.bridge.MsgSetResourceidToDenomResponse")
-	proto.RegisterType((*MsgDeposit)(nil), "furya.furya.bridge.MsgDeposit")
-	proto.RegisterType((*MsgDepositResponse)(nil), "furya.furya.bridge.MsgDepositResponse")
-	proto.RegisterType((*MsgAddChainId)(nil), "furya.furya.bridge.MsgAddChainId")
-	proto.RegisterType((*MsgAddChainIdResponse)(nil), "furya.furya.bridge.MsgAddChainIdResponse")
-	proto.RegisterType((*MsgVoteProposal)(nil), "furya.furya.bridge.MsgVoteProposal")
-	proto.RegisterType((*MsgVoteProposalResponse)(nil), "furya.furya.bridge.MsgVoteProposalResponse")
-	proto.RegisterType((*MsgRmChainId)(nil), "furya.furya.bridge.MsgRmChainId")
-	proto.RegisterType((*MsgRmChainIdResponse)(nil), "furya.furya.bridge.MsgRmChainIdResponse")
-	proto.RegisterType((*MsgSetRelayFeeReceiver)(nil), "furya.furya.bridge.MsgSetRelayFeeReceiver")
-	proto.RegisterType((*MsgSetRelayFeeReceiverResponse)(nil), "furya.furya.bridge.MsgSetRelayFeeReceiverResponse")
-	proto.RegisterType((*MsgSetRelayFee)(nil), "furya.furya.bridge.MsgSetRelayFee")
-	proto.RegisterType((*MsgSetRelayFeeResponse)(nil), "furya.furya.bridge.MsgSetRelayFeeResponse")
-	proto.RegisterType((*MsgAddBannedDenom)(nil), "furya.furya.bridge.MsgAddBannedDenom")
-	proto.RegisterType((*MsgAddBannedDenomResponse)(nil), "furya.furya.bridge.MsgAddBannedDenomResponse")
-	proto.RegisterType((*MsgRmBannedDenom)(nil), "furya.furya.bridge.MsgRmBannedDenom")
-	proto.RegisterType((*MsgRmBannedDenomResponse)(nil), "furya.furya.bridge.MsgRmBannedDenomResponse")
+	proto.RegisterType((*MsgSetResourceidToDenom)(nil), "furyahub.furyahub.bridge.MsgSetResourceidToDenom")
+	proto.RegisterType((*MsgSetResourceidToDenomResponse)(nil), "furyahub.furyahub.bridge.MsgSetResourceidToDenomResponse")
+	proto.RegisterType((*MsgDeposit)(nil), "furyahub.furyahub.bridge.MsgDeposit")
+	proto.RegisterType((*MsgDepositResponse)(nil), "furyahub.furyahub.bridge.MsgDepositResponse")
+	proto.RegisterType((*MsgAddChainId)(nil), "furyahub.furyahub.bridge.MsgAddChainId")
+	proto.RegisterType((*MsgAddChainIdResponse)(nil), "furyahub.furyahub.bridge.MsgAddChainIdResponse")
+	proto.RegisterType((*MsgVoteProposal)(nil), "furyahub.furyahub.bridge.MsgVoteProposal")
+	proto.RegisterType((*MsgVoteProposalResponse)(nil), "furyahub.furyahub.bridge.MsgVoteProposalResponse")
+	proto.RegisterType((*MsgRmChainId)(nil), "furyahub.furyahub.bridge.MsgRmChainId")
+	proto.RegisterType((*MsgRmChainIdResponse)(nil), "furyahub.furyahub.bridge.MsgRmChainIdResponse")
+	proto.RegisterType((*MsgSetRelayFeeReceiver)(nil), "furyahub.furyahub.bridge.MsgSetRelayFeeReceiver")
+	proto.RegisterType((*MsgSetRelayFeeReceiverResponse)(nil), "furyahub.furyahub.bridge.MsgSetRelayFeeReceiverResponse")
+	proto.RegisterType((*MsgSetRelayFee)(nil), "furyahub.furyahub.bridge.MsgSetRelayFee")
+	proto.RegisterType((*MsgSetRelayFeeResponse)(nil), "furyahub.furyahub.bridge.MsgSetRelayFeeResponse")
+	proto.RegisterType((*MsgAddBannedDenom)(nil), "furyahub.furyahub.bridge.MsgAddBannedDenom")
+	proto.RegisterType((*MsgAddBannedDenomResponse)(nil), "furyahub.furyahub.bridge.MsgAddBannedDenomResponse")
+	proto.RegisterType((*MsgRmBannedDenom)(nil), "furyahub.furyahub.bridge.MsgRmBannedDenom")
+	proto.RegisterType((*MsgRmBannedDenomResponse)(nil), "furyahub.furyahub.bridge.MsgRmBannedDenomResponse")
 }
 
 func init() { proto.RegisterFile("bridge/tx.proto", fileDescriptor_41dc2e30e6049cae) }
@@ -1007,7 +1007,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SetResourceidToDenom(ctx context.Context, in *MsgSetResourceidToDenom, opts ...grpc.CallOption) (*MsgSetResourceidToDenomResponse, error) {
 	out := new(MsgSetResourceidToDenomResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/SetResourceidToDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/SetResourceidToDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1016,7 +1016,7 @@ func (c *msgClient) SetResourceidToDenom(ctx context.Context, in *MsgSetResource
 
 func (c *msgClient) Deposit(ctx context.Context, in *MsgDeposit, opts ...grpc.CallOption) (*MsgDepositResponse, error) {
 	out := new(MsgDepositResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/Deposit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/Deposit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1025,7 +1025,7 @@ func (c *msgClient) Deposit(ctx context.Context, in *MsgDeposit, opts ...grpc.Ca
 
 func (c *msgClient) AddChainId(ctx context.Context, in *MsgAddChainId, opts ...grpc.CallOption) (*MsgAddChainIdResponse, error) {
 	out := new(MsgAddChainIdResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/AddChainId", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/AddChainId", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1034,7 +1034,7 @@ func (c *msgClient) AddChainId(ctx context.Context, in *MsgAddChainId, opts ...g
 
 func (c *msgClient) VoteProposal(ctx context.Context, in *MsgVoteProposal, opts ...grpc.CallOption) (*MsgVoteProposalResponse, error) {
 	out := new(MsgVoteProposalResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/VoteProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/VoteProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1043,7 +1043,7 @@ func (c *msgClient) VoteProposal(ctx context.Context, in *MsgVoteProposal, opts 
 
 func (c *msgClient) RmChainId(ctx context.Context, in *MsgRmChainId, opts ...grpc.CallOption) (*MsgRmChainIdResponse, error) {
 	out := new(MsgRmChainIdResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/RmChainId", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/RmChainId", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1052,7 +1052,7 @@ func (c *msgClient) RmChainId(ctx context.Context, in *MsgRmChainId, opts ...grp
 
 func (c *msgClient) SetRelayFeeReceiver(ctx context.Context, in *MsgSetRelayFeeReceiver, opts ...grpc.CallOption) (*MsgSetRelayFeeReceiverResponse, error) {
 	out := new(MsgSetRelayFeeReceiverResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/SetRelayFeeReceiver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/SetRelayFeeReceiver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1061,7 +1061,7 @@ func (c *msgClient) SetRelayFeeReceiver(ctx context.Context, in *MsgSetRelayFeeR
 
 func (c *msgClient) SetRelayFee(ctx context.Context, in *MsgSetRelayFee, opts ...grpc.CallOption) (*MsgSetRelayFeeResponse, error) {
 	out := new(MsgSetRelayFeeResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/SetRelayFee", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/SetRelayFee", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1070,7 +1070,7 @@ func (c *msgClient) SetRelayFee(ctx context.Context, in *MsgSetRelayFee, opts ..
 
 func (c *msgClient) AddBannedDenom(ctx context.Context, in *MsgAddBannedDenom, opts ...grpc.CallOption) (*MsgAddBannedDenomResponse, error) {
 	out := new(MsgAddBannedDenomResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/AddBannedDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/AddBannedDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1079,7 +1079,7 @@ func (c *msgClient) AddBannedDenom(ctx context.Context, in *MsgAddBannedDenom, o
 
 func (c *msgClient) RmBannedDenom(ctx context.Context, in *MsgRmBannedDenom, opts ...grpc.CallOption) (*MsgRmBannedDenomResponse, error) {
 	out := new(MsgRmBannedDenomResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.bridge.Msg/RmBannedDenom", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.bridge.Msg/RmBannedDenom", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1145,7 +1145,7 @@ func _Msg_SetResourceidToDenom_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/SetResourceidToDenom",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/SetResourceidToDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetResourceidToDenom(ctx, req.(*MsgSetResourceidToDenom))
@@ -1163,7 +1163,7 @@ func _Msg_Deposit_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/Deposit",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/Deposit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Deposit(ctx, req.(*MsgDeposit))
@@ -1181,7 +1181,7 @@ func _Msg_AddChainId_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/AddChainId",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/AddChainId",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddChainId(ctx, req.(*MsgAddChainId))
@@ -1199,7 +1199,7 @@ func _Msg_VoteProposal_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/VoteProposal",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/VoteProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).VoteProposal(ctx, req.(*MsgVoteProposal))
@@ -1217,7 +1217,7 @@ func _Msg_RmChainId_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/RmChainId",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/RmChainId",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmChainId(ctx, req.(*MsgRmChainId))
@@ -1235,7 +1235,7 @@ func _Msg_SetRelayFeeReceiver_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/SetRelayFeeReceiver",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/SetRelayFeeReceiver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRelayFeeReceiver(ctx, req.(*MsgSetRelayFeeReceiver))
@@ -1253,7 +1253,7 @@ func _Msg_SetRelayFee_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/SetRelayFee",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/SetRelayFee",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetRelayFee(ctx, req.(*MsgSetRelayFee))
@@ -1271,7 +1271,7 @@ func _Msg_AddBannedDenom_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/AddBannedDenom",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/AddBannedDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddBannedDenom(ctx, req.(*MsgAddBannedDenom))
@@ -1289,7 +1289,7 @@ func _Msg_RmBannedDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.bridge.Msg/RmBannedDenom",
+		FullMethod: "/furyahub.furyahub.bridge.Msg/RmBannedDenom",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmBannedDenom(ctx, req.(*MsgRmBannedDenom))
@@ -1298,7 +1298,7 @@ func _Msg_RmBannedDenom_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.bridge.Msg",
+	ServiceName: "furyahub.furyahub.bridge.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

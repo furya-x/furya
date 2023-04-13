@@ -77,7 +77,7 @@ func (m *GenesisState) GetThresholds() []Threshold {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furya.furya.relayers.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furyahub.furyahub.relayers.GenesisState")
 }
 
 func init() { proto.RegisterFile("relayers/genesis.proto", fileDescriptor_f11bd4799697b145) }

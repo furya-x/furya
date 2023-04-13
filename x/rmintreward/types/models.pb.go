@@ -410,13 +410,13 @@ func (m *Acts) GetActs() []uint64 {
 }
 
 func init() {
-	proto.RegisterType((*MintRewardAct)(nil), "furya.furya.rmintreward.MintRewardAct")
-	proto.RegisterType((*MintRewardActPost)(nil), "furya.furya.rmintreward.MintRewardActPost")
-	proto.RegisterType((*TokenRewardInfo)(nil), "furya.furya.rmintreward.TokenRewardInfo")
-	proto.RegisterType((*TokenRewardInfoPost)(nil), "furya.furya.rmintreward.TokenRewardInfoPost")
-	proto.RegisterType((*UserClaimInfo)(nil), "furya.furya.rmintreward.UserClaimInfo")
-	proto.RegisterType((*TokenClaimInfo)(nil), "furya.furya.rmintreward.TokenClaimInfo")
-	proto.RegisterType((*Acts)(nil), "furya.furya.rmintreward.Acts")
+	proto.RegisterType((*MintRewardAct)(nil), "furyahub.furyahub.rmintreward.MintRewardAct")
+	proto.RegisterType((*MintRewardActPost)(nil), "furyahub.furyahub.rmintreward.MintRewardActPost")
+	proto.RegisterType((*TokenRewardInfo)(nil), "furyahub.furyahub.rmintreward.TokenRewardInfo")
+	proto.RegisterType((*TokenRewardInfoPost)(nil), "furyahub.furyahub.rmintreward.TokenRewardInfoPost")
+	proto.RegisterType((*UserClaimInfo)(nil), "furyahub.furyahub.rmintreward.UserClaimInfo")
+	proto.RegisterType((*TokenClaimInfo)(nil), "furyahub.furyahub.rmintreward.TokenClaimInfo")
+	proto.RegisterType((*Acts)(nil), "furyahub.furyahub.rmintreward.Acts")
 }
 
 func init() { proto.RegisterFile("rmintreward/models.proto", fileDescriptor_db7673bad6a6e525) }

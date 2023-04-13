@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/relayers/types"
+	"github.com/furyahub/furyahub/x/relayers/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

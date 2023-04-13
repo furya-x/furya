@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/oldfurya/furya/testutil/sample"
-	"github.com/oldfurya/furya/utils"
+	"github.com/furyahub/furyahub/testutil/sample"
+	"github.com/furyahub/furyahub/utils"
 	"github.com/stretchr/testify/require"
 )
 

@@ -10,7 +10,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/oldfurya/furya/x/rdex/types"
+	"github.com/furyahub/furyahub/x/rdex/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

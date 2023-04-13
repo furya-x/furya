@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	gogotypes "github.com/gogo/protobuf/types"
-	"github.com/oldfurya/furya/x/rvote/types"
+	"github.com/furyahub/furyahub/x/rvote/types"
 )
 
 type (

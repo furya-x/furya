@@ -3,9 +3,9 @@ package rvote_test
 import (
 	"testing"
 
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/x/rvote"
-	"github.com/oldfurya/furya/x/rvote/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/x/rvote"
+	"github.com/furyahub/furyahub/x/rvote/types"
 	"github.com/stretchr/testify/require"
 )
 

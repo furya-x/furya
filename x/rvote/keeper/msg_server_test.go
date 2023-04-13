@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/x/rvote/keeper"
-	"github.com/oldfurya/furya/x/rvote/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/x/rvote/keeper"
+	"github.com/furyahub/furyahub/x/rvote/types"
 )
 
 func setupMsgServer(t testing.TB) (types.MsgServer, context.Context) {

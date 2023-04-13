@@ -1,10 +1,10 @@
 syntax = "proto3";
-package furya.furya.rdex;
+package furyahub.furyahub.rdex;
 
 import "gogoproto/gogo.proto";
 import "cosmos/base/v1beta1/coin.proto";
 
-option go_package = "github.com/oldfurya/furya/x/rdex/types";
+option go_package = "github.com/furyahub/furyahub/x/rdex/types";
 
 message SwapPool {
   uint32 index = 1;

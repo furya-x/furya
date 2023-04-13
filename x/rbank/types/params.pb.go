@@ -60,7 +60,7 @@ func (m *Params) XXX_DiscardUnknown() {
 var xxx_messageInfo_Params proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Params)(nil), "furya.furya.rbank.Params")
+	proto.RegisterType((*Params)(nil), "furyahub.furyahub.rbank.Params")
 }
 
 func init() { proto.RegisterFile("rbank/params.proto", fileDescriptor_af0803d4c167924c) }

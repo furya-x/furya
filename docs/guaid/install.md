@@ -1,6 +1,6 @@
 # Install
 
-This guide will explain how to install the `furyad` entrypoint
+This guide will explain how to install the `furyahubd` entrypoint
 onto your system. With these installed on a server, you can participate in the
 mainnet as either a [Full Node](./join-mainnet.md) or a
 [Validator](./validator-setup.md).
@@ -39,10 +39,10 @@ go version
 
 ## Install the binaries
 
-Next, let's install the latest version of furyad. Make sure you `git checkout` the
-correct [released version](https://github.com/oldfurya/furya/releases).
+Next, let's install the latest version of furyahubd. Make sure you `git checkout` the
+correct [released version](https://github.com/furyahub/furyahub/releases).
 
 ```bash
-git clone -b <latest-release-tag> https://github.com/oldfurya/furya
-cd furya && make install
+git clone -b <latest-release-tag> https://github.com/furyahub/furyahub
+cd furyahub && make install
 ```

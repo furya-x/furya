@@ -109,8 +109,8 @@ func (m *QueryAdminResponse) GetAddress() string {
 }
 
 func init() {
-	proto.RegisterType((*QueryAdminRequest)(nil), "furya.furya.sudo.QueryAdminRequest")
-	proto.RegisterType((*QueryAdminResponse)(nil), "furya.furya.sudo.QueryAdminResponse")
+	proto.RegisterType((*QueryAdminRequest)(nil), "furyahub.furyahub.sudo.QueryAdminRequest")
+	proto.RegisterType((*QueryAdminResponse)(nil), "furyahub.furyahub.sudo.QueryAdminResponse")
 }
 
 func init() { proto.RegisterFile("sudo/query.proto", fileDescriptor_8e89a5ddd8e4c069) }
@@ -160,7 +160,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Admin(ctx context.Context, in *QueryAdminRequest, opts ...grpc.CallOption) (*QueryAdminResponse, error) {
 	out := new(QueryAdminResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.sudo.Query/Admin", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.sudo.Query/Admin", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -195,7 +195,7 @@ func _Query_Admin_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.sudo.Query/Admin",
+		FullMethod: "/furyahub.furyahub.sudo.Query/Admin",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Admin(ctx, req.(*QueryAdminRequest))
@@ -204,7 +204,7 @@ func _Query_Admin_Handler(srv interface{}, ctx context.Context, dec func(interfa
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.sudo.Query",
+	ServiceName: "furyahub.furyahub.sudo.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

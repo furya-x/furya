@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/oldfurya/furya/x/rdex/types"
+	"github.com/furyahub/furyahub/x/rdex/types"
 )
 
 type msgServer struct {

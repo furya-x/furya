@@ -1,12 +1,12 @@
 syntax = "proto3";
-package furya.furya.rmintreward;
+package furyahub.furyahub.rmintreward;
 
 import "gogoproto/gogo.proto";
 import "rmintreward/params.proto";
 import "rmintreward/models.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/oldfurya/furya/x/rmintreward/types";
+option go_package = "github.com/furyahub/furyahub/x/rmintreward/types";
 
 // GenesisState defines the rmintreward module's genesis state.
 message GenesisState {

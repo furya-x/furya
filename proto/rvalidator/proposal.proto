@@ -1,10 +1,10 @@
 syntax = "proto3";
-package furya.furya.rvalidator;
+package furyahub.furyahub.rvalidator;
 
 // this line is used by starport scaffolding # proto/tx/import
 import "gogoproto/gogo.proto";
 import "rvalidator/genesis.proto";
-option go_package = "github.com/oldfurya/furya/x/rvalidator/types";
+option go_package = "github.com/furyahub/furyahub/x/rvalidator/types";
 
 message UpdateRValidatorProposal {
     string creator = 1;

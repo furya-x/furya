@@ -3,8 +3,8 @@ package bridge
 import (
 	"encoding/hex"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/bridge/keeper"
-	"github.com/oldfurya/furya/x/bridge/types"
+	"github.com/furyahub/furyahub/x/bridge/keeper"
+	"github.com/furyahub/furyahub/x/bridge/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

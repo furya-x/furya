@@ -17,8 +17,8 @@ import (
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmdb "github.com/tendermint/tm-db"
 
-	"github.com/oldfurya/furya/app"
-	"github.com/oldfurya/furya/cosmoscmd"
+	"github.com/furyahub/furyahub/app"
+	"github.com/furyahub/furyahub/cosmoscmd"
 )
 
 type (
@@ -67,7 +67,7 @@ func DefaultConfig() network.Config {
 		TimeoutCommit:   2 * time.Second,
 		ChainID:         "chain-" + tmrand.NewRand().Str(6),
 		NumValidators:   1,
-		BondDenom:       "ufury",
+		BondDenom:       "ufis",
 		MinGasPrices:    fmt.Sprintf("0.000006%s", sdk.DefaultBondDenom),
 		AccountTokens:   sdk.TokensFromConsensusPower(1000, sdk.DefaultPowerReduction),
 		StakingTokens:   sdk.TokensFromConsensusPower(500, sdk.DefaultPowerReduction),

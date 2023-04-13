@@ -3,9 +3,9 @@ package ledger_test
 import (
 	"testing"
 
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/x/ledger"
-	"github.com/oldfurya/furya/x/ledger/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/x/ledger"
+	"github.com/furyahub/furyahub/x/ledger/types"
 	"github.com/stretchr/testify/require"
 )
 

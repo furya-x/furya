@@ -105,7 +105,7 @@ func (m *GenesisState) GetDelegatorWhitelistSwitch() bool {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furya.furya.rstaking.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furyahub.furyahub.rstaking.GenesisState")
 }
 
 func init() { proto.RegisterFile("rstaking/genesis.proto", fileDescriptor_49a658ef752eaf32) }

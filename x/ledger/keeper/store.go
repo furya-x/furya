@@ -5,8 +5,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/utils"
-	"github.com/oldfurya/furya/x/ledger/types"
+	"github.com/furyahub/furyahub/utils"
+	"github.com/furyahub/furyahub/x/ledger/types"
 )
 
 func (k Keeper) IsBondedPoolExist(ctx sdk.Context, denom string, addr string) bool {

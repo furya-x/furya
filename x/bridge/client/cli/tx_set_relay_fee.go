@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/bridge/types"
+	"github.com/furyahub/furyahub/x/bridge/types"
 )
 
 var _ = strconv.Itoa(0)

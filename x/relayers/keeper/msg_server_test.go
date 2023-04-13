@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/testutil/sample"
-	"github.com/oldfurya/furya/x/relayers/keeper"
-	"github.com/oldfurya/furya/x/relayers/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/testutil/sample"
+	"github.com/furyahub/furyahub/x/relayers/keeper"
+	"github.com/furyahub/furyahub/x/relayers/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 	"github.com/stretchr/testify/require"
 )
 

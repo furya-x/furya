@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/testutil/sample"
-	"github.com/oldfurya/furya/x/rdex/keeper"
-	"github.com/oldfurya/furya/x/rdex/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/testutil/sample"
+	"github.com/furyahub/furyahub/x/rdex/keeper"
+	"github.com/furyahub/furyahub/x/rdex/types"
 	"github.com/stretchr/testify/require"
 )
 

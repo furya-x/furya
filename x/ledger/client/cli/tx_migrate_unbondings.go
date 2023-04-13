@@ -12,7 +12,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	"github.com/cosmos/cosmos-sdk/version"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/ledger/types"
+	"github.com/furyahub/furyahub/x/ledger/types"
 )
 
 var _ = strconv.Itoa(0)
@@ -30,7 +30,7 @@ $ %s tx ledger migrate-unbondings path/to/unbondings.json --from admin
 
 Where unbondings.json could be like this:
 {
-    "denom": "uxatom",
+    "denom": "uratom",
     "pool": "cosmos13jd2vn5wt8h6slj0gcv05lasgpkwpm26n04y75",
     "era": 2,
     "unbondings": [

@@ -4,8 +4,8 @@ import (
 	"os"
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
-	"github.com/oldfurya/furya/app"
-	"github.com/oldfurya/furya/cosmoscmd"
+	"github.com/furyahub/furyahub/app"
+	"github.com/furyahub/furyahub/cosmoscmd"
 )
 
 func main() {

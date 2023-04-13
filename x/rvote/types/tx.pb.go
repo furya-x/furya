@@ -157,7 +157,7 @@ var xxx_messageInfo_MsgSubmitProposal proto.InternalMessageInfo
 
 type MsgSubmitProposalResponse struct {
 	PropId string         `protobuf:"bytes,1,opt,name=propId,proto3" json:"propId,omitempty"`
-	Status ProposalStatus `protobuf:"varint,2,opt,name=status,proto3,enum=furya.furya.rvote.ProposalStatus" json:"status,omitempty"`
+	Status ProposalStatus `protobuf:"varint,2,opt,name=status,proto3,enum=furyahub.furyahub.rvote.ProposalStatus" json:"status,omitempty"`
 }
 
 func (m *MsgSubmitProposalResponse) Reset()         { *m = MsgSubmitProposalResponse{} }
@@ -208,10 +208,10 @@ func (m *MsgSubmitProposalResponse) GetStatus() ProposalStatus {
 }
 
 func init() {
-	proto.RegisterType((*MsgSetProposalLife)(nil), "furya.furya.rvote.MsgSetProposalLife")
-	proto.RegisterType((*MsgSetProposalLifeResponse)(nil), "furya.furya.rvote.MsgSetProposalLifeResponse")
-	proto.RegisterType((*MsgSubmitProposal)(nil), "furya.furya.rvote.MsgSubmitProposal")
-	proto.RegisterType((*MsgSubmitProposalResponse)(nil), "furya.furya.rvote.MsgSubmitProposalResponse")
+	proto.RegisterType((*MsgSetProposalLife)(nil), "furyahub.furyahub.rvote.MsgSetProposalLife")
+	proto.RegisterType((*MsgSetProposalLifeResponse)(nil), "furyahub.furyahub.rvote.MsgSetProposalLifeResponse")
+	proto.RegisterType((*MsgSubmitProposal)(nil), "furyahub.furyahub.rvote.MsgSubmitProposal")
+	proto.RegisterType((*MsgSubmitProposalResponse)(nil), "furyahub.furyahub.rvote.MsgSubmitProposalResponse")
 }
 
 func init() { proto.RegisterFile("rvote/tx.proto", fileDescriptor_a2fc698fa4472001) }
@@ -273,7 +273,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SetProposalLife(ctx context.Context, in *MsgSetProposalLife, opts ...grpc.CallOption) (*MsgSetProposalLifeResponse, error) {
 	out := new(MsgSetProposalLifeResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvote.Msg/SetProposalLife", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvote.Msg/SetProposalLife", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -282,7 +282,7 @@ func (c *msgClient) SetProposalLife(ctx context.Context, in *MsgSetProposalLife,
 
 func (c *msgClient) SubmitProposal(ctx context.Context, in *MsgSubmitProposal, opts ...grpc.CallOption) (*MsgSubmitProposalResponse, error) {
 	out := new(MsgSubmitProposalResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvote.Msg/SubmitProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvote.Msg/SubmitProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -320,7 +320,7 @@ func _Msg_SetProposalLife_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvote.Msg/SetProposalLife",
+		FullMethod: "/furyahub.furyahub.rvote.Msg/SetProposalLife",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetProposalLife(ctx, req.(*MsgSetProposalLife))
@@ -338,7 +338,7 @@ func _Msg_SubmitProposal_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvote.Msg/SubmitProposal",
+		FullMethod: "/furyahub.furyahub.rvote.Msg/SubmitProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SubmitProposal(ctx, req.(*MsgSubmitProposal))
@@ -347,7 +347,7 @@ func _Msg_SubmitProposal_Handler(srv interface{}, ctx context.Context, dec func(
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.rvote.Msg",
+	ServiceName: "furyahub.furyahub.rvote.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -3,9 +3,9 @@ package relayers_test
 import (
 	"testing"
 
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/x/relayers"
-	"github.com/oldfurya/furya/x/relayers/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/x/relayers"
+	"github.com/furyahub/furyahub/x/relayers/types"
 	"github.com/stretchr/testify/require"
 )
 

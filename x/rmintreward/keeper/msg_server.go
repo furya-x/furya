@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/oldfurya/furya/x/rmintreward/types"
+	"github.com/furyahub/furyahub/x/rmintreward/types"
 )
 
 type msgServer struct {

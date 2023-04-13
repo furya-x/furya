@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authTypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	xBridgeTypes "github.com/oldfurya/furya/x/bridge/types"
-	"github.com/oldfurya/furya/x/ledger/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	xBridgeTypes "github.com/furyahub/furyahub/x/bridge/types"
+	"github.com/furyahub/furyahub/x/ledger/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 // Notice:

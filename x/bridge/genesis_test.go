@@ -3,10 +3,10 @@ package bridge_test
 import (
 	"testing"
 
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/testutil/nullify"
-	"github.com/oldfurya/furya/x/bridge"
-	"github.com/oldfurya/furya/x/bridge/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/testutil/nullify"
+	"github.com/furyahub/furyahub/x/bridge"
+	"github.com/furyahub/furyahub/x/bridge/types"
 	"github.com/stretchr/testify/require"
 )
 

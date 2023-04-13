@@ -1,9 +1,9 @@
 syntax = "proto3";
-package furya.furya.rvalidator;
+package furyahub.furyahub.rvalidator;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/oldfurya/furya/x/rvalidator/types";
+option go_package = "github.com/furyahub/furyahub/x/rvalidator/types";
 
 // Params defines the parameters for the module.
 message Params {

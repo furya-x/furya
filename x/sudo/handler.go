@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/oldfurya/furya/x/sudo/keeper"
-	"github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/x/sudo/keeper"
+	"github.com/furyahub/furyahub/x/sudo/types"
 )
 
 // NewHandler ...

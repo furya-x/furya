@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/oldfurya/furya/x/claim/types"
+	"github.com/furyahub/furyahub/x/claim/types"
 )
 
 type msgServer struct {

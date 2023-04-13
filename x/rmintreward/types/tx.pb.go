@@ -416,14 +416,14 @@ func (m *MsgProvideRewardTokenResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgProvideRewardTokenResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgAddMintRewardAct)(nil), "furya.furya.rmintreward.MsgAddMintRewardAct")
-	proto.RegisterType((*MsgAddMintRewardActResponse)(nil), "furya.furya.rmintreward.MsgAddMintRewardActResponse")
-	proto.RegisterType((*MsgUpdateMintRewardAct)(nil), "furya.furya.rmintreward.MsgUpdateMintRewardAct")
-	proto.RegisterType((*MsgUpdateMintRewardActResponse)(nil), "furya.furya.rmintreward.MsgUpdateMintRewardActResponse")
-	proto.RegisterType((*MsgClaimMintReward)(nil), "furya.furya.rmintreward.MsgClaimMintReward")
-	proto.RegisterType((*MsgClaimMintRewardResponse)(nil), "furya.furya.rmintreward.MsgClaimMintRewardResponse")
-	proto.RegisterType((*MsgProvideRewardToken)(nil), "furya.furya.rmintreward.MsgProvideRewardToken")
-	proto.RegisterType((*MsgProvideRewardTokenResponse)(nil), "furya.furya.rmintreward.MsgProvideRewardTokenResponse")
+	proto.RegisterType((*MsgAddMintRewardAct)(nil), "furyahub.furyahub.rmintreward.MsgAddMintRewardAct")
+	proto.RegisterType((*MsgAddMintRewardActResponse)(nil), "furyahub.furyahub.rmintreward.MsgAddMintRewardActResponse")
+	proto.RegisterType((*MsgUpdateMintRewardAct)(nil), "furyahub.furyahub.rmintreward.MsgUpdateMintRewardAct")
+	proto.RegisterType((*MsgUpdateMintRewardActResponse)(nil), "furyahub.furyahub.rmintreward.MsgUpdateMintRewardActResponse")
+	proto.RegisterType((*MsgClaimMintReward)(nil), "furyahub.furyahub.rmintreward.MsgClaimMintReward")
+	proto.RegisterType((*MsgClaimMintRewardResponse)(nil), "furyahub.furyahub.rmintreward.MsgClaimMintRewardResponse")
+	proto.RegisterType((*MsgProvideRewardToken)(nil), "furyahub.furyahub.rmintreward.MsgProvideRewardToken")
+	proto.RegisterType((*MsgProvideRewardTokenResponse)(nil), "furyahub.furyahub.rmintreward.MsgProvideRewardTokenResponse")
 }
 
 func init() { proto.RegisterFile("rmintreward/tx.proto", fileDescriptor_8dd96f257662b770) }
@@ -494,7 +494,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) AddMintRewardAct(ctx context.Context, in *MsgAddMintRewardAct, opts ...grpc.CallOption) (*MsgAddMintRewardActResponse, error) {
 	out := new(MsgAddMintRewardActResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Msg/AddMintRewardAct", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rmintreward.Msg/AddMintRewardAct", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -503,7 +503,7 @@ func (c *msgClient) AddMintRewardAct(ctx context.Context, in *MsgAddMintRewardAc
 
 func (c *msgClient) UpdateMintRewardAct(ctx context.Context, in *MsgUpdateMintRewardAct, opts ...grpc.CallOption) (*MsgUpdateMintRewardActResponse, error) {
 	out := new(MsgUpdateMintRewardActResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Msg/UpdateMintRewardAct", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rmintreward.Msg/UpdateMintRewardAct", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -512,7 +512,7 @@ func (c *msgClient) UpdateMintRewardAct(ctx context.Context, in *MsgUpdateMintRe
 
 func (c *msgClient) ClaimMintReward(ctx context.Context, in *MsgClaimMintReward, opts ...grpc.CallOption) (*MsgClaimMintRewardResponse, error) {
 	out := new(MsgClaimMintRewardResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Msg/ClaimMintReward", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rmintreward.Msg/ClaimMintReward", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -521,7 +521,7 @@ func (c *msgClient) ClaimMintReward(ctx context.Context, in *MsgClaimMintReward,
 
 func (c *msgClient) ProvideRewardToken(ctx context.Context, in *MsgProvideRewardToken, opts ...grpc.CallOption) (*MsgProvideRewardTokenResponse, error) {
 	out := new(MsgProvideRewardTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rmintreward.Msg/ProvideRewardToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rmintreward.Msg/ProvideRewardToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -567,7 +567,7 @@ func _Msg_AddMintRewardAct_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rmintreward.Msg/AddMintRewardAct",
+		FullMethod: "/furyahub.furyahub.rmintreward.Msg/AddMintRewardAct",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddMintRewardAct(ctx, req.(*MsgAddMintRewardAct))
@@ -585,7 +585,7 @@ func _Msg_UpdateMintRewardAct_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rmintreward.Msg/UpdateMintRewardAct",
+		FullMethod: "/furyahub.furyahub.rmintreward.Msg/UpdateMintRewardAct",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UpdateMintRewardAct(ctx, req.(*MsgUpdateMintRewardAct))
@@ -603,7 +603,7 @@ func _Msg_ClaimMintReward_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rmintreward.Msg/ClaimMintReward",
+		FullMethod: "/furyahub.furyahub.rmintreward.Msg/ClaimMintReward",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ClaimMintReward(ctx, req.(*MsgClaimMintReward))
@@ -621,7 +621,7 @@ func _Msg_ProvideRewardToken_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rmintreward.Msg/ProvideRewardToken",
+		FullMethod: "/furyahub.furyahub.rmintreward.Msg/ProvideRewardToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ProvideRewardToken(ctx, req.(*MsgProvideRewardToken))
@@ -630,7 +630,7 @@ func _Msg_ProvideRewardToken_Handler(srv interface{}, ctx context.Context, dec f
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.rmintreward.Msg",
+	ServiceName: "furyahub.furyahub.rmintreward.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -485,13 +485,13 @@ func (m *UserMintCount) GetCount() uint64 {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furya.furya.rmintreward.GenesisState")
-	proto.RegisterType((*ActLatestCycle)(nil), "furya.furya.rmintreward.ActLatestCycle")
-	proto.RegisterType((*ActCurrentCycle)(nil), "furya.furya.rmintreward.ActCurrentCycle")
-	proto.RegisterType((*GenesisMintRewardAct)(nil), "furya.furya.rmintreward.GenesisMintRewardAct")
-	proto.RegisterType((*GenesisUserClaimInfo)(nil), "furya.furya.rmintreward.GenesisUserClaimInfo")
-	proto.RegisterType((*GenesisUserAct)(nil), "furya.furya.rmintreward.GenesisUserAct")
-	proto.RegisterType((*UserMintCount)(nil), "furya.furya.rmintreward.UserMintCount")
+	proto.RegisterType((*GenesisState)(nil), "furyahub.furyahub.rmintreward.GenesisState")
+	proto.RegisterType((*ActLatestCycle)(nil), "furyahub.furyahub.rmintreward.ActLatestCycle")
+	proto.RegisterType((*ActCurrentCycle)(nil), "furyahub.furyahub.rmintreward.ActCurrentCycle")
+	proto.RegisterType((*GenesisMintRewardAct)(nil), "furyahub.furyahub.rmintreward.GenesisMintRewardAct")
+	proto.RegisterType((*GenesisUserClaimInfo)(nil), "furyahub.furyahub.rmintreward.GenesisUserClaimInfo")
+	proto.RegisterType((*GenesisUserAct)(nil), "furyahub.furyahub.rmintreward.GenesisUserAct")
+	proto.RegisterType((*UserMintCount)(nil), "furyahub.furyahub.rmintreward.UserMintCount")
 }
 
 func init() { proto.RegisterFile("rmintreward/genesis.proto", fileDescriptor_3353bf5dc303df57) }

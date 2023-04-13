@@ -2,7 +2,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rmintreward/types"
+	"github.com/furyahub/furyahub/x/rmintreward/types"
 )
 
 func (k Keeper) UpdateActCurrentCycle(ctx sdk.Context, denom string) {

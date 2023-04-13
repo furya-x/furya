@@ -1,5 +1,5 @@
 package utils
 
 const (
-	FuryDenom = "ufury"
+	FuryDenom = "ufis"
 )

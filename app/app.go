@@ -97,59 +97,59 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/oldfurya/furya/cosmoscmd"
+	"github.com/furyahub/furyahub/cosmoscmd"
 	"github.com/tendermint/spm/openapiconsole"
 
-	"github.com/oldfurya/furya/docs"
+	"github.com/furyahub/furyahub/docs"
 
-	bridgemodule "github.com/oldfurya/furya/x/bridge"
-	bridgemodulekeeper "github.com/oldfurya/furya/x/bridge/keeper"
-	bridgemoduletypes "github.com/oldfurya/furya/x/bridge/types"
-	"github.com/oldfurya/furya/x/claim"
-	claimmodulekeeper "github.com/oldfurya/furya/x/claim/keeper"
-	claimmoduletypes "github.com/oldfurya/furya/x/claim/types"
-	"github.com/oldfurya/furya/x/ledger"
-	ledgerkeeper "github.com/oldfurya/furya/x/ledger/keeper"
-	ledgertypes "github.com/oldfurya/furya/x/ledger/types"
-	miningmodule "github.com/oldfurya/furya/x/mining"
-	miningmodulekeeper "github.com/oldfurya/furya/x/mining/keeper"
-	miningmoduletypes "github.com/oldfurya/furya/x/mining/types"
-	rbankmodule "github.com/oldfurya/furya/x/rbank"
-	rbankmodulekeeper "github.com/oldfurya/furya/x/rbank/keeper"
-	rbankmoduletypes "github.com/oldfurya/furya/x/rbank/types"
-	rdexmodule "github.com/oldfurya/furya/x/rdex"
-	rdexmodulekeeper "github.com/oldfurya/furya/x/rdex/keeper"
-	rdexmoduletypes "github.com/oldfurya/furya/x/rdex/types"
-	"github.com/oldfurya/furya/x/relayers"
-	relayerskeeper "github.com/oldfurya/furya/x/relayers/keeper"
-	relayerstypes "github.com/oldfurya/furya/x/relayers/types"
-	rmintrewardmodule "github.com/oldfurya/furya/x/rmintreward"
-	rmintrewardmodulekeeper "github.com/oldfurya/furya/x/rmintreward/keeper"
-	rmintrewardmoduletypes "github.com/oldfurya/furya/x/rmintreward/types"
-	rstakingmodule "github.com/oldfurya/furya/x/rstaking"
-	rstakingmodulekeeper "github.com/oldfurya/furya/x/rstaking/keeper"
-	rstakingmoduletypes "github.com/oldfurya/furya/x/rstaking/types"
-	"github.com/oldfurya/furya/x/rvalidator"
-	rvalidatormodulekeeper "github.com/oldfurya/furya/x/rvalidator/keeper"
-	rvalidatormoduletypes "github.com/oldfurya/furya/x/rvalidator/types"
-	"github.com/oldfurya/furya/x/rvote"
-	rvotekeeper "github.com/oldfurya/furya/x/rvote/keeper"
-	rvotetypes "github.com/oldfurya/furya/x/rvote/types"
-	"github.com/oldfurya/furya/x/sudo"
-	sudokeeper "github.com/oldfurya/furya/x/sudo/keeper"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	bridgemodule "github.com/furyahub/furyahub/x/bridge"
+	bridgemodulekeeper "github.com/furyahub/furyahub/x/bridge/keeper"
+	bridgemoduletypes "github.com/furyahub/furyahub/x/bridge/types"
+	"github.com/furyahub/furyahub/x/claim"
+	claimmodulekeeper "github.com/furyahub/furyahub/x/claim/keeper"
+	claimmoduletypes "github.com/furyahub/furyahub/x/claim/types"
+	"github.com/furyahub/furyahub/x/ledger"
+	ledgerkeeper "github.com/furyahub/furyahub/x/ledger/keeper"
+	ledgertypes "github.com/furyahub/furyahub/x/ledger/types"
+	miningmodule "github.com/furyahub/furyahub/x/mining"
+	miningmodulekeeper "github.com/furyahub/furyahub/x/mining/keeper"
+	miningmoduletypes "github.com/furyahub/furyahub/x/mining/types"
+	rbankmodule "github.com/furyahub/furyahub/x/rbank"
+	rbankmodulekeeper "github.com/furyahub/furyahub/x/rbank/keeper"
+	rbankmoduletypes "github.com/furyahub/furyahub/x/rbank/types"
+	rdexmodule "github.com/furyahub/furyahub/x/rdex"
+	rdexmodulekeeper "github.com/furyahub/furyahub/x/rdex/keeper"
+	rdexmoduletypes "github.com/furyahub/furyahub/x/rdex/types"
+	"github.com/furyahub/furyahub/x/relayers"
+	relayerskeeper "github.com/furyahub/furyahub/x/relayers/keeper"
+	relayerstypes "github.com/furyahub/furyahub/x/relayers/types"
+	rmintrewardmodule "github.com/furyahub/furyahub/x/rmintreward"
+	rmintrewardmodulekeeper "github.com/furyahub/furyahub/x/rmintreward/keeper"
+	rmintrewardmoduletypes "github.com/furyahub/furyahub/x/rmintreward/types"
+	rstakingmodule "github.com/furyahub/furyahub/x/rstaking"
+	rstakingmodulekeeper "github.com/furyahub/furyahub/x/rstaking/keeper"
+	rstakingmoduletypes "github.com/furyahub/furyahub/x/rstaking/types"
+	"github.com/furyahub/furyahub/x/rvalidator"
+	rvalidatormodulekeeper "github.com/furyahub/furyahub/x/rvalidator/keeper"
+	rvalidatormoduletypes "github.com/furyahub/furyahub/x/rvalidator/types"
+	"github.com/furyahub/furyahub/x/rvote"
+	rvotekeeper "github.com/furyahub/furyahub/x/rvote/keeper"
+	rvotetypes "github.com/furyahub/furyahub/x/rvote/types"
+	"github.com/furyahub/furyahub/x/sudo"
+	sudokeeper "github.com/furyahub/furyahub/x/sudo/keeper"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 
 	// this line is used by starport scaffolding # stargate/app/moduleImport
-	custombank "github.com/oldfurya/furya/custom/bank"
-	customcrisis "github.com/oldfurya/furya/custom/crisis"
-	customgov "github.com/oldfurya/furya/custom/gov"
-	custommint "github.com/oldfurya/furya/custom/mint"
-	customstaking "github.com/oldfurya/furya/custom/staking"
+	custombank "github.com/furyahub/furyahub/custom/bank"
+	customcrisis "github.com/furyahub/furyahub/custom/crisis"
+	customgov "github.com/furyahub/furyahub/custom/gov"
+	custommint "github.com/furyahub/furyahub/custom/mint"
+	customstaking "github.com/furyahub/furyahub/custom/staking"
 )
 
 const (
 	AccountAddressPrefix = "did:fury:"
-	Name                 = "furya"
+	Name                 = "furyahub"
 )
 
 // this line is used by starport scaffolding # stargate/wasm/app/enabledProposals
@@ -317,7 +317,8 @@ type App struct {
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
 
 	// the module manager
-	mm *module.Manager
+	mm           *module.Manager
+	configurator module.Configurator
 }
 
 // New returns a reference to an initialized Gaia.
@@ -863,7 +864,10 @@ func New(
 
 	app.mm.RegisterInvariants(&app.CrisisKeeper)
 	app.mm.RegisterRoutes(app.Router(), app.QueryRouter(), encodingConfig.Amino)
-	app.mm.RegisterServices(module.NewConfigurator(app.appCodec, app.MsgServiceRouter(), app.GRPCQueryRouter()))
+	// configurator
+	app.configurator = module.NewConfigurator(app.appCodec, app.MsgServiceRouter(), app.GRPCQueryRouter())
+	app.mm.RegisterServices(app.configurator)
+	app.setupUpgradeHandlers()
 
 	// initialize stores
 	app.MountKVStores(keys)

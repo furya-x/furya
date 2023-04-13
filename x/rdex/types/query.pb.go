@@ -522,18 +522,18 @@ func (m *QueryProviderSwitchResponse) GetProviderSwitch() bool {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.rdex.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.rdex.QueryParamsResponse")
-	proto.RegisterType((*QuerySwapPoolInfoRequest)(nil), "furya.furya.rdex.QuerySwapPoolInfoRequest")
-	proto.RegisterType((*QuerySwapPoolInfoResponse)(nil), "furya.furya.rdex.QuerySwapPoolInfoResponse")
-	proto.RegisterType((*QuerySwapPoolListRequest)(nil), "furya.furya.rdex.QuerySwapPoolListRequest")
-	proto.RegisterType((*QuerySwapPoolListResponse)(nil), "furya.furya.rdex.QuerySwapPoolListResponse")
-	proto.RegisterType((*QueryProviderListRequest)(nil), "furya.furya.rdex.QueryProviderListRequest")
-	proto.RegisterType((*QueryProviderListResponse)(nil), "furya.furya.rdex.QueryProviderListResponse")
-	proto.RegisterType((*QueryPoolCreatorListRequest)(nil), "furya.furya.rdex.QueryPoolCreatorListRequest")
-	proto.RegisterType((*QueryPoolCreatorListResponse)(nil), "furya.furya.rdex.QueryPoolCreatorListResponse")
-	proto.RegisterType((*QueryProviderSwitchRequest)(nil), "furya.furya.rdex.QueryProviderSwitchRequest")
-	proto.RegisterType((*QueryProviderSwitchResponse)(nil), "furya.furya.rdex.QueryProviderSwitchResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furyahub.furyahub.rdex.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furyahub.furyahub.rdex.QueryParamsResponse")
+	proto.RegisterType((*QuerySwapPoolInfoRequest)(nil), "furyahub.furyahub.rdex.QuerySwapPoolInfoRequest")
+	proto.RegisterType((*QuerySwapPoolInfoResponse)(nil), "furyahub.furyahub.rdex.QuerySwapPoolInfoResponse")
+	proto.RegisterType((*QuerySwapPoolListRequest)(nil), "furyahub.furyahub.rdex.QuerySwapPoolListRequest")
+	proto.RegisterType((*QuerySwapPoolListResponse)(nil), "furyahub.furyahub.rdex.QuerySwapPoolListResponse")
+	proto.RegisterType((*QueryProviderListRequest)(nil), "furyahub.furyahub.rdex.QueryProviderListRequest")
+	proto.RegisterType((*QueryProviderListResponse)(nil), "furyahub.furyahub.rdex.QueryProviderListResponse")
+	proto.RegisterType((*QueryPoolCreatorListRequest)(nil), "furyahub.furyahub.rdex.QueryPoolCreatorListRequest")
+	proto.RegisterType((*QueryPoolCreatorListResponse)(nil), "furyahub.furyahub.rdex.QueryPoolCreatorListResponse")
+	proto.RegisterType((*QueryProviderSwitchRequest)(nil), "furyahub.furyahub.rdex.QueryProviderSwitchRequest")
+	proto.RegisterType((*QueryProviderSwitchResponse)(nil), "furyahub.furyahub.rdex.QueryProviderSwitchResponse")
 }
 
 func init() { proto.RegisterFile("rdex/query.proto", fileDescriptor_aba77cce02ad22b2) }
@@ -619,7 +619,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rdex.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -628,7 +628,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) SwapPoolInfo(ctx context.Context, in *QuerySwapPoolInfoRequest, opts ...grpc.CallOption) (*QuerySwapPoolInfoResponse, error) {
 	out := new(QuerySwapPoolInfoResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Query/SwapPoolInfo", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rdex.Query/SwapPoolInfo", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -637,7 +637,7 @@ func (c *queryClient) SwapPoolInfo(ctx context.Context, in *QuerySwapPoolInfoReq
 
 func (c *queryClient) SwapPoolList(ctx context.Context, in *QuerySwapPoolListRequest, opts ...grpc.CallOption) (*QuerySwapPoolListResponse, error) {
 	out := new(QuerySwapPoolListResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Query/SwapPoolList", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rdex.Query/SwapPoolList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -646,7 +646,7 @@ func (c *queryClient) SwapPoolList(ctx context.Context, in *QuerySwapPoolListReq
 
 func (c *queryClient) ProviderList(ctx context.Context, in *QueryProviderListRequest, opts ...grpc.CallOption) (*QueryProviderListResponse, error) {
 	out := new(QueryProviderListResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Query/ProviderList", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rdex.Query/ProviderList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -655,7 +655,7 @@ func (c *queryClient) ProviderList(ctx context.Context, in *QueryProviderListReq
 
 func (c *queryClient) PoolCreatorList(ctx context.Context, in *QueryPoolCreatorListRequest, opts ...grpc.CallOption) (*QueryPoolCreatorListResponse, error) {
 	out := new(QueryPoolCreatorListResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Query/PoolCreatorList", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rdex.Query/PoolCreatorList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -664,7 +664,7 @@ func (c *queryClient) PoolCreatorList(ctx context.Context, in *QueryPoolCreatorL
 
 func (c *queryClient) ProviderSwitch(ctx context.Context, in *QueryProviderSwitchRequest, opts ...grpc.CallOption) (*QueryProviderSwitchResponse, error) {
 	out := new(QueryProviderSwitchResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rdex.Query/ProviderSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rdex.Query/ProviderSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -724,7 +724,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rdex.Query/Params",
+		FullMethod: "/furyahub.furyahub.rdex.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -742,7 +742,7 @@ func _Query_SwapPoolInfo_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rdex.Query/SwapPoolInfo",
+		FullMethod: "/furyahub.furyahub.rdex.Query/SwapPoolInfo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).SwapPoolInfo(ctx, req.(*QuerySwapPoolInfoRequest))
@@ -760,7 +760,7 @@ func _Query_SwapPoolList_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rdex.Query/SwapPoolList",
+		FullMethod: "/furyahub.furyahub.rdex.Query/SwapPoolList",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).SwapPoolList(ctx, req.(*QuerySwapPoolListRequest))
@@ -778,7 +778,7 @@ func _Query_ProviderList_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rdex.Query/ProviderList",
+		FullMethod: "/furyahub.furyahub.rdex.Query/ProviderList",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ProviderList(ctx, req.(*QueryProviderListRequest))
@@ -796,7 +796,7 @@ func _Query_PoolCreatorList_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rdex.Query/PoolCreatorList",
+		FullMethod: "/furyahub.furyahub.rdex.Query/PoolCreatorList",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).PoolCreatorList(ctx, req.(*QueryPoolCreatorListRequest))
@@ -814,7 +814,7 @@ func _Query_ProviderSwitch_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rdex.Query/ProviderSwitch",
+		FullMethod: "/furyahub.furyahub.rdex.Query/ProviderSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ProviderSwitch(ctx, req.(*QueryProviderSwitchRequest))
@@ -823,7 +823,7 @@ func _Query_ProviderSwitch_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.rdex.Query",
+	ServiceName: "furyahub.furyahub.rdex.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rdex/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/x/rdex/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 func (k msgServer) AddPoolCreator(goCtx context.Context, msg *types.MsgAddPoolCreator) (*types.MsgAddPoolCreatorResponse, error) {

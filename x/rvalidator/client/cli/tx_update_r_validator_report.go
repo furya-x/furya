@@ -9,8 +9,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/rvalidator/types"
-	rvotetypes "github.com/oldfurya/furya/x/rvote/types"
+	"github.com/furyahub/furyahub/x/rvalidator/types"
+	rvotetypes "github.com/furyahub/furyahub/x/rvote/types"
 )
 
 var _ = strconv.Itoa(0)

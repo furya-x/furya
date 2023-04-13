@@ -3,7 +3,7 @@ package cli
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"os"
 	"strconv"
 
 	"github.com/cosmos/cosmos-sdk/client"
@@ -13,8 +13,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/ledger/types"
-	rvotetypes "github.com/oldfurya/furya/x/rvote/types"
+	"github.com/furyahub/furyahub/x/ledger/types"
+	rvotetypes "github.com/furyahub/furyahub/x/rvote/types"
 )
 
 var _ = strconv.Itoa(0)
@@ -236,7 +236,7 @@ func CmdInterchainTxProposal() *cobra.Command {
 				return err
 			}
 			// check for file path if JSON input is not provided
-			contents, err := ioutil.ReadFile(args[4])
+			contents, err := os.ReadFile(args[4])
 			if err != nil {
 				return errors.Wrap(err, "neither JSON input nor path to .json file for sdk msg were provided")
 			}

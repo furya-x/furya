@@ -1,12 +1,12 @@
 syntax = "proto3";
-package furya.furya.rdex;
+package furyahub.furyahub.rdex;
 
 import "gogoproto/gogo.proto";
 import "rdex/params.proto";
 import "rdex/models.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/oldfurya/furya/x/rdex/types";
+option go_package = "github.com/furyahub/furyahub/x/rdex/types";
 
 // GenesisState defines the rdex module's genesis state.
 message GenesisState {

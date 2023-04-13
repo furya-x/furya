@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authTypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/oldfurya/furya/x/rstaking/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/x/rstaking/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 func (k msgServer) Withdraw(goCtx context.Context, msg *types.MsgWithdraw) (*types.MsgWithdrawResponse, error) {

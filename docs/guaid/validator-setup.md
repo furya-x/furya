@@ -1,4 +1,4 @@
-# Run a Validator on the Furya Mainnet
+# Run a Validator on the Furyahub Mainnet
 
 Before setting up your validator node, make sure you've already gone through the [Full Node Setup](./join-mainnet.md) guide.
 
@@ -17,19 +17,19 @@ You may want to skip the next section if you have already [set up a full-node](.
 Your `furyavalconspub` can be used to create a new validator by staking tokens. You can find your validator pubkey by running:
 
 ```bash
-furyad tendermint show-validator
+furyahubd tendermint show-validator
 ```
 
 To create your validator, just use the following command:
 
 ::: warning
-Don't use more `ufury` than you have!
+Don't use more `ufis` than you have!
 :::
 
 ```bash
-furyad tx staking create-validator \
-  --amount=1000000ufury \
-  --pubkey=$(furyad tendermint show-validator) \
+furyahubd tx staking create-validator \
+  --amount=1000000ufis \
+  --pubkey=$(furyahubd tendermint show-validator) \
   --moniker="choose a moniker" \
   --chain-id=<chain_id> \
   --commission-rate="0.10" \
@@ -37,7 +37,7 @@ furyad tx staking create-validator \
   --commission-max-change-rate="0.01" \
   --min-self-delegation="1000000" \
   --gas="auto" \
-  --gas-prices="0.025ufury" \
+  --gas-prices="0.025ufis" \
   --from=<key_name>
 ```
 
@@ -54,7 +54,7 @@ You can confirm that you are in the validator set by using a third party explore
 ## Participate in Genesis as a Validator
 
 ::: warning
-The genesis ceremony for the Furya mainnet is closed. Please skip to the next section.
+The genesis ceremony for the Furyahub mainnet is closed. Please skip to the next section.
 :::
 
 If you want to participate in genesis as a validator, you need to justify that
@@ -63,22 +63,22 @@ you have some stake at genesis, create one (or multiple) transactions to bond th
 Your `furyavalconspub` can be used to create a new validator by staking tokens. You can find your validator pubkey by running:
 
 ```bash
-furyad tendermint show-validator
+furyahubd tendermint show-validator
 ```
 
-Next, craft your `furyad gentx` command.
+Next, craft your `furyahubd gentx` command.
 
 ::: tip
 A `gentx` is a JSON file carrying a self-delegation. All genesis transactions are collected by a `genesis coordinator` and validated against an initial `genesis.json`.
 :::
 
 ::: warning Note
-Don't use more `ufury` than you have!
+Don't use more `ufis` than you have!
 :::
 
 ```bash
-furyad gentx \
-  --amount <amount_of_delegation_ufury> \
+furyahubd gentx \
+  --amount <amount_of_delegation_ufis> \
   --commission-rate <commission_rate> \
   --commission-max-rate <commission_max_rate> \
   --commission-max-change-rate <commission_max_change_rate> \
@@ -90,7 +90,7 @@ furyad gentx \
 When specifying commission parameters, the `commission-max-change-rate` is used to measure % _point_ change over the `commission-rate`. E.g. 1% to 2% is a 100% rate increase, but only 1 percentage point.
 :::
 
-You can then submit your `gentx` on the [repository](https://github.com/furya/network). These `gentx` will be used to form the final genesis file.
+You can then submit your `gentx` on the [repository](https://github.com/furyahub/network). These `gentx` will be used to form the final genesis file.
 
 ## Edit Validator Description
 
@@ -101,13 +101,13 @@ The <key_name> specifies which validator you are editing. If you choose to not i
 The `--identity` can be used as to verify identity with systems like Keybase or UPort. When using with Keybase `--identity` should be populated with a 16-digit string that is generated with a [keybase.io](https://keybase.io) account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
 
 ```bash
-furyad tx staking edit-validator
+furyahubd tx staking edit-validator
   --new-moniker="choose a moniker" \
-  --website="https://furya.io" \
+  --website="https://furyahub.io" \
   --details="To infinity and beyond!" \
   --chain-id=<chain_id> \
   --gas="auto" \
-  --gas-prices="0.025ufury" \
+  --gas-prices="0.025ufis" \
   --from=<key_name> \
   --commission-rate="0.10"
 ```
@@ -124,7 +124,7 @@ __Note__: The `commission-rate` value must adhere to the following invariants:
 View the validator's information with this command:
 
 ```bash
-furyad query staking validator <account_furya>
+furyahubd query staking validator <account_furyahub>
 ```
 
 ## Track Validator Signing Information
@@ -132,7 +132,7 @@ furyad query staking validator <account_furya>
 In order to keep track of a validator's signatures in the past you can do so by using the `signing-info` command:
 
 ```bash
-furyad query slashing signing-info <validator-pubkey>\
+furyahubd query slashing signing-info <validator-pubkey>\
   --chain-id=<chain_id>
 ```
 
@@ -141,7 +141,7 @@ furyad query slashing signing-info <validator-pubkey>\
 When a validator is "jailed" for downtime, you must submit an `Unjail` transaction from the operator account in order to be able to get block proposer rewards again (depends on the zone fee distribution).
 
 ```bash
-furyad tx slashing unjail \
+furyahubd tx slashing unjail \
  --from=<key_name> \
  --chain-id=<chain_id>
 ```
@@ -151,10 +151,10 @@ furyad tx slashing unjail \
 Your validator is active if the following command returns anything:
 
 ```bash
-furyad query tendermint-validator-set | grep "$(furyad tendermint show-address)"
+furyahubd query tendermint-validator-set | grep "$(furyahubd tendermint show-address)"
 ```
 
-You should now see your validator in one of the Furya explorers. You are looking for the `bech32` encoded `address` in the `~/.furya/config/priv_validator.json` file.
+You should now see your validator in one of the Furyahub explorers. You are looking for the `bech32` encoded `address` in the `~/.furyahub/config/priv_validator.json` file.
 
 ::: warning Note
 To be in the validator set, you need to have more total voting power than the 100th validator.
@@ -165,7 +165,7 @@ To be in the validator set, you need to have more total voting power than the 10
 When attempting to perform routine maintenance or planning for an upcoming coordinated
 upgrade, it can be useful to have your validator systematically and gracefully halt.
 You can achieve this by either setting the `halt-height` to the height at which
-you want your node to shutdown or by passing the `--halt-height` flag to `furyad`.
+you want your node to shutdown or by passing the `--halt-height` flag to `furyahubd`.
 The node will shutdown with a zero exit code at that given height after committing
 the block.
 
@@ -175,10 +175,10 @@ the block.
 
 Your validator has become jailed. Validators get jailed, i.e. get removed from the active validator set, if they do not vote on `500` of the last `10000` blocks, or if they double sign.
 
-If you got jailed for downtime, you can get your voting power back to your validator. First, if `furyad` is not running, start it up again:
+If you got jailed for downtime, you can get your voting power back to your validator. First, if `furyahubd` is not running, start it up again:
 
 ```bash
-furyad start
+furyahubd start
 ```
 
 Wait for your full node to catch up to the latest block. Then, you can [unjail your validator](#unjail-validator)
@@ -186,26 +186,26 @@ Wait for your full node to catch up to the latest block. Then, you can [unjail y
 Lastly, check your validator again to see if your voting power is back.
 
 ```bash
-furyad status
+furyahubd status
 ```
 
 You may notice that your voting power is less than it used to be. That's because you got slashed for downtime!
 
-### Problem #2: My `furyad` crashes because of `too many open files`
+### Problem #2: My `furyahubd` crashes because of `too many open files`
 
-The default number of files Linux can open (per-process) is `1024`. `furyad` is known to open more than `1024` files. This causes the process to crash. A quick fix is to run `ulimit -n 4096` (increase the number of open files allowed) and then restart the process with `furyad start`. If you are using `systemd` or another process manager to launch `furyad` this may require some configuration at that level. A sample `systemd` file to fix this issue is below:
+The default number of files Linux can open (per-process) is `1024`. `furyahubd` is known to open more than `1024` files. This causes the process to crash. A quick fix is to run `ulimit -n 4096` (increase the number of open files allowed) and then restart the process with `furyahubd start`. If you are using `systemd` or another process manager to launch `furyahubd` this may require some configuration at that level. A sample `systemd` file to fix this issue is below:
 
 ```toml
-# /etc/systemd/system/furyad.service
+# /etc/systemd/system/furyahubd.service
 [Unit]
-Description=Furya Node
+Description=Furyahub Node
 After=network.target
 
 [Service]
 Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu
-ExecStart=/home/ubuntu/go/bin/furyad start
+ExecStart=/home/ubuntu/go/bin/furyahubd start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096

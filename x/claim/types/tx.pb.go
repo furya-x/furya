@@ -498,16 +498,16 @@ func (m *MsgWithdrawTokenResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgWithdrawTokenResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgSetMerkleRoot)(nil), "furya.furya.claim.MsgSetMerkleRoot")
-	proto.RegisterType((*MsgSetMerkleRootResponse)(nil), "furya.furya.claim.MsgSetMerkleRootResponse")
-	proto.RegisterType((*MsgClaim)(nil), "furya.furya.claim.MsgClaim")
-	proto.RegisterType((*MsgClaimResponse)(nil), "furya.furya.claim.MsgClaimResponse")
-	proto.RegisterType((*MsgToggleClaimSwitch)(nil), "furya.furya.claim.MsgToggleClaimSwitch")
-	proto.RegisterType((*MsgToggleClaimSwitchResponse)(nil), "furya.furya.claim.MsgToggleClaimSwitchResponse")
-	proto.RegisterType((*MsgProvideToken)(nil), "furya.furya.claim.MsgProvideToken")
-	proto.RegisterType((*MsgProvideTokenResponse)(nil), "furya.furya.claim.MsgProvideTokenResponse")
-	proto.RegisterType((*MsgWithdrawToken)(nil), "furya.furya.claim.MsgWithdrawToken")
-	proto.RegisterType((*MsgWithdrawTokenResponse)(nil), "furya.furya.claim.MsgWithdrawTokenResponse")
+	proto.RegisterType((*MsgSetMerkleRoot)(nil), "furyahub.furyahub.claim.MsgSetMerkleRoot")
+	proto.RegisterType((*MsgSetMerkleRootResponse)(nil), "furyahub.furyahub.claim.MsgSetMerkleRootResponse")
+	proto.RegisterType((*MsgClaim)(nil), "furyahub.furyahub.claim.MsgClaim")
+	proto.RegisterType((*MsgClaimResponse)(nil), "furyahub.furyahub.claim.MsgClaimResponse")
+	proto.RegisterType((*MsgToggleClaimSwitch)(nil), "furyahub.furyahub.claim.MsgToggleClaimSwitch")
+	proto.RegisterType((*MsgToggleClaimSwitchResponse)(nil), "furyahub.furyahub.claim.MsgToggleClaimSwitchResponse")
+	proto.RegisterType((*MsgProvideToken)(nil), "furyahub.furyahub.claim.MsgProvideToken")
+	proto.RegisterType((*MsgProvideTokenResponse)(nil), "furyahub.furyahub.claim.MsgProvideTokenResponse")
+	proto.RegisterType((*MsgWithdrawToken)(nil), "furyahub.furyahub.claim.MsgWithdrawToken")
+	proto.RegisterType((*MsgWithdrawTokenResponse)(nil), "furyahub.furyahub.claim.MsgWithdrawTokenResponse")
 }
 
 func init() { proto.RegisterFile("claim/tx.proto", fileDescriptor_5064b28f68e807c3) }
@@ -581,7 +581,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SetMerkleRoot(ctx context.Context, in *MsgSetMerkleRoot, opts ...grpc.CallOption) (*MsgSetMerkleRootResponse, error) {
 	out := new(MsgSetMerkleRootResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.claim.Msg/SetMerkleRoot", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.claim.Msg/SetMerkleRoot", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -590,7 +590,7 @@ func (c *msgClient) SetMerkleRoot(ctx context.Context, in *MsgSetMerkleRoot, opt
 
 func (c *msgClient) Claim(ctx context.Context, in *MsgClaim, opts ...grpc.CallOption) (*MsgClaimResponse, error) {
 	out := new(MsgClaimResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.claim.Msg/Claim", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.claim.Msg/Claim", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -599,7 +599,7 @@ func (c *msgClient) Claim(ctx context.Context, in *MsgClaim, opts ...grpc.CallOp
 
 func (c *msgClient) ToggleClaimSwitch(ctx context.Context, in *MsgToggleClaimSwitch, opts ...grpc.CallOption) (*MsgToggleClaimSwitchResponse, error) {
 	out := new(MsgToggleClaimSwitchResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.claim.Msg/ToggleClaimSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.claim.Msg/ToggleClaimSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -608,7 +608,7 @@ func (c *msgClient) ToggleClaimSwitch(ctx context.Context, in *MsgToggleClaimSwi
 
 func (c *msgClient) ProvideToken(ctx context.Context, in *MsgProvideToken, opts ...grpc.CallOption) (*MsgProvideTokenResponse, error) {
 	out := new(MsgProvideTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.claim.Msg/ProvideToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.claim.Msg/ProvideToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -617,7 +617,7 @@ func (c *msgClient) ProvideToken(ctx context.Context, in *MsgProvideToken, opts 
 
 func (c *msgClient) WithdrawToken(ctx context.Context, in *MsgWithdrawToken, opts ...grpc.CallOption) (*MsgWithdrawTokenResponse, error) {
 	out := new(MsgWithdrawTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.claim.Msg/WithdrawToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.claim.Msg/WithdrawToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -667,7 +667,7 @@ func _Msg_SetMerkleRoot_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.claim.Msg/SetMerkleRoot",
+		FullMethod: "/furyahub.furyahub.claim.Msg/SetMerkleRoot",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetMerkleRoot(ctx, req.(*MsgSetMerkleRoot))
@@ -685,7 +685,7 @@ func _Msg_Claim_Handler(srv interface{}, ctx context.Context, dec func(interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.claim.Msg/Claim",
+		FullMethod: "/furyahub.furyahub.claim.Msg/Claim",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Claim(ctx, req.(*MsgClaim))
@@ -703,7 +703,7 @@ func _Msg_ToggleClaimSwitch_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.claim.Msg/ToggleClaimSwitch",
+		FullMethod: "/furyahub.furyahub.claim.Msg/ToggleClaimSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleClaimSwitch(ctx, req.(*MsgToggleClaimSwitch))
@@ -721,7 +721,7 @@ func _Msg_ProvideToken_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.claim.Msg/ProvideToken",
+		FullMethod: "/furyahub.furyahub.claim.Msg/ProvideToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ProvideToken(ctx, req.(*MsgProvideToken))
@@ -739,7 +739,7 @@ func _Msg_WithdrawToken_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.claim.Msg/WithdrawToken",
+		FullMethod: "/furyahub.furyahub.claim.Msg/WithdrawToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).WithdrawToken(ctx, req.(*MsgWithdrawToken))
@@ -748,7 +748,7 @@ func _Msg_WithdrawToken_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.claim.Msg",
+	ServiceName: "furyahub.furyahub.claim.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

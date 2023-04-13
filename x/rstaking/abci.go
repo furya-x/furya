@@ -5,8 +5,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rstaking/keeper"
-	"github.com/oldfurya/furya/x/rstaking/types"
+	"github.com/furyahub/furyahub/x/rstaking/keeper"
+	"github.com/furyahub/furyahub/x/rstaking/types"
 )
 
 func BeginBlocker(ctx sdk.Context, k keeper.Keeper, mintKeeper types.MintKeeper) {
@@ -28,6 +28,6 @@ func BeginBlocker(ctx sdk.Context, k keeper.Keeper, mintKeeper types.MintKeeper)
 	err := k.GetBankKeeper().BurnCoins(ctx, types.ModuleName, mintedCoins)
 	// inflation is zero in err case
 	if err != nil {
-		k.GetBankKeeper().BurnCoins(ctx, k.GetFeeCollectorName(), mintedCoins)
+		_ = k.GetBankKeeper().BurnCoins(ctx, k.GetFeeCollectorName(), mintedCoins)
 	}
 }

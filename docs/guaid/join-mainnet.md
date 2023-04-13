@@ -1,58 +1,58 @@
-# Join the Furya Mainnet
+# Join the FurYaHub Mainnet
 
 ## Quickstart
 
 This Quickstart tutorial completes the following actions:
 
 * Ensure that you have [compilation prerequisites](./install.md)
-* Compile furya
+* Compile furyahub
 * Give your node a moniker and configure it
 * Download compressed genesis state
 * Put the `genesis.json` file in the correct location
 
 ```bash
-git clone -b vx.x.x https://github.com/oldfurya/furya
-cd furya
+git clone -b vx.x.x https://github.com/furyahub/furyahub
+cd furyahub
 make install
-furyad init chooseanicehandle
-wget https://github.com/furya/network/blob/main/mainnets/furya-1/genesis.json
-mv genesis.json ~/.furya/config/genesis.json
+furyahubd init chooseanicehandle
+wget https://github.com/furyahub/network/blob/main/mainnets/furyahub-1/genesis.json
+mv genesis.json ~/.furyahub/config/genesis.json
 ```
 
 **Go**
-Starts furya
+Starts furyahub
 
 ```bash
-furyad start  --p2p.seeds bf8328b66dceb4987e5cd94430af66045e59899f@xxx:26656,cfd785a4224c7940e9a10f6c1ab24c343e923bec@xxxx:26656,d72b3011ed46d783e369fdf8ae2055b99a1e5074@xxxx:26656
+furyahubd start  --p2p.seeds bf8328b66dceb4987e5cd94430af66045e59899f@xxx:26656,cfd785a4224c7940e9a10f6c1ab24c343e923bec@xxxx:26656,d72b3011ed46d783e369fdf8ae2055b99a1e5074@xxxx:26656
 ```
 
-To save those seeds to your settings, put the comma-separated list format seeds in `~/.furya/config/config.toml` in the p2p section under seeds.
+To save those seeds to your settings, put the comma-separated list format seeds in `~/.furyahub/config/config.toml` in the p2p section under seeds.
 
 ## Manual Setup of a new Node
 
 These instructions are for setting up a brand new full node from scratch.
 
-Make sure to have the [latest furya version installed](./join-mainnet.md).
+Make sure to have the [latest furyahub version installed](./join-mainnet.md).
 First, initialize the node.
 
 ```bash
-furyad init <your_custom_moniker>
+furyahubd init <your_custom_moniker>
 ```
 
 **Note**
 Monikers can contain only ASCII characters. Using Unicode characters is not supported and renders your node unreachable.
 
-By default, the `init` command creates your `~/.furya` directory with subfolders `config` and `data`.
+By default, the `init` command creates your `~/.furyahub` directory with subfolders `config` and `data`.
 In the `config` directory, the most important files for configuration are `app.toml` and `config.toml`.
 
-You can edit the `moniker` in the `~/.furya/config/config.toml` file:
+You can edit the `moniker` in the `~/.furyahub/config/config.toml` file:
 
 ```toml
 # A custom human readable name for this node
 moniker = "<your_custom_moniker>"
 ```
 
-For optimized node performance, edit the `~/.furya/config/app.toml` file to enable the anti-spam mechanism and reject incoming transactions with less than the minimum gas prices:
+For optimized node performance, edit the `~/.furyahub/config/app.toml` file to enable the anti-spam mechanism and reject incoming transactions with less than the minimum gas prices:
 
 ```
 # This is a TOML config file.
@@ -62,9 +62,9 @@ For optimized node performance, edit the `~/.furya/config/app.toml` file to enab
 
 # The minimum gas prices a validator is willing to accept for processing a
 # transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (for example, 10ufury).
+# specified in this config (for example, 10ufis).
 
-minimum-gas-prices = "0.01ufury"
+minimum-gas-prices = "0.01ufis"
 ```
 
 Your full node has been initialized!
@@ -73,12 +73,12 @@ Your full node has been initialized!
 
 ### Copy the Genesis File
 
-Fetch the mainnet's `genesis.json` file into `furyad`'s config directory.
+Fetch the mainnet's `genesis.json` file into `furyahubd`'s config directory.
 
 ```bash
-mkdir -p $HOME/.furya/config
-wget https://github.com/furya/network/blob/main/mainnets/furya-1/genesis.json
-mv genesis.json $HOME/.furya/config
+mkdir -p $HOME/.furyahub/config
+wget https://github.com/furyahub/network/blob/main/mainnets/furyahub-1/genesis.json
+mv genesis.json $HOME/.furyahub/config
 ```
 
 If you want to connect to the public testnet instead, click [here](./join-testnet.md)
@@ -86,20 +86,20 @@ If you want to connect to the public testnet instead, click [here](./join-testne
 To verify the correctness of the configuration run:
 
 ```bash
-furyad start
+furyahubd start
 ```
 
 ### Add Seed Nodes
 
-Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.furya/config/config.toml`. The [`mainnets`](https://github.com/furya/network/tree/main/mainnets) repo contains links to some seed nodes.
+Your node needs to know how to find peers. You'll need to add healthy seed nodes to `$HOME/.furyahub/config/config.toml`. The [`mainnets`](https://github.com/furyahub/network/tree/main/mainnets) repo contains links to some seed nodes.
 
-If those seeds aren't working, you can find more seeds and persistent peers on a Furya explorer (a list can be found on the [mainnets](https://github.com/furya/network/tree/main/mainnets)).
+If those seeds aren't working, you can find more seeds and persistent peers on a FurYaHub explorer (a list can be found on the [mainnets](https://github.com/furyahub/network/tree/main/mainnets)).
 
 ## A Note on Gas and Fees
 
-On Furya mainnet, the accepted denom is `ufury`, where `1fury = 1.000.000ufury`
+On FurYaHub mainnet, the accepted denom is `ufis`, where `1fis = 1.000.000ufis`
 
-Transactions on the Furya network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
+Transactions on the FurYaHub network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
 
 ```
 fees = ceil(gas * gasPrices)
@@ -111,18 +111,18 @@ The `gasPrice` is the price of each unit of `gas`. Each validator sets a `min-ga
 
 The transaction `fees` are the product of `gas` and `gasPrice`. As a user, you have to input 2 out of 3. The higher the `gasPrice`/`fees`, the higher the chance that your transaction will get included in a block.
 
-For mainnet, the recommended `gas-prices` is `0.0025ufury`.
+For mainnet, the recommended `gas-prices` is `0.0025ufis`.
 
 ## Set `minimum-gas-prices`
 
-Your full-node keeps unconfirmed transactions in its mempool. In order to protect it from spam, it is better to set a `minimum-gas-prices` that the transaction must meet in order to be accepted in your node's mempool. This parameter can be set in the following file `~/.furya/config/app.toml`.
+Your full-node keeps unconfirmed transactions in its mempool. In order to protect it from spam, it is better to set a `minimum-gas-prices` that the transaction must meet in order to be accepted in your node's mempool. This parameter can be set in the following file `~/.furyahub/config/app.toml`.
 
-The initial recommended `min-gas-prices` is `0.0025ufury`, but you might want to change it later.
+The initial recommended `min-gas-prices` is `0.0025ufis`, but you might want to change it later.
 
 ## Pruning of State
 
 There are four strategies for pruning state. These strategies apply only to state and do not apply to block storage.
-To set pruning, adjust the `pruning` parameter in the `~/.furya/config/app.toml` file.
+To set pruning, adjust the `pruning` parameter in the `~/.furyahub/config/app.toml` file.
 The following pruning state settings are available:
 
 1. `everything`: Prune all saved states other than the current state.
@@ -131,7 +131,7 @@ The following pruning state settings are available:
 4. `custom`: Specify pruning settings with the `pruning-keep-recent`, `pruning-keep-every`, and `pruning-interval` parameters.
 
 By default, every node is in `default` mode which is the recommended setting for most environments.
-If you would like to change your nodes pruning strategy then you must do so when the node is initialized. Passing a flag when starting `furya` will always override settings in the `app.toml` file, if you would like to change your node to the `everything` mode then you can pass the `---pruning everything` flag when you call `furyad start`.
+If you would like to change your nodes pruning strategy then you must do so when the node is initialized. Passing a flag when starting `furyahub` will always override settings in the `app.toml` file, if you would like to change your node to the `everything` mode then you can pass the `---pruning everything` flag when you call `furyahubd start`.
 
 > Note: When you are pruning state you will not be able to query the heights that are not in your store.
 
@@ -140,20 +140,20 @@ If you would like to change your nodes pruning strategy then you must do so when
 Start the full node with this command:
 
 ```bash
-furyad start
+furyahubd start
 ```
 
 Check that everything is running smoothly:
 
 ```bash
-furyad status
+furyahubd status
 ```
 
-View the status of the network with the [Furya Explorer](https://furya.io).
+View the status of the network with the [FurYaHub Explorer](https://furyahub.io).
 
 ## Enable the REST API
 
-By default, the REST API is disabled. To enable the REST API, edit the `~/.furya/config/app.toml` file, and set `enable` to `true` in the `[api]` section.
+By default, the REST API is disabled. To enable the REST API, edit the `~/.furyahub/config/app.toml` file, and set `enable` to `true` in the `[api]` section.
 
 ```toml
 ###############################################################################
@@ -173,7 +173,7 @@ After restarting your application, you can access the REST API on `YOURNODEIP:13
 
 ## GRPC Configuration
 
-By default, gRPC is enabled on port `9090`. In the `~/.furya/config/app.toml` file, you can make changes in the gRPC section. To disable the gRPC endpoint, set `enable` to `false`. To change the port, use the `address` parameter.
+By default, gRPC is enabled on port `9090`. In the `~/.furyahub/config/app.toml` file, you can make changes in the gRPC section. To disable the gRPC endpoint, set `enable` to `false`. To change the port, use the `address` parameter.
 
 ```toml
 ###############################################################################
@@ -188,21 +188,21 @@ address = "0.0.0.0:9090"
 
 ## Upgrades
 
-To be best prepared for eventual upgrades, it is recommended to setup [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html), a small process manager,  which can swap in new `furyad` binaries.
+To be best prepared for eventual upgrades, it is recommended to setup [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html), a small process manager,  which can swap in new `furyahubd` binaries.
 
 ## Background Process
 
 To run the node in a background process with automatic restarts, you can use a service manager like `systemd`. To set this up run the following:
 
 ```bash
-sudo tee /etc/systemd/system/furyad.service > /dev/null <<EOF  
+sudo tee /etc/systemd/system/furyahubd.service > /dev/null <<EOF  
 [Unit]
-Description=furya Daemon
+Description=furyahub Daemon
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which furyad) start
+ExecStart=$(which furyahubd) start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
@@ -215,49 +215,49 @@ EOF
 If you're using Cosmovisor you want to add
 
 ```bash
-Environment="DAEMON_HOME=$HOME/.furya"
-Environment="DAEMON_NAME=furyad"
+Environment="DAEMON_HOME=$HOME/.furyahub"
+Environment="DAEMON_NAME=furyahubd"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 ```
 
-after the `LimitNOFILE` line and replace `$(which furyad)` with `$(which cosmovisor)`.
+after the `LimitNOFILE` line and replace `$(which furyahubd)` with `$(which cosmovisor)`.
 
 Then setup the daemon
 
 ```bash
 sudo -S systemctl daemon-reload
-sudo -S systemctl enable furyad
+sudo -S systemctl enable furyahubd
 ```
 
 We can then start the process and confirm that it is running
 
 ```bash
-sudo -S systemctl start furyad
+sudo -S systemctl start furyahubd
 
-sudo service furyad status
+sudo service furyahubd status
 ```
 
 ## Export State
 
-furya can dump the entire application state into a JSON file. This application state dump is useful for manual analysis and can also be used as the genesis file of a new network.
+furyahub can dump the entire application state into a JSON file. This application state dump is useful for manual analysis and can also be used as the genesis file of a new network.
 
 Export state with:
 
 ```bash
-furyad export > [filename].json
+furyahubd export > [filename].json
 ```
 
 You can also export state from a particular height (at the end of processing the block of that height):
 
 ```bash
-furyad export --height [height] > [filename].json
+furyahubd export --height [height] > [filename].json
 ```
 
 If you plan to start a new network from the exported state, export with the `--for-zero-height` flag:
 
 ```bash
-furyad export --height [height] --for-zero-height > [filename].json
+furyahubd export --height [height] --for-zero-height > [filename].json
 ```
 
 ## Verify Mainnet
@@ -271,7 +271,7 @@ are computationally expensive, they are not enabled by default. To run a node wi
 these checks start your node with the assert-invariants-blockly flag:
 
 ```bash
-furyad start --assert-invariants-blockly
+furyahubd start --assert-invariants-blockly
 ```
 
 If an invariant is broken on your node, your node will panic and prompt you to send
@@ -283,7 +283,7 @@ invariant broken:
         pool.NotBondedTokens: 100
         sum of account tokens: 101
     CRITICAL please submit the following transaction:
-        furyad tx crisis invariant-broken staking supply
+        furyahubd tx crisis invariant-broken staking supply
 
 ```
 

@@ -11,7 +11,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	grpc1 "github.com/gogo/protobuf/grpc"
 	proto "github.com/gogo/protobuf/proto"
-	github_com_furya_furya_utils "github.com/oldfurya/furya/utils"
+	github_com_furyahub_furyahub_utils "github.com/furyahub/furyahub/utils"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -156,7 +156,7 @@ func (m *CreateRewardPoolInfo) GetStartTimestamp() uint64 {
 type CreateStakeItemInfo struct {
 	LockSecond uint64 `protobuf:"varint,1,opt,name=lockSecond,proto3" json:"lockSecond"`
 	// user stakedPower = powerRewardRate * stakedAmount
-	PowerRewardRate github_com_furya_furya_utils.Dec `protobuf:"bytes,2,opt,name=powerRewardRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"powerRewardRate"`
+	PowerRewardRate github_com_furyahub_furyahub_utils.Dec `protobuf:"bytes,2,opt,name=powerRewardRate,proto3,customtype=github.com/furyahub/furyahub/utils.Dec" json:"powerRewardRate"`
 }
 
 func (m *CreateStakeItemInfo) Reset()         { *m = CreateStakeItemInfo{} }
@@ -239,7 +239,7 @@ type MsgAddStakeItem struct {
 	Creator         string                                 `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	StakePoolIndex  uint32                                 `protobuf:"varint,2,opt,name=stakePoolIndex,proto3" json:"stakePoolIndex"`
 	LockSecond      uint64                                 `protobuf:"varint,3,opt,name=lockSecond,proto3" json:"lockSecond"`
-	PowerRewardRate github_com_furya_furya_utils.Dec `protobuf:"bytes,4,opt,name=powerRewardRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"powerRewardRate"`
+	PowerRewardRate github_com_furyahub_furyahub_utils.Dec `protobuf:"bytes,4,opt,name=powerRewardRate,proto3,customtype=github.com/furyahub/furyahub/utils.Dec" json:"powerRewardRate"`
 	Enable          bool                                   `protobuf:"varint,5,opt,name=enable,proto3" json:"enable,omitempty"`
 }
 
@@ -741,7 +741,7 @@ type MsgUpdateStakeItem struct {
 	Index           uint32                                 `protobuf:"varint,2,opt,name=index,proto3" json:"index"`
 	StakePoolIndex  uint32                                 `protobuf:"varint,3,opt,name=stakePoolIndex,proto3" json:"stakePoolIndex"`
 	LockSecond      uint64                                 `protobuf:"varint,4,opt,name=lockSecond,proto3" json:"lockSecond"`
-	PowerRewardRate github_com_furya_furya_utils.Dec `protobuf:"bytes,5,opt,name=powerRewardRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"powerRewardRate"`
+	PowerRewardRate github_com_furyahub_furyahub_utils.Dec `protobuf:"bytes,5,opt,name=powerRewardRate,proto3,customtype=github.com/furyahub/furyahub/utils.Dec" json:"powerRewardRate"`
 	Enable          bool                                   `protobuf:"varint,6,opt,name=enable,proto3" json:"enable,omitempty"`
 }
 
@@ -2025,7 +2025,7 @@ var xxx_messageInfo_MsgRmStakeTokenResponse proto.InternalMessageInfo
 type MsgSetStakeItemLimit struct {
 	Creator            string                                 `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
 	MaxLockSecond      uint64                                 `protobuf:"varint,2,opt,name=maxLockSecond,proto3" json:"maxLockSecond"`
-	MaxPowerRewardRate github_com_furya_furya_utils.Dec `protobuf:"bytes,3,opt,name=maxPowerRewardRate,proto3,customtype=github.com/oldfurya/furya/utils.Dec" json:"maxPowerRewardRate"`
+	MaxPowerRewardRate github_com_furyahub_furyahub_utils.Dec `protobuf:"bytes,3,opt,name=maxPowerRewardRate,proto3,customtype=github.com/furyahub/furyahub/utils.Dec" json:"maxPowerRewardRate"`
 }
 
 func (m *MsgSetStakeItemLimit) Reset()         { *m = MsgSetStakeItemLimit{} }
@@ -2209,52 +2209,52 @@ func (m *MsgWithdrawRewardTokenResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgWithdrawRewardTokenResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgAddStakePool)(nil), "furya.furya.mining.MsgAddStakePool")
-	proto.RegisterType((*CreateRewardPoolInfo)(nil), "furya.furya.mining.CreateRewardPoolInfo")
-	proto.RegisterType((*CreateStakeItemInfo)(nil), "furya.furya.mining.CreateStakeItemInfo")
-	proto.RegisterType((*MsgAddStakePoolResponse)(nil), "furya.furya.mining.MsgAddStakePoolResponse")
-	proto.RegisterType((*MsgAddStakeItem)(nil), "furya.furya.mining.MsgAddStakeItem")
-	proto.RegisterType((*MsgAddStakeItemResponse)(nil), "furya.furya.mining.MsgAddStakeItemResponse")
-	proto.RegisterType((*MsgAddRewardPool)(nil), "furya.furya.mining.MsgAddRewardPool")
-	proto.RegisterType((*MsgAddRewardPoolResponse)(nil), "furya.furya.mining.MsgAddRewardPoolResponse")
-	proto.RegisterType((*MsgStake)(nil), "furya.furya.mining.MsgStake")
-	proto.RegisterType((*MsgStakeResponse)(nil), "furya.furya.mining.MsgStakeResponse")
-	proto.RegisterType((*MsgClaimReward)(nil), "furya.furya.mining.MsgClaimReward")
-	proto.RegisterType((*MsgClaimRewardResponse)(nil), "furya.furya.mining.MsgClaimRewardResponse")
-	proto.RegisterType((*MsgWithdraw)(nil), "furya.furya.mining.MsgWithdraw")
-	proto.RegisterType((*MsgWithdrawResponse)(nil), "furya.furya.mining.MsgWithdrawResponse")
-	proto.RegisterType((*MsgUpdateStakeItem)(nil), "furya.furya.mining.MsgUpdateStakeItem")
-	proto.RegisterType((*MsgUpdateStakeItemResponse)(nil), "furya.furya.mining.MsgUpdateStakeItemResponse")
-	proto.RegisterType((*MsgAddMiningProvider)(nil), "furya.furya.mining.MsgAddMiningProvider")
-	proto.RegisterType((*MsgAddMiningProviderResponse)(nil), "furya.furya.mining.MsgAddMiningProviderResponse")
-	proto.RegisterType((*MsgRmMiningProvider)(nil), "furya.furya.mining.MsgRmMiningProvider")
-	proto.RegisterType((*MsgRmMiningProviderResponse)(nil), "furya.furya.mining.MsgRmMiningProviderResponse")
-	proto.RegisterType((*MsgAddRewardToken)(nil), "furya.furya.mining.MsgAddRewardToken")
-	proto.RegisterType((*MsgAddRewardTokenResponse)(nil), "furya.furya.mining.MsgAddRewardTokenResponse")
-	proto.RegisterType((*MsgSetMaxRewardPoolNumber)(nil), "furya.furya.mining.MsgSetMaxRewardPoolNumber")
-	proto.RegisterType((*MsgSetMaxRewardPoolNumberResponse)(nil), "furya.furya.mining.MsgSetMaxRewardPoolNumberResponse")
-	proto.RegisterType((*MsgUpdateRewardPool)(nil), "furya.furya.mining.MsgUpdateRewardPool")
-	proto.RegisterType((*MsgUpdateRewardPoolResponse)(nil), "furya.furya.mining.MsgUpdateRewardPoolResponse")
-	proto.RegisterType((*MsgToggleProviderSwitch)(nil), "furya.furya.mining.MsgToggleProviderSwitch")
-	proto.RegisterType((*MsgToggleProviderSwitchResponse)(nil), "furya.furya.mining.MsgToggleProviderSwitchResponse")
-	proto.RegisterType((*MsgSetMaxStakeItemNumber)(nil), "furya.furya.mining.MsgSetMaxStakeItemNumber")
-	proto.RegisterType((*MsgSetMaxStakeItemNumberResponse)(nil), "furya.furya.mining.MsgSetMaxStakeItemNumberResponse")
-	proto.RegisterType((*MsgAddReward)(nil), "furya.furya.mining.MsgAddReward")
-	proto.RegisterType((*MsgAddRewardResponse)(nil), "furya.furya.mining.MsgAddRewardResponse")
-	proto.RegisterType((*MsgToggleEmergencySwitch)(nil), "furya.furya.mining.MsgToggleEmergencySwitch")
-	proto.RegisterType((*MsgToggleEmergencySwitchResponse)(nil), "furya.furya.mining.MsgToggleEmergencySwitchResponse")
-	proto.RegisterType((*MsgEmergencyWithdraw)(nil), "furya.furya.mining.MsgEmergencyWithdraw")
-	proto.RegisterType((*MsgEmergencyWithdrawResponse)(nil), "furya.furya.mining.MsgEmergencyWithdrawResponse")
-	proto.RegisterType((*MsgAddStakeToken)(nil), "furya.furya.mining.MsgAddStakeToken")
-	proto.RegisterType((*MsgAddStakeTokenResponse)(nil), "furya.furya.mining.MsgAddStakeTokenResponse")
-	proto.RegisterType((*MsgRmRewardToken)(nil), "furya.furya.mining.MsgRmRewardToken")
-	proto.RegisterType((*MsgRmRewardTokenResponse)(nil), "furya.furya.mining.MsgRmRewardTokenResponse")
-	proto.RegisterType((*MsgRmStakeToken)(nil), "furya.furya.mining.MsgRmStakeToken")
-	proto.RegisterType((*MsgRmStakeTokenResponse)(nil), "furya.furya.mining.MsgRmStakeTokenResponse")
-	proto.RegisterType((*MsgSetStakeItemLimit)(nil), "furya.furya.mining.MsgSetStakeItemLimit")
-	proto.RegisterType((*MsgSetStakeItemLimitResponse)(nil), "furya.furya.mining.MsgSetStakeItemLimitResponse")
-	proto.RegisterType((*MsgWithdrawRewardToken)(nil), "furya.furya.mining.MsgWithdrawRewardToken")
-	proto.RegisterType((*MsgWithdrawRewardTokenResponse)(nil), "furya.furya.mining.MsgWithdrawRewardTokenResponse")
+	proto.RegisterType((*MsgAddStakePool)(nil), "furyahub.furyahub.mining.MsgAddStakePool")
+	proto.RegisterType((*CreateRewardPoolInfo)(nil), "furyahub.furyahub.mining.CreateRewardPoolInfo")
+	proto.RegisterType((*CreateStakeItemInfo)(nil), "furyahub.furyahub.mining.CreateStakeItemInfo")
+	proto.RegisterType((*MsgAddStakePoolResponse)(nil), "furyahub.furyahub.mining.MsgAddStakePoolResponse")
+	proto.RegisterType((*MsgAddStakeItem)(nil), "furyahub.furyahub.mining.MsgAddStakeItem")
+	proto.RegisterType((*MsgAddStakeItemResponse)(nil), "furyahub.furyahub.mining.MsgAddStakeItemResponse")
+	proto.RegisterType((*MsgAddRewardPool)(nil), "furyahub.furyahub.mining.MsgAddRewardPool")
+	proto.RegisterType((*MsgAddRewardPoolResponse)(nil), "furyahub.furyahub.mining.MsgAddRewardPoolResponse")
+	proto.RegisterType((*MsgStake)(nil), "furyahub.furyahub.mining.MsgStake")
+	proto.RegisterType((*MsgStakeResponse)(nil), "furyahub.furyahub.mining.MsgStakeResponse")
+	proto.RegisterType((*MsgClaimReward)(nil), "furyahub.furyahub.mining.MsgClaimReward")
+	proto.RegisterType((*MsgClaimRewardResponse)(nil), "furyahub.furyahub.mining.MsgClaimRewardResponse")
+	proto.RegisterType((*MsgWithdraw)(nil), "furyahub.furyahub.mining.MsgWithdraw")
+	proto.RegisterType((*MsgWithdrawResponse)(nil), "furyahub.furyahub.mining.MsgWithdrawResponse")
+	proto.RegisterType((*MsgUpdateStakeItem)(nil), "furyahub.furyahub.mining.MsgUpdateStakeItem")
+	proto.RegisterType((*MsgUpdateStakeItemResponse)(nil), "furyahub.furyahub.mining.MsgUpdateStakeItemResponse")
+	proto.RegisterType((*MsgAddMiningProvider)(nil), "furyahub.furyahub.mining.MsgAddMiningProvider")
+	proto.RegisterType((*MsgAddMiningProviderResponse)(nil), "furyahub.furyahub.mining.MsgAddMiningProviderResponse")
+	proto.RegisterType((*MsgRmMiningProvider)(nil), "furyahub.furyahub.mining.MsgRmMiningProvider")
+	proto.RegisterType((*MsgRmMiningProviderResponse)(nil), "furyahub.furyahub.mining.MsgRmMiningProviderResponse")
+	proto.RegisterType((*MsgAddRewardToken)(nil), "furyahub.furyahub.mining.MsgAddRewardToken")
+	proto.RegisterType((*MsgAddRewardTokenResponse)(nil), "furyahub.furyahub.mining.MsgAddRewardTokenResponse")
+	proto.RegisterType((*MsgSetMaxRewardPoolNumber)(nil), "furyahub.furyahub.mining.MsgSetMaxRewardPoolNumber")
+	proto.RegisterType((*MsgSetMaxRewardPoolNumberResponse)(nil), "furyahub.furyahub.mining.MsgSetMaxRewardPoolNumberResponse")
+	proto.RegisterType((*MsgUpdateRewardPool)(nil), "furyahub.furyahub.mining.MsgUpdateRewardPool")
+	proto.RegisterType((*MsgUpdateRewardPoolResponse)(nil), "furyahub.furyahub.mining.MsgUpdateRewardPoolResponse")
+	proto.RegisterType((*MsgToggleProviderSwitch)(nil), "furyahub.furyahub.mining.MsgToggleProviderSwitch")
+	proto.RegisterType((*MsgToggleProviderSwitchResponse)(nil), "furyahub.furyahub.mining.MsgToggleProviderSwitchResponse")
+	proto.RegisterType((*MsgSetMaxStakeItemNumber)(nil), "furyahub.furyahub.mining.MsgSetMaxStakeItemNumber")
+	proto.RegisterType((*MsgSetMaxStakeItemNumberResponse)(nil), "furyahub.furyahub.mining.MsgSetMaxStakeItemNumberResponse")
+	proto.RegisterType((*MsgAddReward)(nil), "furyahub.furyahub.mining.MsgAddReward")
+	proto.RegisterType((*MsgAddRewardResponse)(nil), "furyahub.furyahub.mining.MsgAddRewardResponse")
+	proto.RegisterType((*MsgToggleEmergencySwitch)(nil), "furyahub.furyahub.mining.MsgToggleEmergencySwitch")
+	proto.RegisterType((*MsgToggleEmergencySwitchResponse)(nil), "furyahub.furyahub.mining.MsgToggleEmergencySwitchResponse")
+	proto.RegisterType((*MsgEmergencyWithdraw)(nil), "furyahub.furyahub.mining.MsgEmergencyWithdraw")
+	proto.RegisterType((*MsgEmergencyWithdrawResponse)(nil), "furyahub.furyahub.mining.MsgEmergencyWithdrawResponse")
+	proto.RegisterType((*MsgAddStakeToken)(nil), "furyahub.furyahub.mining.MsgAddStakeToken")
+	proto.RegisterType((*MsgAddStakeTokenResponse)(nil), "furyahub.furyahub.mining.MsgAddStakeTokenResponse")
+	proto.RegisterType((*MsgRmRewardToken)(nil), "furyahub.furyahub.mining.MsgRmRewardToken")
+	proto.RegisterType((*MsgRmRewardTokenResponse)(nil), "furyahub.furyahub.mining.MsgRmRewardTokenResponse")
+	proto.RegisterType((*MsgRmStakeToken)(nil), "furyahub.furyahub.mining.MsgRmStakeToken")
+	proto.RegisterType((*MsgRmStakeTokenResponse)(nil), "furyahub.furyahub.mining.MsgRmStakeTokenResponse")
+	proto.RegisterType((*MsgSetStakeItemLimit)(nil), "furyahub.furyahub.mining.MsgSetStakeItemLimit")
+	proto.RegisterType((*MsgSetStakeItemLimitResponse)(nil), "furyahub.furyahub.mining.MsgSetStakeItemLimitResponse")
+	proto.RegisterType((*MsgWithdrawRewardToken)(nil), "furyahub.furyahub.mining.MsgWithdrawRewardToken")
+	proto.RegisterType((*MsgWithdrawRewardTokenResponse)(nil), "furyahub.furyahub.mining.MsgWithdrawRewardTokenResponse")
 }
 
 func init() { proto.RegisterFile("mining/tx.proto", fileDescriptor_7b7cc93178595aaa) }
@@ -2406,7 +2406,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) AddStakePool(ctx context.Context, in *MsgAddStakePool, opts ...grpc.CallOption) (*MsgAddStakePoolResponse, error) {
 	out := new(MsgAddStakePoolResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddStakePool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddStakePool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2415,7 +2415,7 @@ func (c *msgClient) AddStakePool(ctx context.Context, in *MsgAddStakePool, opts 
 
 func (c *msgClient) AddStakeItem(ctx context.Context, in *MsgAddStakeItem, opts ...grpc.CallOption) (*MsgAddStakeItemResponse, error) {
 	out := new(MsgAddStakeItemResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddStakeItem", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddStakeItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2424,7 +2424,7 @@ func (c *msgClient) AddStakeItem(ctx context.Context, in *MsgAddStakeItem, opts 
 
 func (c *msgClient) AddRewardPool(ctx context.Context, in *MsgAddRewardPool, opts ...grpc.CallOption) (*MsgAddRewardPoolResponse, error) {
 	out := new(MsgAddRewardPoolResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddRewardPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddRewardPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2433,7 +2433,7 @@ func (c *msgClient) AddRewardPool(ctx context.Context, in *MsgAddRewardPool, opt
 
 func (c *msgClient) Stake(ctx context.Context, in *MsgStake, opts ...grpc.CallOption) (*MsgStakeResponse, error) {
 	out := new(MsgStakeResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/Stake", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/Stake", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2442,7 +2442,7 @@ func (c *msgClient) Stake(ctx context.Context, in *MsgStake, opts ...grpc.CallOp
 
 func (c *msgClient) ClaimReward(ctx context.Context, in *MsgClaimReward, opts ...grpc.CallOption) (*MsgClaimRewardResponse, error) {
 	out := new(MsgClaimRewardResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/ClaimReward", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/ClaimReward", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2451,7 +2451,7 @@ func (c *msgClient) ClaimReward(ctx context.Context, in *MsgClaimReward, opts ..
 
 func (c *msgClient) Withdraw(ctx context.Context, in *MsgWithdraw, opts ...grpc.CallOption) (*MsgWithdrawResponse, error) {
 	out := new(MsgWithdrawResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/Withdraw", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/Withdraw", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2460,7 +2460,7 @@ func (c *msgClient) Withdraw(ctx context.Context, in *MsgWithdraw, opts ...grpc.
 
 func (c *msgClient) UpdateStakeItem(ctx context.Context, in *MsgUpdateStakeItem, opts ...grpc.CallOption) (*MsgUpdateStakeItemResponse, error) {
 	out := new(MsgUpdateStakeItemResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/UpdateStakeItem", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/UpdateStakeItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2469,7 +2469,7 @@ func (c *msgClient) UpdateStakeItem(ctx context.Context, in *MsgUpdateStakeItem,
 
 func (c *msgClient) AddMiningProvider(ctx context.Context, in *MsgAddMiningProvider, opts ...grpc.CallOption) (*MsgAddMiningProviderResponse, error) {
 	out := new(MsgAddMiningProviderResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddMiningProvider", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddMiningProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2478,7 +2478,7 @@ func (c *msgClient) AddMiningProvider(ctx context.Context, in *MsgAddMiningProvi
 
 func (c *msgClient) RmMiningProvider(ctx context.Context, in *MsgRmMiningProvider, opts ...grpc.CallOption) (*MsgRmMiningProviderResponse, error) {
 	out := new(MsgRmMiningProviderResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/RmMiningProvider", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/RmMiningProvider", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2487,7 +2487,7 @@ func (c *msgClient) RmMiningProvider(ctx context.Context, in *MsgRmMiningProvide
 
 func (c *msgClient) AddRewardToken(ctx context.Context, in *MsgAddRewardToken, opts ...grpc.CallOption) (*MsgAddRewardTokenResponse, error) {
 	out := new(MsgAddRewardTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddRewardToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddRewardToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2496,7 +2496,7 @@ func (c *msgClient) AddRewardToken(ctx context.Context, in *MsgAddRewardToken, o
 
 func (c *msgClient) SetMaxRewardPoolNumber(ctx context.Context, in *MsgSetMaxRewardPoolNumber, opts ...grpc.CallOption) (*MsgSetMaxRewardPoolNumberResponse, error) {
 	out := new(MsgSetMaxRewardPoolNumberResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/SetMaxRewardPoolNumber", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/SetMaxRewardPoolNumber", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2505,7 +2505,7 @@ func (c *msgClient) SetMaxRewardPoolNumber(ctx context.Context, in *MsgSetMaxRew
 
 func (c *msgClient) UpdateRewardPool(ctx context.Context, in *MsgUpdateRewardPool, opts ...grpc.CallOption) (*MsgUpdateRewardPoolResponse, error) {
 	out := new(MsgUpdateRewardPoolResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/UpdateRewardPool", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/UpdateRewardPool", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2514,7 +2514,7 @@ func (c *msgClient) UpdateRewardPool(ctx context.Context, in *MsgUpdateRewardPoo
 
 func (c *msgClient) ToggleProviderSwitch(ctx context.Context, in *MsgToggleProviderSwitch, opts ...grpc.CallOption) (*MsgToggleProviderSwitchResponse, error) {
 	out := new(MsgToggleProviderSwitchResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/ToggleProviderSwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/ToggleProviderSwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2523,7 +2523,7 @@ func (c *msgClient) ToggleProviderSwitch(ctx context.Context, in *MsgToggleProvi
 
 func (c *msgClient) SetMaxStakeItemNumber(ctx context.Context, in *MsgSetMaxStakeItemNumber, opts ...grpc.CallOption) (*MsgSetMaxStakeItemNumberResponse, error) {
 	out := new(MsgSetMaxStakeItemNumberResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/SetMaxStakeItemNumber", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/SetMaxStakeItemNumber", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2532,7 +2532,7 @@ func (c *msgClient) SetMaxStakeItemNumber(ctx context.Context, in *MsgSetMaxStak
 
 func (c *msgClient) AddReward(ctx context.Context, in *MsgAddReward, opts ...grpc.CallOption) (*MsgAddRewardResponse, error) {
 	out := new(MsgAddRewardResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddReward", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddReward", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2541,7 +2541,7 @@ func (c *msgClient) AddReward(ctx context.Context, in *MsgAddReward, opts ...grp
 
 func (c *msgClient) ToggleEmergencySwitch(ctx context.Context, in *MsgToggleEmergencySwitch, opts ...grpc.CallOption) (*MsgToggleEmergencySwitchResponse, error) {
 	out := new(MsgToggleEmergencySwitchResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/ToggleEmergencySwitch", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/ToggleEmergencySwitch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2550,7 +2550,7 @@ func (c *msgClient) ToggleEmergencySwitch(ctx context.Context, in *MsgToggleEmer
 
 func (c *msgClient) EmergencyWithdraw(ctx context.Context, in *MsgEmergencyWithdraw, opts ...grpc.CallOption) (*MsgEmergencyWithdrawResponse, error) {
 	out := new(MsgEmergencyWithdrawResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/EmergencyWithdraw", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/EmergencyWithdraw", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2559,7 +2559,7 @@ func (c *msgClient) EmergencyWithdraw(ctx context.Context, in *MsgEmergencyWithd
 
 func (c *msgClient) AddStakeToken(ctx context.Context, in *MsgAddStakeToken, opts ...grpc.CallOption) (*MsgAddStakeTokenResponse, error) {
 	out := new(MsgAddStakeTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/AddStakeToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/AddStakeToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2568,7 +2568,7 @@ func (c *msgClient) AddStakeToken(ctx context.Context, in *MsgAddStakeToken, opt
 
 func (c *msgClient) RmRewardToken(ctx context.Context, in *MsgRmRewardToken, opts ...grpc.CallOption) (*MsgRmRewardTokenResponse, error) {
 	out := new(MsgRmRewardTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/RmRewardToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/RmRewardToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2577,7 +2577,7 @@ func (c *msgClient) RmRewardToken(ctx context.Context, in *MsgRmRewardToken, opt
 
 func (c *msgClient) RmStakeToken(ctx context.Context, in *MsgRmStakeToken, opts ...grpc.CallOption) (*MsgRmStakeTokenResponse, error) {
 	out := new(MsgRmStakeTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/RmStakeToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/RmStakeToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2586,7 +2586,7 @@ func (c *msgClient) RmStakeToken(ctx context.Context, in *MsgRmStakeToken, opts 
 
 func (c *msgClient) SetStakeItemLimit(ctx context.Context, in *MsgSetStakeItemLimit, opts ...grpc.CallOption) (*MsgSetStakeItemLimitResponse, error) {
 	out := new(MsgSetStakeItemLimitResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/SetStakeItemLimit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/SetStakeItemLimit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2595,7 +2595,7 @@ func (c *msgClient) SetStakeItemLimit(ctx context.Context, in *MsgSetStakeItemLi
 
 func (c *msgClient) WithdrawRewardToken(ctx context.Context, in *MsgWithdrawRewardToken, opts ...grpc.CallOption) (*MsgWithdrawRewardTokenResponse, error) {
 	out := new(MsgWithdrawRewardTokenResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.mining.Msg/WithdrawRewardToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.mining.Msg/WithdrawRewardToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2713,7 +2713,7 @@ func _Msg_AddStakePool_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddStakePool",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddStakePool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddStakePool(ctx, req.(*MsgAddStakePool))
@@ -2731,7 +2731,7 @@ func _Msg_AddStakeItem_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddStakeItem",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddStakeItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddStakeItem(ctx, req.(*MsgAddStakeItem))
@@ -2749,7 +2749,7 @@ func _Msg_AddRewardPool_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddRewardPool",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddRewardPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddRewardPool(ctx, req.(*MsgAddRewardPool))
@@ -2767,7 +2767,7 @@ func _Msg_Stake_Handler(srv interface{}, ctx context.Context, dec func(interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/Stake",
+		FullMethod: "/furyahub.furyahub.mining.Msg/Stake",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Stake(ctx, req.(*MsgStake))
@@ -2785,7 +2785,7 @@ func _Msg_ClaimReward_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/ClaimReward",
+		FullMethod: "/furyahub.furyahub.mining.Msg/ClaimReward",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ClaimReward(ctx, req.(*MsgClaimReward))
@@ -2803,7 +2803,7 @@ func _Msg_Withdraw_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/Withdraw",
+		FullMethod: "/furyahub.furyahub.mining.Msg/Withdraw",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).Withdraw(ctx, req.(*MsgWithdraw))
@@ -2821,7 +2821,7 @@ func _Msg_UpdateStakeItem_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/UpdateStakeItem",
+		FullMethod: "/furyahub.furyahub.mining.Msg/UpdateStakeItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UpdateStakeItem(ctx, req.(*MsgUpdateStakeItem))
@@ -2839,7 +2839,7 @@ func _Msg_AddMiningProvider_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddMiningProvider",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddMiningProvider",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddMiningProvider(ctx, req.(*MsgAddMiningProvider))
@@ -2857,7 +2857,7 @@ func _Msg_RmMiningProvider_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/RmMiningProvider",
+		FullMethod: "/furyahub.furyahub.mining.Msg/RmMiningProvider",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmMiningProvider(ctx, req.(*MsgRmMiningProvider))
@@ -2875,7 +2875,7 @@ func _Msg_AddRewardToken_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddRewardToken",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddRewardToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddRewardToken(ctx, req.(*MsgAddRewardToken))
@@ -2893,7 +2893,7 @@ func _Msg_SetMaxRewardPoolNumber_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/SetMaxRewardPoolNumber",
+		FullMethod: "/furyahub.furyahub.mining.Msg/SetMaxRewardPoolNumber",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetMaxRewardPoolNumber(ctx, req.(*MsgSetMaxRewardPoolNumber))
@@ -2911,7 +2911,7 @@ func _Msg_UpdateRewardPool_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/UpdateRewardPool",
+		FullMethod: "/furyahub.furyahub.mining.Msg/UpdateRewardPool",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UpdateRewardPool(ctx, req.(*MsgUpdateRewardPool))
@@ -2929,7 +2929,7 @@ func _Msg_ToggleProviderSwitch_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/ToggleProviderSwitch",
+		FullMethod: "/furyahub.furyahub.mining.Msg/ToggleProviderSwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleProviderSwitch(ctx, req.(*MsgToggleProviderSwitch))
@@ -2947,7 +2947,7 @@ func _Msg_SetMaxStakeItemNumber_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/SetMaxStakeItemNumber",
+		FullMethod: "/furyahub.furyahub.mining.Msg/SetMaxStakeItemNumber",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetMaxStakeItemNumber(ctx, req.(*MsgSetMaxStakeItemNumber))
@@ -2965,7 +2965,7 @@ func _Msg_AddReward_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddReward",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddReward",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddReward(ctx, req.(*MsgAddReward))
@@ -2983,7 +2983,7 @@ func _Msg_ToggleEmergencySwitch_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/ToggleEmergencySwitch",
+		FullMethod: "/furyahub.furyahub.mining.Msg/ToggleEmergencySwitch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ToggleEmergencySwitch(ctx, req.(*MsgToggleEmergencySwitch))
@@ -3001,7 +3001,7 @@ func _Msg_EmergencyWithdraw_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/EmergencyWithdraw",
+		FullMethod: "/furyahub.furyahub.mining.Msg/EmergencyWithdraw",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).EmergencyWithdraw(ctx, req.(*MsgEmergencyWithdraw))
@@ -3019,7 +3019,7 @@ func _Msg_AddStakeToken_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/AddStakeToken",
+		FullMethod: "/furyahub.furyahub.mining.Msg/AddStakeToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddStakeToken(ctx, req.(*MsgAddStakeToken))
@@ -3037,7 +3037,7 @@ func _Msg_RmRewardToken_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/RmRewardToken",
+		FullMethod: "/furyahub.furyahub.mining.Msg/RmRewardToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmRewardToken(ctx, req.(*MsgRmRewardToken))
@@ -3055,7 +3055,7 @@ func _Msg_RmStakeToken_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/RmStakeToken",
+		FullMethod: "/furyahub.furyahub.mining.Msg/RmStakeToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).RmStakeToken(ctx, req.(*MsgRmStakeToken))
@@ -3073,7 +3073,7 @@ func _Msg_SetStakeItemLimit_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/SetStakeItemLimit",
+		FullMethod: "/furyahub.furyahub.mining.Msg/SetStakeItemLimit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetStakeItemLimit(ctx, req.(*MsgSetStakeItemLimit))
@@ -3091,7 +3091,7 @@ func _Msg_WithdrawRewardToken_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.mining.Msg/WithdrawRewardToken",
+		FullMethod: "/furyahub.furyahub.mining.Msg/WithdrawRewardToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).WithdrawRewardToken(ctx, req.(*MsgWithdrawRewardToken))
@@ -3100,7 +3100,7 @@ func _Msg_WithdrawRewardToken_Handler(srv interface{}, ctx context.Context, dec 
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.mining.Msg",
+	ServiceName: "furyahub.furyahub.mining.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

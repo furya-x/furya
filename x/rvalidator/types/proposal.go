@@ -6,7 +6,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	rvotetypes "github.com/oldfurya/furya/x/rvote/types"
+	rvotetypes "github.com/furyahub/furyahub/x/rvote/types"
 	"github.com/tendermint/tendermint/crypto"
 )
 

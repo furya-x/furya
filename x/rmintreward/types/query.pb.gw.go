@@ -881,19 +881,19 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rmintreward", "params"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furyahub", "rmintreward", "params"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ActLatestCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "rmintreward", "act_latest_cycle", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ActLatestCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furyahub", "rmintreward", "act_latest_cycle", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ActDetail_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "rmintreward", "act_detail", "denom", "cycle"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ActDetail_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furyahub", "rmintreward", "act_detail", "denom", "cycle"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_UserMintCount_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"furya", "rmintreward", "user_mint_count", "address", "denom", "cycle"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_UserMintCount_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5}, []string{"furyahub", "rmintreward", "user_mint_count", "address", "denom", "cycle"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_UserActs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furya", "rmintreward", "user_acts", "address", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_UserActs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4}, []string{"furyahub", "rmintreward", "user_acts", "address", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ActCurrentCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "rmintreward", "act_current_cycle", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ActCurrentCycle_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furyahub", "rmintreward", "act_current_cycle", "denom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ClaimInfoDetail_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5, 1, 0, 4, 1, 5, 6}, []string{"furya", "rmintreward", "claim_info_detail", "address", "denom", "cycle", "mintIndex"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ClaimInfoDetail_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3, 1, 0, 4, 1, 5, 4, 1, 0, 4, 1, 5, 5, 1, 0, 4, 1, 5, 6}, []string{"furyahub", "rmintreward", "claim_info_detail", "address", "denom", "cycle", "mintIndex"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

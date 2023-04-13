@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/oldfurya/furya/x/rvalidator/types"
+	"github.com/furyahub/furyahub/x/rvalidator/types"
 )
 
 var _ types.QueryServer = Keeper{}

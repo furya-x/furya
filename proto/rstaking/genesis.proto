@@ -1,12 +1,12 @@
 syntax = "proto3";
-package furya.furya.rstaking;
+package furyahub.furyahub.rstaking;
 
 import "gogoproto/gogo.proto";
 import "rstaking/params.proto";
 import "cosmos/base/v1beta1/coin.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/oldfurya/furya/x/rstaking/types";
+option go_package = "github.com/furyahub/furyahub/x/rstaking/types";
 
 // GenesisState defines the rstaking module's genesis state.
 message GenesisState {

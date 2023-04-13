@@ -1,11 +1,11 @@
 syntax = "proto3";
-package furya.furya.claim;
+package furyahub.furyahub.claim;
 
 import "gogoproto/gogo.proto";
 import "claim/params.proto";
 // this line is used by starport scaffolding # genesis/proto/import
 
-option go_package = "github.com/oldfurya/furya/x/claim/types";
+option go_package = "github.com/furyahub/furyahub/x/claim/types";
 
 // GenesisState defines the claim module's genesis state.
 message GenesisState {

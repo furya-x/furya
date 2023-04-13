@@ -3,9 +3,9 @@ package ledger
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/oldfurya/furya/x/ledger/keeper"
-	"github.com/oldfurya/furya/x/ledger/types"
-	rvotetypes "github.com/oldfurya/furya/x/rvote/types"
+	"github.com/furyahub/furyahub/x/ledger/keeper"
+	"github.com/furyahub/furyahub/x/ledger/types"
+	rvotetypes "github.com/furyahub/furyahub/x/rvote/types"
 )
 
 // NewParamChangeProposalHandler creates a new governance Handler for a ParamChangeProposal

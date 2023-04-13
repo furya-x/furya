@@ -5,7 +5,7 @@ import (
 	fmt "fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/utils"
+	"github.com/furyahub/furyahub/utils"
 )
 
 const (

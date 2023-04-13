@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/oldfurya/furya/testutil/sample"
-	"github.com/oldfurya/furya/utils"
-	"github.com/oldfurya/furya/x/mining/types"
+	"github.com/furyahub/furyahub/testutil/sample"
+	"github.com/furyahub/furyahub/utils"
+	"github.com/furyahub/furyahub/x/mining/types"
 	"github.com/stretchr/testify/require"
 )
 

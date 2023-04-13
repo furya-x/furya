@@ -2,7 +2,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/mining/types"
+	"github.com/furyahub/furyahub/x/mining/types"
 )
 
 // will update {stakePool.RewardPools}

@@ -6,11 +6,11 @@ import (
 	"time"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/testutil/sample"
-	"github.com/oldfurya/furya/utils"
-	"github.com/oldfurya/furya/x/mining/keeper"
-	"github.com/oldfurya/furya/x/mining/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/testutil/sample"
+	"github.com/furyahub/furyahub/utils"
+	"github.com/furyahub/furyahub/x/mining/keeper"
+	"github.com/furyahub/furyahub/x/mining/types"
 	"github.com/stretchr/testify/require"
 )
 

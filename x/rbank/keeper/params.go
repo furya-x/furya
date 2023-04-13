@@ -2,7 +2,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/rbank/types"
+	"github.com/furyahub/furyahub/x/rbank/types"
 )
 
 // GetParams get all parameters as types.Params

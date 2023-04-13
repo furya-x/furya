@@ -97,7 +97,7 @@ type BondReportProposal struct {
 	Proposer string     `protobuf:"bytes,1,opt,name=proposer,proto3" json:"proposer,omitempty"`
 	Denom    string     `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
 	ShotId   string     `protobuf:"bytes,3,opt,name=shotId,proto3" json:"shotId,omitempty"`
-	Action   BondAction `protobuf:"varint,4,opt,name=action,proto3,enum=furya.furya.ledger.BondAction" json:"action,omitempty"`
+	Action   BondAction `protobuf:"varint,4,opt,name=action,proto3,enum=furyahub.furyahub.ledger.BondAction" json:"action,omitempty"`
 	PropId   string     `protobuf:"bytes,5,opt,name=propId,proto3" json:"propId,omitempty"`
 }
 
@@ -315,7 +315,7 @@ type ExecuteBondProposal struct {
 	Txhash   string                                 `protobuf:"bytes,5,opt,name=txhash,proto3" json:"txhash,omitempty"`
 	Amount   github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,6,opt,name=amount,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"amount"`
 	PropId   string                                 `protobuf:"bytes,7,opt,name=propId,proto3" json:"propId,omitempty"`
-	State    LiquidityBondState                     `protobuf:"varint,8,opt,name=state,proto3,enum=furya.furya.ledger.LiquidityBondState" json:"state,omitempty"`
+	State    LiquidityBondState                     `protobuf:"varint,8,opt,name=state,proto3,enum=furyahub.furyahub.ledger.LiquidityBondState" json:"state,omitempty"`
 }
 
 func (m *ExecuteBondProposal) Reset()         { *m = ExecuteBondProposal{} }
@@ -405,7 +405,7 @@ type InterchainTxProposal struct {
 	Denom       string         `protobuf:"bytes,2,opt,name=denom,proto3" json:"denom,omitempty"`
 	PoolAddress string         `protobuf:"bytes,3,opt,name=poolAddress,proto3" json:"poolAddress,omitempty"`
 	Era         uint32         `protobuf:"varint,4,opt,name=era,proto3" json:"era,omitempty"`
-	TxType      OriginalTxType `protobuf:"varint,5,opt,name=txType,proto3,enum=furya.furya.ledger.OriginalTxType" json:"txType,omitempty"`
+	TxType      OriginalTxType `protobuf:"varint,5,opt,name=txType,proto3,enum=furyahub.furyahub.ledger.OriginalTxType" json:"txType,omitempty"`
 	Factor      uint32         `protobuf:"varint,6,opt,name=factor,proto3" json:"factor,omitempty"`
 	Msgs        []*types.Any   `protobuf:"bytes,7,rep,name=msgs,proto3" json:"msgs,omitempty"`
 	PropId      string         `protobuf:"bytes,8,opt,name=propId,proto3" json:"propId,omitempty"`
@@ -501,12 +501,12 @@ func (m *InterchainTxProposal) GetPropId() string {
 }
 
 func init() {
-	proto.RegisterType((*SetChainEraProposal)(nil), "furya.furya.ledger.SetChainEraProposal")
-	proto.RegisterType((*BondReportProposal)(nil), "furya.furya.ledger.BondReportProposal")
-	proto.RegisterType((*ActiveReportProposal)(nil), "furya.furya.ledger.ActiveReportProposal")
-	proto.RegisterType((*TransferReportProposal)(nil), "furya.furya.ledger.TransferReportProposal")
-	proto.RegisterType((*ExecuteBondProposal)(nil), "furya.furya.ledger.ExecuteBondProposal")
-	proto.RegisterType((*InterchainTxProposal)(nil), "furya.furya.ledger.InterchainTxProposal")
+	proto.RegisterType((*SetChainEraProposal)(nil), "furyahub.furyahub.ledger.SetChainEraProposal")
+	proto.RegisterType((*BondReportProposal)(nil), "furyahub.furyahub.ledger.BondReportProposal")
+	proto.RegisterType((*ActiveReportProposal)(nil), "furyahub.furyahub.ledger.ActiveReportProposal")
+	proto.RegisterType((*TransferReportProposal)(nil), "furyahub.furyahub.ledger.TransferReportProposal")
+	proto.RegisterType((*ExecuteBondProposal)(nil), "furyahub.furyahub.ledger.ExecuteBondProposal")
+	proto.RegisterType((*InterchainTxProposal)(nil), "furyahub.furyahub.ledger.InterchainTxProposal")
 }
 
 func init() { proto.RegisterFile("ledger/proposal.proto", fileDescriptor_533d0a7d0c3c5281) }

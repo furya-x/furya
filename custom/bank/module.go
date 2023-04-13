@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/bank"
 	"github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/oldfurya/furya/utils"
+	"github.com/furyahub/furyahub/utils"
 )
 
 var (
@@ -24,53 +24,53 @@ type AppModuleBasic struct {
 func (am AppModuleBasic) DefaultGenesis(cdc codec.JSONCodec) json.RawMessage {
 	defaultGenesisState := types.DefaultGenesisState()
 	// {
-	//     "description": "The native staking token of the Furya Hub",
+	//     "description": "The native staking token of the FurYa Hub",
 	//     "denom_units": [
 	//         {
-	//             "denom": "ufury",
+	//             "denom": "ufis",
 	//             "exponent": 0,
 	//             "aliases": [
-	//                 "microfury"
+	//                 "microfis"
 	//             ]
 	//         },
 	//         {
-	//             "denom": "mfury",
+	//             "denom": "mfis",
 	//             "exponent": 3,
 	//             "aliases": [
-	//               "millifury"
+	//               "millifis"
 	//             ]
 	//         },
 	//         {
-	//             "denom": "fury",
+	//             "denom": "fis",
 	//             "exponent": 6
 	//         }
 	//     ],
-	//     "base": "ufury",
-	//     "display": "fury",
+	//     "base": "ufis",
+	//     "display": "fis",
 	//     "name": "FURY",
 	//     "symbol": "FURY"
 	// }
 	defaultGenesisState.DenomMetadata = append(defaultGenesisState.DenomMetadata,
 		types.Metadata{
-			Description: "The native staking token of the Furya Hub",
+			Description: "The native staking token of the FurYa Hub",
 			DenomUnits: []*types.DenomUnit{
 				{
 					Denom:    utils.FuryDenom,
 					Exponent: 0,
-					Aliases:  []string{"microfury"},
+					Aliases:  []string{"microfis"},
 				},
 				{
-					Denom:    "mfury",
+					Denom:    "mfis",
 					Exponent: 3,
-					Aliases:  []string{"millifury"},
+					Aliases:  []string{"millifis"},
 				},
 				{
-					Denom:    "fury",
+					Denom:    "fis",
 					Exponent: 6,
 				},
 			},
 			Base:    utils.FuryDenom,
-			Display: "fury",
+			Display: "fis",
 			Name:    "FURY",
 			Symbol:  "FURY",
 		},

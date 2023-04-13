@@ -486,17 +486,17 @@ func RegisterQueryHandlerClient(ctx context.Context, mux *runtime.ServeMux, clie
 }
 
 var (
-	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rdex", "params"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_Params_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furyahub", "rdex", "params"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_SwapPoolInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furya", "rdex", "swap_pool_info", "lpDenom"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_SwapPoolInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"furyahub", "rdex", "swap_pool_info", "lpDenom"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_SwapPoolList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rdex", "swap_pool_list"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_SwapPoolList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furyahub", "rdex", "swap_pool_list"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ProviderList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rdex", "provider_list"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ProviderList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furyahub", "rdex", "provider_list"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_PoolCreatorList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rdex", "pool_creator_list"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_PoolCreatorList_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furyahub", "rdex", "pool_creator_list"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_Query_ProviderSwitch_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furya", "rdex", "provider_switch"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_Query_ProviderSwitch_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 0, 2, 1, 2, 2}, []string{"furyahub", "rdex", "provider_switch"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (

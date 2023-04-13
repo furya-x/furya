@@ -3,10 +3,10 @@ package rmintreward_test
 import (
 	"testing"
 
-	keepertest "github.com/oldfurya/furya/testutil/keeper"
-	"github.com/oldfurya/furya/testutil/nullify"
-	"github.com/oldfurya/furya/x/rmintreward"
-	"github.com/oldfurya/furya/x/rmintreward/types"
+	keepertest "github.com/furyahub/furyahub/testutil/keeper"
+	"github.com/furyahub/furyahub/testutil/nullify"
+	"github.com/furyahub/furyahub/x/rmintreward"
+	"github.com/furyahub/furyahub/x/rmintreward/types"
 	"github.com/stretchr/testify/require"
 )
 

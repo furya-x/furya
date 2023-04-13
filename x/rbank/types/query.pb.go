@@ -210,10 +210,10 @@ func (m *QueryAddressPrefixResponse) GetValAddressPrefix() string {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.rbank.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.rbank.QueryParamsResponse")
-	proto.RegisterType((*QueryAddressPrefixRequest)(nil), "furya.furya.rbank.QueryAddressPrefixRequest")
-	proto.RegisterType((*QueryAddressPrefixResponse)(nil), "furya.furya.rbank.QueryAddressPrefixResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furyahub.furyahub.rbank.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furyahub.furyahub.rbank.QueryParamsResponse")
+	proto.RegisterType((*QueryAddressPrefixRequest)(nil), "furyahub.furyahub.rbank.QueryAddressPrefixRequest")
+	proto.RegisterType((*QueryAddressPrefixResponse)(nil), "furyahub.furyahub.rbank.QueryAddressPrefixResponse")
 }
 
 func init() { proto.RegisterFile("rbank/query.proto", fileDescriptor_0cb13210cbef7429) }
@@ -275,7 +275,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rbank.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rbank.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -284,7 +284,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) AddressPrefix(ctx context.Context, in *QueryAddressPrefixRequest, opts ...grpc.CallOption) (*QueryAddressPrefixResponse, error) {
 	out := new(QueryAddressPrefixResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rbank.Query/AddressPrefix", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rbank.Query/AddressPrefix", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -324,7 +324,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rbank.Query/Params",
+		FullMethod: "/furyahub.furyahub.rbank.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -342,7 +342,7 @@ func _Query_AddressPrefix_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rbank.Query/AddressPrefix",
+		FullMethod: "/furyahub.furyahub.rbank.Query/AddressPrefix",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).AddressPrefix(ctx, req.(*QueryAddressPrefixRequest))
@@ -351,7 +351,7 @@ func _Query_AddressPrefix_Handler(srv interface{}, ctx context.Context, dec func
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.rbank.Query",
+	ServiceName: "furyahub.furyahub.rbank.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

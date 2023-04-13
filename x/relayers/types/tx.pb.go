@@ -341,12 +341,12 @@ func (m *MsgSetThresholdResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_MsgSetThresholdResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*MsgAddRelayer)(nil), "furya.furya.relayers.MsgAddRelayer")
-	proto.RegisterType((*MsgAddRelayerResponse)(nil), "furya.furya.relayers.MsgAddRelayerResponse")
-	proto.RegisterType((*MsgDeleteRelayer)(nil), "furya.furya.relayers.MsgDeleteRelayer")
-	proto.RegisterType((*MsgDeleteRelayerResponse)(nil), "furya.furya.relayers.MsgDeleteRelayerResponse")
-	proto.RegisterType((*MsgSetThreshold)(nil), "furya.furya.relayers.MsgSetThreshold")
-	proto.RegisterType((*MsgSetThresholdResponse)(nil), "furya.furya.relayers.MsgSetThresholdResponse")
+	proto.RegisterType((*MsgAddRelayer)(nil), "furyahub.furyahub.relayers.MsgAddRelayer")
+	proto.RegisterType((*MsgAddRelayerResponse)(nil), "furyahub.furyahub.relayers.MsgAddRelayerResponse")
+	proto.RegisterType((*MsgDeleteRelayer)(nil), "furyahub.furyahub.relayers.MsgDeleteRelayer")
+	proto.RegisterType((*MsgDeleteRelayerResponse)(nil), "furyahub.furyahub.relayers.MsgDeleteRelayerResponse")
+	proto.RegisterType((*MsgSetThreshold)(nil), "furyahub.furyahub.relayers.MsgSetThreshold")
+	proto.RegisterType((*MsgSetThresholdResponse)(nil), "furyahub.furyahub.relayers.MsgSetThresholdResponse")
 }
 
 func init() { proto.RegisterFile("relayers/tx.proto", fileDescriptor_858ee6e4c5f310aa) }
@@ -405,7 +405,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) AddRelayer(ctx context.Context, in *MsgAddRelayer, opts ...grpc.CallOption) (*MsgAddRelayerResponse, error) {
 	out := new(MsgAddRelayerResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.relayers.Msg/AddRelayer", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.relayers.Msg/AddRelayer", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -414,7 +414,7 @@ func (c *msgClient) AddRelayer(ctx context.Context, in *MsgAddRelayer, opts ...g
 
 func (c *msgClient) DeleteRelayer(ctx context.Context, in *MsgDeleteRelayer, opts ...grpc.CallOption) (*MsgDeleteRelayerResponse, error) {
 	out := new(MsgDeleteRelayerResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.relayers.Msg/DeleteRelayer", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.relayers.Msg/DeleteRelayer", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -423,7 +423,7 @@ func (c *msgClient) DeleteRelayer(ctx context.Context, in *MsgDeleteRelayer, opt
 
 func (c *msgClient) SetThreshold(ctx context.Context, in *MsgSetThreshold, opts ...grpc.CallOption) (*MsgSetThresholdResponse, error) {
 	out := new(MsgSetThresholdResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.relayers.Msg/SetThreshold", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.relayers.Msg/SetThreshold", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -465,7 +465,7 @@ func _Msg_AddRelayer_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.relayers.Msg/AddRelayer",
+		FullMethod: "/furyahub.furyahub.relayers.Msg/AddRelayer",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddRelayer(ctx, req.(*MsgAddRelayer))
@@ -483,7 +483,7 @@ func _Msg_DeleteRelayer_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.relayers.Msg/DeleteRelayer",
+		FullMethod: "/furyahub.furyahub.relayers.Msg/DeleteRelayer",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).DeleteRelayer(ctx, req.(*MsgDeleteRelayer))
@@ -501,7 +501,7 @@ func _Msg_SetThreshold_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.relayers.Msg/SetThreshold",
+		FullMethod: "/furyahub.furyahub.relayers.Msg/SetThreshold",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SetThreshold(ctx, req.(*MsgSetThreshold))
@@ -510,7 +510,7 @@ func _Msg_SetThreshold_Handler(srv interface{}, ctx context.Context, dec func(in
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.relayers.Msg",
+	ServiceName: "furyahub.furyahub.relayers.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

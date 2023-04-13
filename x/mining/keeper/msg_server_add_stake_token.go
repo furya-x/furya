@@ -4,8 +4,8 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/oldfurya/furya/x/mining/types"
-	sudotypes "github.com/oldfurya/furya/x/sudo/types"
+	"github.com/furyahub/furyahub/x/mining/types"
+	sudotypes "github.com/furyahub/furyahub/x/sudo/types"
 )
 
 func (k msgServer) AddStakeToken(goCtx context.Context, msg *types.MsgAddStakeToken) (*types.MsgAddStakeTokenResponse, error) {

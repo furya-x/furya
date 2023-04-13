@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/oldfurya/furya/x/rbank/keeper"
-	"github.com/oldfurya/furya/x/rbank/types"
+	"github.com/furyahub/furyahub/x/rbank/keeper"
+	"github.com/furyahub/furyahub/x/rbank/types"
 )
 
 // NewHandler ...

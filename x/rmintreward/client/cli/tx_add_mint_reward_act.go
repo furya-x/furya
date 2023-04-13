@@ -12,7 +12,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	"github.com/cosmos/cosmos-sdk/version"
 	"github.com/spf13/cobra"
-	"github.com/oldfurya/furya/x/rmintreward/types"
+	"github.com/furyahub/furyahub/x/rmintreward/types"
 )
 
 var _ = strconv.Itoa(0)
@@ -25,7 +25,7 @@ func CmdAddMintRewardAct() *cobra.Command {
 			fmt.Sprintf(`Broadcast message add mint reward act which can be given through a JSON file.
 
 Example:
-$ %s tx rmintreward add-mint-reward-act uxatom path/to/mint_reward_act.json --from admin
+$ %s tx rmintreward add-mint-reward-act uratom path/to/mint_reward_act.json --from admin
 
 Where mint_reward_act.json could be like this:
 {
@@ -34,7 +34,7 @@ Where mint_reward_act.json could be like this:
     "lockedBlocks": 100,
     "tokenRewardInfos": [
         {
-            "denom": "ufury",
+            "denom": "ufis",
             "rewardRate": "0.000001",
             "totalRewardAmount": "10000000",
             "userLimit": "100"

@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/oldfurya/furya/x/rbank/types"
+	"github.com/furyahub/furyahub/x/rbank/types"
 )
 
 type msgServer struct {

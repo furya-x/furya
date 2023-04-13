@@ -578,18 +578,18 @@ func (m *QueryLatestDealedCycleResponse) GetLatestDealedCycle() *Cycle {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furya.furya.rvalidator.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furya.furya.rvalidator.QueryParamsResponse")
-	proto.RegisterType((*QueryRValidatorListRequest)(nil), "furya.furya.rvalidator.QueryRValidatorListRequest")
-	proto.RegisterType((*QueryRValidatorListResponse)(nil), "furya.furya.rvalidator.QueryRValidatorListResponse")
-	proto.RegisterType((*QueryCycleSecondsRequest)(nil), "furya.furya.rvalidator.QueryCycleSecondsRequest")
-	proto.RegisterType((*QueryCycleSecondsResponse)(nil), "furya.furya.rvalidator.QueryCycleSecondsResponse")
-	proto.RegisterType((*QueryShuffleSecondsRequest)(nil), "furya.furya.rvalidator.QueryShuffleSecondsRequest")
-	proto.RegisterType((*QueryShuffleSecondsResponse)(nil), "furya.furya.rvalidator.QueryShuffleSecondsResponse")
-	proto.RegisterType((*QueryLatestVotedCycleRequest)(nil), "furya.furya.rvalidator.QueryLatestVotedCycleRequest")
-	proto.RegisterType((*QueryLatestVotedCycleResponse)(nil), "furya.furya.rvalidator.QueryLatestVotedCycleResponse")
-	proto.RegisterType((*QueryLatestDealedCycleRequest)(nil), "furya.furya.rvalidator.QueryLatestDealedCycleRequest")
-	proto.RegisterType((*QueryLatestDealedCycleResponse)(nil), "furya.furya.rvalidator.QueryLatestDealedCycleResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furyahub.furyahub.rvalidator.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furyahub.furyahub.rvalidator.QueryParamsResponse")
+	proto.RegisterType((*QueryRValidatorListRequest)(nil), "furyahub.furyahub.rvalidator.QueryRValidatorListRequest")
+	proto.RegisterType((*QueryRValidatorListResponse)(nil), "furyahub.furyahub.rvalidator.QueryRValidatorListResponse")
+	proto.RegisterType((*QueryCycleSecondsRequest)(nil), "furyahub.furyahub.rvalidator.QueryCycleSecondsRequest")
+	proto.RegisterType((*QueryCycleSecondsResponse)(nil), "furyahub.furyahub.rvalidator.QueryCycleSecondsResponse")
+	proto.RegisterType((*QueryShuffleSecondsRequest)(nil), "furyahub.furyahub.rvalidator.QueryShuffleSecondsRequest")
+	proto.RegisterType((*QueryShuffleSecondsResponse)(nil), "furyahub.furyahub.rvalidator.QueryShuffleSecondsResponse")
+	proto.RegisterType((*QueryLatestVotedCycleRequest)(nil), "furyahub.furyahub.rvalidator.QueryLatestVotedCycleRequest")
+	proto.RegisterType((*QueryLatestVotedCycleResponse)(nil), "furyahub.furyahub.rvalidator.QueryLatestVotedCycleResponse")
+	proto.RegisterType((*QueryLatestDealedCycleRequest)(nil), "furyahub.furyahub.rvalidator.QueryLatestDealedCycleRequest")
+	proto.RegisterType((*QueryLatestDealedCycleResponse)(nil), "furyahub.furyahub.rvalidator.QueryLatestDealedCycleResponse")
 }
 
 func init() { proto.RegisterFile("rvalidator/query.proto", fileDescriptor_cd6d8d8aef06837a) }
@@ -679,7 +679,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvalidator.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvalidator.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -688,7 +688,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) RValidatorList(ctx context.Context, in *QueryRValidatorListRequest, opts ...grpc.CallOption) (*QueryRValidatorListResponse, error) {
 	out := new(QueryRValidatorListResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvalidator.Query/RValidatorList", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvalidator.Query/RValidatorList", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -697,7 +697,7 @@ func (c *queryClient) RValidatorList(ctx context.Context, in *QueryRValidatorLis
 
 func (c *queryClient) CycleSeconds(ctx context.Context, in *QueryCycleSecondsRequest, opts ...grpc.CallOption) (*QueryCycleSecondsResponse, error) {
 	out := new(QueryCycleSecondsResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvalidator.Query/CycleSeconds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvalidator.Query/CycleSeconds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -706,7 +706,7 @@ func (c *queryClient) CycleSeconds(ctx context.Context, in *QueryCycleSecondsReq
 
 func (c *queryClient) ShuffleSeconds(ctx context.Context, in *QueryShuffleSecondsRequest, opts ...grpc.CallOption) (*QueryShuffleSecondsResponse, error) {
 	out := new(QueryShuffleSecondsResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvalidator.Query/ShuffleSeconds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvalidator.Query/ShuffleSeconds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -715,7 +715,7 @@ func (c *queryClient) ShuffleSeconds(ctx context.Context, in *QueryShuffleSecond
 
 func (c *queryClient) LatestVotedCycle(ctx context.Context, in *QueryLatestVotedCycleRequest, opts ...grpc.CallOption) (*QueryLatestVotedCycleResponse, error) {
 	out := new(QueryLatestVotedCycleResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvalidator.Query/LatestVotedCycle", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvalidator.Query/LatestVotedCycle", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -724,7 +724,7 @@ func (c *queryClient) LatestVotedCycle(ctx context.Context, in *QueryLatestVoted
 
 func (c *queryClient) LatestDealedCycle(ctx context.Context, in *QueryLatestDealedCycleRequest, opts ...grpc.CallOption) (*QueryLatestDealedCycleResponse, error) {
 	out := new(QueryLatestDealedCycleResponse)
-	err := c.cc.Invoke(ctx, "/furya.furya.rvalidator.Query/LatestDealedCycle", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furyahub.furyahub.rvalidator.Query/LatestDealedCycle", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -784,7 +784,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvalidator.Query/Params",
+		FullMethod: "/furyahub.furyahub.rvalidator.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -802,7 +802,7 @@ func _Query_RValidatorList_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvalidator.Query/RValidatorList",
+		FullMethod: "/furyahub.furyahub.rvalidator.Query/RValidatorList",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).RValidatorList(ctx, req.(*QueryRValidatorListRequest))
@@ -820,7 +820,7 @@ func _Query_CycleSeconds_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvalidator.Query/CycleSeconds",
+		FullMethod: "/furyahub.furyahub.rvalidator.Query/CycleSeconds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).CycleSeconds(ctx, req.(*QueryCycleSecondsRequest))
@@ -838,7 +838,7 @@ func _Query_ShuffleSeconds_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvalidator.Query/ShuffleSeconds",
+		FullMethod: "/furyahub.furyahub.rvalidator.Query/ShuffleSeconds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ShuffleSeconds(ctx, req.(*QueryShuffleSecondsRequest))
@@ -856,7 +856,7 @@ func _Query_LatestVotedCycle_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvalidator.Query/LatestVotedCycle",
+		FullMethod: "/furyahub.furyahub.rvalidator.Query/LatestVotedCycle",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).LatestVotedCycle(ctx, req.(*QueryLatestVotedCycleRequest))
@@ -874,7 +874,7 @@ func _Query_LatestDealedCycle_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furya.furya.rvalidator.Query/LatestDealedCycle",
+		FullMethod: "/furyahub.furyahub.rvalidator.Query/LatestDealedCycle",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).LatestDealedCycle(ctx, req.(*QueryLatestDealedCycleRequest))
@@ -883,7 +883,7 @@ func _Query_LatestDealedCycle_Handler(srv interface{}, ctx context.Context, dec 
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furya.furya.rvalidator.Query",
+	ServiceName: "furyahub.furyahub.rvalidator.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
